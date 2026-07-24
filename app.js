@@ -70,6 +70,12 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function formatMarkdownText(value) {
+  let escaped = escapeHtml(value);
+  // Replace **text** with <strong>text</strong>
+  return escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
+
 function normalizeSearch(value) {
   return String(value || "")
     .normalize("NFD")
@@ -958,12 +964,12 @@ function updateAiHoverPopoverContent(tender) {
         <span>Gemini AI đang phân tích chi tiết hồ sơ gói thầu...</span>
       </div>`;
   } else if (cached) {
-    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${formatMarkdownText(point)}</li>`).join("");
     const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
     bodyHtml = `
-      <p class="ai-popover-lead">${escapeHtml(cached.summary)}</p>
+      <p class="ai-popover-lead">${formatMarkdownText(cached.summary)}</p>
       <ul class="ai-popover-list">${keyPoints}</ul>
-      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${formatMarkdownText(cached.aiAssessment)}</div>` : ""}
       <div class="ai-popover-official-link">
         <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn">
           <span>🔗</span> <strong>Xem toàn văn hồ sơ gốc trên Cổng Mua sắm công ↗</strong>
@@ -1042,12 +1048,12 @@ function tenderAiSummaryCardMarkup(tender) {
         <span>Gemini AI đang phân tích toàn văn hồ sơ...</span>
       </div>`;
   } else if (cached) {
-    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${formatMarkdownText(point)}</li>`).join("");
     const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
     contentHtml = `
-      <p class="ai-popover-lead">${escapeHtml(cached.summary)}</p>
+      <p class="ai-popover-lead">${formatMarkdownText(cached.summary)}</p>
       <ul class="ai-popover-list">${keyPoints}</ul>
-      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${formatMarkdownText(cached.aiAssessment)}</div>` : ""}
       <div class="ai-popover-official-link">
         <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn">
           <span>🔗</span> <strong>Truy cập hồ sơ công khai gốc trên Muasamcong.mpi.gov.vn ↗</strong>
