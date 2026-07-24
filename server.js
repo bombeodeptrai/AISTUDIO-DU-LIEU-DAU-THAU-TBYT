@@ -24,6 +24,26 @@ function getGeminiClient() {
   });
 }
 
+// Fallback sequence for models in case of rate limits / quota issues
+const CANDIDATE_MODELS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+
+async function generateContentWithFallback(ai, requestConfig) {
+  let lastError = null;
+  for (const model of CANDIDATE_MODELS) {
+    try {
+      const response = await ai.models.generateContent({
+        ...requestConfig,
+        model: model,
+      });
+      return { response, usedModel: model };
+    } catch (err) {
+      console.warn(`Model ${model} request failed (${err.message || err}). Trying fallback model...`);
+      lastError = err;
+    }
+  }
+  throw lastError || new Error('All Gemini candidate models failed');
+}
+
 // Memory cache for summaries
 const summaryCache = new Map();
 
@@ -83,8 +103,7 @@ Yêu cầu tóm tắt:
 2. "keyPoints": Danh sách 3-4 điểm trọng tâm (ví dụ: Quy mô ngân sách, Các thiết bị chính, Thời hạn & Yêu cầu, Đối tượng tham gia).
 3. "aiAssessment": Đánh giá vắt tắt góc nhìn AI (mức độ hấp dẫn, độ phức tạp kỹ thuật hoặc lưu ý chính).`;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.6-flash',
+    const { response, usedModel } = await generateContentWithFallback(ai, {
       contents: promptText,
       config: {
         systemInstruction: 'Bạn là chuyên gia phân tích dữ liệu đấu thầu y tế Việt Nam. Hãy tóm tắt thông tin gói thầu cực kỳ súc tích, chính xác, khách quan.',
@@ -121,7 +140,19 @@ Yêu cầu tóm tắt:
     return res.json({ success: true, data, cached: false });
   } catch (error) {
     console.error('Gemini summarize error:', error);
-    return res.status(500).json({ error: 'Không thể tạo tóm tắt AI: ' + error.message });
+    const fallbackData = {
+      summary: `Gói thầu "${req.body.name}" do ${req.body.investor || 'Chủ đầu tư'} mời thầu tại ${req.body.location || 'Gia Lai'}.`,
+      keyPoints: [
+        `Giá gói thầu / quy mô: ${req.body.price ? Number(req.body.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa cập nhật'}`,
+        `Phân loại: ${req.body.category || 'Thiết bị y tế'}`,
+        `Trạng thái: ${req.body.status || 'Chưa rõ'}`,
+        `Hạn đóng thầu: ${req.body.closeDate || 'Chưa công bố'}`
+      ],
+      aiAssessment: 'Tóm tắt tự động theo hồ sơ gói thầu.',
+      isFallback: true
+    };
+    summaryCache.set(req.body.notifyNo, fallbackData);
+    return res.json({ success: true, data: fallbackData });
   }
 });
 
@@ -200,8 +231,7 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
 `;
 
     try {
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.6-flash',
+      const { response, usedModel } = await generateContentWithFallback(ai, {
         contents: promptText,
         config: {
           systemInstruction: 'Trả về JSON array các tóm tắt gói thầu cực kỳ súc tích, chính xác.',
