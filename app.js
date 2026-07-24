@@ -640,6 +640,62 @@ function equipmentSearchMatchMarkup(tender) {
 let hoverTimer = null;
 let currentHoveredTender = null;
 
+async function preloadBatchSummaries(tendersList) {
+  if (!Array.isArray(tendersList) || tendersList.length === 0) return;
+
+  const BATCH_SIZE = 10;
+  for (let i = 0; i < tendersList.length; i += BATCH_SIZE) {
+    const batch = tendersList.slice(i, i + BATCH_SIZE);
+    
+    // Check if all items in this batch are already preloaded
+    const missingInBatch = batch.filter((t) => t.notifyNo && !state.aiSummaries[t.notifyNo]);
+    if (missingInBatch.length === 0) continue;
+
+    const payload = missingInBatch.map((tender) => {
+      const detail = state.detailsByNotifyNo[tender.notifyNo];
+      const items = detail?.items || detail?.technicalRequirements?.items || [];
+      const equipmentSummary = items.slice(0, 5).map((item) => item.name).filter(Boolean).join(", ");
+
+      return {
+        notifyNo: tender.notifyNo,
+        name: tender.name,
+        investor: tender.investor,
+        location: tender.location,
+        price: tender.winningPrice || tender.price,
+        category: tender.category,
+        status: statusLabels[tender.status] || tender.status,
+        closeDate: formatDate(tender.closeDate, true),
+        winnerNames: tender.winnerNames?.join("; "),
+        equipmentSummary: equipmentSummary,
+      };
+    });
+
+    try {
+      const response = await fetch("/api/batch-summarize-tenders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tenders: payload }),
+      });
+
+      if (response.ok) {
+        const resData = await response.json();
+        if (resData.success && resData.summaries) {
+          Object.assign(state.aiSummaries, resData.summaries);
+          
+          if (currentHoveredTender && state.aiSummaries[currentHoveredTender.notifyNo]) {
+            updateAiHoverPopoverContent(currentHoveredTender);
+          }
+          if (state.aiSummaryActiveId) {
+            render();
+          }
+        }
+      }
+    } catch (err) {
+      console.error("Batch pre-summarize error:", err);
+    }
+  }
+}
+
 async function fetchAiSummary(tender) {
   if (state.aiSummaries[tender.notifyNo]) {
     return state.aiSummaries[tender.notifyNo];
@@ -908,6 +964,7 @@ async function loadData(cacheBust = false) {
       ? `Cập nhật ${formatDate(state.fetchedAt, true)}`
       : "Từ Hệ thống mạng đấu thầu quốc gia";
     render();
+    void preloadBatchSummaries(state.tenders);
   } catch (error) {
     elements.dataState.dataset.state = "error";
     elements.sourceLabel.textContent = "Không tải được dữ liệu";

@@ -125,6 +125,146 @@ Yêu cầu tóm tắt:
   }
 });
 
+app.post('/api/batch-summarize-tenders', async (req, res) => {
+  try {
+    const { tenders } = req.body;
+    if (!Array.isArray(tenders) || tenders.length === 0) {
+      return res.json({ success: true, summaries: {} });
+    }
+
+    const summaries = {};
+    const missingTenders = [];
+
+    // Check cache first
+    for (const tender of tenders) {
+      if (!tender.notifyNo) continue;
+      if (summaryCache.has(tender.notifyNo)) {
+        summaries[tender.notifyNo] = summaryCache.get(tender.notifyNo);
+      } else {
+        missingTenders.push(tender);
+      }
+    }
+
+    if (missingTenders.length === 0) {
+      return res.json({ success: true, summaries, cachedAll: true });
+    }
+
+    const ai = getGeminiClient();
+
+    // If no API key, populate intelligent fallbacks immediately
+    if (!ai) {
+      for (const tender of missingTenders) {
+        const fallbackData = {
+          summary: `Gói thầu "${tender.name}" do ${tender.investor || 'Chủ đầu tư'} mời thầu tại ${tender.location || 'Gia Lai'}.`,
+          keyPoints: [
+            `Giá dự toán: ${tender.price ? Number(tender.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa cập nhật'}`,
+            `Phân loại: ${tender.category || 'Thiết bị y tế'}`,
+            `Trạng thái: ${tender.status || 'Chưa rõ'}`,
+            `Hạn đóng thầu: ${tender.closeDate || 'Chưa công bố'}`
+          ],
+          aiAssessment: 'Lưu ý: Để bật AI Gemini phân tích sâu, hãy nhập GEMINI_API_KEY trong Cài đặt > Secrets.',
+          isFallback: true
+        };
+        summaryCache.set(tender.notifyNo, fallbackData);
+        summaries[tender.notifyNo] = fallbackData;
+      }
+      return res.json({ success: true, summaries, isFallback: true });
+    }
+
+    // Process missing tenders in batch using Gemini with concurrency or batch prompt
+    // We process up to 10 at a time to stay fast and avoid token limits
+    const batchPrompt = missingTenders.map((t, idx) => `
+[GÓI THẦU #${idx + 1}]
+- Mã TBMT: ${t.notifyNo}
+- Tên: ${t.name}
+- Chủ đầu tư: ${t.investor}
+- Địa điểm: ${t.location}
+- Ngân sách: ${t.price ? t.price + ' VNĐ' : 'Chưa công bố'}
+- Danh mục: ${t.category}
+- Trạng thái: ${t.status}
+- Đóng thầu: ${t.closeDate || 'Chưa công bố'}
+${t.winnerNames ? `- Đơn vị trúng: ${t.winnerNames}` : ''}
+${t.equipmentSummary ? `- Thiết bị chính: ${t.equipmentSummary}` : ''}
+`).join('\n---');
+
+    const promptText = `Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam. Hãy tóm tắt ngắn gọn khái quát từng gói thầu dưới đây.
+
+Danh sách ${missingTenders.length} gói thầu:
+${batchPrompt}
+
+Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ tự các gói thầu:
+- "notifyNo": Mã TBMT của gói thầu
+- "summary": Tóm tắt súc tích 1-2 câu về bản chất gói thầu
+- "keyPoints": Mảng 3-4 điểm trọng tâm ngắn (Quy mô, thiết bị, hạn nộp,...)
+- "aiAssessment": Đánh giá vắt tắt 1 câu góc nhìn AI
+`;
+
+    try {
+      const response = await ai.models.generateContent({
+        model: 'gemini-3.6-flash',
+        contents: promptText,
+        config: {
+          systemInstruction: 'Trả về JSON array các tóm tắt gói thầu cực kỳ súc tích, chính xác.',
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: Type.ARRAY,
+            items: {
+              type: Type.OBJECT,
+              properties: {
+                notifyNo: { type: Type.STRING },
+                summary: { type: Type.STRING },
+                keyPoints: { type: Type.ARRAY, items: { type: Type.STRING } },
+                aiAssessment: { type: Type.STRING }
+              },
+              required: ['notifyNo', 'summary', 'keyPoints', 'aiAssessment']
+            }
+          }
+        }
+      });
+
+      const parsed = JSON.parse(response.text || '[]');
+      if (Array.isArray(parsed)) {
+        for (const item of parsed) {
+          if (item.notifyNo) {
+            const sumData = {
+              summary: item.summary,
+              keyPoints: item.keyPoints,
+              aiAssessment: item.aiAssessment
+            };
+            summaryCache.set(item.notifyNo, sumData);
+            summaries[item.notifyNo] = sumData;
+          }
+        }
+      }
+    } catch (batchErr) {
+      console.error('Batch AI summarize error, falling back to basic:', batchErr);
+    }
+
+    // Ensure any missing items in batch receive a fallback so clients never hang
+    for (const tender of missingTenders) {
+      if (!summaries[tender.notifyNo]) {
+        const fallbackData = {
+          summary: `Gói thầu "${tender.name}" do ${tender.investor || 'Chủ đầu tư'} mời thầu tại ${tender.location || 'Gia Lai'}.`,
+          keyPoints: [
+            `Giá dự toán: ${tender.price ? Number(tender.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa cập nhật'}`,
+            `Phân loại: ${tender.category || 'Thiết bị y tế'}`,
+            `Trạng thái: ${tender.status || 'Chưa rõ'}`
+          ],
+          aiAssessment: 'Tóm tắt tự động theo thông tin gói thầu.',
+          isFallback: true
+        };
+        summaryCache.set(tender.notifyNo, fallbackData);
+        summaries[tender.notifyNo] = fallbackData;
+      }
+    }
+
+    return res.json({ success: true, summaries });
+  } catch (error) {
+    console.error('Batch summarize error:', error);
+    return res.status(500).json({ error: 'Lỗi xử lý hàng loạt: ' + error.message });
+  }
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
