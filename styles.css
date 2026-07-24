@@ -751,26 +751,35 @@ select:focus-visible {
 
 .tender-meta {
   display: flex;
-  gap: 7px;
-  margin-bottom: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
 }
 
 .tender-meta span {
-  color: var(--forest-2);
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  background: #f1ede5;
+  border: 1px solid #dfd8cb;
+  border-radius: 4px;
+  color: #4f5148;
   font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .tender-meta span + span::before {
-  margin-right: 7px;
-  color: #b7b1a7;
-  content: "•";
+  content: none;
 }
 
 .tender-meta .result-meta {
-  color: #2f7659;
+  background: #e2f2e9;
+  border-color: #bfe5cf;
+  color: #1b5e3a;
 }
 
 .tender-main h3 {
@@ -1780,6 +1789,80 @@ select:focus-visible {
   .pagination { gap: 4px; }
   .pagination button { min-width: 40px; height: 40px; }
   .site-footer { align-items: flex-start; flex-direction: column; padding-inline: 18px; }
+
+  /* Mobile-first enhancements */
+  #ai-hover-popover {
+    display: none !important;
+  }
+  .tender-meta {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .tender-meta span {
+    padding: 2px 5px;
+    font-size: 8.5px;
+    border-radius: 3px;
+  }
+  .ai-summary-badge {
+    padding: 2px 6px !important;
+    font-size: 9px !important;
+    border-radius: 4px !important;
+  }
+  .equipment-card-preview {
+    padding: 6px 8px;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  .equipment-card-preview-heading {
+    font-size: 10px;
+  }
+  .equipment-chip {
+    padding: 2px 5px;
+    font-size: 9.5px;
+    border-radius: 4px;
+  }
+  .chip-qty {
+    padding: 1px 3px;
+    font-size: 8.5px;
+    border-radius: 2px;
+  }
+  .chip-name {
+    font-weight: 600;
+  }
+  .chip-model {
+    font-size: 8.5px;
+  }
+  .equipment-chip-more {
+    font-size: 9.5px;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  .tender-ai-card {
+    padding: 12px;
+    margin-top: 8px;
+  }
+  .ai-popover-lead {
+    font-size: 11.5px;
+    margin-bottom: 8px;
+  }
+  .ai-popover-list li {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  .ai-popover-assessment {
+    font-size: 10.5px;
+    padding: 6px 8px;
+    line-height: 1.4;
+  }
+  .ai-official-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    font-size: 11px;
+    align-items: center;
+  }
 }
 
 /* AI Summary & Hover Tooltip Styles */

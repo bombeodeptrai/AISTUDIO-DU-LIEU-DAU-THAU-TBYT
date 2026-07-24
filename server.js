@@ -25,7 +25,7 @@ function getGeminiClient() {
 }
 
 // Fallback sequence for models in case of rate limits / quota issues
-const CANDIDATE_MODELS = ['gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-3.1-pro-preview', 'gemini-2.5-flash'];
+const CANDIDATE_MODELS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-2.5-pro', 'gemini-1.5-pro'];
 
 async function generateContentWithFallback(ai, requestConfig) {
   let lastError = null;
@@ -91,7 +91,7 @@ app.post('/api/summarize-tender', async (req, res) => {
       return res.json({ success: true, data: fallbackData });
     }
 
-    const promptText = `Bạn là chuyên gia phân tích dữ liệu đấu thầu y tế Việt Nam. Hãy phân tích VÀ TÓM TẮT CHI TIẾT HỒ SƠ GÓI THẦU dưới đây cho nhà thầu/cơ sở y tế:
+    const promptText = `Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam hàng đầu. Hãy phân tích chuyên sâu VÀ TÓM TẮT CHI TIẾT HỒ SƠ GÓI THẦU dưới đây cho nhà thầu và các hãng sản xuất thiết bị/vật tư y tế:
 
 [THÔNG TIN HỒ SƠ GÓI THẦU]
 - Mã TBMT: ${notifyNo}
@@ -112,22 +112,23 @@ ${equipmentSummary ? `- Chi tiết danh mục thiết bị/vật tư/mặt hàng
 - Nguồn hồ sơ công khai gốc: ${sourceUrl || 'https://muasamcong.mpi.gov.vn/'}
 
 Yêu cầu phân tích chi tiết & trả về định dạng JSON:
-1. "summary": Tóm tắt tổng quan chi tiết 2-3 câu ngắn gọn nhưng đầy đủ bối cảnh, quy mô ngân sách, mục đích mua sắm và cơ sở y tế mời thầu.
-2. "keyPoints": Mảng 5-7 mục thông tin chi tiết chuyên sâu:
-   - 🏦 Chủ đầu tư & Cơ sở: ...
-   - 💰 Giá gói thầu & Tài chính: ... (nếu có giá trúng thầu thì nêu cả mức chênh lệch/tiết kiệm)
-   - 📑 Hình thức & Phương thức LCNT: ...
-   - 📦 Danh mục hàng hóa / Thiết bị chính: (Nêu cụ thể tên máy/vật tư/sinh phẩm kèm model/số lượng)
-   - ⏱️ Tiến độ mốc thời gian: (Ngày đăng tải, hạn đóng thầu)
-   - 🏆 Kết quả & Nhà thầu: (Đơn vị trúng thầu, nhà thầu tham gia/trượt thầu)
-3. "aiAssessment": Đánh giá chuyên sâu góc nhìn AI (mức độ cạnh tranh, tính phức tạp kỹ thuật của danh mục, rủi ro/lưu ý hồ sơ).
+1. "summary": Tóm tắt tổng quan chi tiết 2-3 câu ngắn gọn thể hiện bối cảnh bệnh viện mời thầu, quy mô tài chính, và các nhóm sản phẩm cốt lõi được mua sắm lần này.
+2. "keyPoints": Mảng 6-8 mục thông tin chi tiết chuyên sâu về góc nhìn đấu thầu y tế:
+   - 🏦 Chủ đầu tư & Cơ sở: (Ví dụ: Trung tâm Y tế Pleiku tổ chức mua sắm...)
+   - 💰 Quy mô ngân sách: (Giá gói thầu và đánh giá tầm cỡ dòng vốn)
+   - 📑 Hình thức LCNT: (Hình thức lựa chọn nhà thầu thực tế)
+   - 💎 Mặt hàng chủ chốt & giá trị cao nhất: (Xác định rõ ràng mặt hàng/thiết bị/vật tư nào trong danh mục có giá trị lâm sàng cao nhất, giá trị thương mại lớn nhất hoặc đóng vai trò cốt lõi trong gói thầu này - Ví dụ: Hệ thống nội soi, nẹp khóa đa hướng cao cấp, v.v.)
+   - 📦 Danh mục sản phẩm e-HSMT: (Tóm tắt các nhóm hàng chính. TUYỆT ĐỐI BỎ các mã số, chuỗi số model/serial vô nghĩa như 32403, 48101, v.v. Chỉ ghi rõ tên thiết bị, hãng/nước sản xuất nếu có)
+   - ⏱️ Tiến độ thời gian: (Mốc thời gian đóng/mở thầu quan trọng)
+   - 🏆 Đối thủ & Kết quả: (Nếu đã có kết quả, nêu rõ nhà thầu trúng và mức chênh lệch giá trúng thầu)
+3. "aiAssessment": Phân tích chuyên sâu 3-4 câu với tư cách Chuyên gia Đấu thầu: Đánh giá cơ hội thị trường, tính độc quyền công nghệ, tiềm năng biên lợi nhuận cao cho nhà thầu tham gia, lưu ý hồ sơ pháp lý/kỹ thuật e-HSMT và các cơ hội bán kèm vật tư tiêu hao (consumables) đi kèm thiết bị chính.
 4. "officialUrl": Trả về chính xác link hồ sơ công khai: "${sourceUrl || 'https://muasamcong.mpi.gov.vn/'}"
 `;
 
     const { response, usedModel } = await generateContentWithFallback(ai, {
       contents: promptText,
       config: {
-        systemInstruction: 'Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam. Trả về thông tin phân tích gói thầu cực kỳ chi tiết, chính xác, khách quan dưới dạng JSON.',
+        systemInstruction: 'Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam xuất sắc. Trả về thông tin phân tích gói thầu sâu sắc dưới góc nhìn kinh tế, thị trường và kỹ thuật lâm sàng, loại bỏ các chuỗi mã số vô nghĩa, trả về dạng JSON.',
         responseMimeType: 'application/json',
         responseSchema: {
           type: Type.OBJECT,
@@ -136,9 +137,9 @@ Yêu cầu phân tích chi tiết & trả về định dạng JSON:
             keyPoints: {
               type: Type.ARRAY,
               items: { type: Type.STRING },
-              description: '5-7 điểm nổi bật chi tiết về quy mô, thiết bị, thời gian, kết quả'
+              description: '6-8 điểm nổi bật chi tiết về quy mô, thiết bị giá trị cao nhất, thời gian, kết quả'
             },
-            aiAssessment: { type: Type.STRING, description: 'Đánh giá chuyên sâu từ AI' },
+            aiAssessment: { type: Type.STRING, description: 'Đánh giá phân tích tiềm năng và rủi ro từ chuyên gia AI' },
             officialUrl: { type: Type.STRING, description: 'Đường dẫn hồ sơ chính thức gốc' }
           },
           required: ['summary', 'keyPoints', 'aiAssessment', 'officialUrl']
@@ -259,16 +260,16 @@ ${t.equipmentSummary ? `- Danh mục thiết bị chính: ${t.equipmentSummary}`
 - Nguồn hồ sơ gốc: ${t.sourceUrl || 'https://muasamcong.mpi.gov.vn/'}
 `).join('\n---');
 
-    const promptText = `Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam. Hãy phân tích & tóm tắt CHI TIẾT ĐẦY ĐỦ cho từng gói thầu dưới đây.
+    const promptText = `Bạn là chuyên gia tư vấn đấu thầu y tế Việt Nam hàng đầu. Hãy phân tích chuyên sâu & tóm tắt CHI TIẾT ĐẦY ĐỦ cho từng gói thầu dưới đây để định hướng thầu cho các đối tác phân phối thiết bị và vật tư y tế.
 
 Danh sách ${missingTenders.length} gói thầu:
 ${batchPrompt}
 
 Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ tự các gói thầu:
 - "notifyNo": Mã TBMT của gói thầu
-- "summary": Tóm tắt tổng quan chi tiết 2-3 câu ngắn gọn
-- "keyPoints": Mảng 5-6 điểm thông tin chi tiết (Chủ đầu tư, giá gói thầu, hình thức LCNT, danh mục thiết bị, mốc thời gian, kết quả)
-- "aiAssessment": Đánh giá chuyên sâu 1-2 câu góc nhìn AI
+- "summary": Tóm tắt tổng quan chi tiết 2-3 câu thể hiện bối cảnh bệnh viện, quy mô gói thầu, và nhóm sản phẩm thầu chính.
+- "keyPoints": Mảng 6-7 điểm thông tin thầu chi tiết (Gồm: Bên mời thầu; Quy mô ngân sách/tiết kiệm; Hình thức LCNT; 💎Mặt hàng chủ chốt & giá trị cao nhất: Xác định rõ sản phẩm có giá trị thầu hoặc tiềm năng kinh doanh cao nhất của gói thầu; 📦Danh mục sản phẩm thầu chính: Tuyệt đối bỏ hết chuỗi mã số model/serial rườm rà như 32403, 48101, v.v., chỉ nêu tên lâm sàng thực tế và hãng/nước sản xuất thầu; Tiến độ thời gian; Kết quả thầu và mức chênh lệch).
+- "aiAssessment": Đánh giá chuyên sâu 2-3 câu về cơ hội cạnh tranh, biên lợi nhuận, lưu ý kỹ thuật/pháp lý e-HSMT và tiềm năng phát triển phân khúc vật tư tiêu hao phụ trợ đi kèm.
 - "officialUrl": Đường dẫn hồ sơ gốc công khai
 `;
 
@@ -276,7 +277,7 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
       const { response, usedModel } = await generateContentWithFallback(ai, {
         contents: promptText,
         config: {
-          systemInstruction: 'Trả về JSON array các tóm tắt phân tích gói thầu cực kỳ chi tiết, chính xác.',
+          systemInstruction: 'Trả về JSON array các tóm tắt phân tích gói thầu cực kỳ chi tiết, chuyên nghiệp, tập trung vào giá trị thương mại và sản phẩm lâm sàng cốt lõi, loại bỏ các chuỗi mã số model vô nghĩa.',
           responseMimeType: 'application/json',
           responseSchema: {
             type: Type.ARRAY,

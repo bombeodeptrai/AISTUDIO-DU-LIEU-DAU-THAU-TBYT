@@ -612,8 +612,23 @@ async function toggleDetails(tender) {
 }
 
 function displayEquipmentValue(value) {
-  const text = String(value || "").replace(/\s+/g, " ").trim();
-  return /^[.;,:/-]*$/.test(text) ? "" : text;
+  let text = String(value || "").replace(/\s+/g, " ").trim();
+  if (/^[.;,:/-]*$/.test(text)) return "";
+
+  // If there are many semicolons/commas, check if it's mostly codes or small sizes
+  const parts = text.split(/[;,]/).map(p => p.trim()).filter(Boolean);
+  if (parts.length > 2) {
+    const isMostlyShortOrNumbers = parts.every(p => /^\d+$/.test(p) || /^[0-9.-]+$/.test(p) || p.length <= 5);
+    if (isMostlyShortOrNumbers) {
+      return "Nhiều kích cỡ / dải thông số";
+    }
+  }
+  
+  if (text.length > 30 && text.split(';').length > 4) {
+    return "Đa dạng chủng loại";
+  }
+
+  return text;
 }
 
 function equipmentSearchMatchMarkup(tender) {
@@ -1237,6 +1252,7 @@ elements.savedList.addEventListener("click", (event) => {
 });
 
 elements.list.addEventListener("mouseover", (event) => {
+  if (window.innerWidth <= 760) return;
   const row = event.target.closest(".tender-row");
   if (!row) return;
   const id = row.dataset.tenderId;
