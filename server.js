@@ -25,7 +25,7 @@ function getGeminiClient() {
 }
 
 // Fallback sequence for models in case of rate limits / quota issues
-const CANDIDATE_MODELS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+const CANDIDATE_MODELS = ['gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-3.1-pro-preview', 'gemini-2.5-flash'];
 
 async function generateContentWithFallback(ai, requestConfig) {
   let lastError = null;
@@ -37,8 +37,13 @@ async function generateContentWithFallback(ai, requestConfig) {
       });
       return { response, usedModel: model };
     } catch (err) {
-      console.warn(`Model ${model} request failed (${err.message || err}). Trying fallback model...`);
+      const msg = err.message || String(err);
+      console.warn(`[Gemini Model ${model}] ${msg.slice(0, 120)}...`);
       lastError = err;
+      if (msg.includes('429') || msg.includes('quota') || msg.includes('RESOURCE_EXHAUSTED')) {
+        // Brief pause before fallback to avoid cascading rate-limit hits
+        await new Promise((r) => setTimeout(r, 800));
+      }
     }
   }
   throw lastError || new Error('All Gemini candidate models failed');
@@ -86,40 +91,57 @@ app.post('/api/summarize-tender', async (req, res) => {
       return res.json({ success: true, data: fallbackData });
     }
 
-    const promptText = `Hãy phân tích và tóm tắt khái quát thông tin gói thầu sau đây cho nhà thầu/người quan tâm bằng tiếng Việt:
+    const promptText = `Bạn là chuyên gia phân tích dữ liệu đấu thầu y tế Việt Nam. Hãy phân tích VÀ TÓM TẮT CHI TIẾT HỒ SƠ GÓI THẦU dưới đây cho nhà thầu/cơ sở y tế:
+
+[THÔNG TIN HỒ SƠ GÓI THẦU]
 - Mã TBMT: ${notifyNo}
 - Tên gói thầu: ${name}
 - Bên mời thầu / Chủ đầu tư: ${investor}
-- Địa điểm: ${location}
-- Ngân sách / Giá gói thầu: ${price ? price + ' VNĐ' : 'Chưa công bố'}
-- Danh mục: ${category}
+- Địa điểm thực hiện: ${location}
+- Giá gói thầu / Giá dự toán: ${price ? Number(price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa công bố'}
+- Lĩnh vực / Danh mục: ${category}
 - Trạng thái hiện tại: ${status}
-- Thời điểm đóng thầu: ${closeDate || 'Chưa công bố'}
-${winnerNames ? `- Đơn vị trúng thầu: ${winnerNames}` : ''}
-${equipmentSummary ? `- Danh mục máy móc/thiết bị chính: ${equipmentSummary}` : ''}
+- Hình thức LCNT: ${bidForm || 'Theo quy định'} (${processApply || 'Đấu thầu qua mạng'})
+- Ngày đăng tải TBMT: ${publicDate || 'Chưa rõ'}
+- Thời điểm đóng/mở thầu: ${closeDate || 'Chưa công bố'}
+${winnerNames ? `- Nhà thầu trúng thầu: ${winnerNames}` : ''}
+${winningPrice ? `- Giá trúng thầu: ${Number(winningPrice).toLocaleString('vi-VN')} VNĐ` : ''}
+${participantNames ? `- Nhà thầu tham gia: ${participantNames}` : ''}
+${loserNames ? `- Nhà thầu không trúng thầu: ${loserNames}` : ''}
+${equipmentSummary ? `- Chi tiết danh mục thiết bị/vật tư/mặt hàng e-HSMT: ${equipmentSummary}` : ''}
+- Nguồn hồ sơ công khai gốc: ${sourceUrl || 'https://muasamcong.mpi.gov.vn/'}
 
-Yêu cầu tóm tắt:
-1. "summary": Tóm tắt súc tích trong 1-2 câu ngắn gọn về bản chất gói thầu.
-2. "keyPoints": Danh sách 3-4 điểm trọng tâm (ví dụ: Quy mô ngân sách, Các thiết bị chính, Thời hạn & Yêu cầu, Đối tượng tham gia).
-3. "aiAssessment": Đánh giá vắt tắt góc nhìn AI (mức độ hấp dẫn, độ phức tạp kỹ thuật hoặc lưu ý chính).`;
+Yêu cầu phân tích chi tiết & trả về định dạng JSON:
+1. "summary": Tóm tắt tổng quan chi tiết 2-3 câu ngắn gọn nhưng đầy đủ bối cảnh, quy mô ngân sách, mục đích mua sắm và cơ sở y tế mời thầu.
+2. "keyPoints": Mảng 5-7 mục thông tin chi tiết chuyên sâu:
+   - 🏦 Chủ đầu tư & Cơ sở: ...
+   - 💰 Giá gói thầu & Tài chính: ... (nếu có giá trúng thầu thì nêu cả mức chênh lệch/tiết kiệm)
+   - 📑 Hình thức & Phương thức LCNT: ...
+   - 📦 Danh mục hàng hóa / Thiết bị chính: (Nêu cụ thể tên máy/vật tư/sinh phẩm kèm model/số lượng)
+   - ⏱️ Tiến độ mốc thời gian: (Ngày đăng tải, hạn đóng thầu)
+   - 🏆 Kết quả & Nhà thầu: (Đơn vị trúng thầu, nhà thầu tham gia/trượt thầu)
+3. "aiAssessment": Đánh giá chuyên sâu góc nhìn AI (mức độ cạnh tranh, tính phức tạp kỹ thuật của danh mục, rủi ro/lưu ý hồ sơ).
+4. "officialUrl": Trả về chính xác link hồ sơ công khai: "${sourceUrl || 'https://muasamcong.mpi.gov.vn/'}"
+`;
 
     const { response, usedModel } = await generateContentWithFallback(ai, {
       contents: promptText,
       config: {
-        systemInstruction: 'Bạn là chuyên gia phân tích dữ liệu đấu thầu y tế Việt Nam. Hãy tóm tắt thông tin gói thầu cực kỳ súc tích, chính xác, khách quan.',
+        systemInstruction: 'Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam. Trả về thông tin phân tích gói thầu cực kỳ chi tiết, chính xác, khách quan dưới dạng JSON.',
         responseMimeType: 'application/json',
         responseSchema: {
           type: Type.OBJECT,
           properties: {
-            summary: { type: Type.STRING, description: 'Tóm tắt khái quát gói thầu 1-2 câu' },
+            summary: { type: Type.STRING, description: 'Tóm tắt tổng quan chi tiết 2-3 câu' },
             keyPoints: {
               type: Type.ARRAY,
               items: { type: Type.STRING },
-              description: '3-4 điểm nổi bật chính của gói thầu'
+              description: '5-7 điểm nổi bật chi tiết về quy mô, thiết bị, thời gian, kết quả'
             },
-            aiAssessment: { type: Type.STRING, description: 'Đánh giá vắt tắt từ AI' }
+            aiAssessment: { type: Type.STRING, description: 'Đánh giá chuyên sâu từ AI' },
+            officialUrl: { type: Type.STRING, description: 'Đường dẫn hồ sơ chính thức gốc' }
           },
-          required: ['summary', 'keyPoints', 'aiAssessment']
+          required: ['summary', 'keyPoints', 'aiAssessment', 'officialUrl']
         }
       }
     });
@@ -132,7 +154,8 @@ Yêu cầu tóm tắt:
       data = {
         summary: resultText,
         keyPoints: [`Gói thầu: ${name}`, `Chủ đầu tư: ${investor}`],
-        aiAssessment: 'Phân tích tự động từ AI Gemini.'
+        aiAssessment: 'Phân tích tự động từ AI Gemini.',
+        officialUrl: sourceUrl || 'https://muasamcong.mpi.gov.vn/'
       };
     }
 
@@ -140,15 +163,18 @@ Yêu cầu tóm tắt:
     return res.json({ success: true, data, cached: false });
   } catch (error) {
     console.error('Gemini summarize error:', error);
+    const formattedPrice = req.body.price ? Number(req.body.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa công bố';
     const fallbackData = {
-      summary: `Gói thầu "${req.body.name}" do ${req.body.investor || 'Chủ đầu tư'} mời thầu tại ${req.body.location || 'Gia Lai'}.`,
+      summary: `Gói thầu "${req.body.name}" do ${req.body.investor || 'Chủ đầu tư'} mời thầu tại ${req.body.location || 'Gia Lai'} với dự toán ${formattedPrice}.`,
       keyPoints: [
-        `Giá gói thầu / quy mô: ${req.body.price ? Number(req.body.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa cập nhật'}`,
-        `Phân loại: ${req.body.category || 'Thiết bị y tế'}`,
-        `Trạng thái: ${req.body.status || 'Chưa rõ'}`,
-        `Hạn đóng thầu: ${req.body.closeDate || 'Chưa công bố'}`
+        `🏦 Bên mời thầu: ${req.body.investor || 'Chủ đầu tư'} (${req.body.location || 'Gia Lai'})`,
+        `💰 Dự toán gói thầu: ${formattedPrice}`,
+        `📑 Hình thức LCNT: ${req.body.bidForm || 'Qua mạng'} - ${req.body.category || 'Thiết bị y tế'}`,
+        `📦 Danh mục hàng hóa: ${req.body.equipmentSummary || 'Trích từ biểu mẫu e-HSMT công khai'}`,
+        `⏱️ Thời điểm đóng thầu: ${req.body.closeDate || 'Chưa công bố'}`
       ],
-      aiAssessment: 'Tóm tắt tự động theo hồ sơ gói thầu.',
+      aiAssessment: 'Hồ sơ công khai chính thức từ Cổng Mua sắm công (Muasamcong). Bấm nút bên dưới để xem toàn văn e-HSMT gốc.',
+      officialUrl: req.body.sourceUrl || 'https://muasamcong.mpi.gov.vn/',
       isFallback: true
     };
     summaryCache.set(req.body.notifyNo, fallbackData);
@@ -182,59 +208,75 @@ app.post('/api/batch-summarize-tenders', async (req, res) => {
 
     const ai = getGeminiClient();
 
+    // Helper to generate rich fallback
+    const createFallbackForTender = (tender) => {
+      const formattedPrice = tender.price ? Number(tender.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa công bố';
+      const winnerText = tender.winnerNames ? (Array.isArray(tender.winnerNames) ? tender.winnerNames.join('; ') : tender.winnerNames) : '';
+      
+      const points = [
+        `🏦 Bên mời thầu: ${tender.investor || 'Cơ sở y tế'} (${tender.location || 'Gia Lai'})`,
+        `💰 Giá gói thầu / Dự toán: ${formattedPrice}`,
+        `📑 Phân loại & Hình thức: ${tender.category || 'Thiết bị y tế'} (${tender.bidForm || 'Qua mạng'})`,
+        `📦 Danh mục máy móc/thiết bị e-HSMT: ${tender.equipmentSummary || 'Chi tiết trong biểu mẫu công khai.'}`,
+        `⏱️ Hạn đóng thầu: ${tender.closeDate || 'Chưa công bố'}`
+      ];
+      if (winnerText) {
+        points.push(`🏆 Kết quả trúng thầu: ${winnerText}`);
+      }
+
+      return {
+        summary: `Gói thầu "${tender.name}" do ${tender.investor || 'Chủ đầu tư'} mời thầu tại ${tender.location || 'Gia Lai'} quy mô ${formattedPrice}.`,
+        keyPoints: points,
+        aiAssessment: `Thông tin trích xuất từ Cổng Dịch vụ công / Mạng đấu thầu Quốc gia. Bấm xem liên kết gốc để truy cập hồ sơ đầy đủ.`,
+        officialUrl: tender.sourceUrl || 'https://muasamcong.mpi.gov.vn/',
+        isFallback: true
+      };
+    };
+
     // If no API key, populate intelligent fallbacks immediately
     if (!ai) {
       for (const tender of missingTenders) {
-        const fallbackData = {
-          summary: `Gói thầu "${tender.name}" do ${tender.investor || 'Chủ đầu tư'} mời thầu tại ${tender.location || 'Gia Lai'}.`,
-          keyPoints: [
-            `Giá dự toán: ${tender.price ? Number(tender.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa cập nhật'}`,
-            `Phân loại: ${tender.category || 'Thiết bị y tế'}`,
-            `Trạng thái: ${tender.status || 'Chưa rõ'}`,
-            `Hạn đóng thầu: ${tender.closeDate || 'Chưa công bố'}`
-          ],
-          aiAssessment: 'Lưu ý: Để bật AI Gemini phân tích sâu, hãy nhập GEMINI_API_KEY trong Cài đặt > Secrets.',
-          isFallback: true
-        };
+        const fallbackData = createFallbackForTender(tender);
         summaryCache.set(tender.notifyNo, fallbackData);
         summaries[tender.notifyNo] = fallbackData;
       }
       return res.json({ success: true, summaries, isFallback: true });
     }
 
-    // Process missing tenders in batch using Gemini with concurrency or batch prompt
-    // We process up to 10 at a time to stay fast and avoid token limits
+    // Process missing tenders in batch using Gemini
     const batchPrompt = missingTenders.map((t, idx) => `
 [GÓI THẦU #${idx + 1}]
 - Mã TBMT: ${t.notifyNo}
 - Tên: ${t.name}
 - Chủ đầu tư: ${t.investor}
 - Địa điểm: ${t.location}
-- Ngân sách: ${t.price ? t.price + ' VNĐ' : 'Chưa công bố'}
+- Ngân sách: ${t.price ? Number(t.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa công bố'}
 - Danh mục: ${t.category}
 - Trạng thái: ${t.status}
 - Đóng thầu: ${t.closeDate || 'Chưa công bố'}
 ${t.winnerNames ? `- Đơn vị trúng: ${t.winnerNames}` : ''}
-${t.equipmentSummary ? `- Thiết bị chính: ${t.equipmentSummary}` : ''}
+${t.equipmentSummary ? `- Danh mục thiết bị chính: ${t.equipmentSummary}` : ''}
+- Nguồn hồ sơ gốc: ${t.sourceUrl || 'https://muasamcong.mpi.gov.vn/'}
 `).join('\n---');
 
-    const promptText = `Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam. Hãy tóm tắt ngắn gọn khái quát từng gói thầu dưới đây.
+    const promptText = `Bạn là chuyên gia phân tích đấu thầu y tế Việt Nam. Hãy phân tích & tóm tắt CHI TIẾT ĐẦY ĐỦ cho từng gói thầu dưới đây.
 
 Danh sách ${missingTenders.length} gói thầu:
 ${batchPrompt}
 
 Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ tự các gói thầu:
 - "notifyNo": Mã TBMT của gói thầu
-- "summary": Tóm tắt súc tích 1-2 câu về bản chất gói thầu
-- "keyPoints": Mảng 3-4 điểm trọng tâm ngắn (Quy mô, thiết bị, hạn nộp,...)
-- "aiAssessment": Đánh giá vắt tắt 1 câu góc nhìn AI
+- "summary": Tóm tắt tổng quan chi tiết 2-3 câu ngắn gọn
+- "keyPoints": Mảng 5-6 điểm thông tin chi tiết (Chủ đầu tư, giá gói thầu, hình thức LCNT, danh mục thiết bị, mốc thời gian, kết quả)
+- "aiAssessment": Đánh giá chuyên sâu 1-2 câu góc nhìn AI
+- "officialUrl": Đường dẫn hồ sơ gốc công khai
 `;
 
     try {
       const { response, usedModel } = await generateContentWithFallback(ai, {
         contents: promptText,
         config: {
-          systemInstruction: 'Trả về JSON array các tóm tắt gói thầu cực kỳ súc tích, chính xác.',
+          systemInstruction: 'Trả về JSON array các tóm tắt phân tích gói thầu cực kỳ chi tiết, chính xác.',
           responseMimeType: 'application/json',
           responseSchema: {
             type: Type.ARRAY,
@@ -244,7 +286,8 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
                 notifyNo: { type: Type.STRING },
                 summary: { type: Type.STRING },
                 keyPoints: { type: Type.ARRAY, items: { type: Type.STRING } },
-                aiAssessment: { type: Type.STRING }
+                aiAssessment: { type: Type.STRING },
+                officialUrl: { type: Type.STRING }
               },
               required: ['notifyNo', 'summary', 'keyPoints', 'aiAssessment']
             }
@@ -259,7 +302,8 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
             const sumData = {
               summary: item.summary,
               keyPoints: item.keyPoints,
-              aiAssessment: item.aiAssessment
+              aiAssessment: item.aiAssessment,
+              officialUrl: item.officialUrl || 'https://muasamcong.mpi.gov.vn/'
             };
             summaryCache.set(item.notifyNo, sumData);
             summaries[item.notifyNo] = sumData;
@@ -267,22 +311,13 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
         }
       }
     } catch (batchErr) {
-      console.error('Batch AI summarize error, falling back to basic:', batchErr);
+      console.error('Batch AI summarize error, falling back to rich details:', batchErr);
     }
 
     // Ensure any missing items in batch receive a fallback so clients never hang
     for (const tender of missingTenders) {
       if (!summaries[tender.notifyNo]) {
-        const fallbackData = {
-          summary: `Gói thầu "${tender.name}" do ${tender.investor || 'Chủ đầu tư'} mời thầu tại ${tender.location || 'Gia Lai'}.`,
-          keyPoints: [
-            `Giá dự toán: ${tender.price ? Number(tender.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa cập nhật'}`,
-            `Phân loại: ${tender.category || 'Thiết bị y tế'}`,
-            `Trạng thái: ${tender.status || 'Chưa rõ'}`
-          ],
-          aiAssessment: 'Tóm tắt tự động theo thông tin gói thầu.',
-          isFallback: true
-        };
+        const fallbackData = createFallbackForTender(tender);
         summaryCache.set(tender.notifyNo, fallbackData);
         summaries[tender.notifyNo] = fallbackData;
       }

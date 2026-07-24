@@ -854,6 +854,90 @@ select:focus-visible {
   font-weight: 700;
 }
 
+.equipment-card-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 9px;
+  padding: 8px 10px;
+  background: #f3f8f4;
+  border: 1px solid #d8e6da;
+  border-left: 3px solid #3c7356;
+  border-radius: 7px;
+}
+
+.equipment-card-preview.empty-eq {
+  padding: 6px 10px;
+  background: #f8f8f6;
+  border-color: #e5e5e0;
+  border-left-color: #a0a098;
+  font-size: 11px;
+  color: #666;
+}
+
+.equipment-card-preview-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e4537;
+}
+
+.equipment-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+
+.equipment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: #ffffff;
+  border: 1px solid #cfe0d2;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #233b30;
+  max-width: 100%;
+}
+
+.chip-qty {
+  display: inline-block;
+  padding: 1px 5px;
+  background: #e4f2e7;
+  color: #1b533a;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.chip-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chip-model {
+  font-size: 10px;
+  color: #587365;
+  white-space: nowrap;
+}
+
+.equipment-chip-more {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2e6047;
+  padding: 2px 7px;
+  background: #e4f3e7;
+  border: 1px solid #bde2c7;
+  border-radius: 4px;
+}
+
 .tender-status,
 .tender-price {
   display: flex;
@@ -1820,6 +1904,35 @@ select:focus-visible {
   font-size: 11px;
   line-height: 1.45;
   color: #1e3f35;
+}
+
+.ai-popover-official-link {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #dbe8df;
+}
+
+.ai-official-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1b4d3e;
+  background: #edf7f0;
+  border: 1px solid #bce3c9;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 160ms ease;
+}
+
+.ai-official-btn:hover {
+  color: #0b2e23;
+  background: #dcf2e3;
+  border-color: #9cd1ae;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(27, 77, 62, 0.12);
 }
 
 .ai-popover-loading {

@@ -640,6 +640,144 @@ function equipmentSearchMatchMarkup(tender) {
 let hoverTimer = null;
 let currentHoveredTender = null;
 
+function getTenderEquipmentList(tender) {
+  const list = [];
+  const seen = new Set();
+
+  const detail = state.detailsByNotifyNo[tender.notifyNo];
+  
+  // 1. Technical requirements from e-HSMT
+  const techItems = detail?.technicalRequirements?.items || [];
+  for (const item of techItems) {
+    const name = (item.name || "").trim();
+    if (!name) continue;
+    const key = `${name}-${item.quantity || ""}-${item.model || ""}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      list.push({
+        name,
+        quantity: item.quantity,
+        unit: item.unit || "",
+        model: displayEquipmentValue(item.model),
+        brand: displayEquipmentValue(item.brand) || displayEquipmentValue(item.manufacturer),
+        origin: displayEquipmentValue(item.origin),
+      });
+    }
+  }
+
+  // 2. Requirements items (from plan)
+  const reqItems = detail?.requirements?.items || [];
+  for (const item of reqItems) {
+    const name = (item.name || "").trim();
+    if (!name) continue;
+    const key = `${name}-${item.quantity || ""}-${item.model || ""}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      list.push({
+        name,
+        quantity: item.quantity,
+        unit: item.unit || "",
+        model: displayEquipmentValue(item.model),
+        brand: displayEquipmentValue(item.brand),
+      });
+    }
+  }
+
+  // 3. Equipment search index
+  const eqItems = state.equipmentByNotifyNo.get(tender.notifyNo) || [];
+  for (const item of eqItems) {
+    const name = (item.name || "").trim();
+    if (!name) continue;
+    const key = `${name}-${item.quantity || ""}-${item.model || ""}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      list.push({
+        name,
+        quantity: item.quantity,
+        unit: item.unit || "",
+        model: displayEquipmentValue(item.model),
+        brand: displayEquipmentValue(item.brand) || displayEquipmentValue(item.manufacturer),
+        origin: displayEquipmentValue(item.origin),
+      });
+    }
+  }
+
+  // 4. Winning items
+  const resultItems = detail?.items || [];
+  for (const item of resultItems) {
+    const name = (item.name || "").trim();
+    if (!name) continue;
+    const key = `${name}-${item.quantity || ""}-${item.model || ""}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      list.push({
+        name,
+        quantity: item.quantity,
+        unit: item.unit || "",
+        model: displayEquipmentValue(item.model),
+        brand: displayEquipmentValue(item.brand) || displayEquipmentValue(item.manufacturer),
+        origin: displayEquipmentValue(item.origin),
+      });
+    }
+  }
+
+  return list;
+}
+
+function getTenderEquipmentSummaryText(tender) {
+  const eqList = getTenderEquipmentList(tender);
+  if (eqList.length > 0) {
+    return eqList.slice(0, 15).map((i, idx) => {
+      const name = i.name;
+      const qty = Number(i.quantity) ? `SL: ${new Intl.NumberFormat("vi-VN").format(i.quantity)} ${i.unit || ""}`.trim() : "";
+      const specs = [i.model ? `Model: ${i.model}` : "", i.brand ? `Hãng/Nhãn: ${i.brand}` : "", i.origin ? `Xuất xứ: ${i.origin}` : ""].filter(Boolean).join(", ");
+      const details = [qty, specs].filter(Boolean).join(" - ");
+      return `${idx + 1}. ${name}${details ? ` [${details}]` : ""}`;
+    }).join("; ");
+  }
+
+  return "";
+}
+
+function tenderEquipmentPreviewMarkup(tender) {
+  if (state.query.trim()) {
+    const searchMatch = equipmentSearchMatchMarkup(tender);
+    if (searchMatch) return searchMatch;
+  }
+
+  const equipmentList = getTenderEquipmentList(tender);
+  if (!equipmentList.length) {
+    return `<div class="equipment-card-preview empty-eq">
+      <span>📦 <strong>Máy móc/thiết bị e-HSMT:</strong> Đính kèm trong tệp PDF/Word thuộc hồ sơ công khai gốc.</span>
+    </div>`;
+  }
+
+  const visible = equipmentList.slice(0, 4);
+  const remainder = equipmentList.length - visible.length;
+
+  const chipsHtml = visible.map((item) => {
+    const qty = Number(item.quantity) ? `<b>${new Intl.NumberFormat("vi-VN").format(item.quantity)} ${escapeHtml(item.unit || "")}</b>` : "";
+    const specs = [item.model ? `Model: ${item.model}` : "", item.brand ? `Hãng: ${item.brand}` : ""].filter(Boolean).join(" · ");
+    const fullTooltip = [item.name, qty, specs].filter(Boolean).join(" - ");
+    return `<div class="equipment-chip" title="${escapeHtml(fullTooltip)}">
+      ${qty ? `<span class="chip-qty">${qty}</span>` : ""}
+      <span class="chip-name">${escapeHtml(item.name)}</span>
+      ${specs ? `<span class="chip-model">${escapeHtml(specs)}</span>` : ""}
+    </div>`;
+  }).join("");
+
+  const moreHtml = remainder > 0
+    ? `<span class="equipment-chip-more">+${remainder} mặt hàng/máy khác</span>`
+    : "";
+
+  return `<div class="equipment-card-preview">
+    <div class="equipment-card-preview-heading">
+      <span>📦 <strong>Máy móc & Thiết bị đấu thầu e-HSMT</strong> (${equipmentList.length} mặt hàng):</span>
+    </div>
+    <div class="equipment-card-chips">${chipsHtml}${moreHtml}</div>
+  </div>`;
+}
+
 async function preloadBatchSummaries(tendersList) {
   if (!Array.isArray(tendersList) || tendersList.length === 0) return;
 
@@ -652,21 +790,25 @@ async function preloadBatchSummaries(tendersList) {
     if (missingInBatch.length === 0) continue;
 
     const payload = missingInBatch.map((tender) => {
-      const detail = state.detailsByNotifyNo[tender.notifyNo];
-      const items = detail?.items || detail?.technicalRequirements?.items || [];
-      const equipmentSummary = items.slice(0, 5).map((item) => item.name).filter(Boolean).join(", ");
-
+      const equipmentSummary = getTenderEquipmentSummaryText(tender);
       return {
         notifyNo: tender.notifyNo,
         name: tender.name,
         investor: tender.investor,
         location: tender.location,
         price: tender.winningPrice || tender.price,
+        winningPrice: tender.winningPrice,
         category: tender.category,
         status: statusLabels[tender.status] || tender.status,
         closeDate: formatDate(tender.closeDate, true),
+        publicDate: formatDate(tender.publicDate, true),
+        bidForm: tender.bidForm,
+        processApply: tender.processApply,
         winnerNames: tender.winnerNames?.join("; "),
+        participantNames: tender.participantNames?.join("; "),
+        loserNames: tender.loserNames?.join("; "),
         equipmentSummary: equipmentSummary,
+        sourceUrl: officialUrl(tender.sourceUrl),
       };
     });
 
@@ -699,15 +841,28 @@ async function preloadBatchSummaries(tendersList) {
 function getFallbackSummary(tender) {
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
   const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
+  const equipmentText = getTenderEquipmentSummaryText(tender) || "Chi tiết máy móc, thiết bị, vật tư/sinh phẩm được công khai trong biểu mẫu e-HSMT.";
+  const url = officialUrl(tender.sourceUrl);
+  
+  const points = [
+    `🏦 Bên mời thầu / Cơ sở: ${tender.investor || "Chủ đầu tư"} (${tender.location || "Gia Lai"})`,
+    `💰 Giá gói thầu / Dự toán: ${formattedPrice}`,
+    `📑 Hình thức & Phân loại: ${tender.category || "Thiết bị y tế"} (${tender.bidForm || "Đấu thầu qua mạng"})`,
+    `📦 Danh mục thiết bị/mặt hàng: ${equipmentText}`,
+    `⏱️ Thời điểm đóng thầu: ${formatDate(tender.closeDate, true) || "Chưa công bố"}`
+  ];
+
+  if (tender.winnerNames?.length) {
+    points.push(`🏆 Đơn vị trúng thầu: ${tender.winnerNames.join("; ")}`);
+  } else if (tender.bidderCount) {
+    points.push(`👥 Số nhà thầu tham dự: ${tender.bidderCount} nhà thầu`);
+  }
+
   return {
-    summary: `Gói thầu "${tender.name}" do ${tender.investor || "Chủ đầu tư"} mời thầu tại ${tender.location || "Gia Lai"}.`,
-    keyPoints: [
-      `Ngân sách / Quy mô: ${formattedPrice}`,
-      `Phân loại danh mục: ${tender.category || "Thiết bị y tế"}`,
-      `Trạng thái: ${statusLabels[tender.status] || tender.status || "Đang xử lý"}`,
-      `Đóng thầu: ${formatDate(tender.closeDate, true) || "Chưa công bố"}`
-    ],
-    aiAssessment: "Tóm tắt tự động trích xuất từ hồ sơ gói thầu."
+    summary: `Gói thầu "${tender.name}" do ${tender.investor || "Bên mời thầu"} tổ chức tại ${tender.location || "Gia Lai"} với quy mô dự toán ${formattedPrice}.`,
+    keyPoints: points,
+    aiAssessment: `Hồ sơ công khai chính thức từ Cổng Dịch vụ công Mạng đấu thầu Quốc gia. Bấm liên kết bên dưới để xem toàn văn e-HSMT gốc.`,
+    officialUrl: url
   };
 }
 
@@ -722,9 +877,7 @@ async function fetchAiSummary(tender) {
   }
 
   try {
-    const detail = state.detailsByNotifyNo[tender.notifyNo];
-    const items = detail?.items || detail?.technicalRequirements?.items || [];
-    const equipmentSummary = items.slice(0, 5).map((i) => i.name).filter(Boolean).join(", ");
+    const equipmentSummary = getTenderEquipmentSummaryText(tender);
 
     const response = await fetch("/api/summarize-tender", {
       method: "POST",
@@ -734,12 +887,19 @@ async function fetchAiSummary(tender) {
         name: tender.name,
         investor: tender.investor,
         location: tender.location,
-        price: tender.winningPrice || tender.price,
+        price: tender.price,
+        winningPrice: tender.winningPrice,
         category: tender.category,
         status: statusLabels[tender.status] || tender.status,
         closeDate: formatDate(tender.closeDate, true),
+        publicDate: formatDate(tender.publicDate, true),
+        bidForm: tender.bidForm,
+        processApply: tender.processApply,
         winnerNames: tender.winnerNames?.join("; "),
+        participantNames: tender.participantNames?.join("; "),
+        loserNames: tender.loserNames?.join("; "),
         equipmentSummary: equipmentSummary,
+        sourceUrl: officialUrl(tender.sourceUrl),
       }),
     });
 
@@ -780,20 +940,26 @@ function updateAiHoverPopoverContent(tender) {
     bodyHtml = `
       <div class="ai-popover-loading">
         <div class="ai-spinner"></div>
-        <span>Gemini AI đang tóm tắt khái quát...</span>
+        <span>Gemini AI đang phân tích chi tiết hồ sơ gói thầu...</span>
       </div>`;
   } else if (cached) {
     const keyPoints = (cached.keyPoints || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
     bodyHtml = `
       <p class="ai-popover-lead">${escapeHtml(cached.summary)}</p>
       <ul class="ai-popover-list">${keyPoints}</ul>
-      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Đánh giá AI:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+      <div class="ai-popover-official-link">
+        <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn">
+          <span>🔗</span> <strong>Xem toàn văn hồ sơ gốc trên Cổng Mua sắm công ↗</strong>
+        </a>
+      </div>
     `;
   }
 
   elements.aiPopover.innerHTML = `
     <div class="ai-popover-header">
-      <div class="ai-popover-title"><span>✨</span> <strong>Tóm tắt khái quát gói thầu</strong></div>
+      <div class="ai-popover-title"><span>✨</span> <strong>Phân tích & Tóm tắt chi tiết gói thầu</strong></div>
       <span class="ai-popover-badge">AI Gemini</span>
     </div>
     ${bodyHtml}
@@ -803,7 +969,7 @@ function updateAiHoverPopoverContent(tender) {
 function positionAiHoverPopover(targetElement) {
   if (!elements.aiPopover || !targetElement) return;
   const rect = targetElement.getBoundingClientRect();
-  const popoverWidth = Math.min(400, window.innerWidth * 0.92);
+  const popoverWidth = Math.min(480, window.innerWidth * 0.92);
   
   let left = rect.left;
   if (left + popoverWidth > window.innerWidth - 16) {
@@ -812,8 +978,8 @@ function positionAiHoverPopover(targetElement) {
   if (left < 16) left = 16;
 
   let top = rect.bottom + window.scrollY + 8;
-  if (rect.bottom + 220 > window.innerHeight) {
-    top = rect.top + window.scrollY - 220;
+  if (rect.bottom + 280 > window.innerHeight) {
+    top = rect.top + window.scrollY - 280;
     if (top < window.scrollY + 10) {
       top = rect.bottom + window.scrollY + 8;
     }
@@ -858,21 +1024,27 @@ function tenderAiSummaryCardMarkup(tender) {
     contentHtml = `
       <div class="ai-popover-loading">
         <div class="ai-spinner"></div>
-        <span>Gemini AI đang tóm tắt gói thầu...</span>
+        <span>Gemini AI đang phân tích toàn văn hồ sơ...</span>
       </div>`;
   } else if (cached) {
     const keyPoints = (cached.keyPoints || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
     contentHtml = `
       <p class="ai-popover-lead">${escapeHtml(cached.summary)}</p>
       <ul class="ai-popover-list">${keyPoints}</ul>
-      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Đánh giá AI:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+      <div class="ai-popover-official-link">
+        <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn">
+          <span>🔗</span> <strong>Truy cập hồ sơ công khai gốc trên Muasamcong.mpi.gov.vn ↗</strong>
+        </a>
+      </div>
     `;
   }
 
   return `
     <div class="tender-ai-card">
       <div class="ai-card-header">
-        <div class="ai-card-title"><span>✨</span> <strong>AI Gemini Tóm Tắt Khái Quát</strong></div>
+        <div class="ai-card-title"><span>✨</span> <strong>AI Gemini Phân Tích & Tóm Tắt Chi Tiết</strong></div>
         <button class="ai-card-close" data-action="close-ai" data-id="${escapeHtml(tender.id)}" type="button" aria-label="Đóng tóm tắt AI">✕</button>
       </div>
       ${contentHtml}
@@ -897,7 +1069,7 @@ function tenderMarkup(tender) {
       </div>
       <h3>${escapeHtml(tender.name)}</h3>
       <p>${escapeHtml(tender.investor)} · ${escapeHtml(tender.location)}</p>
-      ${equipmentSearchMatchMarkup(tender)}
+      ${tenderEquipmentPreviewMarkup(tender)}
     </div>
     <div class="tender-status"><span class="status-pill ${escapeHtml(tender.status)}">${escapeHtml(statusLabels[tender.status] || tender.status)}</span><span>Đóng ${escapeHtml(formatDate(tender.closeDate, true))}</span></div>
     <div class="tender-price"><strong title="${escapeHtml(formatMoney(price, false))}">${escapeHtml(formatMoney(price))}</strong><span>${tender.winningPrice ? "Giá trúng thầu" : "Giá dự toán"}</span></div>
