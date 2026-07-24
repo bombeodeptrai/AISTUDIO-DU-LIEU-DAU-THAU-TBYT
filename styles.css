@@ -127,10 +127,10 @@ select:focus-visible {
   align-items: center;
   gap: 13px;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(19px, 2vw, 27px);
   font-weight: 700;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.01em;
   text-decoration: none;
 }
 
@@ -255,7 +255,7 @@ select:focus-visible {
 .hero h1,
 .panel-heading h2,
 .alert-copy h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--forest);
 }
 
@@ -443,9 +443,9 @@ select:focus-visible {
   display: block;
   margin-top: -7px;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(36px, 3.4vw, 52px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -887,9 +887,9 @@ select:focus-visible {
 
 .tender-price strong {
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .tender-actions {
@@ -1055,9 +1055,9 @@ select:focus-visible {
 
 .bidder-price strong {
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .bidder-price span {
@@ -1243,9 +1243,9 @@ select:focus-visible {
 
 .equipment-price strong {
   color: var(--terracotta);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .result-limit-note { margin: 10px 0 0; }
@@ -1311,9 +1311,9 @@ select:focus-visible {
 .insight-item strong {
   display: block;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .insight-hero span,
@@ -1362,8 +1362,9 @@ select:focus-visible {
   height: 23px;
   place-items: center;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 11px;
+  font-weight: 700;
   background: var(--sage-light);
   border-radius: 50%;
 }
@@ -1381,8 +1382,9 @@ select:focus-visible {
 
 .investor-list strong {
   color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
+  font-weight: 700;
   text-align: right;
 }
 
@@ -1422,9 +1424,9 @@ select:focus-visible {
 
 .saved-count strong {
   color: var(--terracotta);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 34px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .saved-count span {

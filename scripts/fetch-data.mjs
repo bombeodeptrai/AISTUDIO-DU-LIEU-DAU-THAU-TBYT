@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { extractOnlineReofferTechnicalRequirements } from "./technical-requirements.mjs";
@@ -179,37 +179,49 @@ async function mapLimited(values, concurrency, mapper) {
 }
 
 async function fetchWindow(window, windowIndex, totalWindows) {
-  const first = await postJson(SEARCH_URL, searchPayload(0, window.from, window.to));
-  const totalPages = Math.max(1, Number(first.page?.totalPages) || 1);
-  const pageNumbers = Array.from({ length: totalPages - 1 }, (_, index) => index + 1);
-  const remaining = await mapLimited(pageNumbers, 2, (pageNumber) =>
-    postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to)),
-  );
-  const items = [first, ...remaining].flatMap((payload) => payload.page?.content || []);
-  process.stdout.write(
-    `Khoảng ${windowIndex + 1}/${totalWindows}: ${items.length} bản ghi, ${totalPages} trang\n`,
-  );
-  return items;
+  try {
+    const first = await postJson(SEARCH_URL, searchPayload(0, window.from, window.to));
+    const totalPages = Math.max(1, Number(first.page?.totalPages) || 1);
+    const pageNumbers = Array.from({ length: totalPages - 1 }, (_, index) => index + 1);
+    const remaining = await mapLimited(pageNumbers, 2, (pageNumber) =>
+      postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to)),
+    );
+    const items = [first, ...remaining].flatMap((payload) => payload.page?.content || []);
+    process.stdout.write(
+      `Khoảng ${windowIndex + 1}/${totalWindows}: ${items.length} bản ghi, ${totalPages} trang\n`,
+    );
+    return items;
+  } catch (error) {
+    process.stderr.write(`Cảnh báo khoảng ${windowIndex + 1}/${totalWindows} thất bại: ${error.message}\n`);
+    return [];
+  }
 }
 
 async function fetchHistoricalPair(pair, pairIndex, totalPairs, from, to) {
   const { locationTerm, titleTerm } = pair;
-  const first = await postJson(
-    SEARCH_URL,
-    historicalSearchPayload(0, from, to, locationTerm, titleTerm),
-  );
-  const totalPages = Math.max(0, Number(first.page?.totalPages) || 0);
-  const pageNumbers = Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => index + 1);
-  const remaining = await mapLimited(pageNumbers, 2, (pageNumber) =>
-    postJson(SEARCH_URL, historicalSearchPayload(pageNumber, from, to, locationTerm, titleTerm)),
-  );
-  const items = [first, ...remaining].flatMap((payload) => payload.page?.content || []);
-  if (items.length || (pairIndex + 1) % 50 === 0 || pairIndex + 1 === totalPairs) {
-    process.stdout.write(
-      `Bù địa bàn ${pairIndex + 1}/${totalPairs}: ${locationTerm} + ${titleTerm} = ${items.length}\n`,
+  try {
+    const first = await postJson(
+      SEARCH_URL,
+      historicalSearchPayload(0, from, to, locationTerm, titleTerm),
     );
+    const totalPages = Math.max(0, Number(first.page?.totalPages) || 0);
+    const pageNumbers = Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => index + 1);
+    const remaining = await mapLimited(pageNumbers, 2, (pageNumber) =>
+      postJson(SEARCH_URL, historicalSearchPayload(pageNumber, from, to, locationTerm, titleTerm)),
+    );
+    const items = [first, ...remaining].flatMap((payload) => payload.page?.content || []);
+    if (items.length || (pairIndex + 1) % 50 === 0 || pairIndex + 1 === totalPairs) {
+      process.stdout.write(
+        `Bù địa bàn ${pairIndex + 1}/${totalPairs}: ${locationTerm} + ${titleTerm} = ${items.length}\n`,
+      );
+    }
+    return items;
+  } catch (error) {
+    process.stderr.write(
+      `Cảnh báo bù địa bàn ${pairIndex + 1}/${totalPairs} (${locationTerm} + ${titleTerm}) thất bại: ${error.message}\n`,
+    );
+    return [];
   }
-  return items;
 }
 
 async function fetchHistoricalFallback() {
@@ -934,11 +946,17 @@ async function main() {
   await mapLimited(Object.entries(detailsByNotifyNo), 10, ([notifyNo, detail]) =>
     writeFile(resolve(detailsDir, `${notifyNo}.json`), `${JSON.stringify(detail, null, 2)}\n`),
   );
-  await writeFile(biddersOutputPath, `${JSON.stringify({ bidders, fetchedAt: new Date().toISOString() }, null, 2)}\n`);
-  await writeFile(equipmentOutputPath, `${JSON.stringify({ equipment, fetchedAt: new Date().toISOString() }, null, 2)}\n`);
-  await writeFile(requirementsOutputPath, `${JSON.stringify({ requirements, fetchedAt: new Date().toISOString() }, null, 2)}\n`);
-  await writeFile(technicalRequirementsOutputPath, `${JSON.stringify({ technicalRequirements, fetchedAt: new Date().toISOString() }, null, 2)}\n`);
-  await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`);
+  async function writeAtomic(targetPath, data) {
+    const tmpPath = `${targetPath}.${Date.now()}.${Math.random().toString(36).slice(2)}.tmp`;
+    await writeFile(tmpPath, `${JSON.stringify(data, null, 2)}\n`);
+    await rename(tmpPath, targetPath);
+  }
+
+  await writeAtomic(biddersOutputPath, { bidders, fetchedAt: new Date().toISOString() });
+  await writeAtomic(equipmentOutputPath, { equipment, fetchedAt: new Date().toISOString() });
+  await writeAtomic(requirementsOutputPath, { requirements, fetchedAt: new Date().toISOString() });
+  await writeAtomic(technicalRequirementsOutputPath, { technicalRequirements, fetchedAt: new Date().toISOString() });
+  await writeAtomic(outputPath, payload);
   process.stdout.write(
     `Đã lưu ${enrichedTenders.length} gói, ${requirements.length} phần/lô mời, ${technicalRequirements.length} dòng kỹ thuật, ${bidders.length} dòng nhà thầu và ${equipment.length} mặt hàng trúng\n`,
   );

@@ -43239,23 +43239,8 @@
       ],
       "losingModels": [],
       "losingModelDisclosure": "Nguồn công khai chưa công bố"
-    },
-    {
-      "id": "IB2400329247",
-      "notifyId": "IB2400329247",
-      "bidId": "488d5515-843f-4ee1-87d2-c45e0c16e0f6",
-      "bidOpenId": "",
-      "inputResultId": "67754a3b-c89e-46e5-8bd8-e1e132f436da",
-      "notifyNo": "IB2400329247",
-      "name": "Mua sắm Trang thiết bị y tế từ nguồn Ngân sách Nhà nước cấp năm 2024 của Trung tâm Y tế huyện Mang Yang",
-      "investor": "Trung Tâm Y Tế Huyện Mang Yang",
-      "location": "Tỉnh Gia Lai",
-      "closeDate": "2024-09-06T10:19:19.755",
-      "publicDate": "2024-09-06T10:19:19",
-      "price": 59850000,
-      "category": "Thiết bị y tế",
-      "status": "awarded",
-      "sourceStatus": "IS_PUBLISH",
-      "statusForNotify": "CNTTT",
-      "bidderCount": 1,
-      "sourceUrl": "https://muasamcong.mpi.gov.vn/web/guest/contractor-selection?p_p_id=egpportalcontractorselectionv2_WAR_egpportalcontractorselectionv2&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_egpportalcontractorselectionv2_WAR_egpportalcontractorselectionv2_render=detail-v2&type=es-notify-contractor&stepCode=notify-contractor-step-4-kqlcnt&id=IB2400329247&notifyId=IB2400329247&inputResultId=67754a3b-c89e-46e5-8bd8-e1e132f436da&bidOpe
+    }
+  ],
+  "detailsByNotifyNo": {},
+  "fetchedAt": "2026-07-24T08:49:52.111Z"
+}
