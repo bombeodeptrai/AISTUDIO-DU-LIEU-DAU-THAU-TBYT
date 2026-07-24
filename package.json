@@ -1,0 +1,14 @@
+{
+  "name": "thau-y-te-gia-lai",
+  "version": "1.0.0",
+  "description": "Thầu Y tế Gia Lai",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'No build required'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
