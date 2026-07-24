@@ -67,10 +67,14 @@ function normalizeText(value) {
 
 function dateWindows(days = DAYS) {
   const now = new Date();
+  // Muasamcong trả về publicDate theo giờ địa phương Việt Nam (UTC+7).
+  // Nếu dùng now.toISOString() làm mốc 'to' trên máy chủ UTC (như GitHub Actions),
+  // các gói thầu vừa đăng trong ngày (ví dụ 08:50 ICT) sẽ mang mốc giờ lớn hơn UTC và bị loại bỏ.
+  const bufferedNow = new Date(now.getTime() + 86_400_000);
   const windows = [];
   for (let offset = 0; offset < days; offset += WINDOW_DAYS) {
-    const to = new Date(now.getTime() - offset * 86_400_000);
-    const from = new Date(now.getTime() - Math.min(offset + WINDOW_DAYS, days) * 86_400_000);
+    const to = new Date(bufferedNow.getTime() - offset * 86_400_000);
+    const from = new Date(bufferedNow.getTime() - Math.min(offset + WINDOW_DAYS, days) * 86_400_000);
     windows.push({ from: from.toISOString(), to: to.toISOString() });
   }
   return windows;
@@ -210,8 +214,9 @@ async function fetchHistoricalPair(pair, pairIndex, totalPairs, from, to) {
 
 async function fetchHistoricalFallback() {
   const now = new Date();
-  const from = new Date(now.getTime() - DAYS * 86_400_000).toISOString();
-  const to = now.toISOString();
+  const bufferedNow = new Date(now.getTime() + 86_400_000);
+  const from = new Date(bufferedNow.getTime() - DAYS * 86_400_000).toISOString();
+  const to = bufferedNow.toISOString();
   const pairs = HISTORICAL_LOCATION_TERMS.flatMap((locationTerm) =>
     HISTORICAL_TITLE_TERMS.map((titleTerm) => ({ locationTerm, titleTerm })));
   process.stdout.write(
