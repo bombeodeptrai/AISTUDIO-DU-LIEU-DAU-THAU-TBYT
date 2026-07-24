@@ -16,4 +16,4 @@ Hệ thống không gửi 241 gói hiện có trong lần khởi tạo. Từ l�
 - Email nhận thông báo: sheet `Cấu hình`, ô `B2`.
 - Bật/tắt thông báo: sheet `Cấu hình`, ô `B3`.
 - Có thể dùng menu **Thầu Y tế Gia Lai → Cập nhật ngay** hoặc **Gửi email thử**.
-- Trigger tự động chạy mỗi giờ, kể cả khi không mở Google Sheet.
+- Trigger tự động chạy mỗi 15 phút, kể cả khi không mở Google Sheet.

@@ -8,6 +8,10 @@ const state = {
   equipmentByNotifyNo: new Map(),
   searchMatchesByNotifyNo: new Map(),
   detailsByNotifyNo: {},
+  aiSummaries: {},
+  aiSummaryActiveId: null,
+  aiSummaryLoadingId: null,
+  aiSummaryErrors: {},
   fetchedAt: "",
   query: "",
   category: "all",
@@ -54,6 +58,7 @@ const elements = {
   investorRanking: document.querySelector("#investor-ranking"),
   savedCount: document.querySelector("#saved-count"),
   savedList: document.querySelector("#saved-list"),
+  aiPopover: document.querySelector("#ai-hover-popover"),
 };
 
 function escapeHtml(value) {
@@ -632,17 +637,202 @@ function equipmentSearchMatchMarkup(tender) {
   return `<div class="equipment-search-match"><div class="equipment-search-match-heading"><span>Khớp danh mục e-HSMT/thiết bị/model</span><b>${matches.length} mặt hàng</b></div>${visible}${remainder}</div>`;
 }
 
+let hoverTimer = null;
+let currentHoveredTender = null;
+
+async function fetchAiSummary(tender) {
+  if (state.aiSummaries[tender.notifyNo]) {
+    return state.aiSummaries[tender.notifyNo];
+  }
+
+  state.aiSummaryLoadingId = tender.id;
+  delete state.aiSummaryErrors[tender.id];
+  if (currentHoveredTender?.id === tender.id) {
+    updateAiHoverPopoverContent(tender);
+  }
+
+  try {
+    const detail = state.detailsByNotifyNo[tender.notifyNo];
+    const items = detail?.items || detail?.technicalRequirements?.items || [];
+    const equipmentSummary = items.slice(0, 5).map((i) => i.name).filter(Boolean).join(", ");
+
+    const response = await fetch("/api/summarize-tender", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        notifyNo: tender.notifyNo,
+        name: tender.name,
+        investor: tender.investor,
+        location: tender.location,
+        price: tender.winningPrice || tender.price,
+        category: tender.category,
+        status: statusLabels[tender.status] || tender.status,
+        closeDate: formatDate(tender.closeDate, true),
+        winnerNames: tender.winnerNames?.join("; "),
+        equipmentSummary: equipmentSummary,
+      }),
+    });
+
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const resData = await response.json();
+    if (!resData.success || !resData.data) {
+      throw new Error(resData.error || "Không thể tải tóm tắt AI");
+    }
+
+    state.aiSummaries[tender.notifyNo] = resData.data;
+    return resData.data;
+  } catch (err) {
+    console.error("AI summarize error:", err);
+    state.aiSummaryErrors[tender.id] = "Không thể tạo tóm tắt AI tự động.";
+    throw err;
+  } finally {
+    state.aiSummaryLoadingId = null;
+    if (currentHoveredTender?.id === tender.id) {
+      updateAiHoverPopoverContent(tender);
+    }
+    if (state.aiSummaryActiveId === tender.id) {
+      render();
+    }
+  }
+}
+
+function updateAiHoverPopoverContent(tender) {
+  if (!elements.aiPopover) return;
+  const cached = state.aiSummaries[tender.notifyNo];
+  const isLoading = state.aiSummaryLoadingId === tender.id;
+
+  let bodyHtml = "";
+  if (isLoading) {
+    bodyHtml = `
+      <div class="ai-popover-loading">
+        <div class="ai-spinner"></div>
+        <span>Gemini AI đang tóm tắt khái quát...</span>
+      </div>`;
+  } else if (cached) {
+    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    bodyHtml = `
+      <p class="ai-popover-lead">${escapeHtml(cached.summary)}</p>
+      <ul class="ai-popover-list">${keyPoints}</ul>
+      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Đánh giá AI:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+    `;
+  } else if (state.aiSummaryErrors[tender.id]) {
+    bodyHtml = `<div class="ai-popover-lead" style="color:#c86746;">${escapeHtml(state.aiSummaryErrors[tender.id])}</div>`;
+  }
+
+  elements.aiPopover.innerHTML = `
+    <div class="ai-popover-header">
+      <div class="ai-popover-title"><span>✨</span> <strong>Tóm tắt khái quát gói thầu</strong></div>
+      <span class="ai-popover-badge">AI Gemini</span>
+    </div>
+    ${bodyHtml}
+  `;
+}
+
+function positionAiHoverPopover(targetElement) {
+  if (!elements.aiPopover || !targetElement) return;
+  const rect = targetElement.getBoundingClientRect();
+  const popoverWidth = Math.min(400, window.innerWidth * 0.92);
+  
+  let left = rect.left;
+  if (left + popoverWidth > window.innerWidth - 16) {
+    left = window.innerWidth - popoverWidth - 16;
+  }
+  if (left < 16) left = 16;
+
+  let top = rect.bottom + window.scrollY + 8;
+  if (rect.bottom + 220 > window.innerHeight) {
+    top = rect.top + window.scrollY - 220;
+    if (top < window.scrollY + 10) {
+      top = rect.bottom + window.scrollY + 8;
+    }
+  }
+
+  elements.aiPopover.style.left = `${left}px`;
+  elements.aiPopover.style.top = `${top}px`;
+}
+
+function showAiHoverPopover(tender, targetElement) {
+  currentHoveredTender = tender;
+  if (!elements.aiPopover) return;
+  
+  updateAiHoverPopoverContent(tender);
+  positionAiHoverPopover(targetElement);
+  elements.aiPopover.hidden = false;
+  requestAnimationFrame(() => {
+    elements.aiPopover.classList.add("visible");
+  });
+
+  void fetchAiSummary(tender);
+}
+
+function hideAiHoverPopover() {
+  currentHoveredTender = null;
+  if (!elements.aiPopover) return;
+  elements.aiPopover.classList.remove("visible");
+  setTimeout(() => {
+    if (!currentHoveredTender) {
+      elements.aiPopover.hidden = true;
+    }
+  }, 180);
+}
+
+function tenderAiSummaryCardMarkup(tender) {
+  if (state.aiSummaryActiveId !== tender.id) return "";
+  const cached = state.aiSummaries[tender.notifyNo];
+  const loading = state.aiSummaryLoadingId === tender.id;
+
+  let contentHtml = "";
+  if (loading) {
+    contentHtml = `
+      <div class="ai-popover-loading">
+        <div class="ai-spinner"></div>
+        <span>Gemini AI đang tóm tắt gói thầu...</span>
+      </div>`;
+  } else if (cached) {
+    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("");
+    contentHtml = `
+      <p class="ai-popover-lead">${escapeHtml(cached.summary)}</p>
+      <ul class="ai-popover-list">${keyPoints}</ul>
+      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Đánh giá AI:</strong> ${escapeHtml(cached.aiAssessment)}</div>` : ""}
+    `;
+  } else if (state.aiSummaryErrors[tender.id]) {
+    contentHtml = `<div class="ai-popover-lead" style="color:#c86746;">${escapeHtml(state.aiSummaryErrors[tender.id])}</div>`;
+  }
+
+  return `
+    <div class="tender-ai-card">
+      <div class="ai-card-header">
+        <div class="ai-card-title"><span>✨</span> <strong>AI Gemini Tóm Tắt Khái Quát</strong></div>
+        <button class="ai-card-close" data-action="close-ai" data-id="${escapeHtml(tender.id)}" type="button" aria-label="Đóng tóm tắt AI">✕</button>
+      </div>
+      ${contentHtml}
+    </div>
+  `;
+}
+
 function tenderMarkup(tender) {
   const expanded = state.expandedId === tender.id;
   const saved = state.saved.includes(String(tender.id));
   const hasResult = Boolean(tender.hasResult || tender.winnerNames?.length);
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
-  return `<article class="tender-row">
+  return `<article class="tender-row" data-tender-id="${escapeHtml(tender.id)}">
     <button class="save-button${saved ? " saved" : ""}" data-action="save" data-id="${escapeHtml(tender.id)}" type="button" aria-label="${saved ? "Bỏ lưu" : "Lưu"} gói thầu">${saved ? "★" : "☆"}</button>
-    <div class="tender-main"><div class="tender-meta"><span>${escapeHtml(tender.notifyNo)}</span><span>${escapeHtml(tender.category)}</span>${hasResult ? '<span class="result-meta">Có kết quả</span>' : ""}${Number(tender.bidderCount) ? `<span>${escapeHtml(tender.bidderCount)} nhà thầu</span>` : ""}</div><h3>${escapeHtml(tender.name)}</h3><p>${escapeHtml(tender.investor)} · ${escapeHtml(tender.location)}</p>${equipmentSearchMatchMarkup(tender)}</div>
+    <div class="tender-main">
+      <div class="tender-meta">
+        <span>${escapeHtml(tender.notifyNo)}</span>
+        <span>${escapeHtml(tender.category)}</span>
+        ${hasResult ? '<span class="result-meta">Có kết quả</span>' : ""}
+        ${Number(tender.bidderCount) ? `<span>${escapeHtml(tender.bidderCount)} nhà thầu</span>` : ""}
+        <button class="ai-summary-badge" data-action="toggle-ai" data-id="${escapeHtml(tender.id)}" type="button" title="Rê chuột hoặc bấm để xem AI Gemini tóm tắt khái quát"><span class="ai-icon-sparkle">✨</span> AI Tóm tắt</button>
+      </div>
+      <h3>${escapeHtml(tender.name)}</h3>
+      <p>${escapeHtml(tender.investor)} · ${escapeHtml(tender.location)}</p>
+      ${equipmentSearchMatchMarkup(tender)}
+    </div>
     <div class="tender-status"><span class="status-pill ${escapeHtml(tender.status)}">${escapeHtml(statusLabels[tender.status] || tender.status)}</span><span>Đóng ${escapeHtml(formatDate(tender.closeDate, true))}</span></div>
     <div class="tender-price"><strong title="${escapeHtml(formatMoney(price, false))}">${escapeHtml(formatMoney(price))}</strong><span>${tender.winningPrice ? "Giá trúng thầu" : "Giá dự toán"}</span></div>
     <div class="tender-actions"><button class="expand-button${expanded ? " expanded" : ""}" data-action="expand" data-id="${escapeHtml(tender.id)}" type="button" aria-expanded="${expanded}"><span>${expanded ? "Thu gọn" : "Mở rộng"}</span><span>⌄</span></button><a class="detail-link" href="${officialUrl(tender.sourceUrl)}" target="_blank" rel="noreferrer"><span>↗</span><span>Nguồn</span></a></div>
+    ${tenderAiSummaryCardMarkup(tender)}
     ${expanded ? detailMarkup(tender) : ""}
   </article>`;
 }
@@ -803,6 +993,32 @@ elements.savedList.addEventListener("click", (event) => {
   document.querySelector("#goi-thau")?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
+elements.list.addEventListener("mouseover", (event) => {
+  const row = event.target.closest(".tender-row");
+  if (!row) return;
+  const id = row.dataset.tenderId;
+  const tender = state.tenders.find((item) => String(item.id) === id);
+  if (!tender) return;
+
+  if (currentHoveredTender?.id === tender.id) return;
+
+  clearTimeout(hoverTimer);
+  hoverTimer = setTimeout(() => {
+    showAiHoverPopover(tender, row);
+  }, 220);
+});
+
+elements.list.addEventListener("mouseout", (event) => {
+  const row = event.target.closest(".tender-row");
+  if (!row) return;
+  const relatedRow = event.relatedTarget?.closest(".tender-row");
+  const relatedPopover = event.relatedTarget?.closest("#ai-hover-popover");
+  if (relatedRow === row || relatedPopover) return;
+
+  clearTimeout(hoverTimer);
+  hideAiHoverPopover();
+});
+
 elements.list.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-action]");
   if (!button) return;
@@ -817,6 +1033,21 @@ elements.list.addEventListener("click", (event) => {
   } else if (button.dataset.action === "expand") {
     const tender = state.tenders.find((item) => String(item.id) === id);
     if (tender) void toggleDetails(tender);
+    return;
+  } else if (button.dataset.action === "toggle-ai") {
+    const tender = state.tenders.find((item) => String(item.id) === id);
+    if (tender) {
+      hideAiHoverPopover();
+      state.aiSummaryActiveId = state.aiSummaryActiveId === tender.id ? null : tender.id;
+      if (state.aiSummaryActiveId === tender.id) {
+        void fetchAiSummary(tender);
+      }
+      render();
+    }
+    return;
+  } else if (button.dataset.action === "close-ai") {
+    state.aiSummaryActiveId = null;
+    render();
     return;
   }
   render();

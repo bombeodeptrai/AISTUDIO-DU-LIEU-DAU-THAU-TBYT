@@ -1698,6 +1698,202 @@ select:focus-visible {
   .site-footer { align-items: flex-start; flex-direction: column; padding-inline: 18px; }
 }
 
+/* AI Summary & Hover Tooltip Styles */
+.ai-summary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #173c32;
+  background: linear-gradient(135deg, #ebf5ee 0%, #d6edd8 100%);
+  border: 1px solid #b2dac1;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 180ms ease;
+  user-select: none;
+}
+
+.ai-summary-badge:hover {
+  color: #0d2a22;
+  background: linear-gradient(135deg, #d3ebd8 0%, #bfe4c6 100%);
+  border-color: #87c79a;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(36, 86, 71, 0.16);
+}
+
+.ai-summary-badge .ai-icon-sparkle {
+  color: #d97706;
+  font-size: 12px;
+}
+
+/* Hover Floating Card Popover */
+.ai-hover-popover {
+  position: absolute;
+  z-index: 1000;
+  width: min(400px, 92vw);
+  padding: 16px;
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid #b8d4c2;
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(23, 60, 50, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.ai-hover-popover.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ai-hover-popover[hidden] {
+  display: none;
+}
+
+.ai-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eef3ef;
+}
+
+.ai-popover-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ai-popover-badge {
+  padding: 2px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #173c32;
+  background: #e2f0e6;
+  border-radius: 4px;
+}
+
+.ai-popover-lead {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #2b302a;
+  font-weight: 500;
+}
+
+.ai-popover-list {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-popover-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #3b423a;
+}
+
+.ai-popover-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 2px;
+  color: var(--forest);
+  font-size: 10px;
+}
+
+.ai-popover-assessment {
+  padding: 8px 10px;
+  background: #f4f8f5;
+  border-left: 3px solid #245647;
+  border-radius: 0 6px 6px 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #1e3f35;
+}
+
+.ai-popover-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ai-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #b5dcc3;
+  border-top-color: var(--forest);
+  border-radius: 50%;
+  animation: ai-spin 700ms linear infinite;
+}
+
+@keyframes ai-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Inline Expandable AI Card */
+.tender-ai-card {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: #f7faf8;
+  border: 1px solid #cce2d3;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+  animation: ai-fade-in 220ms ease;
+}
+
+@keyframes ai-fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ai-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ai-card-close {
+  padding: 2px 6px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ai-card-close:hover {
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+
 @media (max-width: 390px) {
   .stats-grid { grid-template-columns: 1fr; }
   .stat-card { min-height: 112px; }

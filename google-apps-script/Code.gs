@@ -1,6 +1,6 @@
-const TENDER_DATA_URL = "https://bombeodeptrai.github.io/thau-y-te-gia-lai/data/tenders.json";
-const BIDDER_DATA_URL = "https://bombeodeptrai.github.io/thau-y-te-gia-lai/data/bidders.json";
-const EQUIPMENT_DATA_URL = "https://bombeodeptrai.github.io/thau-y-te-gia-lai/data/equipment.json";
+const TENDER_DATA_URL = "https://bombeodeptrai.github.io/AISTUDIO-DU-LIEU-DAU-THAU-TBYT/data/tenders.json";
+const BIDDER_DATA_URL = "https://bombeodeptrai.github.io/AISTUDIO-DU-LIEU-DAU-THAU-TBYT/data/bidders.json";
+const EQUIPMENT_DATA_URL = "https://bombeodeptrai.github.io/AISTUDIO-DU-LIEU-DAU-THAU-TBYT/data/equipment.json";
 const TENDER_SHEET = "Gói thầu";
 const BIDDER_SHEET = "Nhà thầu";
 const EQUIPMENT_SHEET = "Danh mục thiết bị";
@@ -13,7 +13,7 @@ const TENDER_DATA_START_ROW = 3;
 function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu("Thầu Y tế Gia Lai")
-    .addItem("Cài đặt cập nhật mỗi giờ", "setupAutomation")
+    .addItem("Cài đặt tự động cập nhật (15 phút/lần)", "setupAutomation")
     .addItem("Cập nhật ngay", "syncTenders")
     .addItem("Gửi email thử", "sendTestEmail")
     .addToUi();
@@ -25,8 +25,8 @@ function setupAutomation() {
   ScriptApp.getProjectTriggers()
     .filter((trigger) => trigger.getHandlerFunction() === "syncTenders")
     .forEach((trigger) => ScriptApp.deleteTrigger(trigger));
-  ScriptApp.newTrigger("syncTenders").timeBased().everyHours(1).create();
-  SpreadsheetApp.getActive().toast("Đã cài cập nhật tự động mỗi giờ.", "Thầu Y tế Gia Lai", 6);
+  ScriptApp.newTrigger("syncTenders").timeBased().everyMinutes(15).create();
+  SpreadsheetApp.getActive().toast("Đã cài cập nhật tự động mỗi 15 phút.", "Thầu Y tế Gia Lai", 6);
 }
 
 function syncTenders() {
@@ -56,7 +56,7 @@ function syncTenders() {
     const knownIds = new Set(JSON.parse(properties.getProperty(KNOWN_IDS_KEY) || "[]"));
     // Chỉ lưu mã gần đây để không vượt giới hạn dung lượng Script Properties
     // khi website mở rộng phạm vi lịch sử lên nhiều năm.
-    const knownWindowCutoff = Date.now() - 45 * 86_400_000;
+    const knownWindowCutoff = Date.now() - 45 * 86400000;
     const currentIds = tenders
       .filter((tender) => {
         const publishedAt = new Date(tender.publicDate || 0).getTime();
@@ -127,31 +127,64 @@ function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt) {
     toDate_(fetchedAt),
   ]);
 
-  // Các bản cũ đặt tiêu đề cột ở hàng 1. Chỉ chèn thêm hàng tiêu đề lớn
-  // khi chưa có bố cục hai hàng, tránh đụng vào trang đã được chỉnh tay.
-  if (!isNewSheet && String(sheet.getRange(1, 1).getValue()).trim() === "Mã TBMT") {
-    sheet.insertRowBefore(1);
+  let headerRow = 2;
+  let dataStartRow = 3;
+
+  if (isNewSheet) {
+    initializeTenderSheet_(sheet, headers.length);
+  } else {
+    const r1c1 = String(sheet.getRange(1, 1).getValue() || "").trim();
+    const r2c2 = String(sheet.getRange(2, 2).getValue() || "").trim();
+    const r2c1 = String(sheet.getRange(2, 1).getValue() || "").trim();
+
+    if (/^Bảng tổng hợp gói thầu/i.test(r1c1)) {
+      headerRow = 2;
+      dataStartRow = 3;
+    } else if (r2c2 === "Cột 2" || r2c2 === "Ngày đăng" || /^Mã TBMT/i.test(r2c1) || /^Cột 1/i.test(r2c1) || /^IB/i.test(r2c1)) {
+      headerRow = 2;
+      dataStartRow = 3;
+    } else if (/^Mã/i.test(r1c1)) {
+      headerRow = 1;
+      dataStartRow = 2;
+    } else {
+      headerRow = 2;
+      dataStartRow = 3;
+    }
   }
-  if (isNewSheet) initializeTenderSheet_(sheet, headers.length);
+
   const titleCell = sheet.getRange(1, 1);
   if (/^Bảng tổng hợp gói thầu thiết bị y tế/i.test(String(titleCell.getValue() || ""))) {
-    titleCell.setValue("Bảng tổng hợp gói thầu thiết bị y tế khu vực Gia Lai trong 3 năm gần nhất");
+    try {
+      titleCell.setValue("Bảng tổng hợp gói thầu thiết bị y tế khu vực Gia Lai trong 3 năm gần nhất");
+    } catch (e) {}
   }
 
-  const filter = sheet.getFilter();
-  if (filter) filter.remove();
+  try {
+    const filter = sheet.getFilter();
+    if (filter) filter.remove();
+  } catch (e) {}
 
-  // Chỉ xóa vùng dữ liệu do script quản lý. Hàng tiêu đề lớn, định dạng,
-  // độ rộng cột, đường viền và các cột ghi chú bên phải vẫn được giữ nguyên.
+  try {
+    sheet.getRange(headerRow, 1, 1, headers.length).setValues([headers]);
+  } catch (e) {}
+
   const oldLastRow = sheet.getLastRow();
-  if (oldLastRow >= TENDER_DATA_START_ROW) {
-    sheet
-      .getRange(TENDER_DATA_START_ROW, 1, oldLastRow - TENDER_DATA_START_ROW + 1, headers.length)
-      .clearContent();
+  if (oldLastRow >= dataStartRow) {
+    try {
+      sheet
+        .getRange(dataStartRow, 1, oldLastRow - dataStartRow + 1, headers.length)
+        .clearContent();
+    } catch (e) {
+      const clearRows = oldLastRow - dataStartRow + 1;
+      const emptyRows = Array(clearRows).fill(null).map(() => Array(headers.length).fill(""));
+      try {
+        sheet.getRange(dataStartRow, 1, clearRows, headers.length).setValues(emptyRows);
+      } catch (e2) {}
+    }
   }
-  sheet.getRange(TENDER_HEADER_ROW, 1, 1, headers.length).setValues([headers]);
+
   if (rows.length) {
-    sheet.getRange(TENDER_DATA_START_ROW, 1, rows.length, headers.length).setValues(rows);
+    sheet.getRange(dataStartRow, 1, rows.length, headers.length).setValues(rows);
     const spreadsheetUrl = spreadsheet.getUrl();
     const modelLinks = tenders.map((tender, index) => {
       const text = String(rows[index][13] || "");
@@ -164,53 +197,63 @@ function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt) {
       }
       return [richText.build()];
     });
-    sheet.getRange(TENDER_DATA_START_ROW, 14, rows.length, 1).setRichTextValues(modelLinks);
+    try {
+      sheet.getRange(dataStartRow, 14, rows.length, 1).setRichTextValues(modelLinks);
+    } catch (e) {}
   }
 
-  const lastRow = Math.max(TENDER_DATA_START_ROW, rows.length + TENDER_HEADER_ROW);
-  sheet.setFrozenRows(TENDER_HEADER_ROW);
-  sheet.setFrozenColumns(2);
-  sheet.getRange(TENDER_HEADER_ROW, 1, lastRow - TENDER_HEADER_ROW + 1, headers.length).createFilter();
-  // Không ép định dạng số tại đây. Google Sheets Table có cột được định kiểu
-  // sẽ báo lỗi nếu Apps Script đổi định dạng của một phần cột.
-  sheet.getRange(TENDER_DATA_START_ROW, 3, Math.max(1, rows.length), 4).setWrap(true).setVerticalAlignment("top");
+  const lastRow = Math.max(dataStartRow, rows.length + headerRow - 1);
+  try {
+    sheet.setFrozenRows(headerRow);
+    sheet.setFrozenColumns(2);
+  } catch (e) {}
+
+  try {
+    sheet.getRange(headerRow, 1, lastRow - headerRow + 1, headers.length).createFilter();
+  } catch (e) {}
+
+  try {
+    sheet.getRange(dataStartRow, 3, Math.max(1, rows.length), 4).setWrap(true).setVerticalAlignment("top");
+  } catch (e) {}
 }
 
 function initializeTenderSheet_(sheet, columnCount) {
-  sheet.getRange(1, 1, 1, columnCount).merge();
-  sheet
-    .getRange(1, 1)
-    .setValue("Bảng tổng hợp gói thầu thiết bị y tế khu vực Gia Lai trong 3 năm gần nhất")
-    .setHorizontalAlignment("center")
-    .setVerticalAlignment("middle")
-    .setFontWeight("bold")
-    .setFontSize(16);
-  sheet.setRowHeight(1, 34);
-  sheet
-    .getRange(TENDER_HEADER_ROW, 1, 1, columnCount)
-    .setBackground("#0f513f")
-    .setFontColor("#ffffff")
-    .setFontWeight("bold");
-  sheet.setColumnWidth(1, 125);
-  sheet.setColumnWidth(2, 135);
-  sheet.setColumnWidth(3, 430);
-  sheet.setColumnWidth(4, 150);
-  sheet.setColumnWidth(5, 260);
-  sheet.setColumnWidth(6, 190);
-  sheet.setColumnWidth(7, 135);
-  sheet.setColumnWidth(8, 135);
-  sheet.setColumnWidth(9, 110);
-  sheet.setColumnWidth(10, 125);
-  sheet.setColumnWidth(11, 320);
-  sheet.setColumnWidth(12, 280);
-  sheet.setColumnWidth(13, 320);
-  sheet.setColumnWidth(14, 300);
-  sheet.setColumnWidth(15, 280);
-  sheet.setColumnWidth(16, 135);
-  sheet.setColumnWidth(17, 120);
-  sheet.setColumnWidth(18, 100);
-  sheet.setColumnWidth(19, 280);
-  sheet.setColumnWidth(20, 145);
+  try {
+    sheet.getRange(1, 1, 1, columnCount).merge();
+    sheet
+      .getRange(1, 1)
+      .setValue("Bảng tổng hợp gói thầu thiết bị y tế khu vực Gia Lai trong 3 năm gần nhất")
+      .setHorizontalAlignment("center")
+      .setVerticalAlignment("middle")
+      .setFontWeight("bold")
+      .setFontSize(16);
+    sheet.setRowHeight(1, 34);
+    sheet
+      .getRange(2, 1, 1, columnCount)
+      .setBackground("#0f513f")
+      .setFontColor("#ffffff")
+      .setFontWeight("bold");
+    sheet.setColumnWidth(1, 125);
+    sheet.setColumnWidth(2, 135);
+    sheet.setColumnWidth(3, 430);
+    sheet.setColumnWidth(4, 150);
+    sheet.setColumnWidth(5, 260);
+    sheet.setColumnWidth(6, 190);
+    sheet.setColumnWidth(7, 135);
+    sheet.setColumnWidth(8, 135);
+    sheet.setColumnWidth(9, 110);
+    sheet.setColumnWidth(10, 125);
+    sheet.setColumnWidth(11, 320);
+    sheet.setColumnWidth(12, 280);
+    sheet.setColumnWidth(13, 320);
+    sheet.setColumnWidth(14, 300);
+    sheet.setColumnWidth(15, 280);
+    sheet.setColumnWidth(16, 135);
+    sheet.setColumnWidth(17, 120);
+    sheet.setColumnWidth(18, 100);
+    sheet.setColumnWidth(19, 280);
+    sheet.setColumnWidth(20, 145);
+  } catch (e) {}
 }
 
 function writeBidderSheet_(bidders, fetchedAt) {
@@ -285,11 +328,18 @@ function writeEquipmentSheet_(equipment, fetchedAt) {
 function writeManagedSheet_(sheetName, headers, rows, wrapColumns) {
   const spreadsheet = SpreadsheetApp.getActive();
   const sheet = spreadsheet.getSheetByName(sheetName) || spreadsheet.insertSheet(sheetName);
-  const filter = sheet.getFilter();
-  if (filter) filter.remove();
-  const oldLastRow = sheet.getLastRow();
-  if (oldLastRow) sheet.getRange(1, 1, oldLastRow, headers.length).clearContent();
+  try {
+    const filter = sheet.getFilter();
+    if (filter) filter.remove();
+  } catch (e) {}
+
   sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+
+  const oldLastRow = sheet.getLastRow();
+  if (oldLastRow > 1) {
+    sheet.getRange(2, 1, oldLastRow - 1, headers.length).clearContent();
+  }
+
   if (rows.length) sheet.getRange(2, 1, rows.length, headers.length).setValues(rows);
   sheet.getRange(1, 1, 1, headers.length)
     .setBackground("#0f513f").setFontColor("#ffffff").setFontWeight("bold");
@@ -297,7 +347,9 @@ function writeManagedSheet_(sheetName, headers, rows, wrapColumns) {
     sheet.getRange(2, column, Math.max(1, rows.length), 1).setWrap(true).setVerticalAlignment("top");
   });
   const lastRow = Math.max(2, rows.length + 1);
-  sheet.getRange(1, 1, lastRow, headers.length).createFilter();
+  try {
+    sheet.getRange(1, 1, lastRow, headers.length).createFilter();
+  } catch (e) {}
   sheet.setFrozenRows(1);
   sheet.setFrozenColumns(1);
   return sheet;
