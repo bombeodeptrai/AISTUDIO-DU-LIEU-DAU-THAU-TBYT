@@ -1486,10 +1486,12 @@ function openKieuVietModal(tender) {
     `;
   };
 
-  const hospitalPastTendersHTML = sameInvestorTenders.length > 0
-    ? sameInvestorTenders.slice(0, 10).map((t, idx) => renderPastTenderItem(t, idx, 75 - idx * 3)).join("")
-    : '<div style="padding: 12px; background: #fbf9f5; border-radius: 8px; font-size: 12px; color: #777;">Chưa có đủ dữ liệu công khai phù hợp trong bộ dữ liệu đang lưu.</div>';
+  // Build complete 10-item list for hospital tenders (filling with regional if needed)
+  const hospitalTenderIds = new Set(sameInvestorTenders.map(t => t.id));
+  const fillRegional = regionalTenders.filter(t => !hospitalTenderIds.has(t.id));
+  const combinedHospitalTenders = [...sameInvestorTenders, ...fillRegional].slice(0, 10);
 
+  const hospitalPastTendersHTML = combinedHospitalTenders.map((t, idx) => renderPastTenderItem(t, idx, 75 - idx * 3)).join("");
   const regionalPastTendersHTML = regionalTenders.slice(0, 10).map((t, idx) => renderPastTenderItem(t, idx, 67 - idx * 4)).join("");
 
   bodyEl.innerHTML = `
