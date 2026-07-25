@@ -389,49 +389,110 @@ function writeManagedSheet_(sheetName, headers, rows, wrapColumns) {
 
 function ensureConfigSheet_() {
   const spreadsheet = SpreadsheetApp.getActive();
-  const sheet = spreadsheet.getSheetByName(CONFIG_SHEET) || spreadsheet.insertSheet(CONFIG_SHEET);
-  if (!sheet.getRange("A1").getValue()) {
-    sheet.getRange("A1:B7").setValues([
-      ["CẤU HÌNH THÔNG BÁO", "Giá trị"],
-      ["Email nhận thông báo", Session.getEffectiveUser().getEmail() || ""],
-      ["Bật thông báo", true],
-      ["Nguồn dữ liệu", TENDER_DATA_URL],
-      ["Khu vực lọc thầu (Miền Trung / Gia Lai / Bình Định / Đắk Lắk / Toàn quốc)", "Miền Trung"],
-      ["Lần đồng bộ gần nhất", "Chưa chạy"],
-      ["Trạng thái", "Chưa cài đặt"],
-    ]);
-    sheet.getRange("A1:B1").setBackground("#0f513f").setFontColor("#ffffff").setFontWeight("bold");
-    sheet.getRange("B3").insertCheckboxes();
-    sheet.setColumnWidth(1, 400);
-    sheet.setColumnWidth(2, 420);
-    sheet.setFrozenRows(1);
+  let sheet = spreadsheet.getSheetByName(CONFIG_SHEET);
+  if (!sheet) {
+    sheet = spreadsheet.insertSheet(CONFIG_SHEET);
   }
+  
+  const expectedRows = [
+    ["Email nhận thông báo", Session.getEffectiveUser().getEmail() || ""],
+    ["Bật thông báo", true],
+    ["Nguồn dữ liệu", TENDER_DATA_URL],
+    ["Khu vực lọc thầu (Miền Trung / Gia Lai / Bình Định / Đắk Lắk / Toàn quốc)", "Miền Trung"],
+    ["Lần đồng bộ gần nhất", "Chưa chạy"],
+    ["Trạng thái", "Chưa cài đặt"],
+  ];
+
+  const firstCell = sheet.getRange("A1").getValue();
+  if (!firstCell) {
+    sheet.getRange("A1:B1").setValues([["CẤU HÌNH THÔNG BÁO", "Giá trị"]]);
+    sheet.getRange("A1:B1").setBackground("#0f513f").setFontColor("#ffffff").setFontWeight("bold");
+  }
+
+  expectedRows.forEach(([name, defaultValue]) => {
+    let found = false;
+    const lastRow = sheet.getLastRow();
+    if (lastRow > 0) {
+      const prefix = name.split(" (")[0].toLowerCase().trim();
+      const values = sheet.getRange(1, 1, lastRow, 1).getValues();
+      for (let i = 0; i < values.length; i++) {
+        const valA = String(values[i][0] || "").toLowerCase().trim();
+        if (valA.includes(prefix)) {
+          found = true;
+          break;
+        }
+      }
+    }
+    if (!found) {
+      const nextRow = sheet.getLastRow() + 1;
+      sheet.getRange(nextRow, 1, 1, 2).setValues([[name, defaultValue]]);
+      if (name === "Bật thông báo") {
+        sheet.getRange(nextRow, 2).insertCheckboxes();
+      }
+    }
+  });
+
+  sheet.setColumnWidth(1, 400);
+  sheet.setColumnWidth(2, 420);
+  sheet.setFrozenRows(1);
   return sheet;
 }
 
+function getConfigValueByName_(name, defaultValue) {
+  try {
+    const sheet = ensureConfigSheet_();
+    const lastRow = sheet.getLastRow();
+    if (lastRow > 0) {
+      const prefix = name.toLowerCase().trim();
+      const range = sheet.getRange(1, 1, lastRow, 2);
+      const values = range.getValues();
+      for (let i = 0; i < values.length; i++) {
+        const valA = String(values[i][0] || "").toLowerCase().trim();
+        if (valA.includes(prefix)) {
+          return values[i][1] !== undefined ? values[i][1] : defaultValue;
+        }
+      }
+    }
+  } catch (e) {}
+  return defaultValue;
+}
+
+function setConfigValueByName_(name, value) {
+  try {
+    const sheet = ensureConfigSheet_();
+    const lastRow = sheet.getLastRow();
+    if (lastRow > 0) {
+      const prefix = name.toLowerCase().trim();
+      const range = sheet.getRange(1, 1, lastRow, 2);
+      const values = range.getValues();
+      for (let i = 0; i < values.length; i++) {
+        const valA = String(values[i][0] || "").toLowerCase().trim();
+        if (valA.includes(prefix)) {
+          sheet.getRange(i + 1, 2).setValue(value);
+          return;
+        }
+      }
+    }
+  } catch (e) {}
+}
+
 function updateLastSync_(fetchedAt, total, newCount) {
-  const sheet = ensureConfigSheet_();
   const syncedAt = toDate_(fetchedAt) || new Date();
-  sheet.getRange("B6").setValue(Utilities.formatDate(syncedAt, "Asia/Ho_Chi_Minh", "dd/MM/yyyy HH:mm:ss"));
-  sheet.getRange("B7").setValue(`Đang lưu ${total} gói; phát hiện ${newCount} gói mới trong lần này`);
+  const formattedDate = Utilities.formatDate(syncedAt, "Asia/Ho_Chi_Minh", "dd/MM/yyyy HH:mm:ss");
+  setConfigValueByName_("Lần đồng bộ gần nhất", formattedDate);
+  setConfigValueByName_("Trạng thái", `Đang lưu ${total} gói; phát hiện ${newCount} gói mới trong lần này`);
 }
 
 function configuredRegion_() {
-  try {
-    const sheet = SpreadsheetApp.getActive().getSheetByName(CONFIG_SHEET);
-    if (sheet) {
-      return String(sheet.getRange("B5").getValue() || "Miền Trung").trim();
-    }
-  } catch (e) {}
-  return "Miền Trung";
+  return String(getConfigValueByName_("Khu vực lọc thầu", "Miền Trung")).trim();
 }
 
 function alertsEnabled_() {
-  return ensureConfigSheet_().getRange("B3").getValue() === true;
+  return getConfigValueByName_("Bật thông báo", true) === true;
 }
 
 function notificationEmail_() {
-  return String(ensureConfigSheet_().getRange("B2").getValue() || "").trim();
+  return String(getConfigValueByName_("Email nhận thông báo", "")).trim();
 }
 
 function sendNewTenderEmail_(tenders, fetchedAt, activeRegion) {

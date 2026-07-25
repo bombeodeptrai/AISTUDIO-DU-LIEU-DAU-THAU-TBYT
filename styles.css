@@ -336,6 +336,10 @@ select:focus-visible {
   appearance: none;
 }
 
+.search-field > *:not(input):not(select):not(datalist) {
+  pointer-events: none;
+}
+
 .search-field input::placeholder {
   color: #96978f;
 }
