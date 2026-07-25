@@ -864,9 +864,10 @@ function getFallbackSummary(tender) {
   const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
   const equipmentText = getTenderEquipmentSummaryText(tender) || "Chi tiết máy móc, thiết bị, vật tư/sinh phẩm được công khai trong biểu mẫu e-HSMT.";
   const url = officialUrl(tender.sourceUrl);
+  const locName = tender.location || tender.investor || "Địa phương";
   
   const points = [
-    `🏦 Bên mời thầu / Cơ sở: ${tender.investor || "Chủ đầu tư"} (${tender.location || "Gia Lai"})`,
+    `🏦 Bên mời thầu / Cơ sở: ${tender.investor || "Chủ đầu tư"} (${locName})`,
     `💰 Giá gói thầu / Dự toán: ${formattedPrice}`,
     `📑 Hình thức & Phân loại: ${tender.category || "Thiết bị y tế"} (${tender.bidForm || "Đấu thầu qua mạng"})`,
     `📦 Danh mục thiết bị/mặt hàng: ${equipmentText}`,
@@ -880,7 +881,7 @@ function getFallbackSummary(tender) {
   }
 
   return {
-    summary: `Gói thầu "${tender.name}" do ${tender.investor || "Bên mời thầu"} tổ chức tại ${tender.location || "Gia Lai"} với quy mô dự toán ${formattedPrice}.`,
+    summary: `Gói thầu "${tender.name}" do ${tender.investor || "Bên mời thầu"} tổ chức tại ${locName} với quy mô dự toán ${formattedPrice}.`,
     score: 60,
     successChance: 35,
     suitabilityMetrics: {
@@ -894,7 +895,7 @@ function getFallbackSummary(tender) {
     primaryEquipment: equipmentText,
     strengths: [
       "Có thông tin dự toán rõ ràng, hỗ trợ lập phương án giá hiệu quả.",
-      `Địa bàn mời thầu tập trung tại khu vực trọng điểm y tế ${tender.location || "Gia Lai"}.`
+      `Địa bàn mời thầu tập trung tại khu vực ${locName}.`
     ],
     gaps: [
       "Cần rà soát kỹ tiêu chuẩn kỹ thuật chi tiết của thiết bị chính trong e-HSMT.",
@@ -992,10 +993,12 @@ function renderPremiumAiDashboard(cached, tender) {
   const partners = (cached.requiredPartners || []).map(p => `<li>${formatMarkdownText(p)}</li>`).join("");
   const actionItems = (cached.actionItems || []).map(a => `<li>${formatMarkdownText(a)}</li>`).join("");
   
+  const locName = tender.location || tender.investor || "Địa phương";
+  
   // Extract and format competitor analysis from database
   const comp = cached.competitorAnalysis || {
     likelyRivals: [
-      "Các nhà thầu phân phối trang thiết bị y tế hoạt động mạnh tại khu vực Gia Lai.",
+      `Các nhà thầu phân phối trang thiết bị y tế hoạt động mạnh tại khu vực ${locName}.`,
       "Các đơn vị có giấy ủy quyền bán hàng chính hãng từ nhà sản xuất."
     ],
     hospitalHistorySummary: `Đơn vị sử dụng "${tender.investor || "Cơ sở y tế"}" thường xuyên đấu thầu trang thiết bị lâm sàng, hồ sơ mời thầu cần rà soát kỹ tiêu chí kinh nghiệm tương tự.`,
@@ -1019,8 +1022,8 @@ function renderPremiumAiDashboard(cached, tender) {
       <div class="ai-fallback-alert-banner">
         <span class="ai-fallback-alert-icon">⚡</span>
         <div class="ai-fallback-alert-content">
-          <strong>Hạn mức AI Gemini miễn phí tạm thời bị giới hạn (429 Quota Exceeded / 503 Busy)</strong>
-          <p>Hệ thống tự động chuyển sang chế độ <b>Phân tích Bản đồ Đối thủ & Lịch sử Đấu thầu Cục bộ Gia Lai</b> thông minh, dựa trên cơ sở dữ liệu y tế lưu trữ nhằm đảm bảo trải nghiệm liền mạch.</p>
+          <strong>Chế độ Phân tích CSDL Đấu thầu Cục bộ</strong>
+          <p>Dữ liệu được trích xuất trực tiếp từ CSDL Lịch sử Đấu thầu & e-HSMT của <b>${tender.investor || locName}</b> nhằm đảm bảo thông tin chính xác và trải nghiệm nhanh nhất.</p>
         </div>
       </div>
     `;

@@ -561,7 +561,13 @@ app.post('/api/summarize-tender', async (req, res) => {
     }
 
     if (summaryCache.has(notifyNo)) {
-      return res.json({ success: true, data: summaryCache.get(notifyNo), cached: true });
+      let cachedData = summaryCache.get(notifyNo);
+      if (!cachedData.competitorAnalysis || !cachedData.competitorAnalysis.likelyRivals || cachedData.competitorAnalysis.likelyRivals.length === 0 || cachedData.competitorAnalysis.likelyRivals.some(r => r.includes('hoạt động mạnh tại khu vực'))) {
+        const history = getHistoricalContext(investor, category, notifyNo, name, location);
+        cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, investor, category, location);
+        saveToDiskCache(notifyNo, cachedData);
+      }
+      return res.json({ success: true, data: cachedData, cached: true });
     }
 
     // Query historical database early for competitor analysis & statistics
@@ -711,51 +717,9 @@ Yêu cầu trả về thông tin dưới dạng JSON có đầy đủ các trư�
   } catch (error) {
     console.error('Gemini summarize error:', error);
     
-    // Safety check to ensure we have a fallback competitorAnalysis even if error happened before main init
-    let dbCompetitorAnalysisCatch;
-    try {
-      const hist = getHistoricalContext(req.body.investor, req.body.category, req.body.notifyNo, req.body.name, req.body.location);
-      dbCompetitorAnalysisCatch = buildCompetitorAnalysisFromDatabase(hist, req.body.investor, req.body.category, req.body.location);
-    } catch (e) {
-      dbCompetitorAnalysisCatch = {
-        likelyRivals: [
-          "Các nhà thầu phân phối trang thiết bị y tế hoạt động mạnh tại khu vực Gia Lai.",
-          "Các nhà thầu phân phối thiết bị y tế chuyên dụng đã được hãng ủy quyền chính thức."
-        ],
-        hospitalHistorySummary: `Chủ đầu tư "${req.body.investor || 'Cơ sở y tế'}" thường xuyên thực hiện mời thầu các thiết bị thuộc phân khúc này.`,
-        winStrategy: [
-          "Đăng ký đầy đủ các thông tin thầu hợp lệ, làm rõ các chỉ tiêu kỹ thuật ngặt nghèo ngay khi mở thầu.",
-          "Chuẩn bị kỹ thư ủy quyền phân phối chính hãng và các tài liệu kỹ thuật có công chứng."
-        ]
-      };
-    }
-
-    const formattedPrice = req.body.price ? Number(req.body.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa công bố';
-    const fallbackData = {
-      summary: `Gói thầu "${req.body.name}" do ${req.body.investor || 'Chủ đầu tư'} mời thầu tại ${req.body.location || 'Gia Lai'} với dự toán ${formattedPrice}.`,
-      score: 60,
-      successChance: 35,
-      suitabilityMetrics: { phapLy: 50, kyThuat: 50, thuongMai: 45, tienDo: 50, diaBan: 50, lienKet: 45 },
-      primaryEquipment: req.body.equipmentSummary || "Chưa đủ dữ liệu để xác định thiết bị chủ đạo.",
-      strengths: ["Thông tin dự toán công khai rõ ràng.", "Địa bàn mời thầu tập trung."],
-      gaps: ["Cần rà soát kỹ các tiêu chuẩn kỹ thuật e-HSMT."],
-      risks: ["Cạnh tranh thầu cao."],
-      requiredPartners: ["Hãng sản xuất hoặc đại lý ủy quyền."],
-      actionItems: ["Tải file e-HSMT chính thức.", "Liên hệ hãng lấy báo giá."],
-      keyPoints: [
-        `🏦 Bên mời thầu: ${req.body.investor || 'Chủ đầu tư'} (${req.body.location || 'Gia Lai'})`,
-        `💰 Dự toán gói thầu: ${formattedPrice}`,
-        `📑 Hình thức LCNT: ${req.body.bidForm || 'Qua mạng'} - ${req.body.category || 'Thiết bị y tế'}`,
-        `📦 Danh mục hàng hóa: ${req.body.equipmentSummary || 'Trích từ biểu mẫu e-HSMT công khai'}`,
-        `⏱️ Thời điểm đóng thầu: ${req.body.closeDate || 'Chưa công bố'}`
-      ],
-      aiAssessment: 'Hồ sơ công khai chính thức từ Cổng Mua sắm công (Muasamcong). Bấm nút bên dưới để xem toàn văn e-HSMT gốc.',
-      officialUrl: req.body.sourceUrl || 'https://muasamcong.mpi.gov.vn/',
-      competitorAnalysis: dbCompetitorAnalysisCatch,
-      isFallback: true
-    };
+    const fallbackData = createFallbackForTender(req.body);
     saveToDiskCache(req.body.notifyNo, fallbackData);
-    return res.json({ success: true, data: fallbackData });
+    return res.json({ success: true, data: fallbackData, cached: false });
   }
 });
 
@@ -773,7 +737,13 @@ app.post('/api/batch-summarize-tenders', async (req, res) => {
     for (const tender of tenders) {
       if (!tender.notifyNo) continue;
       if (summaryCache.has(tender.notifyNo)) {
-        summaries[tender.notifyNo] = summaryCache.get(tender.notifyNo);
+        let cachedData = summaryCache.get(tender.notifyNo);
+        if (!cachedData.competitorAnalysis || !cachedData.competitorAnalysis.likelyRivals || cachedData.competitorAnalysis.likelyRivals.length === 0 || cachedData.competitorAnalysis.likelyRivals.some(r => r.includes('hoạt động mạnh tại khu vực'))) {
+          const history = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location);
+          cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, tender.investor, tender.category, tender.location);
+          saveToDiskCache(tender.notifyNo, cachedData);
+        }
+        summaries[tender.notifyNo] = cachedData;
       } else {
         missingTenders.push(tender);
       }
