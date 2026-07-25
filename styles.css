@@ -2089,6 +2089,461 @@ select:focus-visible {
   background: rgba(0, 0, 0, 0.06);
 }
 
+/* Premium AI Bid Assessment Dashboard Styles */
+.ai-assessment-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  color: #2c302b;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: left;
+}
+
+.ai-top-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px;
+  border: 1px solid #e1e7e2;
+  border-radius: 12px;
+}
+
+.ai-circular-gauge-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-circular-gauge {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(var(--forest) var(--percent), #e6efe7 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(23, 60, 50, 0.06);
+}
+
+.ai-circular-gauge::after {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.ai-circular-gauge-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-circular-gauge-score {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--forest);
+  line-height: 1;
+}
+
+.ai-circular-gauge-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.ai-overview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-overview-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-overview-badge {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffe0b2;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ai-overview-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #173c32;
+  margin: 0;
+}
+
+.ai-success-probability {
+  margin-top: 6px;
+}
+
+.ai-success-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555850;
+  margin-bottom: 4px;
+}
+
+.ai-success-bar-bg {
+  height: 8px;
+  background: #eef3ef;
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid #e1e7e2;
+}
+
+.ai-success-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5c9e70, var(--forest));
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-brief-tender-card {
+  padding: 10px 14px;
+  background: #f4f7f5;
+  border: 1px solid #e2ece5;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a504a;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.ai-brief-tender-card span strong {
+  color: #173c32;
+}
+
+.ai-section-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--forest);
+  margin: 12px 0 6px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2ece5;
+  padding-bottom: 4px;
+}
+
+.ai-suitability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ai-suitability-card {
+  background: #ffffff;
+  border: 1px solid #e3e8e4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-suitability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a504a;
+}
+
+.ai-suitability-score {
+  color: var(--forest-2);
+}
+
+.ai-suitability-bar-bg {
+  height: 6px;
+  background: #f1f4f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ai-suitability-bar-fill {
+  height: 100%;
+  background: #7ca88a;
+  border-radius: 4px;
+}
+
+.ai-primary-equipment-box {
+  background: #fcfdfd;
+  border: 1px solid #d4dfd7;
+  border-left: 4px solid var(--forest);
+  padding: 10px 14px;
+  border-radius: 4px 8px 8px 4px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #2b302a;
+}
+
+.ai-quad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ai-quad-card {
+  background: #ffffff;
+  border: 1px solid #e3e8e4;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.ai-quad-card h4 {
+  font-size: 11.5px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-quad-card.strengths h4 { color: #1e5e3a; }
+.ai-quad-card.gaps h4 { color: #b25e00; }
+.ai-quad-card.risks h4 { color: #b71c1c; }
+.ai-quad-card.partners h4 { color: #1565c0; }
+
+.ai-bullet-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-bullet-list li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #3b423a;
+}
+
+.ai-bullet-list li::before {
+  position: absolute;
+  left: 0;
+  font-size: 12px;
+}
+
+.ai-quad-card.strengths li::before { content: "•"; color: #2e7d32; }
+.ai-quad-card.gaps li::before { content: "•"; color: #ef6c00; }
+.ai-quad-card.risks li::before { content: "•"; color: #c62828; }
+.ai-quad-card.partners li::before { content: "•"; color: #1565c0; }
+
+.ai-todo-box {
+  background: #edf7f3;
+  border: 1px solid #bce2cb;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.ai-todo-box h4 {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0b4028;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-todo-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #1c3d2e;
+}
+
+.ai-todo-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* AI Competitor Intelligence Styling */
+.ai-competitor-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e3e8e4;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ai-competitor-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-competitor-sub h5 {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #1a3c30;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: none;
+}
+
+.ai-competitor-list-styled, .ai-strategy-list-styled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-competitor-list-styled li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #383d38;
+}
+
+.ai-competitor-list-styled li::before {
+  content: "⚠️";
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  top: 1px;
+}
+
+.ai-strategy-list-styled li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #383d38;
+}
+
+.ai-strategy-list-styled li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  top: 1px;
+}
+
+.ai-hospital-summary-text {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a504a;
+  background: #f4f7f5;
+  border: 1px solid #e2ece5;
+  border-left: 3px solid #ff9100;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0;
+}
+
+/* Fallback banner style */
+.ai-fallback-alert-banner {
+  display: flex;
+  gap: 12px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-left: 4px solid #ffb300;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.ai-fallback-alert-icon {
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.ai-fallback-alert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-fallback-alert-content strong {
+  font-size: 11.5px;
+  color: #b78103;
+  font-weight: 700;
+}
+
+.ai-fallback-alert-content p {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #5d4037;
+  margin: 0;
+}
+
+@media (max-width: 1120px) {
+  .ai-suitability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .ai-top-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+  .ai-overview-info {
+    text-align: center;
+    width: 100%;
+  }
+  .ai-overview-badge-row {
+    justify-content: center;
+  }
+  .ai-suitability-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-quad-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-assessment-dashboard {
+    gap: 12px;
+  }
+}
+
 
 @media (max-width: 390px) {
   .stats-grid { grid-template-columns: 1fr; }
@@ -2102,5 +2557,7 @@ select:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    zoom: normal !important;
   }
 }
+

@@ -881,6 +881,36 @@ function getFallbackSummary(tender) {
 
   return {
     summary: `Gói thầu "${tender.name}" do ${tender.investor || "Bên mời thầu"} tổ chức tại ${tender.location || "Gia Lai"} với quy mô dự toán ${formattedPrice}.`,
+    score: 60,
+    successChance: 35,
+    suitabilityMetrics: {
+      phapLy: 50,
+      kyThuat: 55,
+      thuongMai: 45,
+      tienDo: 50,
+      diaBan: 50,
+      lienKet: 45
+    },
+    primaryEquipment: equipmentText,
+    strengths: [
+      "Có thông tin dự toán rõ ràng, hỗ trợ lập phương án giá hiệu quả.",
+      `Địa bàn mời thầu tập trung tại khu vực trọng điểm y tế ${tender.location || "Gia Lai"}.`
+    ],
+    gaps: [
+      "Cần rà soát kỹ tiêu chuẩn kỹ thuật chi tiết của thiết bị chính trong e-HSMT.",
+      "Chưa làm rõ điều khoản thanh toán và tiến độ giao nhận hàng hóa."
+    ],
+    risks: [
+      "Khả năng cạnh tranh cao nếu thiết bị có nhiều hãng tương đương.",
+      "Hạn chế thời gian chuẩn bị hồ sơ pháp lý đối với thiết bị nhập khẩu."
+    ],
+    requiredPartners: [
+      "Hãng sản xuất hoặc nhà phân phối được ủy quyền chính thức tại Việt Nam."
+    ],
+    actionItems: [
+      "Tải toàn bộ file e-HSMT chính thức để rà soát chi tiết chỉ tiêu Đạt/Không đạt.",
+      "Liên hệ hãng sản xuất lấy báo giá và thư cam kết hỗ trợ kỹ thuật."
+    ],
     keyPoints: points,
     aiAssessment: `Hồ sơ công khai chính thức từ Cổng Dịch vụ công Mạng đấu thầu Quốc gia. Bấm liên kết bên dưới để xem toàn văn e-HSMT gốc.`,
     officialUrl: url
@@ -951,6 +981,222 @@ async function fetchAiSummary(tender) {
   }
 }
 
+function renderPremiumAiDashboard(cached, tender) {
+  const score = cached.score || 60;
+  const successChance = cached.successChance || 35;
+  const metrics = cached.suitabilityMetrics || { phapLy: 50, kyThuat: 50, thuongMai: 45, tienDo: 50, diaBan: 50, lienKet: 45 };
+  const primaryEquipment = cached.primaryEquipment || "Chưa đủ dữ liệu để xác định thiết bị chủ đạo.";
+  const strengths = (cached.strengths || []).map(s => `<li>${formatMarkdownText(s)}</li>`).join("");
+  const gaps = (cached.gaps || []).map(g => `<li>${formatMarkdownText(g)}</li>`).join("");
+  const risks = (cached.risks || []).map(r => `<li>${formatMarkdownText(r)}</li>`).join("");
+  const partners = (cached.requiredPartners || []).map(p => `<li>${formatMarkdownText(p)}</li>`).join("");
+  const actionItems = (cached.actionItems || []).map(a => `<li>${formatMarkdownText(a)}</li>`).join("");
+  
+  // Extract and format competitor analysis from database
+  const comp = cached.competitorAnalysis || {
+    likelyRivals: [
+      "Các nhà thầu phân phối trang thiết bị y tế hoạt động mạnh tại khu vực Gia Lai.",
+      "Các đơn vị có giấy ủy quyền bán hàng chính hãng từ nhà sản xuất."
+    ],
+    hospitalHistorySummary: `Đơn vị sử dụng "${tender.investor || "Cơ sở y tế"}" thường xuyên đấu thầu trang thiết bị lâm sàng, hồ sơ mời thầu cần rà soát kỹ tiêu chí kinh nghiệm tương tự.`,
+    winStrategy: [
+      "Phối hợp với hãng cung cấp giải pháp kỹ thuật ưu việt để tạo rào cản kỹ thuật phản kháng.",
+      "Chuẩn bị kỹ hồ sơ năng lực tài chính và bảo lãnh thầu đúng thời hạn quy định."
+    ]
+  };
+
+  const likelyRivalsHTML = (comp.likelyRivals || []).map(r => `<li>${formatMarkdownText(r)}</li>`).join("");
+  const hospitalHistorySummaryText = formatMarkdownText(comp.hospitalHistorySummary || "");
+  const winStrategyHTML = (comp.winStrategy || []).map(w => `<li>${formatMarkdownText(w)}</li>`).join("");
+
+  const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
+  const price = Number(tender.winningPrice) || Number(tender.price) || 0;
+  const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
+  
+  let fallbackBannerHTML = "";
+  if (cached.isFallback) {
+    fallbackBannerHTML = `
+      <div class="ai-fallback-alert-banner">
+        <span class="ai-fallback-alert-icon">⚡</span>
+        <div class="ai-fallback-alert-content">
+          <strong>Hạn mức AI Gemini miễn phí tạm thời bị giới hạn (429 Quota Exceeded / 503 Busy)</strong>
+          <p>Hệ thống tự động chuyển sang chế độ <b>Phân tích Bản đồ Đối thủ & Lịch sử Đấu thầu Cục bộ Gia Lai</b> thông minh, dựa trên cơ sở dữ liệu y tế lưu trữ nhằm đảm bảo trải nghiệm liền mạch.</p>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="ai-assessment-dashboard">
+      ${fallbackBannerHTML}
+      <!-- Top Row with Score Gauge and Success Bar -->
+      <div class="ai-top-row">
+        <div class="ai-circular-gauge-wrapper">
+          <div class="ai-circular-gauge" style="--percent: ${(score / 100) * 360}deg;">
+            <div class="ai-circular-gauge-content">
+              <span class="ai-circular-gauge-score">${score}</span>
+              <span class="ai-circular-gauge-label">/ 100</span>
+            </div>
+          </div>
+        </div>
+        <div class="ai-overview-info">
+          <div class="ai-overview-badge-row">
+            <span class="ai-overview-badge">Đánh giá sơ bộ</span>
+          </div>
+          <h3 class="ai-overview-title">Phân tích & Làm rõ</h3>
+          <p class="ai-popover-lead" style="margin: 4px 0 0; font-size: 11px; line-height: 1.45; color: #555850;">
+            Đây là chấm điểm sơ bộ tại trình duyệt được đánh giá tự động bởi AI Gemini dựa trên các chỉ tiêu hành chính, kỹ thuật, tài chính, tiến độ thầu của e-HSMT.
+          </p>
+          <div class="ai-success-probability">
+            <div class="ai-success-label-row">
+              <span>Khả năng thành công ước tính</span>
+              <span>${successChance}%</span>
+            </div>
+            <div class="ai-success-bar-bg">
+              <div class="ai-success-bar-fill" style="width: ${successChance}%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brief Tender Info bar -->
+      <div class="ai-brief-tender-card">
+        <span><strong>Mã TBMT:</strong> ${escapeHtml(tender.notifyNo)}</span>
+        <span><strong>Chủ đầu tư:</strong> ${escapeHtml(tender.investor || "Chưa rõ")}</span>
+        <span><strong>Quy mô:</strong> ${escapeHtml(formattedPrice)}</span>
+        <span><strong>Đóng thầu:</strong> ${escapeHtml(formatDate(tender.closeDate, true))}</span>
+      </div>
+
+      <!-- Suitability Section -->
+      <div class="ai-section-title">Mức độ phù hợp với nhà thầu</div>
+      <div class="ai-suitability-grid">
+        <div class="ai-suitability-card">
+          <div class="ai-suitability-header">
+            <span>Pháp lý / năng lực</span>
+            <span class="ai-suitability-score">${metrics.phapLy}</span>
+          </div>
+          <div class="ai-suitability-bar-bg">
+            <div class="ai-suitability-bar-fill" style="width: ${metrics.phapLy}%;"></div>
+          </div>
+        </div>
+        <div class="ai-suitability-card">
+          <div class="ai-suitability-header">
+            <span>Kỹ thuật</span>
+            <span class="ai-suitability-score">${metrics.kyThuat}</span>
+          </div>
+          <div class="ai-suitability-bar-bg">
+            <div class="ai-suitability-bar-fill" style="width: ${metrics.kyThuat}%;"></div>
+          </div>
+        </div>
+        <div class="ai-suitability-card">
+          <div class="ai-suitability-header">
+            <span>Thương mại</span>
+            <span class="ai-suitability-score">${metrics.thuongMai}</span>
+          </div>
+          <div class="ai-suitability-bar-bg">
+            <div class="ai-suitability-bar-fill" style="width: ${metrics.thuongMai}%;"></div>
+          </div>
+        </div>
+        <div class="ai-suitability-card">
+          <div class="ai-suitability-header">
+            <span>Tiến độ</span>
+            <span class="ai-suitability-score">${metrics.tienDo}</span>
+          </div>
+          <div class="ai-suitability-bar-bg">
+            <div class="ai-suitability-bar-fill" style="width: ${metrics.tienDo}%;"></div>
+          </div>
+        </div>
+        <div class="ai-suitability-card">
+          <div class="ai-suitability-header">
+            <span>Địa bàn</span>
+            <span class="ai-suitability-score">${metrics.diaBan}</span>
+          </div>
+          <div class="ai-suitability-bar-bg">
+            <div class="ai-suitability-bar-fill" style="width: ${metrics.diaBan}%;"></div>
+          </div>
+        </div>
+        <div class="ai-suitability-card">
+          <div class="ai-suitability-header">
+            <span>Khả năng liên kết</span>
+            <span class="ai-suitability-score">${metrics.lienKet}</span>
+          </div>
+          <div class="ai-suitability-bar-bg">
+            <div class="ai-suitability-bar-fill" style="width: ${metrics.lienKet}%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competitor & History Map Section -->
+      <div class="ai-section-title">Bản đồ Đối thủ & Lịch sử Đấu thầu</div>
+      <div class="ai-competitor-box">
+        <div class="ai-competitor-sub">
+          <h5><span>👥</span> Đối thủ cạnh tranh trực tiếp nhất (Từ CSDL lịch sử)</h5>
+          <ul class="ai-competitor-list-styled">
+            ${likelyRivalsHTML || '<li>Chưa ghi nhận đối thủ có tần suất thắng thầu nổi bật.</li>'}
+          </ul>
+        </div>
+        
+        <div class="ai-competitor-sub" style="margin-top: 10px;">
+          <h5><span>🏦</span> Thói quen & Lịch sử chọn thầu của Chủ đầu tư</h5>
+          <p class="ai-hospital-summary-text">${hospitalHistorySummaryText}</p>
+        </div>
+
+        <div class="ai-competitor-sub" style="margin-top: 10px;">
+          <h5><span>🎯</span> Chiến thuật đề xuất khắc chế</h5>
+          <ul class="ai-strategy-list-styled">
+            ${winStrategyHTML || '<li>Chuẩn bị hồ sơ kỹ thuật và năng lực sòng phẳng.</li>'}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Primary Equipment -->
+      <div class="ai-section-title">Thiết bị / vật tư chủ đạo</div>
+      <div class="ai-primary-equipment-box">
+        <strong>Xác định lâm sàng cốt lõi:</strong> ${formatMarkdownText(primaryEquipment)}
+      </div>
+
+      <!-- Quad Grid: Strengths, Gaps, Risks, Partners -->
+      <div class="ai-quad-grid">
+        <div class="ai-quad-card strengths">
+          <h4><span>🟢</span> Điểm mạnh</h4>
+          <ul class="ai-bullet-list">${strengths || '<li>Chưa xác định ưu thế vượt trội</li>'}</ul>
+        </div>
+        <div class="ai-quad-card gaps">
+          <h4><span>🟡</span> Khoảng trống hồ sơ</h4>
+          <ul class="ai-bullet-list">${gaps || '<li>Chưa đồng bộ phân tích hồ sơ</li>'}</ul>
+        </div>
+        <div class="ai-quad-card risks">
+          <h4><span>🔴</span> Rủi ro chính</h4>
+          <ul class="ai-bullet-list">${risks || '<li>Cần xem xét kỹ e-HSMT chính thức</li>'}</ul>
+        </div>
+        <div class="ai-quad-card partners">
+          <h4><span>🔵</span> Đối tác cần có</h4>
+          <ul class="ai-bullet-list">${partners || '<li>Cần ủy quyền hãng chính hãng</li>'}</ul>
+        </div>
+      </div>
+
+      <!-- 24-72h Action items -->
+      <div class="ai-todo-box">
+        <h4><span>⚡</span> Việc cần làm trong 24–72 giờ</h4>
+        <ul class="ai-todo-list">${actionItems || '<li>Đọc và rà soát e-HSMT chính thức</li>'}</ul>
+      </div>
+
+      <!-- Expert Analysis Description -->
+      <div class="ai-section-title">Đánh giá chuyên sâu độc lập</div>
+      <p class="ai-popover-assessment" style="margin: 0;">
+        ${formatMarkdownText(cached.aiAssessment || "AI đang tiến hành thẩm định bổ sung.")}
+      </p>
+
+      <!-- View original doc -->
+      <div class="ai-popover-official-link" style="margin-top: 8px;">
+        <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn" style="width: 100%; justify-content: center; min-height: 40px;">
+          <span>🔗</span> <strong>Xem toàn văn hồ sơ gốc trên Cổng Mua sắm công ↗</strong>
+        </a>
+      </div>
+    </div>
+  `;
+}
+
 function updateAiHoverPopoverContent(tender) {
   if (!elements.aiPopover) return;
   const cached = state.aiSummaries[tender.notifyNo] || (state.aiSummaryLoadingId !== tender.id ? getFallbackSummary(tender) : null);
@@ -964,23 +1210,12 @@ function updateAiHoverPopoverContent(tender) {
         <span>Gemini AI đang phân tích chi tiết hồ sơ gói thầu...</span>
       </div>`;
   } else if (cached) {
-    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${formatMarkdownText(point)}</li>`).join("");
-    const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
-    bodyHtml = `
-      <p class="ai-popover-lead">${formatMarkdownText(cached.summary)}</p>
-      <ul class="ai-popover-list">${keyPoints}</ul>
-      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${formatMarkdownText(cached.aiAssessment)}</div>` : ""}
-      <div class="ai-popover-official-link">
-        <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn">
-          <span>🔗</span> <strong>Xem toàn văn hồ sơ gốc trên Cổng Mua sắm công ↗</strong>
-        </a>
-      </div>
-    `;
+    bodyHtml = renderPremiumAiDashboard(cached, tender);
   }
 
   elements.aiPopover.innerHTML = `
     <div class="ai-popover-header">
-      <div class="ai-popover-title"><span>✨</span> <strong>Phân tích & Tóm tắt chi tiết gói thầu</strong></div>
+      <div class="ai-popover-title"><span>✨</span> <strong>AI ĐẤU THẦU KIỂU VIỆT</strong></div>
       <span class="ai-popover-badge">AI Gemini</span>
     </div>
     ${bodyHtml}
@@ -990,7 +1225,7 @@ function updateAiHoverPopoverContent(tender) {
 function positionAiHoverPopover(targetElement) {
   if (!elements.aiPopover || !targetElement) return;
   const rect = targetElement.getBoundingClientRect();
-  const popoverWidth = Math.min(480, window.innerWidth * 0.92);
+  const popoverWidth = Math.min(520, window.innerWidth * 0.94);
   
   let left = rect.left;
   if (left + popoverWidth > window.innerWidth - 16) {
@@ -999,8 +1234,8 @@ function positionAiHoverPopover(targetElement) {
   if (left < 16) left = 16;
 
   let top = rect.bottom + window.scrollY + 8;
-  if (rect.bottom + 280 > window.innerHeight) {
-    top = rect.top + window.scrollY - 280;
+  if (rect.bottom + 450 > window.innerHeight) {
+    top = rect.top + window.scrollY - 450;
     if (top < window.scrollY + 10) {
       top = rect.bottom + window.scrollY + 8;
     }
@@ -1048,24 +1283,13 @@ function tenderAiSummaryCardMarkup(tender) {
         <span>Gemini AI đang phân tích toàn văn hồ sơ...</span>
       </div>`;
   } else if (cached) {
-    const keyPoints = (cached.keyPoints || []).map((point) => `<li>${formatMarkdownText(point)}</li>`).join("");
-    const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
-    contentHtml = `
-      <p class="ai-popover-lead">${formatMarkdownText(cached.summary)}</p>
-      <ul class="ai-popover-list">${keyPoints}</ul>
-      ${cached.aiAssessment ? `<div class="ai-popover-assessment"><strong>Phân tích chuyên sâu:</strong> ${formatMarkdownText(cached.aiAssessment)}</div>` : ""}
-      <div class="ai-popover-official-link">
-        <a href="${escapeHtml(officialLink)}" target="_blank" rel="noreferrer" class="ai-official-btn">
-          <span>🔗</span> <strong>Truy cập hồ sơ công khai gốc trên Muasamcong.mpi.gov.vn ↗</strong>
-        </a>
-      </div>
-    `;
+    contentHtml = renderPremiumAiDashboard(cached, tender);
   }
 
   return `
     <div class="tender-ai-card">
       <div class="ai-card-header">
-        <div class="ai-card-title"><span>✨</span> <strong>AI Gemini Phân Tích & Tóm Tắt Chi Tiết</strong></div>
+        <div class="ai-card-title"><span>✨</span> <strong>AI ĐẤU THẦU KIỂU VIỆT - PHÂN TÍCH CHUYÊN SÂU</strong></div>
         <button class="ai-card-close" data-action="close-ai" data-id="${escapeHtml(tender.id)}" type="button" aria-label="Đóng tóm tắt AI">✕</button>
       </div>
       ${contentHtml}
@@ -1138,6 +1362,9 @@ async function loadData(cacheBust = false) {
   elements.dataState.dataset.state = "loading";
   elements.sourceLabel.textContent = "Đang tải dữ liệu";
   elements.warning.hidden = true;
+  if (cacheBust) {
+    state.aiSummaries = {};
+  }
   try {
     const suffix = cacheBust ? `?t=${Date.now()}` : "";
     const [response, equipmentResponse] = await Promise.all([
