@@ -859,6 +859,71 @@ async function preloadBatchSummaries(tendersList) {
   }
 }
 
+function getDynamicCompetitorAnalysis(tender) {
+  const investor = tender.investor || "";
+  const location = tender.location || "";
+  const category = tender.category || "";
+  const allTenders = state.tenders || [];
+
+  // 1. Same investor
+  const sameInvestor = allTenders.filter(t => t.investor && investor && t.investor.toLowerCase().trim() === investor.toLowerCase().trim() && t.winnerNames?.length);
+  const investorWinners = new Map();
+  sameInvestor.forEach(t => {
+    t.winnerNames.forEach(w => {
+      if (w) {
+        const name = w.trim();
+        investorWinners.set(name, (investorWinners.get(name) || 0) + 1);
+      }
+    });
+  });
+
+  let rivals = [];
+  [...investorWinners.entries()].sort((a,b) => b[1] - a[1]).slice(0, 4).forEach(([name, count]) => {
+    let ratingText = count >= 3 ? "Rất Cao (85 - 90%)" : count === 2 ? "Cao (70 - 80%)" : "Khá (50 - 65%)";
+    rivals.push(`${name} - **[Xếp loại khả năng trúng: ${ratingText}]** (Trúng ${count} gói tại ${investor})`);
+  });
+
+  if (rivals.length < 2) {
+    // 2. Regional or Category winners
+    const regional = allTenders.filter(t => t.winnerNames?.length && ((t.location && location && t.location.includes(location)) || (t.category && category && t.category === category)));
+    const regionalWinners = new Map();
+    regional.forEach(t => {
+      t.winnerNames.forEach(w => {
+        if (w) {
+          const name = w.trim();
+          if (!investorWinners.has(name)) {
+            regionalWinners.set(name, (regionalWinners.get(name) || 0) + 1);
+          }
+        }
+      });
+    });
+    [...regionalWinners.entries()].sort((a,b) => b[1] - a[1]).slice(0, 4 - rivals.length).forEach(([name, count]) => {
+      let ratingText = count >= 3 ? "Rất Cao (85 - 90%)" : count === 2 ? "Cao (70 - 80%)" : "Khá (50 - 65%)";
+      rivals.push(`${name} - **[Xếp loại khả năng trúng: ${ratingText}]** (Trúng ${count} gói tại khu vực / chuyên ngành)`);
+    });
+  }
+
+  if (rivals.length === 0) {
+    rivals = [
+      `Nhà thầu phân phối trang thiết bị y tế tiêu biểu tại ${location || investor || "khu vực"}`,
+      "Các đơn vị có giấy ủy quyền bán hàng chính hãng từ nhà sản xuất."
+    ];
+  }
+
+  const historySummary = sameInvestor.length > 0 
+    ? `Chủ đầu tư "${investor}" có ${sameInvestor.length} gói thầu lịch sử trong CSDL. Các nhà thầu trong danh sách có tần suất trúng thầu cao nhất.`
+    : `Chủ đầu tư "${investor || "Cơ sở y tế"}" thường xuyên đấu thầu trang thiết bị lâm sàng, hồ sơ mời thầu cần rà soát kỹ tiêu chí kinh nghiệm tương tự.`;
+
+  return {
+    likelyRivals: rivals,
+    hospitalHistorySummary: historySummary,
+    winStrategy: [
+      "Phối hợp với hãng cung cấp giải pháp kỹ thuật ưu việt để tạo rào cản kỹ thuật phản kháng.",
+      "Chuẩn bị kỹ hồ sơ năng lực tài chính và bảo lãnh thầu đúng thời hạn quy định."
+    ]
+  };
+}
+
 function getFallbackSummary(tender) {
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
   const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
@@ -914,7 +979,9 @@ function getFallbackSummary(tender) {
     ],
     keyPoints: points,
     aiAssessment: `Hồ sơ công khai chính thức từ Cổng Dịch vụ công Mạng đấu thầu Quốc gia. Bấm liên kết bên dưới để xem toàn văn e-HSMT gốc.`,
-    officialUrl: url
+    officialUrl: url,
+    competitorAnalysis: getDynamicCompetitorAnalysis(tender),
+    isFallback: true
   };
 }
 
@@ -996,17 +1063,7 @@ function renderPremiumAiDashboard(cached, tender) {
   const locName = tender.location || tender.investor || "Địa phương";
   
   // Extract and format competitor analysis from database
-  const comp = cached.competitorAnalysis || {
-    likelyRivals: [
-      `Các nhà thầu phân phối trang thiết bị y tế hoạt động mạnh tại khu vực ${locName}.`,
-      "Các đơn vị có giấy ủy quyền bán hàng chính hãng từ nhà sản xuất."
-    ],
-    hospitalHistorySummary: `Đơn vị sử dụng "${tender.investor || "Cơ sở y tế"}" thường xuyên đấu thầu trang thiết bị lâm sàng, hồ sơ mời thầu cần rà soát kỹ tiêu chí kinh nghiệm tương tự.`,
-    winStrategy: [
-      "Phối hợp với hãng cung cấp giải pháp kỹ thuật ưu việt để tạo rào cản kỹ thuật phản kháng.",
-      "Chuẩn bị kỹ hồ sơ năng lực tài chính và bảo lãnh thầu đúng thời hạn quy định."
-    ]
-  };
+  const comp = cached.competitorAnalysis || getDynamicCompetitorAnalysis(tender);
 
   const likelyRivalsHTML = (comp.likelyRivals || []).map(r => `<li>${formatMarkdownText(r)}</li>`).join("");
   const hospitalHistorySummaryText = formatMarkdownText(comp.hospitalHistorySummary || "");
