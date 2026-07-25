@@ -1491,15 +1491,6 @@ function openKieuVietModal(tender) {
     : '<div style="padding: 12px; background: #fbf9f5; border-radius: 8px; font-size: 12px; color: #777;">Chưa có đủ dữ liệu công khai phù hợp trong bộ dữ liệu đang lưu.</div>';
 
   const regionalPastTendersHTML = regionalTenders.slice(0, 10).map((t, idx) => renderPastTenderItem(t, idx, 67 - idx * 4)).join("");
-          <strong>Thiết bị/hóa chất/model:</strong> ${escapeHtml(p.equip)}
-        </div>
-      </div>
-      <div class="kv-past-tender-price-box">
-        <div class="kv-past-tender-price">${p.price}</div>
-        <a href="${p.url}" target="_blank" rel="noreferrer" class="kv-past-tender-link">Nguồn ↗</a>
-      </div>
-    </div>
-  `).join("");
 
   bodyEl.innerHTML = `
     <!-- Top Overview Card -->
