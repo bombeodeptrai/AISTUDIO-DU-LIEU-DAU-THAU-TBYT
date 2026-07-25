@@ -173,14 +173,23 @@ function tenderModelSearchTexts(tender) {
   ].map(normalizeSearch).filter(Boolean);
 }
 
-function officialUrl(value) {
+function officialUrl(value, notifyNo) {
   try {
-    if (!value) return "https://muasamcong.mpi.gov.vn/";
-    const url = new URL(value);
-    return url.protocol === "https:" && url.hostname === "muasamcong.mpi.gov.vn"
-      ? url.href
-      : "https://muasamcong.mpi.gov.vn/";
+    if (!value && !notifyNo) return "https://muasamcong.mpi.gov.vn/";
+    if (value) {
+      const url = new URL(value);
+      if (url.protocol === "https:" && url.hostname === "muasamcong.mpi.gov.vn") {
+        return url.href;
+      }
+    }
+    if (notifyNo) {
+      return `https://muasamcong.mpi.gov.vn/web/guest/contractor-selection?p_p_id=egpportalcontractorselectionv2_WAR_egpportalcontractorselectionv2&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_egpportalcontractorselectionv2_WAR_egpportalcontractorselectionv2_render=index&notifyNo=${encodeURIComponent(notifyNo)}`;
+    }
+    return "https://muasamcong.mpi.gov.vn/";
   } catch {
+    if (notifyNo) {
+      return `https://muasamcong.mpi.gov.vn/web/guest/contractor-selection?p_p_id=egpportalcontractorselectionv2_WAR_egpportalcontractorselectionv2&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_egpportalcontractorselectionv2_WAR_egpportalcontractorselectionv2_render=index&notifyNo=${encodeURIComponent(notifyNo)}`;
+    }
     return "https://muasamcong.mpi.gov.vn/";
   }
 }
@@ -1261,6 +1270,53 @@ function renderPremiumAiDashboard(cached, tender) {
   `;
 }
 
+function getTenderCategoryType(t) {
+  const text = ((t.name || "") + " " + (t.category || "") + " " + (t.equipmentSummary || "") + " " + (t.items ? JSON.stringify(t.items) : "")).toLowerCase();
+  if (/siêu âm|đầu dò|convex|linear|sector|ultrasound/i.test(text)) return { id: "SIEU_AM", label: "Siêu âm" };
+  if (/x-quang|ct scanner|cắt lớp|cộng hưởng từ|mri|nội soi|c-arm|chẩn đoán hình ảnh/i.test(text)) return { id: "CDHA", label: "Chẩn đoán hình ảnh" };
+  if (/hóa chất|sinh phẩm|vật tư|xét nghiệm|thuốc thử|reagent|bơm tiêm|găng tay|dây truyền|khí máu|đông máu|huyết học|miễn dịch|sinh hóa/i.test(text)) return { id: "HOA_CHAT_VAT_TU", label: "Hóa chất & Vật tư" };
+  if (/thuốc|dược|chế phẩm y tế|vaccine|vacxin|kháng sinh/i.test(text)) return { id: "THUOC", label: "Thuốc & Dược phẩm" };
+  if (/máy|thiết bị|bơm tiêm điện|máy thở|monitor|nồi hấp|máy lọc nước|giường bệnh|đèn mổ|bàn mổ|ghế nha khoa|oxy|khí y tế/i.test(text)) return { id: "THIET_BI", label: "Thiết bị y tế" };
+  return { id: "KHAC", label: "Gói thầu y tế" };
+}
+
+function extractKeywords(text) {
+  if (!text) return new Set();
+  const words = text.toLowerCase()
+    .replace(/[^\w\sàáảãạăắằẳẵặânấầnẩẫậnèéẻẽẹêếềểễệđìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵ]/g, " ")
+    .split(/\s+/)
+    .filter(w => w.length >= 3 && !["mua", "sắm", "gói", "thầu", "bổ", "sung", "lần", "phục", "vụ", "công", "tác", "khám", "chữa", "bệnh", "năm", "2025", "2026", "2024", "bệnh", "viện", "trung", "tâm", "tỉnh", "huyện", "thành", "phố"].includes(w));
+  return new Set(words);
+}
+
+function calculateSimilarity(t1, t2, cat1, cat2) {
+  let baseScore = cat1.id === cat2.id ? 72 : 45;
+  const kw1 = extractKeywords((t1.name || "") + " " + (t1.equipmentSummary || ""));
+  const kw2 = extractKeywords((t2.name || "") + " " + (t2.equipmentSummary || ""));
+  if (kw1.size === 0 || kw2.size === 0) return baseScore;
+  let matchCount = 0;
+  kw1.forEach(k => { if (kw2.has(k)) matchCount++; });
+  const overlapRatio = matchCount / Math.min(kw1.size, kw2.size);
+  return Math.min(95, Math.round(baseScore + overlapRatio * 25));
+}
+
+function getProvinceWeight(locationStr, targetProvince) {
+  const loc = (locationStr || "").toLowerCase();
+  const target = (targetProvince || "gia lai").toLowerCase();
+  if (loc.includes(target)) return 10;
+  const neighborsMap = {
+    "gia lai": ["bình định", "kon tum", "đắk lắk", "phú yên", "quảng ngãi"],
+    "bình định": ["gia lai", "phú yên", "quảng ngãi", "kon tum"],
+    "đắk lắk": ["gia lai", "đắk nông", "lâm đồng", "phú yên", "khánh hòa"],
+    "quảng ngãi": ["bình định", "quảng nam", "gia lai", "kon tum"]
+  };
+  const neighbors = neighborsMap[target] || ["gia lai", "bình định", "kon tum", "đắk lắk", "phú yên"];
+  if (neighbors.some(n => loc.includes(n))) return 8;
+  const centralRegion = ["đà nẵng", "quảng nam", "thừa thiên huế", "huế", "khánh hòa", "nha trang", "lâm đồng", "đà lạt", "đắk nông"];
+  if (centralRegion.some(c => loc.includes(c))) return 6;
+  return 4;
+}
+
 function openKieuVietModal(tender) {
   const modal = document.querySelector("#kieu-viet-modal");
   const titleEl = document.querySelector("#kv-header-title");
@@ -1333,28 +1389,44 @@ function openKieuVietModal(tender) {
   const allTenders = state.tenders || [];
   const tendersWithWinners = allTenders.filter(t => t.winnerNames && t.winnerNames.length > 0);
   
-  // 1. Hospital tenders matching logic
-  let sameInvestorTenders = tendersWithWinners.filter(t => t.investor && tender.investor && t.investor.toLowerCase().trim() === tender.investor.toLowerCase().trim());
-  if (sameInvestorTenders.length === 0 && tender.investor) {
-    // Keyword fuzzy match for hospital name
-    const invKeywords = tender.investor.toLowerCase().split(/\s+/).filter(w => w.length > 2 && !["bệnh", "viện", "tỉnh", "trung", "tâm"].includes(w));
+  // 1. Hospital tenders matching logic (strictly 10 most recent tenders at this hospital)
+  const currentInvNorm = (tender.investor || "").toLowerCase().trim();
+  let sameInvestorTenders = tendersWithWinners.filter(t => t.id !== tender.id && (t.investor || "").toLowerCase().trim() === currentInvNorm);
+  if (sameInvestorTenders.length === 0 && currentInvNorm) {
+    const invKeywords = currentInvNorm.split(/\s+/).filter(w => w.length > 2 && !["bệnh", "viện", "tỉnh", "trung", "tâm"].includes(w));
     if (invKeywords.length > 0) {
-      sameInvestorTenders = tendersWithWinners.filter(t => {
-        const target = (t.investor || "").toLowerCase();
-        return invKeywords.some(k => target.includes(k));
-      });
+      sameInvestorTenders = tendersWithWinners.filter(t => t.id !== tender.id && invKeywords.some(k => (t.investor || "").toLowerCase().includes(k)));
     }
   }
+  sameInvestorTenders.sort((a, b) => new Date(b.closeDate || b.publishDate || 0) - new Date(a.closeDate || a.publishDate || 0));
 
-  // 2. Regional tenders matching logic
-  let regionalTenders = tendersWithWinners.filter(t => {
-    const locMatch = t.location && tender.location && t.location.toLowerCase().includes(tender.location.toLowerCase().split(" ")[0]);
-    const catMatch = t.category && tender.category && t.category === tender.category;
-    return locMatch || catMatch;
+  // 2. Category classification & Regional similarity matching logic
+  const currentCat = getTenderCategoryType(tender);
+  const hospitalIdsSet = new Set(sameInvestorTenders.map(t => t.id));
+  hospitalIdsSet.add(tender.id);
+
+  const otherRegionalCandidates = tendersWithWinners.filter(t => !hospitalIdsSet.has(t.id));
+  const currentProv = tender.location || "Gia Lai";
+
+  const scoredRegional = otherRegionalCandidates.map(candidate => {
+    const candidateCat = getTenderCategoryType(candidate);
+    const simPercent = calculateSimilarity(tender, candidate, currentCat, candidateCat);
+    const geoWeight = getProvinceWeight((candidate.location || "") + " " + (candidate.investor || ""), currentProv);
+    return { candidate, candidateCat, simPercent, geoWeight };
   });
-  if (regionalTenders.length === 0) {
-    regionalTenders = tendersWithWinners.slice(0, 10);
+
+  let categoryMatches = scoredRegional.filter(r => r.candidateCat.id === currentCat.id);
+  if (categoryMatches.length < 10) {
+    const remaining = scoredRegional.filter(r => r.candidateCat.id !== currentCat.id);
+    remaining.sort((a, b) => b.simPercent - a.simPercent);
+    categoryMatches = [...categoryMatches, ...remaining];
   }
+
+  categoryMatches.sort((a, b) => {
+    if (b.geoWeight !== a.geoWeight) return b.geoWeight - a.geoWeight;
+    if (b.simPercent !== a.simPercent) return b.simPercent - a.simPercent;
+    return new Date(b.candidate.closeDate || b.candidate.publishDate || 0) - new Date(a.candidate.closeDate || a.candidate.publishDate || 0);
+  });
 
   const allWinnersMap = new Map();
   allTenders.forEach(t => {
@@ -1367,7 +1439,7 @@ function openKieuVietModal(tender) {
   });
 
   const goiAtHospital = sameInvestorTenders.length;
-  const goiInRegion = Math.max(10, regionalTenders.length);
+  const goiInRegion = Math.max(10, categoryMatches.length);
   const totalRivalsDetected = allWinnersMap.size || 48;
   const totalModelsDetected = 42;
 
@@ -1457,7 +1529,7 @@ function openKieuVietModal(tender) {
   `).join("");
 
   // Helper function to map dataset tender to past tender HTML
-  const renderPastTenderItem = (t, idx, simPercent) => {
+  const renderPastTenderItem = (t, idx, badgeHTML) => {
     const pVal = Number(t.winningPrice) || Number(t.price) || 0;
     const pStr = pVal ? formatMoney(pVal) : "Chưa công bố";
     const winnersStr = t.winnerNames?.join("; ") || "Đang cập nhật";
@@ -1469,7 +1541,7 @@ function openKieuVietModal(tender) {
           <div class="kv-past-tender-meta">
             <span>${formatDate(t.closeDate || t.publishDate)}</span>
             <span>${escapeHtml(t.notifyNo)}</span>
-            <span class="kv-similarity-badge">Tương đồng ${simPercent}%</span>
+            ${badgeHTML || ""}
           </div>
           <h5 class="kv-past-tender-title">${escapeHtml(t.name)}</h5>
           <div class="kv-past-tender-details">
@@ -1481,20 +1553,26 @@ function openKieuVietModal(tender) {
         </div>
         <div class="kv-past-tender-price-box">
           <div class="kv-past-tender-price">${escapeHtml(pStr)}</div>
-          <a href="${escapeHtml(officialUrl(t.sourceUrl))}" target="_blank" rel="noreferrer" class="kv-past-tender-link">Nguồn ↗</a>
+          <a href="${escapeHtml(officialUrl(t.sourceUrl, t.notifyNo))}" target="_blank" rel="noreferrer" class="kv-past-tender-link">Nguồn ↗</a>
         </div>
       </div>
     `;
   };
 
-  // Build combined list of past tenders (prioritizing same hospital/investor, then regional)
-  const hospitalTenderIds = new Set(sameInvestorTenders.map(t => t.id));
-  const fillRegional = regionalTenders.filter(t => !hospitalTenderIds.has(t.id));
-  const combinedTenders = [...sameInvestorTenders, ...fillRegional].slice(0, 10);
+  // Section 1: 10 gói gần nhất tại bệnh viện (Strictly hospital tenders sorted by date descending, NO SIMILARITY BADGE)
+  const hospitalTop10 = sameInvestorTenders.slice(0, 10);
+  const hospitalPastTendersHTML = hospitalTop10.length > 0
+    ? hospitalTop10.map((t, idx) => renderPastTenderItem(t, idx, "")).join("")
+    : '<div style="padding: 10px; background: #fbf9f5; border-radius: 6px; font-size: 12px; color: #777;">Chưa ghi nhận gói thầu đã có kết quả khác tại đơn vị này trong bộ dữ liệu đang lưu.</div>';
 
-  const pastTendersHTML = combinedTenders.length > 0
-    ? combinedTenders.map((t, idx) => renderPastTenderItem(t, idx, Math.max(45, 80 - idx * 4))).join("")
-    : '<div style="padding: 12px; background: #fbf9f5; border-radius: 8px; font-size: 12px; color: #777;">Chưa có đủ dữ liệu công khai phù hợp trong bộ dữ liệu đang lưu.</div>';
+  // Section 2: 10 gói tương tự ở lân cận khu vực Miền Trung (Filtered by Category & sorted by Proximity + Similarity)
+  const regionalTop10 = categoryMatches.slice(0, 10);
+  const regionalPastTendersHTML = regionalTop10.length > 0
+    ? regionalTop10.map((r, idx) => {
+        const badge = `<span class="kv-similarity-badge">Tương đồng ${r.simPercent}% · ${r.candidateCat.label}</span>`;
+        return renderPastTenderItem(r.candidate, idx, badge);
+      }).join("")
+    : '<div style="padding: 10px; background: #fbf9f5; border-radius: 6px; font-size: 12px; color: #777;">Chưa tìm thấy gói thầu tương tự phù hợp trong khu vực.</div>';
 
   bodyEl.innerHTML = `
     <!-- Top Overview Card -->
@@ -1714,16 +1792,24 @@ function openKieuVietModal(tender) {
       </div>
 
       <!-- Lịch sử trúng thầu & Gói thầu tương tự -->
-      <div class="kv-past-tenders-box" style="background: #ffffff; border: 1px solid #e2ece5; border-radius: 10px; padding: 14px; margin-top: 14px;">
-        <div class="kv-past-tenders-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #edf4f0;">
-          <span style="font-size: 15px;">📋</span>
-          <h4 style="margin: 0; font-size: 13px; font-weight: 800; color: #173c32;">
-            Lịch sử trúng thầu & Gói thầu tương tự
-          </h4>
-        </div>
-        <div class="kv-past-tenders-list" style="display: flex; flex-direction: column; gap: 10px;">
-          ${pastTendersHTML}
-        </div>
+      <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 12px;">
+        <details class="kv-past-tenders-box" open style="background: #ffffff; border: 1px solid #e2ece5; border-radius: 10px; padding: 14px;">
+          <summary style="font-size: 13px; font-weight: 800; color: #173c32; cursor: pointer; padding-bottom: 6px;">
+            ▼ 10 gói gần nhất đã có kết quả tại ${escapeHtml(tender.investor || locName)} (${sameInvestorTenders.length} gói)
+          </summary>
+          <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+            ${hospitalPastTendersHTML}
+          </div>
+        </details>
+
+        <details class="kv-past-tenders-box" open style="background: #ffffff; border: 1px solid #e2ece5; border-radius: 10px; padding: 14px;">
+          <summary style="font-size: 13px; font-weight: 800; color: #173c32; cursor: pointer; padding-bottom: 6px;">
+            ▼ 10 gói tương tự ở lân cận khu vực Miền Trung (${escapeHtml(currentCat.label)})
+          </summary>
+          <div class="kv-past-tenders-list" style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+            ${regionalPastTendersHTML}
+          </div>
+        </details>
       </div>
     </div>
   `;
