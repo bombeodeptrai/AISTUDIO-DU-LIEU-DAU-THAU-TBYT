@@ -61,54 +61,61 @@ function isSameInvestorFuzzy(inv1, inv2) {
   return kw1.every(k => str2.includes(k));
 }
 
-function getRegionNameAndKeywords(investor, location, name) {
-  const combined = `${investor || ''} ${location || ''} ${name || ''}`.toLowerCase();
-  
-  // Gia Lai districts & cities
-  const giaLaiKeywords = [
-    'gia lai', 'pleiku', 'đức cơ', 'chư sê', 'chư prông', 'chư păh', 'chư phư', 
-    'an khê', 'ayun pa', 'đak đoa', 'đak pơ', 'mang yang', 'kông chro', 
-    'kbang', 'phú thiện', 'krông pa', 'ia pa', 'ia grai'
-  ];
-  if (giaLaiKeywords.some(kw => combined.includes(kw))) {
-    return { name: 'Gia Lai', keywords: giaLaiKeywords };
-  }
-  
-  // Bình Định districts & cities
-  const binhDinhKeywords = [
-    'bình định', 'quy nhơn', 'bồng sơn', 'hoài nhơn', 'an nhơn', 'tuy phước', 
-    'phù cát', 'phù mỹ', 'hoài ân', 'tây sơn', 'vân canh', 'vĩnh thạnh', 'tam quan'
-  ];
-  if (binhDinhKeywords.some(kw => combined.includes(kw))) {
-    return { name: 'Bình Định', keywords: binhDinhKeywords };
-  }
-
-  // Đắk Lắk
-  const dakLakKeywords = ['đắk lắk', 'dak lak', 'buôn ma thuột', 'krông pắc', 'cư m\'gar', 'buôn hồ', 'ea h\'leo'];
-  if (dakLakKeywords.some(kw => combined.includes(kw))) {
-    return { name: 'Đắk Lắk', keywords: dakLakKeywords };
-  }
-
+const DISTRICT_CLUSTERS = [
+  // Gia Lai clusters
+  { id: "GL_CENTRAL", name: "Khu vực TP. Pleiku & 2-3 huyện lân cận (Chư Păh, Đắk Đoa, Ia Grai, Mang Yang)", province: "Gia Lai", keywords: ["pleiku", "chư păh", "đak đoa", "ia grai", "mang yang"] },
+  { id: "GL_WEST", name: "Khu vực Đức Cơ & 2-3 huyện lân cận (Chư Prông, Chư Sê, Chư Pưh)", province: "Gia Lai", keywords: ["đức cơ", "chư prông", "chư pưh", "chư sê"] },
+  { id: "GL_EAST", name: "Khu vực TX. An Khê & 2-3 huyện lân cận (Đắk Pơ, KBang, Kông Chro)", province: "Gia Lai", keywords: ["an khê", "đak pơ", "kbang", "kông chro"] },
+  { id: "GL_SOUTH", name: "Khu vực TX. Ayun Pa & 2-3 huyện lân cận (Phú Thiện, Krông Pa, Ia Pa)", province: "Gia Lai", keywords: ["ayun pa", "phú thiện", "krông pa", "ia pa"] },
+  // Bình Định clusters
+  { id: "BD_SOUTH", name: "Khu vực TP. Quy Nhơn & 2-3 huyện lân cận (Tuy Phước, An Nhơn, Vân Canh)", province: "Bình Định", keywords: ["quy nhơn", "tuy phước", "an nhơn", "vân canh"] },
+  { id: "BD_NORTH", name: "Khu vực TX. Hoài Nhơn & 2-3 huyện lân cận (Hoài Ân, An Lão, Phù Mỹ, Phù Cát)", province: "Bình Định", keywords: ["hoài nhơn", "bồng sơn", "hoài ân", "an lão", "phù mỹ", "phù cát", "tam quan"] },
+  { id: "BD_WEST", name: "Khu vực Tây Sơn & Vĩnh Thạnh", province: "Bình Định", keywords: ["tây sơn", "vĩnh thạnh"] },
+  // Đắk Lắk clusters
+  { id: "DL_CENTRAL", name: "Khu vực Buôn Ma Thuột & 2-3 huyện lân cận", province: "Đắk Lắk", keywords: ["buôn ma thuột", "dak lak", "đắk lắk", "cư m'gar", "buôn hồ", "ea h'leo", "krông pắc"] },
   // Quảng Nam
-  const quangNamKeywords = ['quảng nam', 'tam kỳ', 'hội an', 'điện bàn', 'đại lộc'];
-  if (quangNamKeywords.some(kw => combined.includes(kw))) {
-    return { name: 'Quảng Nam', keywords: quangNamKeywords };
-  }
-
+  { id: "QN_CENTRAL", name: "Khu vực Tam Kỳ & 2-3 huyện lân cận", province: "Quảng Nam", keywords: ["quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc"] },
   // Hà Nội
-  const haNoiKeywords = ['hà nội', 'hoàn kiếm', 'cầu giấy', 'đống đa', 'hai bà trưng', 'ba đình', 'thanh xuân'];
-  if (haNoiKeywords.some(kw => combined.includes(kw))) {
-    return { name: 'Hà Nội', keywords: haNoiKeywords };
+  { id: "HN_CENTRAL", name: "Khu vực Hà Nội & các quận/huyện lân cận", province: "Hà Nội", keywords: ["hà nội", "hoàn kiếm", "cầu giấy", "đống đa", "hai bà trưng", "ba đình", "thanh xuân"] },
+  // TP. Hồ Chí Minh
+  { id: "HCM_CENTRAL", name: "Khu vực TP. Hồ Chí Minh & các quận lân cận", province: "TP. Hồ Chí Minh", keywords: ["hồ chí minh", "tphcm", "sài gòn", "thủ đức", "quận 1", "quận 3", "quận 5", "quận 10"] }
+];
+
+function getDistrictClusterInfo(investor, location, name) {
+  const text = `${investor || ''} ${location || ''} ${name || ''}`.toLowerCase();
+  for (const cluster of DISTRICT_CLUSTERS) {
+    if (cluster.keywords.some(kw => text.includes(kw))) {
+      return cluster;
+    }
+  }
+  return null;
+}
+
+function isPriceCompatible(p1, p2) {
+  const price1 = Number(p1) || 0;
+  const price2 = Number(p2) || 0;
+  if (!price1 || !price2) return true;
+  if (price1 >= 10000000000) return price2 >= price1 * 0.05;
+  if (price1 >= 1000000000) return price2 >= price1 * 0.05;
+  if (price1 <= 200000000) return price2 <= price1 * 25;
+  return true;
+}
+
+function getRegionNameAndKeywords(investor, location, name) {
+  const cluster = getDistrictClusterInfo(investor, location, name);
+  if (cluster) {
+    return { name: cluster.name, keywords: cluster.keywords, province: cluster.province };
   }
 
-  // TP. Hồ Chí Minh
-  const hcmKeywords = ['hồ chí minh', 'tphcm', 'sài gòn', 'thủ đức', 'quận 1', 'quận 3', 'quận 5', 'quận 10'];
-  if (hcmKeywords.some(kw => combined.includes(kw))) {
-    return { name: 'TP. Hồ Chí Minh', keywords: hcmKeywords };
-  }
+  const combined = `${investor || ''} ${location || ''} ${name || ''}`.toLowerCase();
+
+  // Fallbacks by province
+  if (combined.includes('gia lai')) return { name: 'Gia Lai', keywords: ['gia lai', 'pleiku'], province: 'Gia Lai' };
+  if (combined.includes('bình định')) return { name: 'Bình Định', keywords: ['bình định', 'quy nhơn'], province: 'Bình Định' };
+  if (combined.includes('đắk lắk') || combined.includes('dak lak')) return { name: 'Đắk Lắk', keywords: ['đắk lắk', 'buôn ma thuột'], province: 'Đắk Lắk' };
 
   const fallbackName = (location || investor || 'Địa phương').trim();
-  return { name: fallbackName, keywords: [fallbackName.toLowerCase()] };
+  return { name: fallbackName, keywords: [fallbackName.toLowerCase()], province: fallbackName };
 }
 
 function formatPackageTitle(rawName) {
@@ -237,25 +244,24 @@ function isValidModelName(model) {
   return true;
 }
 
-function getHistoricalContext(investor, category, currentNotifyNo, currentName, currentLocation) {
+function getHistoricalContext(investor, category, currentNotifyNo, currentName, currentLocation, currentPrice) {
   const tenders = getAllTenders();
   const safeCategory = (category || '').toLowerCase().trim();
   
-  // Sort tenders descending by date to analyze 10 most recent tenders
+  // Sort tenders descending by date
   const sortedTenders = [...tenders].sort((a, b) => {
     const dateA = new Date(a.publicDate || a.closeDate || 0);
     const dateB = new Date(b.publicDate || b.closeDate || 0);
     return dateB - dateA;
   });
 
-  // 1. Fuzzy match investor
+  // 1. Fuzzy match investor (Exact hospital familiar contractors)
   const sameInvestorTenders = sortedTenders.filter(t => 
     t.investor && 
     t.notifyNo !== currentNotifyNo &&
     isSameInvestorFuzzy(investor, t.investor)
   );
 
-  // Take 10 most recent tenders of same investor
   const recentInvestor10 = sameInvestorTenders.slice(0, 10);
   const investorWinnerPackages = new Map();
   const investorWinnerModels = new Map();
@@ -275,7 +281,6 @@ function getHistoricalContext(investor, category, currentNotifyNo, currentName, 
           if (!investorWinnerYears.has(name)) investorWinnerYears.set(name, new Set());
           if (year) investorWinnerYears.get(name).add(year);
 
-          // Extract and check models for overlap
           const currentScopes = getScopeKeywords(currentName + " " + (category || ""));
           const historicalScopes = getScopeKeywords(t.name + " " + (t.category || ""));
           const hasOverlap = currentScopes.length === 0 || historicalScopes.length === 0 || currentScopes.some(s => historicalScopes.includes(s));
@@ -300,10 +305,17 @@ function getHistoricalContext(investor, category, currentNotifyNo, currentName, 
     .slice(0, 4)
     .map(([name, pkgs]) => formatContractorWinningText(name, pkgs, investorWinnerModels.get(name), investorWinnerYears.get(name)));
 
-  // 2. Regional match based on location keywords (Gia Lai, Bình Định, etc.)
+  // 2. Regional district cluster match (2-3 lân cận) + Price scale match
   const regionInfo = getRegionNameAndKeywords(investor, currentLocation, currentName);
+  const targetPrice = currentPrice || 0;
+
   const regionalTenders = sortedTenders.filter(t => {
     if (t.notifyNo === currentNotifyNo) return false;
+    
+    // Price compatibility check
+    const tPrice = Number(t.winningPrice) || Number(t.price) || 0;
+    if (!isPriceCompatible(targetPrice, tPrice)) return false;
+
     let inRegion = false;
     if (regionInfo.keywords.length > 0) {
       const combinedT = `${t.investor || ''} ${t.location || ''} ${t.name || ''}`.toLowerCase();
@@ -311,10 +323,10 @@ function getHistoricalContext(investor, category, currentNotifyNo, currentName, 
     } else {
       inRegion = true;
     }
-    return inRegion && t.category === category;
+    return inRegion;
   });
 
-  const recentRegional10 = regionalTenders.slice(0, 10);
+  const recentRegional10 = regionalTenders.slice(0, 12);
   const regionalWinnerPackages = new Map();
   const regionalWinnerModels = new Map();
   const regionalWinnerYears = new Map();
@@ -333,7 +345,6 @@ function getHistoricalContext(investor, category, currentNotifyNo, currentName, 
           if (!regionalWinnerYears.has(name)) regionalWinnerYears.set(name, new Set());
           if (year) regionalWinnerYears.get(name).add(year);
 
-          // Extract and check models for overlap
           const currentScopes = getScopeKeywords(currentName + " " + (category || ""));
           const historicalScopes = getScopeKeywords(t.name + " " + (t.category || ""));
           const hasOverlap = currentScopes.length === 0 || historicalScopes.length === 0 || currentScopes.some(s => historicalScopes.includes(s));
@@ -624,7 +635,8 @@ function createFallbackForTender(tender) {
     points.push(`🏆 Kết quả trúng thầu: ${winnerText}`);
   }
 
-  const hist = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location);
+  const currentPriceVal = Number(tender.winningPrice) || Number(tender.price) || 0;
+  const hist = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location, currentPriceVal);
   const compAnalysis = buildCompetitorAnalysisFromDatabase(hist, tender.investor, tender.category, tender.location);
 
   const locName = regionInfo.name !== 'Toàn quốc' ? regionInfo.name : locationDisplay;
@@ -763,7 +775,8 @@ app.post('/api/summarize-tender', async (req, res) => {
     if (summaryCache.has(notifyNo)) {
       let cachedData = summaryCache.get(notifyNo);
       // Recalculate competitor analysis dynamically in real-time so it is always 100% up-to-date with model-level cross-referencing
-      const history = getHistoricalContext(investor, category, notifyNo, name, location);
+      const reqPrice = Number(req.body.winningPrice) || Number(req.body.price) || 0;
+      const history = getHistoricalContext(investor, category, notifyNo, name, location, reqPrice);
       cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, investor, category, location);
       
       // Keep score and successChance aligned with live history data
@@ -774,7 +787,7 @@ app.post('/api/summarize-tender', async (req, res) => {
     }
 
     // Query historical database early for competitor analysis & statistics
-    const history = getHistoricalContext(investor, category, notifyNo, name, location);
+    const history = getHistoricalContext(investor, category, notifyNo, name, location, reqPrice);
     const databaseCompetitorAnalysis = buildCompetitorAnalysisFromDatabase(history, investor, category, location);
 
     const ai = getGeminiClient();
@@ -944,7 +957,8 @@ app.post('/api/batch-summarize-tenders', async (req, res) => {
       if (!tender.notifyNo) continue;
       if (summaryCache.has(tender.notifyNo)) {
         let cachedData = summaryCache.get(tender.notifyNo);
-        const history = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location);
+        const tPrice = Number(tender.winningPrice) || Number(tender.price) || 0;
+        const history = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location, tPrice);
         cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, tender.investor, tender.category, tender.location);
         saveToDiskCache(tender.notifyNo, cachedData);
         summaries[tender.notifyNo] = cachedData;
@@ -1059,7 +1073,8 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
         for (const item of parsed) {
           if (item.notifyNo) {
             const originalTender = missingTenders.find(t => t.notifyNo === item.notifyNo) || {};
-            const history = getHistoricalContext(originalTender.investor, originalTender.category, item.notifyNo, originalTender.name, originalTender.location);
+            const origPrice = Number(originalTender.winningPrice) || Number(originalTender.price) || 0;
+            const history = getHistoricalContext(originalTender.investor, originalTender.category, item.notifyNo, originalTender.name, originalTender.location, origPrice);
             const compAnalysis = buildCompetitorAnalysisFromDatabase(history, originalTender.investor, originalTender.category, originalTender.location);
 
             const sumData = {

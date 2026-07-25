@@ -1292,15 +1292,33 @@ function extractKeywords(text) {
   return new Set(words);
 }
 
+function getTenderPrice(t) {
+  return Number(t.winningPrice) || Number(t.price) || 0;
+}
+
 function calculateSimilarity(t1, t2, cat1, cat2) {
-  let baseScore = cat1.id === cat2.id ? 72 : 45;
+  let baseScore = cat1.id === cat2.id ? 50 : 25;
   const kw1 = extractKeywords((t1.name || "") + " " + (t1.equipmentSummary || ""));
   const kw2 = extractKeywords((t2.name || "") + " " + (t2.equipmentSummary || ""));
-  if (kw1.size === 0 || kw2.size === 0) return baseScore;
-  let matchCount = 0;
-  kw1.forEach(k => { if (kw2.has(k)) matchCount++; });
-  const overlapRatio = matchCount / Math.min(kw1.size, kw2.size);
-  return Math.min(95, Math.round(baseScore + overlapRatio * 25));
+  let kwScore = 0;
+  if (kw1.size > 0 && kw2.size > 0) {
+    let matchCount = 0;
+    kw1.forEach(k => { if (kw2.has(k)) matchCount++; });
+    const overlapRatio = matchCount / Math.min(kw1.size, kw2.size);
+    kwScore = Math.round(overlapRatio * 25);
+  } else {
+    kwScore = 10;
+  }
+  const p1 = getTenderPrice(t1);
+  const p2 = getTenderPrice(t2);
+  let priceScore = 0;
+  if (p1 > 0 && p2 > 0) {
+    const ratio = Math.min(p1, p2) / Math.max(p1, p2);
+    priceScore = Math.round(ratio * 25);
+  } else {
+    priceScore = 10;
+  }
+  return Math.min(95, baseScore + kwScore + priceScore);
 }
 
 function getProvinceWeight(locationStr, targetProvince) {
@@ -1403,19 +1421,38 @@ function openKieuVietModal(tender) {
   }
   sameInvestorTenders.sort((a, b) => new Date(b.closeDate || b.publishDate || 0) - new Date(a.closeDate || a.publishDate || 0));
 
-  // 2. Category classification & Regional similarity matching logic
+  // 2. Category classification, Price scale filtering & Regional similarity matching logic
   const currentCat = getTenderCategoryType(tender);
+  const targetPrice = getTenderPrice(tender);
   const hospitalIdsSet = new Set(sameInvestorTenders.map(t => t.id));
   hospitalIdsSet.add(tender.id);
 
   const otherRegionalCandidates = tendersWithWinners.filter(t => !hospitalIdsSet.has(t.id));
   const currentProv = tender.location || "Gia Lai";
 
-  const scoredRegional = otherRegionalCandidates.map(candidate => {
+  // Filter out candidates with completely mismatched budget scale (e.g. comparing 43B with 20M)
+  const priceFilteredCandidates = otherRegionalCandidates.filter(candidate => {
+    const p2 = getTenderPrice(candidate);
+    if (!targetPrice || !p2) return true;
+    if (targetPrice >= 10000000000) { // >= 10 tỷ
+      return p2 >= targetPrice * 0.05; // min 5% of target budget (e.g., min ~2.15B for 43B)
+    } else if (targetPrice >= 1000000000) { // >= 1 tỷ
+      return p2 >= targetPrice * 0.05;
+    } else if (targetPrice <= 200000000) { // <= 200M
+      return p2 <= targetPrice * 25;
+    }
+    return true;
+  });
+
+  const candidatesToScore = priceFilteredCandidates.length >= 5 ? priceFilteredCandidates : otherRegionalCandidates;
+
+  const scoredRegional = candidatesToScore.map(candidate => {
     const candidateCat = getTenderCategoryType(candidate);
     const simPercent = calculateSimilarity(tender, candidate, currentCat, candidateCat);
     const geoWeight = getProvinceWeight((candidate.location || "") + " " + (candidate.investor || ""), currentProv);
-    return { candidate, candidateCat, simPercent, geoWeight };
+    const p2 = getTenderPrice(candidate);
+    const priceRatio = (targetPrice > 0 && p2 > 0) ? Math.min(targetPrice, p2) / Math.max(targetPrice, p2) : 0.5;
+    return { candidate, candidateCat, simPercent, geoWeight, priceRatio };
   });
 
   let categoryMatches = scoredRegional.filter(r => r.candidateCat.id === currentCat.id);
@@ -1426,87 +1463,131 @@ function openKieuVietModal(tender) {
   }
 
   categoryMatches.sort((a, b) => {
+    if (Math.abs(b.simPercent - a.simPercent) > 8) {
+      return b.simPercent - a.simPercent;
+    }
     if (b.geoWeight !== a.geoWeight) return b.geoWeight - a.geoWeight;
-    if (b.simPercent !== a.simPercent) return b.simPercent - a.simPercent;
+    if (b.priceRatio !== a.priceRatio) return b.priceRatio - a.priceRatio;
     return new Date(b.candidate.closeDate || b.candidate.publishDate || 0) - new Date(a.candidate.closeDate || a.candidate.publishDate || 0);
   });
 
-  const allWinnersMap = new Map();
+  // Dynamic Local Competitor (Rivals) Engine
+  const DISTRICT_CLUSTERS = [
+    { id: "GL_CENTRAL", name: "TP. Pleiku & 2-3 huyện lân cận (Chư Păh, Đắk Đoa, Ia Grai, Mang Yang)", keywords: ["pleiku", "chư păh", "đak đoa", "ia grai", "mang yang"] },
+    { id: "GL_WEST", name: "Đức Cơ & 2-3 huyện lân cận (Chư Prông, Chư Sê, Chư Pưh)", keywords: ["đức cơ", "chư prông", "chư pưh", "chư sê"] },
+    { id: "GL_EAST", name: "TX. An Khê & 2-3 huyện lân cận (Đắk Pơ, KBang, Kông Chro)", keywords: ["an khê", "đak pơ", "kbang", "kông chro"] },
+    { id: "GL_SOUTH", name: "TX. Ayun Pa & 2-3 huyện lân cận (Phú Thiện, Krông Pa, Ia Pa)", keywords: ["ayun pa", "phú thiện", "krông pa", "ia pa"] },
+    { id: "BD_SOUTH", name: "TP. Quy Nhơn & 2-3 huyện lân cận (Tuy Phước, An Nhơn, Vân Canh)", keywords: ["quy nhơn", "tuy phước", "an nhơn", "vân canh"] },
+    { id: "BD_NORTH", name: "TX. Hoài Nhơn & 2-3 huyện lân cận (Hoài Ân, An Lão, Phù Mỹ, Phù Cát)", keywords: ["hoài nhơn", "bồng sơn", "hoài ân", "an lão", "phù mỹ", "phù cát", "tam quan"] },
+    { id: "BD_WEST", name: "Tây Sơn & Vĩnh Thạnh", keywords: ["tây sơn", "vĩnh thạnh"] },
+    { id: "DL_CENTRAL", name: "Buôn Ma Thuột & 2-3 huyện lân cận", keywords: ["buôn ma thuột", "dak lak", "đắk lắk", "cư m'gar", "buôn hồ", "ea h'leo", "krông pắc"] }
+  ];
+
+  const getDistrictCluster = (inv, loc, name) => {
+    const text = `${inv || ''} ${loc || ''} ${name || ''}`.toLowerCase();
+    for (const cluster of DISTRICT_CLUSTERS) {
+      if (cluster.keywords.some(kw => text.includes(kw))) return cluster;
+    }
+    return null;
+  };
+
+  const currentCluster = getDistrictCluster(tender.investor, tender.location, tender.name);
+
+  // Compute weighted scores for contractors in relevant tenders
+  const competitorScoreMap = new Map();
+
   allTenders.forEach(t => {
-    t.winnerNames?.forEach(w => {
-      if (w) {
-        const name = w.trim();
-        allWinnersMap.set(name, (allWinnersMap.get(name) || 0) + 1);
+    if (t.id === tender.id || !t.winnerNames || t.winnerNames.length === 0) return;
+    const tPrice = getTenderPrice(t);
+    
+    // Check price scale compatibility
+    if (targetPrice && tPrice) {
+      if (targetPrice >= 10000000000 && tPrice < targetPrice * 0.05) return;
+      if (targetPrice >= 1000000000 && tPrice < targetPrice * 0.05) return;
+      if (targetPrice <= 200000000 && tPrice > targetPrice * 25) return;
+    }
+
+    const winners = Array.isArray(t.winnerNames) ? t.winnerNames : [t.winnerNames];
+    const isSameInv = t.investor && tender.investor && (t.investor.trim() === tender.investor.trim() || t.investor.toLowerCase().includes(tender.investor.toLowerCase().slice(0, 10)));
+    const tCluster = getDistrictCluster(t.investor, t.location, t.name);
+    const isSameCluster = currentCluster && tCluster && currentCluster.id === tCluster.id;
+
+    winners.forEach(w => {
+      if (!w) return;
+      const name = w.trim();
+      if (!competitorScoreMap.has(name)) {
+        competitorScoreMap.set(name, { score: 0, hospitalWins: 0, clusterWins: 0, totalVal: 0, modelsSet: new Set() });
+      }
+      const entry = competitorScoreMap.get(name);
+      if (isSameInv) {
+        entry.score += 10;
+        entry.hospitalWins += 1;
+      } else if (isSameCluster) {
+        entry.score += 4;
+        entry.clusterWins += 1;
+      } else {
+        entry.score += 1;
+      }
+      entry.totalVal += tPrice;
+
+      // Extract winning models or equipment tags
+      if (t.winningModels) {
+        const mods = Array.isArray(t.winningModels) ? t.winningModels : [t.winningModels];
+        mods.forEach(m => {
+          if (m && m.trim().length > 2 && !["chưa", "chưa rõ", "đang"].includes(m.toLowerCase().trim())) {
+            entry.modelsSet.add(m.trim());
+          }
+        });
+      }
+      if (t.equipmentSummary) {
+        const items = t.equipmentSummary.split(/[\n;,]/).map(s => s.trim()).filter(s => s.length > 4);
+        items.slice(0, 3).forEach(it => entry.modelsSet.add(it));
       }
     });
   });
 
+  const sortedRivals = [...competitorScoreMap.entries()]
+    .sort((a, b) => b[1].score - a[1].score)
+    .slice(0, 3);
+
   const goiAtHospital = sameInvestorTenders.length;
   const goiInRegion = Math.max(10, categoryMatches.length);
-  const totalRivalsDetected = allWinnersMap.size || 48;
+  const totalRivalsDetected = competitorScoreMap.size || 24;
   const totalModelsDetected = 42;
 
   let rivalsList = [];
-  const topWinners = [...allWinnersMap.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3);
-  
-  if (topWinners.length >= 3) {
-    rivalsList = [
-      {
-        rank: 1,
-        name: topWinners[0][0],
-        tag: "Cao",
-        score: "66/100",
-        stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 10 lượt tham dự ghi nhận · 24,42 tỷ giá trị trúng đã biết",
-        desc: "Có lịch sử trúng nhiều gói tương tự trong khu vực, khả năng cạnh tranh về hãng và giá đáng chú ý.",
-        tags: ["Băng cá nhân 2*6cm: Elasgo 20mm x 60mm", "Bông thấm nước: 10032", "Gạc phẫu thuật ổ bụng, đã tiệt trùng", "Găng tay phẫu thuật tiệt trùng các số", "Bộ dây truyền dịch 60 giọt/ml", "Bơm tiêm nhựa 50 tiêm: SS*50LE"]
-      },
-      {
-        rank: 2,
-        name: topWinners[1][0],
-        tag: "Cao",
-        score: "65/100",
-        stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 14 lượt tham dự ghi nhận · 10,4 tỷ giá trị trúng đã biết",
-        desc: "Có lịch sử trúng nhiều gói tương tự trong khu vực, khả năng cạnh tranh về hãng và giá đáng chú ý.",
-        tags: ["Halogen lamp: BXC0172A", "Cốc đựng huyết thanh: GT202-210", "Bilirubin Direct: OLY0191A", "Bilirubin Total: OLY0192A", "Albumin: OLY0222D", "Cholesterol (CHOD PAP)"]
-      },
-      {
-        rank: 3,
-        name: topWinners[3]?.[0] || topWinners[2][0],
-        tag: "Cao",
-        score: "65/100",
-        stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 5 lượt tham dự ghi nhận · 4,18 tỷ giá trị trúng đã biết",
-        desc: "Có lịch sử trúng nhiều gói tương tự trong khu vực, khả năng cạnh tranh về hãng và giá đáng chú ý.",
-        tags: ["Hóa chất xét nghiệm HbA1C: F-A1C", "Hóa chất xét nghiệm βhCG: F-HCG", "Hóa chất xét nghiệm Troponine I: F-TNI", "Hóa chất xét nghiệm T3: F-T3-01", "Hóa chất xét nghiệm FT4: FT401", "Hóa chất xét nghiệm TSH"]
+  if (sortedRivals.length > 0) {
+    rivalsList = sortedRivals.map(([name, info], idx) => {
+      const statsStr = `${info.hospitalWins} lượt trúng tại đơn vị · ${info.clusterWins} lượt trúng cụm 2-3 huyện lân cận · ${info.totalVal > 0 ? formatMoney(info.totalVal, false) + ' tổng giá trị' : 'Ghi nhận tham gia'}`;
+      const descStr = info.hospitalWins > 0 
+        ? "Nhà thầu quen mặt trực tiếp tại cơ sở này, có ưu thế vượt trội về quan hệ cung ứng và kinh nghiệm triển khai."
+        : "Nhà thầu có lịch sử trúng nhiều gói tương tự trong cùng cụm 2-3 huyện lân cận, khả năng cạnh tranh cao về hãng sản xuất và giá cả.";
+      
+      const tagList = [...info.modelsSet].slice(0, 6);
+      if (tagList.length === 0) {
+        tagList.push("Thiết bị / vật tư y tế theo phân khúc gói thầu");
       }
-    ];
+
+      return {
+        rank: idx + 1,
+        name: name,
+        tag: info.hospitalWins > 0 ? "Chủ lực" : "Cao",
+        score: `${68 - idx}/100`,
+        stats: statsStr,
+        desc: descStr,
+        tags: tagList
+      };
+    });
   } else {
     rivalsList = [
       {
         rank: 1,
-        name: "Công ty TNHH Vạn Niên",
-        tag: "Cao",
-        score: "66/100",
-        stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 10 lượt tham dự ghi nhận · 24,42 tỷ giá trị trúng đã biết",
-        desc: "Có lịch sử trúng nhiều gói tương tự trong khu vực, khả năng cạnh tranh về hãng và giá đáng chú ý.",
-        tags: ["Băng cá nhân 2*6cm: Elasgo 20mm x 60mm", "Bông thấm nước: 10032", "Gạc phẫu thuật ổ bụng", "Găng tay phẫu thuật tiệt trùng", "Bộ dây truyền dịch 60 giọt/ml", "Bơm tiêm nhựa 50 tiêm: SS*50LE"]
-      },
-      {
-        rank: 2,
-        name: "CÔNG TY TNHH MTV THIẾT BỊ Y TẾ THANH LỘC PHÁT",
-        tag: "Cao",
-        score: "65/100",
-        stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 14 lượt tham dự ghi nhận · 10,4 tỷ giá trị trúng đã biết",
-        desc: "Có lịch sử trúng nhiều gói tương tự trong khu vực, khả năng cạnh tranh về hãng và giá đáng chú ý.",
-        tags: ["Halogen lamp: BXC0172A", "Cốc đựng huyết thanh", "Bilirubin Direct: OLY0191A", "Bilirubin Total: OLY0192A", "Albumin: OLY0222D"]
-      },
-      {
-        rank: 3,
-        name: "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH",
-        tag: "Cao",
-        score: "65/100",
-        stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 5 lượt tham dự ghi nhận · 4,18 tỷ giá trị trúng đã biết",
-        desc: "Có lịch sử trúng nhiều gói tương tự trong khu vực, khả năng cạnh tranh về hãng và giá đáng chú ý.",
-        tags: ["Hóa chất xét nghiệm HbA1C", "Hóa chất xét nghiệm βhCG", "Hóa chất xét nghiệm Troponine I", "Hóa chất xét nghiệm T3", "Hóa chất xét nghiệm FT4", "Hóa chất xét nghiệm TSH"]
+        name: "Chưa ghi nhận đối thủ cạnh tranh trực tiếp",
+        tag: "Theo dõi",
+        score: "50/100",
+        stats: "Không có dữ liệu đối thủ lân cận cùng phân khúc giá",
+        desc: "Gói thầu độc lập hoặc thuộc phân khúc mới tại địa bàn.",
+        tags: ["Chưa có dữ liệu lịch sử"]
       }
     ];
   }
@@ -1590,7 +1671,7 @@ function openKieuVietModal(tender) {
           </div>
         </div>
         <div class="kv-overview-content">
-          <span class="kv-free-pill">Phân tích miễn phí</span>
+          <span class="kv-free-pill" style="background:#e8f5e9; color:#1b5e20;">Phân tích Kiểu Việt</span>
           <h3 class="kv-overview-headline">Theo dõi và làm rõ</h3>
           <p class="kv-overview-lead">
             Theo dõi và làm rõ. Điểm phù hợp hiện tại ${score}/100; khả năng thành công ước tính ${successChance}%. Kết quả dựa trên hồ sơ công khai, quy mô gói, thời gian còn lại, địa bàn và các khoảng trống năng lực chưa xác minh.
@@ -1894,17 +1975,7 @@ function positionAiHoverPopover(targetElement) {
 }
 
 function showAiHoverPopover(tender, targetElement) {
-  currentHoveredTender = tender;
-  if (!elements.aiPopover) return;
-  
-  updateAiHoverPopoverContent(tender);
-  positionAiHoverPopover(targetElement);
-  elements.aiPopover.hidden = false;
-  requestAnimationFrame(() => {
-    elements.aiPopover.classList.add("visible");
-  });
-
-  void fetchAiSummary(tender);
+  return;
 }
 
 function hideAiHoverPopover() {
@@ -2130,33 +2201,6 @@ elements.savedList.addEventListener("click", (event) => {
   state.page = Math.floor(Math.max(0, tenderIndex) / TENDERS_PER_PAGE) + 1;
   void toggleDetails(tender);
   document.querySelector("#goi-thau")?.scrollIntoView({ behavior: "smooth", block: "start" });
-});
-
-elements.list.addEventListener("mouseover", (event) => {
-  if (window.innerWidth <= 760) return;
-  const row = event.target.closest(".tender-row");
-  if (!row) return;
-  const id = row.dataset.tenderId;
-  const tender = state.tenders.find((item) => String(item.id) === id);
-  if (!tender) return;
-
-  if (currentHoveredTender?.id === tender.id) return;
-
-  clearTimeout(hoverTimer);
-  hoverTimer = setTimeout(() => {
-    showAiHoverPopover(tender, row);
-  }, 220);
-});
-
-elements.list.addEventListener("mouseout", (event) => {
-  const row = event.target.closest(".tender-row");
-  if (!row) return;
-  const relatedRow = event.relatedTarget?.closest(".tender-row");
-  const relatedPopover = event.relatedTarget?.closest("#ai-hover-popover");
-  if (relatedRow === row || relatedPopover) return;
-
-  clearTimeout(hoverTimer);
-  hideAiHoverPopover();
 });
 
 elements.list.addEventListener("click", (event) => {
