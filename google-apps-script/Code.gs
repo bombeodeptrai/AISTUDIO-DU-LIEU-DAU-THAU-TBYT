@@ -12,7 +12,7 @@ const TENDER_DATA_START_ROW = 3;
 
 function onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu("Thầu Y tế Gia Lai")
+    .createMenu("Hệ thống Thầu Y tế")
     .addItem("Cài đặt tự động cập nhật (15 phút/lần)", "setupAutomation")
     .addItem("Cập nhật ngay", "syncTenders")
     .addItem("Gửi email thử", "sendTestEmail")
@@ -26,7 +26,8 @@ function setupAutomation() {
     .filter((trigger) => trigger.getHandlerFunction() === "syncTenders")
     .forEach((trigger) => ScriptApp.deleteTrigger(trigger));
   ScriptApp.newTrigger("syncTenders").timeBased().everyMinutes(15).create();
-  SpreadsheetApp.getActive().toast("Đã cài cập nhật tự động mỗi 15 phút.", "Thầu Y tế Gia Lai", 6);
+  const regionName = configuredRegion_();
+  SpreadsheetApp.getActive().toast("Đã cài cập nhật tự động mỗi 15 phút.", `Thầu Y tế ${regionName}`, 6);
 }
 
 function syncTenders() {
@@ -64,28 +65,56 @@ function syncTenders() {
       })
       .map((tender) => String(tender.notifyNo || tender.id || ""))
       .filter(Boolean);
+
+    const activeRegion = configuredRegion_();
+    let filteredTenders = tenders;
+    if (activeRegion && activeRegion.toLowerCase() !== "toàn quốc") {
+      const activeRegLower = activeRegion.toLowerCase();
+      const regionKeywordsMap = {
+        "gia lai": ["gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư phư", "an khê", "ayun pa", "đak đoa", "đak pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai"],
+        "bình định": ["bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan"],
+        "đắk lắk": ["đắk lắk", "dak lak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo"],
+        "miền trung": [
+          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư phư", "an khê", "ayun pa", "đak đoa", "đak pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai",
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan",
+          "đắk lắk", "dak lak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo",
+          "quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc"
+        ]
+      };
+      
+      const kws = regionKeywordsMap[activeRegLower] || [activeRegLower];
+      filteredTenders = tenders.filter((t) => {
+        const combined = `${t.investor || ""} ${t.location || ""} ${t.name || ""}`.toLowerCase();
+        return kws.some(kw => combined.includes(kw));
+      });
+    }
+
+    const filteredTenderIds = new Set(filteredTenders.map(t => String(t.notifyNo || t.id || "")));
+    const filteredBidders = bidders.filter((b) => filteredTenderIds.has(String(b.notifyNo || "")));
+    const filteredEquipment = equipment.filter((e) => filteredTenderIds.has(String(e.notifyNo || "")));
+
     const alertCutoff = Date.now() - 72 * 60 * 60 * 1000;
     const newTenders = initialized
-      ? tenders.filter((tender) => {
+      ? filteredTenders.filter((tender) => {
         const id = String(tender.notifyNo || tender.id || "");
         const publishedAt = new Date(tender.publicDate || 0).getTime();
         return id && !knownIds.has(id) && publishedAt && publishedAt >= alertCutoff;
       })
       : [];
 
-    const equipmentIndex = writeEquipmentSheet_(equipment, payload.fetchedAt);
-    writeTenderSheet_(tenders, equipment, equipmentIndex, payload.fetchedAt);
-    writeBidderSheet_(bidders, payload.fetchedAt);
+    const equipmentIndex = writeEquipmentSheet_(filteredEquipment, payload.fetchedAt);
+    writeTenderSheet_(filteredTenders, filteredEquipment, equipmentIndex, payload.fetchedAt, activeRegion);
+    writeBidderSheet_(filteredBidders, payload.fetchedAt);
     properties.setProperty(KNOWN_IDS_KEY, JSON.stringify(currentIds));
     properties.setProperty(INITIALIZED_KEY, "1");
-    updateLastSync_(payload.fetchedAt, tenders.length, newTenders.length);
-    if (newTenders.length && alertsEnabled_()) sendNewTenderEmail_(newTenders, payload.fetchedAt);
+    updateLastSync_(payload.fetchedAt, filteredTenders.length, newTenders.length);
+    if (newTenders.length && alertsEnabled_()) sendNewTenderEmail_(newTenders, payload.fetchedAt, activeRegion);
   } finally {
     lock.releaseLock();
   }
 }
 
-function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt) {
+function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt, activeRegion) {
   const spreadsheet = SpreadsheetApp.getActive();
   let sheet = spreadsheet.getSheetByName(TENDER_SHEET);
   const isNewSheet = !sheet;
@@ -130,8 +159,10 @@ function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt) {
   let headerRow = 2;
   let dataStartRow = 3;
 
+  const regionName = activeRegion || "Miền Trung";
+
   if (isNewSheet) {
-    initializeTenderSheet_(sheet, headers.length);
+    initializeTenderSheet_(sheet, headers.length, regionName);
   } else {
     const r1c1 = String(sheet.getRange(1, 1).getValue() || "").trim();
     const r2c2 = String(sheet.getRange(2, 2).getValue() || "").trim();
@@ -155,7 +186,7 @@ function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt) {
   const titleCell = sheet.getRange(1, 1);
   if (/^Bảng tổng hợp gói thầu thiết bị y tế/i.test(String(titleCell.getValue() || ""))) {
     try {
-      titleCell.setValue("Bảng tổng hợp gói thầu thiết bị y tế khu vực Gia Lai trong 3 năm gần nhất");
+      titleCell.setValue(`Bảng tổng hợp gói thầu thiết bị y tế khu vực ${regionName} trong 3 năm gần nhất`);
     } catch (e) {}
   }
 
@@ -217,12 +248,13 @@ function writeTenderSheet_(tenders, equipment, equipmentIndex, fetchedAt) {
   } catch (e) {}
 }
 
-function initializeTenderSheet_(sheet, columnCount) {
+function initializeTenderSheet_(sheet, columnCount, activeRegion) {
+  const regionName = activeRegion || "Miền Trung";
   try {
     sheet.getRange(1, 1, 1, columnCount).merge();
     sheet
       .getRange(1, 1)
-      .setValue("Bảng tổng hợp gói thầu thiết bị y tế khu vực Gia Lai trong 3 năm gần nhất")
+      .setValue(`Bảng tổng hợp gói thầu thiết bị y tế khu vực ${regionName} trong 3 năm gần nhất`)
       .setHorizontalAlignment("center")
       .setVerticalAlignment("middle")
       .setFontWeight("bold")
@@ -359,17 +391,18 @@ function ensureConfigSheet_() {
   const spreadsheet = SpreadsheetApp.getActive();
   const sheet = spreadsheet.getSheetByName(CONFIG_SHEET) || spreadsheet.insertSheet(CONFIG_SHEET);
   if (!sheet.getRange("A1").getValue()) {
-    sheet.getRange("A1:B6").setValues([
+    sheet.getRange("A1:B7").setValues([
       ["CẤU HÌNH THÔNG BÁO", "Giá trị"],
       ["Email nhận thông báo", Session.getEffectiveUser().getEmail() || ""],
       ["Bật thông báo", true],
       ["Nguồn dữ liệu", TENDER_DATA_URL],
+      ["Khu vực lọc thầu (Miền Trung / Gia Lai / Bình Định / Đắk Lắk / Toàn quốc)", "Miền Trung"],
       ["Lần đồng bộ gần nhất", "Chưa chạy"],
       ["Trạng thái", "Chưa cài đặt"],
     ]);
     sheet.getRange("A1:B1").setBackground("#0f513f").setFontColor("#ffffff").setFontWeight("bold");
     sheet.getRange("B3").insertCheckboxes();
-    sheet.setColumnWidth(1, 220);
+    sheet.setColumnWidth(1, 400);
     sheet.setColumnWidth(2, 420);
     sheet.setFrozenRows(1);
   }
@@ -379,8 +412,18 @@ function ensureConfigSheet_() {
 function updateLastSync_(fetchedAt, total, newCount) {
   const sheet = ensureConfigSheet_();
   const syncedAt = toDate_(fetchedAt) || new Date();
-  sheet.getRange("B5").setValue(Utilities.formatDate(syncedAt, "Asia/Ho_Chi_Minh", "dd/MM/yyyy HH:mm:ss"));
-  sheet.getRange("B6").setValue(`Đang lưu ${total} gói; phát hiện ${newCount} gói mới trong lần này`);
+  sheet.getRange("B6").setValue(Utilities.formatDate(syncedAt, "Asia/Ho_Chi_Minh", "dd/MM/yyyy HH:mm:ss"));
+  sheet.getRange("B7").setValue(`Đang lưu ${total} gói; phát hiện ${newCount} gói mới trong lần này`);
+}
+
+function configuredRegion_() {
+  try {
+    const sheet = SpreadsheetApp.getActive().getSheetByName(CONFIG_SHEET);
+    if (sheet) {
+      return String(sheet.getRange("B5").getValue() || "Miền Trung").trim();
+    }
+  } catch (e) {}
+  return "Miền Trung";
 }
 
 function alertsEnabled_() {
@@ -391,9 +434,10 @@ function notificationEmail_() {
   return String(ensureConfigSheet_().getRange("B2").getValue() || "").trim();
 }
 
-function sendNewTenderEmail_(tenders, fetchedAt) {
+function sendNewTenderEmail_(tenders, fetchedAt, activeRegion) {
   const recipient = notificationEmail_();
   if (!recipient) return;
+  const regionName = activeRegion || "Miền Trung";
   const visible = tenders.slice(0, 30);
   const items = visible.map((tender) => `
     <li style="margin-bottom:12px">
@@ -406,17 +450,18 @@ function sendNewTenderEmail_(tenders, fetchedAt) {
     : "";
   MailApp.sendEmail({
     to: recipient,
-    subject: `[Thầu Y tế Gia Lai] Có ${tenders.length} gói thầu mới`,
-    htmlBody: `<h2>Có ${tenders.length} gói thiết bị/vật tư y tế mới</h2><ol>${items}</ol>${remainder}<p>Dữ liệu nguồn cập nhật: ${formatDate_(fetchedAt)}</p>`,
-    name: "Thầu Y tế Gia Lai",
+    subject: `[Thầu Y tế ${regionName}] Có ${tenders.length} gói thầu mới`,
+    htmlBody: `<h2>Có ${tenders.length} gói thiết bị/vật tư y tế mới khu vực ${regionName}</h2><ol>${items}</ol>${remainder}<p>Dữ liệu nguồn cập nhật: ${formatDate_(fetchedAt)}</p>`,
+    name: `Thầu Y tế ${regionName}`,
   });
 }
 
 function sendTestEmail() {
   const recipient = notificationEmail_();
   if (!recipient) throw new Error("Hãy nhập email tại sheet Cấu hình, ô B2.");
-  MailApp.sendEmail(recipient, "[Thầu Y tế Gia Lai] Kiểm tra thông báo", "Thông báo Gmail đã được cấu hình thành công.");
-  SpreadsheetApp.getActive().toast(`Đã gửi email thử đến ${recipient}.`, "Thầu Y tế Gia Lai", 6);
+  const regionName = configuredRegion_();
+  MailApp.sendEmail(recipient, `[Thầu Y tế ${regionName}] Kiểm tra thông báo`, `Thông báo Gmail đã được cấu hình thành công cho khu vực ${regionName}.`);
+  SpreadsheetApp.getActive().toast(`Đã gửi email thử đến ${recipient}.`, `Thầu Y tế ${regionName}`, 6);
 }
 
 function statusLabel_(status) {

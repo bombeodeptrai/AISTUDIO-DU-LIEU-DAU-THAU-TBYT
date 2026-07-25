@@ -26,7 +26,7 @@
       <section class="hero" id="top">
         <div class="hero-copy">
           <p class="eyebrow">CỔNG THÔNG TIN ĐẤU THẦU</p>
-          <h1>Theo dõi cơ hội thầu<br />thiết bị y tế tại Gia Lai</h1>
+          <h1 id="hero-title">Theo dõi cơ hội thầu<br />thiết bị y tế tại Miền Trung</h1>
           <p class="hero-note">Chỉ tổng hợp thiết bị y tế, vật tư tiêu hao và hóa chất xét nghiệm; kèm kết quả lựa chọn nhà thầu, model, hãng, đơn giá và cấu hình kỹ thuật.</p>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -46,9 +46,18 @@
               <option value="Mindray"></option>
             </datalist>
           </label>
-          <div class="search-field fixed-field" aria-label="Địa bàn Gia Lai">
-            <span class="icon-text">⌖</span><span>Gia Lai</span><span class="field-note">sau sáp nhập</span>
-          </div>
+          <label class="search-field select-field">
+            <span class="icon-text">⌖</span><span class="sr-only">Địa bàn</span>
+            <select id="province">
+              <option value="mientrung" selected>Khu vực Miền Trung</option>
+              <option value="all">Toàn quốc (Tất cả)</option>
+              <option value="gialai">Tỉnh Gia Lai</option>
+              <option value="binhdinh">Tỉnh Bình Định</option>
+              <option value="daklak">Tỉnh Đắk Lắk</option>
+              <option value="hn_hcm">Hà Nội &amp; TP. HCM</option>
+            </select>
+            <span>⌄</span>
+          </label>
           <label class="search-field select-field">
             <span class="icon-text">▣</span><span class="sr-only">Nhóm dữ liệu</span>
             <select id="category">

@@ -15,6 +15,7 @@ const state = {
   fetchedAt: "",
   query: "",
   category: "all",
+  province: "mientrung",
   days: 1095,
   status: "all",
   investor: "",
@@ -39,6 +40,7 @@ const elements = {
   form: document.querySelector("#search-form"),
   keyword: document.querySelector("#keyword"),
   category: document.querySelector("#category"),
+  province: document.querySelector("#province"),
   days: document.querySelector("#days"),
   statusFilter: document.querySelector("#status-filter"),
   list: document.querySelector("#tender-list"),
@@ -361,7 +363,54 @@ function filteredTenders() {
         ? Boolean(tender.hasResult || tender.winnerNames?.length)
         : tender.status === state.status);
     const investorMatches = !state.investor || tender.investor === state.investor;
-    const matches = queryMatches && statusMatches && investorMatches;
+
+    const provinceMatches = (() => {
+      if (state.province === "all") return true;
+      const combined = `${tender.investor || ""} ${tender.location || ""} ${tender.name || ""}`.toLowerCase();
+      
+      if (state.province === "mientrung") {
+        const centralKeywords = [
+          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư phư", "an khê", "ayun pa", "đak đoa", "đak pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai",
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan",
+          "đắk lắk", "dak lak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo",
+          "quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc"
+        ];
+        return centralKeywords.some(kw => combined.includes(kw));
+      }
+      
+      if (state.province === "gialai") {
+        const giaLaiKeywords = [
+          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư phư", "an khê", "ayun pa", "đak đoa", "đak pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai"
+        ];
+        return giaLaiKeywords.some(kw => combined.includes(kw));
+      }
+      
+      if (state.province === "binhdinh") {
+        const binhDinhKeywords = [
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan"
+        ];
+        return binhDinhKeywords.some(kw => combined.includes(kw));
+      }
+      
+      if (state.province === "daklak") {
+        const dakLakKeywords = [
+          "đắk lắk", "dak lak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo"
+        ];
+        return dakLakKeywords.some(kw => combined.includes(kw));
+      }
+      
+      if (state.province === "hn_hcm") {
+        const hnHcmKeywords = [
+          "hà nội", "hoàn kiếm", "cầu giấy", "đống đa", "hai bà trưng", "ba đình", "thanh xuân",
+          "hồ chí minh", "tphcm", "sài gòn", "thủ đức", "quận 1", "quận 3", "quận 5", "quận 10"
+        ];
+        return hnHcmKeywords.some(kw => combined.includes(kw));
+      }
+      
+      return true;
+    })();
+
+    const matches = queryMatches && statusMatches && investorMatches && provinceMatches;
     if (matches && equipmentMatches.length) {
       state.searchMatchesByNotifyNo.set(tender.notifyNo, equipmentMatches);
     }
@@ -2141,6 +2190,33 @@ elements.form.addEventListener("submit", (event) => {
   document.querySelector("#goi-thau")?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
+function updateDynamicPageTitles() {
+  const titles = {
+    mientrung: "Miền Trung",
+    all: "Toàn quốc",
+    gialai: "Gia Lai",
+    binhdinh: "Bình Định",
+    daklak: "Đắk Lắk",
+    hn_hcm: "Hà Nội - HCM"
+  };
+  const activeLabel = titles[state.province] || "Miền Trung";
+  const heroTitle = document.querySelector("#hero-title");
+  if (heroTitle) {
+    heroTitle.innerHTML = `Theo dõi cơ hội thầu<br />thiết bị y tế tại ${activeLabel}`;
+  }
+  document.title = `Thầu Y tế ${activeLabel}`;
+}
+
+if (elements.province) {
+  elements.province.addEventListener("change", () => {
+    state.province = elements.province.value;
+    state.page = 1;
+    state.expandedId = null;
+    updateDynamicPageTitles();
+    render();
+  });
+}
+
 elements.category.addEventListener("change", () => {
   state.category = elements.category.value;
   state.page = 1;
@@ -2247,4 +2323,8 @@ elements.pagination.addEventListener("click", (event) => {
 });
 
 elements.refresh.addEventListener("click", () => loadData(true));
+if (elements.province) {
+  state.province = elements.province.value || "mientrung";
+}
+updateDynamicPageTitles();
 loadData();
