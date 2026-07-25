@@ -137,5 +137,25 @@
 
     <!-- Floating AI Summary Popover for row hover -->
     <div id="ai-hover-popover" class="ai-hover-popover" hidden></div>
+
+    <!-- Full-screen Kiểu Việt AI Analysis Modal -->
+    <div id="kieu-viet-modal" class="kv-modal-backdrop" hidden>
+      <div class="kv-modal-container">
+        <div class="kv-modal-header">
+          <div class="kv-header-brand-row">
+            <span class="kv-header-brand">✦ PHÂN TÍCH ĐẤU THẦU KIỂU VIỆT</span>
+            <button id="kv-modal-close-top" class="kv-modal-close" type="button" aria-label="Đóng">✕</button>
+          </div>
+          <h2 id="kv-header-title" class="kv-header-tender-title"></h2>
+        </div>
+        <div id="kv-modal-body" class="kv-modal-body">
+          <!-- Dynamic content -->
+        </div>
+        <div class="kv-modal-footer">
+          <span class="kv-footer-note">Chế độ miễn phí: không gọi API và không phát sinh chi phí.</span>
+          <button id="kv-modal-close-bottom" class="kv-footer-close-btn" type="button">Đóng</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
