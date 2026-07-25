@@ -1328,10 +1328,32 @@ function openKieuVietModal(tender) {
     </div>
   `).join("");
 
-  // Regional matching from CSDL
+  // Regional & Hospital matching from CSDL
   const allTenders = state.tenders || [];
-  const sameInvestorTenders = allTenders.filter(t => t.investor && tender.investor && t.investor.toLowerCase().trim() === tender.investor.toLowerCase().trim() && t.winnerNames?.length);
-  const regionalTenders = allTenders.filter(t => t.winnerNames?.length && ((t.location && tender.location && t.location.includes(tender.location)) || t.category === tender.category));
+  const tendersWithWinners = allTenders.filter(t => t.winnerNames && t.winnerNames.length > 0);
+  
+  // 1. Hospital tenders matching logic
+  let sameInvestorTenders = tendersWithWinners.filter(t => t.investor && tender.investor && t.investor.toLowerCase().trim() === tender.investor.toLowerCase().trim());
+  if (sameInvestorTenders.length === 0 && tender.investor) {
+    // Keyword fuzzy match for hospital name
+    const invKeywords = tender.investor.toLowerCase().split(/\s+/).filter(w => w.length > 2 && !["bệnh", "viện", "tỉnh", "trung", "tâm"].includes(w));
+    if (invKeywords.length > 0) {
+      sameInvestorTenders = tendersWithWinners.filter(t => {
+        const target = (t.investor || "").toLowerCase();
+        return invKeywords.some(k => target.includes(k));
+      });
+    }
+  }
+
+  // 2. Regional tenders matching logic
+  let regionalTenders = tendersWithWinners.filter(t => {
+    const locMatch = t.location && tender.location && t.location.toLowerCase().includes(tender.location.toLowerCase().split(" ")[0]);
+    const catMatch = t.category && tender.category && t.category === tender.category;
+    return locMatch || catMatch;
+  });
+  if (regionalTenders.length === 0) {
+    regionalTenders = tendersWithWinners.slice(0, 10);
+  }
 
   const allWinnersMap = new Map();
   allTenders.forEach(t => {
@@ -1373,7 +1395,7 @@ function openKieuVietModal(tender) {
       },
       {
         rank: 3,
-        name: topWinners[2][0],
+        name: topWinners[3]?.[0] || topWinners[2][0],
         tag: "Cao",
         score: "65/100",
         stats: "0 tháng tại đơn vị · 3 tháng gói tương tự · 5 lượt tham dự ghi nhận · 4,18 tỷ giá trị trúng đã biết",
@@ -1433,71 +1455,42 @@ function openKieuVietModal(tender) {
     </div>
   `).join("");
 
-  const pastTendersSample = [
-    {
-      rank: 1,
-      date: "26/12/2024",
-      code: "IB2400370905",
-      similarity: "Tương đồng 67%",
-      title: "Gói thầu số 1: Mua sắm vật tư y tế tiêu hao, sinh phẩm y tế, hóa chất sát khuẩn, hóa chất xét nghiệm, vật tư y tế thay thế và khí y tế của Bệnh viện Nhi tỉnh Gia Lai năm 2024.",
-      investor: "BỆNH VIỆN NHI TỈNH GIA LAI",
-      winners: "CÔNG TY TNHH OXYGEN TUẤN ANH - GIA LAI; CÔNG TY TNHH TMDV MINH ANH; CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN Y TẾ TRUNG THỊNH PHÁT; Công ty TNHH Vạn Niên; LIÊN DANH NHÀ THẦU CÔNG TY TNHH THIẾT BỊ Y TẾ BÌNH MINH...",
-      equip: "Băng cá nhân 2*6cm: Elasgo 20mm x 60mm · Bông thấm nước: 10032 · Gạc phẫu thuật ổ bụng · Găng tay phẫu thuật tiệt trùng...",
-      price: "16,79 tỷ",
-      url: "https://muasamcong.mpi.gov.vn/"
-    },
-    {
-      rank: 2,
-      date: "11/06/2025",
-      code: "IB2500126367",
-      similarity: "Tương đồng 61%",
-      title: "Gói thầu số 1: Mua sắm vật tư y tế tiêu hao, sinh phẩm y tế, hóa chất sát khuẩn, hóa chất xét nghiệm và vật tư y tế thay thế của Bệnh viện Nhi tỉnh Gia Lai năm 2025",
-      investor: "BỆNH VIỆN NHI TỈNH GIA LAI",
-      winners: "CÔNG TY TNHH K.A.L.H.U; CÔNG TY TNHH MTV THIẾT BỊ Y TẾ THANH LỘC PHÁT; CÔNG TY TNHH TMDV MINH ANH; CÔNG TY CỔ PHẦN Y TẾ QUANG MINH...",
-      equip: "Halogen lamp: BXC0172A · Cốc đựng huyết thanh: GT202-210 · Bilirubin Direct: OLY0191A · Bilirubin Total: OLY0192A...",
-      price: "9,42 tỷ",
-      url: "https://muasamcong.mpi.gov.vn/"
-    },
-    {
-      rank: 3,
-      date: "08/04/2026",
-      code: "IB2600085012",
-      similarity: "Tương đồng 45%",
-      title: "Mua sắm Hóa chất xét nghiệm, sinh phẩm xét nghiệm, vật tư hóa chất khử khuẩn và sinh phẩm miễn dịch năm 2026 của Trung tâm Y tế An Khê",
-      investor: "TRUNG TÂM Y TẾ AN KHÊ",
-      winners: "CÔNG TY TNHH THIẾT BỊ Y TẾ NHẤT TÂM; CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH; CÔNG TY CỔ PHẦN Y TẾ AMVGROUP",
-      equip: "Hóa chất xét nghiệm HbA1C: F-A1C · Hóa chất xét nghiệm βhCG: F-HCG · Hóa chất xét nghiệm Troponine I: F-TNI...",
-      price: "3,1 tỷ",
-      url: "https://muasamcong.mpi.gov.vn/"
-    },
-    {
-      rank: 4,
-      date: "26/06/2026",
-      code: "IB2600297823",
-      similarity: "Tương đồng 44%",
-      title: "Mua sắm vật tư y tế, sinh phẩm, khí dùng trong y tế, hóa chất xét nghiệm trong khi chờ kết quả lựa chọn nhà thầu gói thầu đấu thầu rộng rãi của Bệnh viện Nhi tỉnh Gia Lai năm 2026",
-      investor: "BỆNH VIỆN NHI TỈNH GIA LAI",
-      winners: "CÔNG TY TNHH OXYGEN TUẤN ANH - GIA LAI; CÔNG TY TNHH ĐẦU TƯ HALICO; Công ty TNHH Vạn Niên...",
-      equip: "Thiết bị/vật tư theo gói thầu cấp bách...",
-      price: "752,4 triệu",
-      url: "https://muasamcong.mpi.gov.vn/"
-    }
-  ];
+  // Helper function to map dataset tender to past tender HTML
+  const renderPastTenderItem = (t, idx, simPercent) => {
+    const pVal = Number(t.winningPrice) || Number(t.price) || 0;
+    const pStr = pVal ? formatMoney(pVal) : "Chưa công bố";
+    const winnersStr = t.winnerNames?.join("; ") || "Đang cập nhật";
+    const eqSummary = getTenderEquipmentSummaryText(t) || "Thiết bị, vật tư/sinh phẩm y tế theo biểu mẫu e-HSMT công khai";
+    return `
+      <div class="kv-past-tender-card">
+        <div class="kv-past-tender-num">${idx + 1}</div>
+        <div class="kv-past-tender-body">
+          <div class="kv-past-tender-meta">
+            <span>${formatDate(t.closeDate || t.publishDate)}</span>
+            <span>${escapeHtml(t.notifyNo)}</span>
+            <span class="kv-similarity-badge">Tương đồng ${simPercent}%</span>
+          </div>
+          <h5 class="kv-past-tender-title">${escapeHtml(t.name)}</h5>
+          <div class="kv-past-tender-details">
+            <strong>Đơn vị:</strong> ${escapeHtml(t.investor)} — <strong>Trúng:</strong> ${escapeHtml(winnersStr)}
+          </div>
+          <div class="kv-past-tender-details">
+            <strong>Thiết bị/hóa chất/model:</strong> ${escapeHtml(eqSummary.slice(0, 160))}${eqSummary.length > 160 ? "..." : ""}
+          </div>
+        </div>
+        <div class="kv-past-tender-price-box">
+          <div class="kv-past-tender-price">${escapeHtml(pStr)}</div>
+          <a href="${escapeHtml(officialUrl(t.sourceUrl))}" target="_blank" rel="noreferrer" class="kv-past-tender-link">Nguồn ↗</a>
+        </div>
+      </div>
+    `;
+  };
 
-  const pastTendersHTML = pastTendersSample.map(p => `
-    <div class="kv-past-tender-card">
-      <div class="kv-past-tender-num">${p.rank}</div>
-      <div class="kv-past-tender-body">
-        <div class="kv-past-tender-meta">
-          <span>${p.date}</span>
-          <span>${p.code}</span>
-          <span class="kv-similarity-badge">${p.similarity}</span>
-        </div>
-        <h5 class="kv-past-tender-title">${escapeHtml(p.title)}</h5>
-        <div class="kv-past-tender-details">
-          <strong>Đơn vị:</strong> ${escapeHtml(p.investor)} — <strong>Trúng:</strong> ${escapeHtml(p.winners)}
-        </div>
-        <div class="kv-past-tender-details">
+  const hospitalPastTendersHTML = sameInvestorTenders.length > 0
+    ? sameInvestorTenders.slice(0, 10).map((t, idx) => renderPastTenderItem(t, idx, 75 - idx * 3)).join("")
+    : '<div style="padding: 12px; background: #fbf9f5; border-radius: 8px; font-size: 12px; color: #777;">Chưa có đủ dữ liệu công khai phù hợp trong bộ dữ liệu đang lưu.</div>';
+
+  const regionalPastTendersHTML = regionalTenders.slice(0, 10).map((t, idx) => renderPastTenderItem(t, idx, 67 - idx * 4)).join("");
           <strong>Thiết bị/hóa chất/model:</strong> ${escapeHtml(p.equip)}
         </div>
       </div>
@@ -1732,7 +1725,7 @@ function openKieuVietModal(tender) {
             ▼ 10 gói gần nhất đã có kết quả tại ${escapeHtml(tender.investor || locName)}
           </summary>
           <div style="margin-top: 10px;">
-            ${goiAtHospital === 0 ? '<div style="padding: 12px; background: #fbf9f5; border-radius: 8px; font-size: 12px; color: #777;">Chưa có đủ dữ liệu công khai phù hợp trong bộ dữ liệu đang lưu.</div>' : pastTendersHTML}
+            ${hospitalPastTendersHTML}
           </div>
         </details>
 
@@ -1741,7 +1734,7 @@ function openKieuVietModal(tender) {
             ▼ 10 gói tương tự đã trúng trong Gia Lai, Quy Nhơn và khu vực lân cận
           </summary>
           <div class="kv-past-tenders-list" style="margin-top: 10px;">
-            ${pastTendersHTML}
+            ${regionalPastTendersHTML}
           </div>
         </details>
       </div>

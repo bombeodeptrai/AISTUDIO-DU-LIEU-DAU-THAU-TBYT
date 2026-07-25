@@ -2563,6 +2563,21 @@ select:focus-visible {
 /* ==========================================================================
    Kiểu Việt AI Full-screen Modal Styles (Matching ChatGPT screenshots)
    ========================================================================== */
+.kv-past-tenders-box summary,
+details summary {
+  list-style: none !important;
+  outline: none !important;
+  user-select: none;
+}
+
+.kv-past-tenders-box summary::-webkit-details-marker,
+.kv-past-tenders-box summary::marker,
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none !important;
+  content: "" !important;
+}
+
 .kv-modal-backdrop {
   position: fixed;
   inset: 0;
