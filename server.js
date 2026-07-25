@@ -111,79 +111,260 @@ function getRegionNameAndKeywords(investor, location, name) {
   return { name: fallbackName, keywords: [fallbackName.toLowerCase()] };
 }
 
+function formatPackageTitle(rawName) {
+  if (!rawName) return "Gói thầu thiết bị/vật tư y tế";
+  let name = rawName
+    .replace(/^gói thầu( số \d+)?[:\s]*/i, "")
+    .replace(/^mua sắm\s*/i, "Mua sắm ")
+    .trim();
+  if (name.length > 40) {
+    name = name.slice(0, 38) + "...";
+  }
+  return name;
+}
+
+function getTenderYear(t) {
+  if (!t) return 2025;
+  let dateStr = t.decisionDate || t.resultPublishedDate || t.publicDate || t.closeDate;
+  if (dateStr) {
+    const y = new Date(dateStr).getFullYear();
+    if (y && !isNaN(y) && y > 2000) return y;
+  }
+  const match = (t.name || "").match(/năm\s+(20\d\d)/i) || (t.name || "").match(/(20\d\d)/);
+  if (match) return parseInt(match[1]);
+  return 2025;
+}
+
+function formatContractorWinningText(name, packagesList, modelsSet, yearsSet) {
+  if (!packagesList || packagesList.length === 0) return name;
+
+  const winCount = packagesList.length;
+  let ratingText = "";
+  if (winCount >= 3) {
+    ratingText = "Xếp loại khả năng trúng: Rất Cao (85 - 90%)";
+  } else if (winCount === 2) {
+    ratingText = "Xếp loại khả năng trúng: Cao (70 - 80%)";
+  } else {
+    ratingText = "Xếp loại khả năng trúng: Khá (50 - 65%)";
+  }
+
+  let pkgText = "";
+  if (winCount === 1) {
+    pkgText = `Trúng 1 gói: "${packagesList[0]}"`;
+  } else if (winCount === 2) {
+    pkgText = `Trúng 2 gói: "${packagesList[0]}", "${packagesList[1]}"`;
+  } else {
+    pkgText = `Trúng ${winCount} gói, tiêu biểu: "${packagesList[0]}", "${packagesList[1]}"`;
+  }
+
+  let detailsParts = [pkgText];
+
+  if (modelsSet && modelsSet.size > 0) {
+    const modelsList = [...modelsSet].slice(0, 4);
+    const modelsJoined = modelsList.map(m => `**${m}**`).join(", ");
+    detailsParts.push(`Thiết bị/Model đã trúng: ${modelsJoined}`);
+  }
+
+  if (yearsSet && yearsSet.size > 0) {
+    const sortedYears = [...yearsSet].sort((a, b) => a - b);
+    detailsParts.push(`Năm trúng: ${sortedYears.join(", ")}`);
+  }
+
+  return `${name} - **[${ratingText}]** (${detailsParts.join("; ")})`;
+}
+
+function splitModelString(str) {
+  if (!str) return [];
+  return str.split(/[;\n\r,]+/)
+    .map(s => s.trim())
+    .filter(s => s.length > 0 && s.toLowerCase() !== "nhiều mã hàng" && s.toLowerCase() !== "không có" && s.toLowerCase() !== ".");
+}
+
+function getModelsWonByContractorInTender(contractorName, t) {
+  if (!t.winnerNames || !t.winningModels || t.winningModels.length === 0) return [];
+  const winners = Array.isArray(t.winnerNames) ? t.winnerNames : [t.winnerNames];
+  const models = Array.isArray(t.winningModels) ? t.winningModels : [t.winningModels];
+  
+  const cleanContractor = contractorName.toLowerCase().trim();
+  
+  if (winners.length === models.length) {
+    for (let i = 0; i < winners.length; i++) {
+      if (winners[i] && winners[i].toLowerCase().trim() === cleanContractor) {
+        return splitModelString(models[i]);
+      }
+    }
+  } else {
+    const hasWinner = winners.some(w => w && w.toLowerCase().trim() === cleanContractor);
+    if (hasWinner) {
+      return models.flatMap(m => splitModelString(m));
+    }
+  }
+  return [];
+}
+
+function getScopeKeywords(text) {
+  const t = (text || "").toLowerCase();
+  const keywords = [];
+  if (t.includes("hóa chất") || t.includes("sinh phẩm") || t.includes("reagent") || t.includes("thuốc thử") || t.includes("xét nghiệm")) {
+    keywords.push("hoa_chat");
+  }
+  if (t.includes("vật tư") || t.includes("dụng cụ") || t.includes("đinh") || t.includes("nẹp") || t.includes("vít") || t.includes("catheter") || t.includes("băng") || t.includes("gạc")) {
+    keywords.push("vat_tu");
+  }
+  if (t.includes("thiết bị") || t.includes("máy") || t.includes("bơm tiêm") || t.includes("monitor") || t.includes("điện tim") || t.includes("nội soi") || t.includes("x-quang") || t.includes("siêu âm")) {
+    keywords.push("thiet_bi");
+  }
+  if (t.includes("bảo dưỡng") || t.includes("sửa chữa") || t.includes("kiểm định")) {
+    keywords.push("bao_duong");
+  }
+  return keywords;
+}
+
+function isValidModelName(model) {
+  if (!model) return false;
+  const m = model.toLowerCase().trim();
+  if (m.length <= 2) return false;
+  if (/^[0-9*xX\s/-]+$/.test(m)) return false;
+  const blacklisted = [
+    "không", "không có", "nhiều mã hàng", "co", "dg", "đg", "kèm", "theo", 
+    "ltd.", "ltd", "co.", "co", "inc.", "inc", "corporation", "corp",
+    "china", "vietnam", "usa", "germany", "japan", "g7", "hãng", "nước",
+    "bộ", "cái", "chiếc", "hộp", "thùng", "máy", "thiết bị", "vật tư", "hóa chất",
+    "chưa", "chưa rõ", "đang", "đang thầu", "coo", "con"
+  ];
+  if (blacklisted.includes(m)) return false;
+  if (m.includes("nhiều mã") || m.includes("không có")) return false;
+  return true;
+}
+
 function getHistoricalContext(investor, category, currentNotifyNo, currentName, currentLocation) {
   const tenders = getAllTenders();
   const safeCategory = (category || '').toLowerCase().trim();
   
+  // Sort tenders descending by date to analyze 10 most recent tenders
+  const sortedTenders = [...tenders].sort((a, b) => {
+    const dateA = new Date(a.publicDate || a.closeDate || 0);
+    const dateB = new Date(b.publicDate || b.closeDate || 0);
+    return dateB - dateA;
+  });
+
   // 1. Fuzzy match investor
-  const sameInvestorTenders = tenders.filter(t => 
+  const sameInvestorTenders = sortedTenders.filter(t => 
     t.investor && 
     t.notifyNo !== currentNotifyNo &&
     isSameInvestorFuzzy(investor, t.investor)
   );
 
-  // 2. Regional match based on location keywords
+  // Take 10 most recent tenders of same investor
+  const recentInvestor10 = sameInvestorTenders.slice(0, 10);
+  const investorWinnerPackages = new Map();
+  const investorWinnerModels = new Map();
+  const investorWinnerYears = new Map();
+  recentInvestor10.forEach(t => {
+    if (t.winnerNames && t.winnerNames.length > 0) {
+      const winners = Array.isArray(t.winnerNames) ? t.winnerNames : [t.winnerNames];
+      const pkgTitle = formatPackageTitle(t.name);
+      const year = getTenderYear(t);
+      winners.forEach(w => {
+        if (w) {
+          const name = w.trim();
+          if (!investorWinnerPackages.has(name)) investorWinnerPackages.set(name, []);
+          const list = investorWinnerPackages.get(name);
+          if (!list.includes(pkgTitle)) list.push(pkgTitle);
+
+          if (!investorWinnerYears.has(name)) investorWinnerYears.set(name, new Set());
+          if (year) investorWinnerYears.get(name).add(year);
+
+          // Extract and check models for overlap
+          const currentScopes = getScopeKeywords(currentName + " " + (category || ""));
+          const historicalScopes = getScopeKeywords(t.name + " " + (t.category || ""));
+          const hasOverlap = currentScopes.length === 0 || historicalScopes.length === 0 || currentScopes.some(s => historicalScopes.includes(s));
+          
+          if (hasOverlap) {
+            const models = getModelsWonByContractorInTender(name, t);
+            if (models && models.length > 0) {
+              if (!investorWinnerModels.has(name)) investorWinnerModels.set(name, new Set());
+              const set = investorWinnerModels.get(name);
+              models.forEach(m => {
+                if (isValidModelName(m)) set.add(m);
+              });
+            }
+          }
+        }
+      });
+    }
+  });
+
+  const topInvestorWinners = [...investorWinnerPackages.entries()]
+    .sort((a, b) => b[1].length - a[1].length)
+    .slice(0, 4)
+    .map(([name, pkgs]) => formatContractorWinningText(name, pkgs, investorWinnerModels.get(name), investorWinnerYears.get(name)));
+
+  // 2. Regional match based on location keywords (Gia Lai, Bình Định, etc.)
   const regionInfo = getRegionNameAndKeywords(investor, currentLocation, currentName);
-  const regionalTenders = tenders.filter(t => {
+  const regionalTenders = sortedTenders.filter(t => {
     if (t.notifyNo === currentNotifyNo) return false;
-    
     let inRegion = false;
     if (regionInfo.keywords.length > 0) {
       const combinedT = `${t.investor || ''} ${t.location || ''} ${t.name || ''}`.toLowerCase();
       inRegion = regionInfo.keywords.some(kw => combinedT.includes(kw));
     } else {
-      inRegion = true; // Overall national matching if region is undetermined
+      inRegion = true;
     }
-    
-    // Match same category
     return inRegion && t.category === category;
   });
 
-  // Extract investor winners and participants
-  const investorWinners = new Map();
-  sameInvestorTenders.forEach(t => {
-    if (t.winnerNames) {
+  const recentRegional10 = regionalTenders.slice(0, 10);
+  const regionalWinnerPackages = new Map();
+  const regionalWinnerModels = new Map();
+  const regionalWinnerYears = new Map();
+  recentRegional10.forEach(t => {
+    if (t.winnerNames && t.winnerNames.length > 0) {
       const winners = Array.isArray(t.winnerNames) ? t.winnerNames : [t.winnerNames];
+      const pkgTitle = formatPackageTitle(t.name);
+      const year = getTenderYear(t);
       winners.forEach(w => {
         if (w) {
           const name = w.trim();
-          investorWinners.set(name, (investorWinners.get(name) || 0) + 1);
+          if (!regionalWinnerPackages.has(name)) regionalWinnerPackages.set(name, []);
+          const list = regionalWinnerPackages.get(name);
+          if (!list.includes(pkgTitle)) list.push(pkgTitle);
+
+          if (!regionalWinnerYears.has(name)) regionalWinnerYears.set(name, new Set());
+          if (year) regionalWinnerYears.get(name).add(year);
+
+          // Extract and check models for overlap
+          const currentScopes = getScopeKeywords(currentName + " " + (category || ""));
+          const historicalScopes = getScopeKeywords(t.name + " " + (t.category || ""));
+          const hasOverlap = currentScopes.length === 0 || historicalScopes.length === 0 || currentScopes.some(s => historicalScopes.includes(s));
+          
+          if (hasOverlap) {
+            const models = getModelsWonByContractorInTender(name, t);
+            if (models && models.length > 0) {
+              if (!regionalWinnerModels.has(name)) regionalWinnerModels.set(name, new Set());
+              const set = regionalWinnerModels.get(name);
+              models.forEach(m => {
+                if (isValidModelName(m)) set.add(m);
+              });
+            }
+          }
         }
       });
     }
   });
 
-  // Extract regional winners in this category
-  const regionalWinners = new Map();
-  regionalTenders.forEach(t => {
-    if (t.winnerNames) {
-      const winners = Array.isArray(t.winnerNames) ? t.winnerNames : [t.winnerNames];
-      winners.forEach(w => {
-        if (w) {
-          const name = w.trim();
-          regionalWinners.set(name, (regionalWinners.get(name) || 0) + 1);
-        }
-      });
-    }
-  });
-
-  const topInvestorWinners = [...investorWinners.entries()]
-    .sort((a, b) => b[1] - a[1])
+  const topRegionalWinners = [...regionalWinnerPackages.entries()]
+    .sort((a, b) => b[1].length - a[1].length)
     .slice(0, 4)
-    .map(([name, count]) => `${name} (Trúng ${count} gói tại đơn vị này)`);
+    .map(([name, pkgs]) => formatContractorWinningText(name, pkgs, regionalWinnerModels.get(name), regionalWinnerYears.get(name)));
 
-  const topRegionalWinners = [...regionalWinners.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 4)
-    .map(([name, count]) => `${name} (Trúng ${count} gói tương đương trên địa bàn)`);
-
-  const investorHistory = sameInvestorTenders.slice(0, 4).map(t => {
+  const investorHistory = recentInvestor10.slice(0, 5).map(t => {
     const formattedPrice = t.price ? Number(t.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa rõ';
     const winnerText = t.winnerNames ? (Array.isArray(t.winnerNames) ? t.winnerNames.join(', ') : t.winnerNames) : 'Chưa rõ/Đang thầu';
     return `- "${t.name}" (${formattedPrice}) -> Trúng thầu: ${winnerText}`;
   }).join('\n');
 
-  const regionalHistory = regionalTenders.slice(0, 4).map(t => {
+  const regionalHistory = recentRegional10.slice(0, 5).map(t => {
     const formattedPrice = t.price ? Number(t.price).toLocaleString('vi-VN') + ' VNĐ' : 'Chưa rõ';
     const winnerText = t.winnerNames ? (Array.isArray(t.winnerNames) ? t.winnerNames.join(', ') : t.winnerNames) : 'Chưa rõ';
     return `- Tại ${t.investor}: "${t.name}" (${formattedPrice}) -> Trúng thầu: ${winnerText}`;
@@ -219,23 +400,42 @@ function buildCompetitorAnalysisFromDatabase(history, investor, category, locati
   if (likelyRivals.length < 2) {
     try {
       const tenders = getAllTenders();
-      const categoryWinners = new Map();
+      const categoryWinnerPkgs = new Map();
+      const categoryWinnerModels = new Map();
+      const categoryWinnerYears = new Map();
       tenders.forEach(t => {
         if (t.category === category && t.winnerNames) {
           const winners = Array.isArray(t.winnerNames) ? t.winnerNames : [t.winnerNames];
+          const pkgTitle = formatPackageTitle(t.name);
+          const year = getTenderYear(t);
           winners.forEach(w => {
             if (w) {
               const trimmed = w.trim();
-              categoryWinners.set(trimmed, (categoryWinners.get(trimmed) || 0) + 1);
+              if (!categoryWinnerPkgs.has(trimmed)) categoryWinnerPkgs.set(trimmed, []);
+              const list = categoryWinnerPkgs.get(trimmed);
+              if (!list.includes(pkgTitle)) list.push(pkgTitle);
+
+              if (!categoryWinnerYears.has(trimmed)) categoryWinnerYears.set(trimmed, new Set());
+              if (year) categoryWinnerYears.get(trimmed).add(year);
+
+              const models = getModelsWonByContractorInTender(trimmed, t);
+              if (models && models.length > 0) {
+                if (!categoryWinnerModels.has(trimmed)) categoryWinnerModels.set(trimmed, new Set());
+                const set = categoryWinnerModels.get(trimmed);
+                models.forEach(m => {
+                  if (isValidModelName(m)) set.add(m);
+                });
+              }
             }
           });
         }
       });
-      const sortedCatWinners = [...categoryWinners.entries()].sort((a,b) => b[1]-a[1]).slice(0, 4);
-      sortedCatWinners.forEach(([name, count]) => {
-        const alreadyAdded = likelyRivals.some(r => r.includes(name));
+      const sortedCatWinners = [...categoryWinnerPkgs.entries()].sort((a,b) => b[1].length - a[1].length).slice(0, 4);
+      sortedCatWinners.forEach(([name, pkgs]) => {
+        const nameOnly = name.trim();
+        const alreadyAdded = likelyRivals.some(r => r.includes(nameOnly));
         if (!alreadyAdded && likelyRivals.length < 4) {
-          likelyRivals.push(`${name} (Top ${count} lần thắng thầu ngành ${category || 'Y tế'} toàn hệ thống)`);
+          likelyRivals.push(formatContractorWinningText(name, pkgs, categoryWinnerModels.get(name), categoryWinnerYears.get(name)));
         }
       });
     } catch (e) {
@@ -562,11 +762,14 @@ app.post('/api/summarize-tender', async (req, res) => {
 
     if (summaryCache.has(notifyNo)) {
       let cachedData = summaryCache.get(notifyNo);
-      if (!cachedData.competitorAnalysis || !cachedData.competitorAnalysis.likelyRivals || cachedData.competitorAnalysis.likelyRivals.length === 0 || cachedData.competitorAnalysis.likelyRivals.some(r => r.includes('hoạt động mạnh tại khu vực'))) {
-        const history = getHistoricalContext(investor, category, notifyNo, name, location);
-        cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, investor, category, location);
-        saveToDiskCache(notifyNo, cachedData);
-      }
+      // Recalculate competitor analysis dynamically in real-time so it is always 100% up-to-date with model-level cross-referencing
+      const history = getHistoricalContext(investor, category, notifyNo, name, location);
+      cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, investor, category, location);
+      
+      // Keep score and successChance aligned with live history data
+      cachedData.score = history.sameInvestorCount > 0 ? 82 : 70;
+      cachedData.successChance = history.topInvestorWinners.length > 0 ? 32 : 45;
+      
       return res.json({ success: true, data: cachedData, cached: true });
     }
 
@@ -738,11 +941,9 @@ app.post('/api/batch-summarize-tenders', async (req, res) => {
       if (!tender.notifyNo) continue;
       if (summaryCache.has(tender.notifyNo)) {
         let cachedData = summaryCache.get(tender.notifyNo);
-        if (!cachedData.competitorAnalysis || !cachedData.competitorAnalysis.likelyRivals || cachedData.competitorAnalysis.likelyRivals.length === 0 || cachedData.competitorAnalysis.likelyRivals.some(r => r.includes('hoạt động mạnh tại khu vực'))) {
-          const history = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location);
-          cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, tender.investor, tender.category, tender.location);
-          saveToDiskCache(tender.notifyNo, cachedData);
-        }
+        const history = getHistoricalContext(tender.investor, tender.category, tender.notifyNo, tender.name, tender.location);
+        cachedData.competitorAnalysis = buildCompetitorAnalysisFromDatabase(history, tender.investor, tender.category, tender.location);
+        saveToDiskCache(tender.notifyNo, cachedData);
         summaries[tender.notifyNo] = cachedData;
       } else {
         missingTenders.push(tender);
@@ -854,10 +1055,14 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
       if (Array.isArray(parsed)) {
         for (const item of parsed) {
           if (item.notifyNo) {
+            const originalTender = missingTenders.find(t => t.notifyNo === item.notifyNo) || {};
+            const history = getHistoricalContext(originalTender.investor, originalTender.category, item.notifyNo, originalTender.name, originalTender.location);
+            const compAnalysis = buildCompetitorAnalysisFromDatabase(history, originalTender.investor, originalTender.category, originalTender.location);
+
             const sumData = {
               summary: item.summary,
-              score: item.score || 60,
-              successChance: item.successChance || 35,
+              score: history.sameInvestorCount > 0 ? 82 : (item.score || 60),
+              successChance: history.topInvestorWinners.length > 0 ? 32 : (item.successChance || 35),
               suitabilityMetrics: item.suitabilityMetrics || { phapLy: 50, kyThuat: 50, thuongMai: 45, tienDo: 50, diaBan: 50, lienKet: 45 },
               primaryEquipment: item.primaryEquipment || "Chưa rõ thiết bị chủ đạo",
               strengths: item.strengths || [],
@@ -867,7 +1072,8 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
               actionItems: item.actionItems || [],
               keyPoints: item.keyPoints,
               aiAssessment: item.aiAssessment,
-              officialUrl: item.officialUrl || 'https://muasamcong.mpi.gov.vn/'
+              officialUrl: item.officialUrl || 'https://muasamcong.mpi.gov.vn/',
+              competitorAnalysis: compAnalysis
             };
             saveToDiskCache(item.notifyNo, sumData);
             summaries[item.notifyNo] = sumData;
