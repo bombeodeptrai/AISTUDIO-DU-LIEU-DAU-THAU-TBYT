@@ -175,9 +175,12 @@ function tenderModelSearchTexts(tender) {
 
 function officialUrl(value, notifyNo) {
   try {
-    if (!value && !notifyNo) return "https://muasamcong.mpi.gov.vn/";
-    if (value) {
-      const url = new URL(value);
+    let raw = String(value || "").trim();
+    while (raw.includes("&amp;")) {
+      raw = raw.replaceAll("&amp;", "&");
+    }
+    if (raw) {
+      const url = new URL(raw);
       if (url.protocol === "https:" && url.hostname === "muasamcong.mpi.gov.vn") {
         return url.href;
       }
@@ -491,7 +494,7 @@ function requirementsMarkup(detail, tender) {
     const message = requirements?.disclosure === "temporarily-unavailable"
       ? "Tạm thời chưa tải được danh mục phần/lô mời thầu từ dữ liệu kế hoạch công khai. Hệ thống sẽ tự thử lại ở lần cập nhật tiếp theo."
       : "Nguồn kế hoạch chưa tách danh mục phần/lô cho gói này. Hãy mở E-HSMT chính thức để xem yêu cầu kỹ thuật chi tiết.";
-    return `<div class="requirements-list"><div class="equipment-heading"><div><span>DANH MỤC MỜI THẦU</span><strong>Yêu cầu kỹ thuật và thiết bị được mời</strong></div><a class="official-document-link" href="${escapeHtml(officialUrl(tender.sourceUrl))}" target="_blank" rel="noreferrer">Mở E-HSMT ↗</a></div><div class="detail-notice">${escapeHtml(message)}</div></div>`;
+    return `<div class="requirements-list"><div class="equipment-heading"><div><span>DANH MỤC MỜI THẦU</span><strong>Yêu cầu kỹ thuật và thiết bị được mời</strong></div><a class="official-document-link" href="${escapeHtml(officialUrl(tender.sourceUrl, tender.notifyNo))}" target="_blank" rel="noreferrer">Mở E-HSMT ↗</a></div><div class="detail-notice">${escapeHtml(message)}</div></div>`;
   }
 
   const rows = items.map((item, index) => {
@@ -511,7 +514,7 @@ function requirementsMarkup(detail, tender) {
   const summary = requirements.summary
     ? `<p class="requirement-summary"><b>Phạm vi:</b> ${escapeHtml(requirements.summary)}</p>`
     : "";
-  return `<div class="requirements-list"><div class="equipment-heading"><div><span>DANH MỤC MỜI THẦU</span><strong>${items.length} phần/lô từ kế hoạch công khai</strong></div><a class="official-document-link" href="${escapeHtml(officialUrl(tender.sourceUrl))}" target="_blank" rel="noreferrer">Mở E-HSMT ↗</a></div>${summary}${rows}<p class="requirement-source-note">Tên phần/lô và giá kế hoạch lấy từ KHLCNT công khai. Cấu hình chi tiết chỉ hiển thị khi nguồn chính thức công bố không qua CAPTCHA; E-HSMT vẫn là tài liệu đối chiếu cuối cùng.</p></div>`;
+  return `<div class="requirements-list"><div class="equipment-heading"><div><span>DANH MỤC MỜI THẦU</span><strong>${items.length} phần/lô từ kế hoạch công khai</strong></div><a class="official-document-link" href="${escapeHtml(officialUrl(tender.sourceUrl, tender.notifyNo))}" target="_blank" rel="noreferrer">Mở E-HSMT ↗</a></div>${summary}${rows}<p class="requirement-source-note">Tên phần/lô và giá kế hoạch lấy từ KHLCNT công khai. Cấu hình chi tiết chỉ hiển thị khi nguồn chính thức công bố không qua CAPTCHA; E-HSMT vẫn là tài liệu đối chiếu cuối cùng.</p></div>`;
 }
 
 function technicalRequirementsMarkup(detail, tender) {
@@ -534,7 +537,7 @@ function technicalRequirementsMarkup(detail, tender) {
       filesHtml = `<div class="technical-files-list" style="margin-top: 12px; padding: 12px; background: rgba(0,0,0,0.03); border-radius: 6px;"><p style="margin:0 0 8px 0; font-size: 13px; font-weight: 500;">Phát hiện các tệp đính kèm E-HSMT:</p><ul style="margin: 0; padding: 0; list-style: none; font-size: 13px;">${fileRows}</ul><p style="margin:8px 0 0 0; font-size: 13px; color: #666;">Vui lòng ấn "Xác nhận và mở hồ sơ" để tải tệp về.</p></div>`;
     }
 
-    return `<div class="technical-requirements-list"><div class="equipment-heading"><div><span>THÔNG SỐ KỸ THUẬT E-HSMT</span><strong>Dữ liệu không nằm trong biểu mẫu Web</strong></div><a class="official-document-link" href="${escapeHtml(officialUrl(tender.sourceUrl))}" target="_blank" rel="noreferrer">Xác nhận và mở hồ sơ ↗</a></div><div class="detail-notice">${escapeHtml(message)}</div>${filesHtml}</div>`;
+    return `<div class="technical-requirements-list"><div class="equipment-heading"><div><span>THÔNG SỐ KỸ THUẬT E-HSMT</span><strong>Dữ liệu không nằm trong biểu mẫu Web</strong></div><a class="official-document-link" href="${escapeHtml(officialUrl(tender.sourceUrl, tender.notifyNo))}" target="_blank" rel="noreferrer">Xác nhận và mở hồ sơ ↗</a></div><div class="detail-notice">${escapeHtml(message)}</div>${filesHtml}</div>`;
   }
 
   const visibleItems = items.slice(0, 40);
@@ -597,7 +600,7 @@ function detailMarkup(tender) {
       ${summary}
     </div>
     ${detailBody}
-    <div class="detail-footer"><span>Dữ liệu được đối chiếu từ KHLCNT, biểu mẫu e-HSMT, biên bản mở thầu và kết quả công khai.</span><a href="${escapeHtml(officialUrl(tender.sourceUrl))}" target="_blank" rel="noreferrer">Xem hồ sơ chính thức ↗</a></div>
+    <div class="detail-footer"><span>Dữ liệu được đối chiếu từ KHLCNT, biểu mẫu e-HSMT, biên bản mở thầu và kết quả công khai.</span><a href="${escapeHtml(officialUrl(tender.sourceUrl, tender.notifyNo))}" target="_blank" rel="noreferrer">Xem hồ sơ chính thức ↗</a></div>
   </section>`;
 }
 
@@ -839,7 +842,7 @@ async function preloadBatchSummaries(tendersList) {
         participantNames: tender.participantNames?.join("; "),
         loserNames: tender.loserNames?.join("; "),
         equipmentSummary: equipmentSummary,
-        sourceUrl: officialUrl(tender.sourceUrl),
+        sourceUrl: officialUrl(tender.sourceUrl, tender.notifyNo),
       };
     });
 
@@ -938,7 +941,7 @@ function getFallbackSummary(tender) {
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
   const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
   const equipmentText = getTenderEquipmentSummaryText(tender) || "Chi tiết máy móc, thiết bị, vật tư/sinh phẩm được công khai trong biểu mẫu e-HSMT.";
-  const url = officialUrl(tender.sourceUrl);
+  const url = officialUrl(tender.sourceUrl, tender.notifyNo);
   const locName = tender.location || tender.investor || "Địa phương";
   
   const points = [
@@ -1028,7 +1031,7 @@ async function fetchAiSummary(tender) {
         participantNames: tender.participantNames?.join("; "),
         loserNames: tender.loserNames?.join("; "),
         equipmentSummary: equipmentSummary,
-        sourceUrl: officialUrl(tender.sourceUrl),
+        sourceUrl: officialUrl(tender.sourceUrl, tender.notifyNo),
       }),
     });
 
@@ -1079,7 +1082,7 @@ function renderPremiumAiDashboard(cached, tender) {
   const hospitalHistorySummaryText = formatMarkdownText(comp.hospitalHistorySummary || "");
   const winStrategyHTML = (comp.winStrategy || []).map(w => `<li>${formatMarkdownText(w)}</li>`).join("");
 
-  const officialLink = cached.officialUrl || officialUrl(tender.sourceUrl);
+  const officialLink = officialUrl(cached?.officialUrl || tender.sourceUrl, tender.notifyNo);
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
   const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
   
@@ -1963,7 +1966,7 @@ function tenderMarkup(tender) {
     </div>
     <div class="tender-status"><span class="status-pill ${escapeHtml(tender.status)}">${escapeHtml(statusLabels[tender.status] || tender.status)}</span><span>Đóng ${escapeHtml(formatDate(tender.closeDate, true))}</span></div>
     <div class="tender-price"><strong title="${escapeHtml(formatMoney(price, false))}">${escapeHtml(formatMoney(price))}</strong><span>${tender.winningPrice ? "Giá trúng thầu" : "Giá dự toán"}</span></div>
-    <div class="tender-actions"><button class="expand-button${expanded ? " expanded" : ""}" data-action="expand" data-id="${escapeHtml(tender.id)}" type="button" aria-expanded="${expanded}"><span>${expanded ? "Thu gọn" : "Mở rộng"}</span><span>⌄</span></button><a class="detail-link" href="${escapeHtml(officialUrl(tender.sourceUrl))}" target="_blank" rel="noreferrer"><span>↗</span><span>Nguồn</span></a></div>
+    <div class="tender-actions"><button class="expand-button${expanded ? " expanded" : ""}" data-action="expand" data-id="${escapeHtml(tender.id)}" type="button" aria-expanded="${expanded}"><span>${expanded ? "Thu gọn" : "Mở rộng"}</span><span>⌄</span></button><a class="detail-link" href="${escapeHtml(officialUrl(tender.sourceUrl, tender.notifyNo))}" target="_blank" rel="noreferrer"><span>↗</span><span>Nguồn</span></a></div>
     ${tenderAiSummaryCardMarkup(tender)}
     ${expanded ? detailMarkup(tender) : ""}
   </article>`;

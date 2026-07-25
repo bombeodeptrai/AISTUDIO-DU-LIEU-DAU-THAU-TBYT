@@ -896,6 +896,9 @@ Yêu cầu trả về thông tin dưới dạng JSON có đầy đủ các trư�
     let data;
     try {
       data = JSON.parse(resultText);
+      if (data && data.officialUrl) {
+        data.officialUrl = data.officialUrl.replaceAll("&amp;", "&");
+      }
     } catch (e) {
       data = {
         summary: resultText,
@@ -1072,7 +1075,7 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
               actionItems: item.actionItems || [],
               keyPoints: item.keyPoints,
               aiAssessment: item.aiAssessment,
-              officialUrl: item.officialUrl || 'https://muasamcong.mpi.gov.vn/',
+              officialUrl: (item.officialUrl || originalTender.sourceUrl || 'https://muasamcong.mpi.gov.vn/').replaceAll('&amp;', '&'),
               competitorAnalysis: compAnalysis
             };
             saveToDiskCache(item.notifyNo, sumData);
