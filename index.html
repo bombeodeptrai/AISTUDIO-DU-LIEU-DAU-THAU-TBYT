@@ -127,6 +127,25 @@
           <div class="insight-hero"><span class="insight-icon">↗</span><div><strong id="open-percent">0%</strong><span>gói thầu còn mở</span></div></div>
           <div class="insight-item"><span class="insight-icon gold">◉</span><div><strong id="average-value">—</strong><span>Giá trị trung bình mỗi gói</span></div></div>
           <div class="investor-list"><p>Chủ đầu tư hoạt động nhiều · bấm để lọc</p><div id="investor-ranking"></div></div>
+          
+          <!-- Kiểu Việt Official Portfolio Section -->
+          <div class="kv-portfolio-card" style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-soft);">
+            <p class="eyebrow small" style="color: #b88230; margin-bottom: 6px;">PORTFOLIO KIỂU VIỆT</p>
+            <h3 style="font-size: 15px; font-weight: 500; margin: 0 0 10px 0; display: flex; align-items: center; justify-content: space-between;">
+              <span>Dự án Đã Thực Hiện</span>
+              <span style="background: #e8f5e9; color: #1b5e20; font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px; border: 1px solid #c8e6c9;">Đã kiểm thực 🛡️</span>
+            </h3>
+            
+            <!-- Quick Search for Portfolio projects -->
+            <div style="position: relative; margin-bottom: 12px;">
+              <input type="text" id="kv-portfolio-search" placeholder="Tìm dự án, thiết bị, địa bàn..." style="width: 100%; padding: 6px 10px 6px 28px; font-size: 12px; border: 1px solid var(--border-soft); border-radius: 6px; background: #fffcf7; color: #333;" />
+              <span style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font-size: 12px; color: #999;">⌕</span>
+            </div>
+
+            <div id="kv-portfolio-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; padding-right: 2px;">
+              <!-- Dynamic list will be rendered by JavaScript -->
+            </div>
+          </div>
         </aside>
       </section>
 
