@@ -10,7 +10,7 @@ const LOT_OPEN_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-sele
 const CONTRACTOR_RESULT_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-selection-v2/services/expose/contractor-input-result/get?token=public";
 const PLAN_BID_DETAIL_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-selection-v2/services/lcnt/bid-po-bidp-plan-project-view/get-bidp-plan-detail-by-id?token=public";
 const ONLINE_REOFFER_HSMT_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-selection-v2/services/lcnt_tbmcgtt_hsmt";
-const PROVINCE_CODE = "52";
+const PROVINCE_CODES = ["52", "50", "54", "51", "53", "49", "48", "56", "58", "55", "57", "60", "46", "45", "44"];
 const DAYS = 3 * 365;
 const INCREMENTAL_DAYS = 14;
 const STATUS_SCHEMA_VERSION = 4;
@@ -35,18 +35,10 @@ const SEARCH_KEYWORDS = [
 // Khi quét bù 3 năm, tìm giao giữa địa danh trong tên đơn vị và từ khóa trong tên gói,
 // sau đó vẫn chạy bộ lọc y tế chặt chẽ ở isMedical().
 const HISTORICAL_LOCATION_TERMS = [
-  "Gia Lai", "Bình Định",
-  "Pleiku", "An Khê", "Ayun Pa", "Chư Păh", "Chư Prông", "Chư Sê", "Chư Pưh",
-  "Đak Đoa", "Đăk Đoa", "Đak Pơ", "Đăk Pơ", "Đức Cơ", "Ia Grai", "Ia Pa", "Kbang",
-  "Kông Chro", "Krông Pa", "Mang Yang", "Phú Thiện",
-  "Quy Nhơn", "An Nhơn", "Hoài Nhơn", "Tuy Phước", "Phù Cát", "Phù Mỹ", "Tây Sơn",
-  "Vân Canh", "Vĩnh Thạnh", "An Lão", "Hoài Ân",
+  "Gia Lai", "Bình Định", "Đắk Lắk", "Kon Tum", "Phú Yên", "Quảng Ngãi", "Quảng Nam", "Khánh Hòa", "Lâm Đồng", "Đắk Nông"
 ];
 const HISTORICAL_TITLE_TERMS = [
-  "thiết bị", "vật tư", "hóa chất", "hoá chất", "sinh phẩm", "dụng cụ", "y cụ", "máy",
-  "xét nghiệm", "chẩn đoán", "phẫu thuật", "nha khoa", "lọc máu", "chạy thận",
-  "kit", "test", "stent", "catheter", "implant", "bơm tiêm", "kim", "găng",
-  "khẩu trang", "bông", "gạc", "oxy", "khí y tế",
+  "thiết bị y tế", "vật tư y tế", "hóa chất", "máy thở", "siêu âm", "xét nghiệm"
 ];
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(root, "data/tenders.json");
@@ -93,7 +85,7 @@ function searchPayload(pageNumber, from, to) {
       matchFields: ["notifyNo", "bidName", "investorName"],
       filters: [
         { fieldName: "type", searchType: "in", fieldValues: ["es-notify-contractor"] },
-        { fieldName: "locations.provCode", searchType: "in", fieldValues: [PROVINCE_CODE] },
+        { fieldName: "locations.provCode", searchType: "in", fieldValues: PROVINCE_CODES },
         { fieldName: "publicDate", searchType: "range", from, to },
       ],
     }],
@@ -923,7 +915,7 @@ async function main() {
     tenders: enrichedTenders,
     fetchedAt: new Date().toISOString(),
     source: "muasamcong-public-api",
-    provinceCode: PROVINCE_CODE,
+    provinceCodes: PROVINCE_CODES,
     detailTenderCount: Object.keys(detailsByNotifyNo).length,
     collection: {
       days: DAYS,
