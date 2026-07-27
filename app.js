@@ -29,45 +29,92 @@ const state = {
 // --- CORE COMPANY PROFILE DYNAMIC ENGINE & TEMPLATES ---
 const PROFILE_TEMPLATES = {
   kieu_viet: {
-    name: "Công ty Đấu giá Hợp danh Kiểu Việt",
-    coreBusiness: "đấu giá tài sản, tổ chức đấu giá quyền sử dụng đất, tài sản công thanh lý, tang vật tịch thu, đấu giá tài sản trên đất, lựa chọn tổ chức đấu giá chuyên nghiệp, lập hồ sơ mời thầu đấu giá",
-    primaryLocations: "Gia Lai, Bình Định, Kon Tum, Đắk Lắk, Phú Yên",
+    name: "Hệ sinh thái Doanh nghiệp Kiểu Việt",
+    members: [
+      {
+        name: "Công ty TNHH Kiểu Việt (Đơn vị đứng đầu Liên danh)",
+        taxCode: "4100596520",
+        address: "Số 60 đường Chu Văn An, phường Lý Thường Kiệt, TP. Quy Nhơn, tỉnh Bình Định",
+        role: "Thi công xây lắp, cung cấp và lắp đặt thiết bị y tế chuyên dụng, hệ thống khí y tế"
+      },
+      {
+        name: "Công ty CP Nội thất và Vật liệu xây dựng Kiểu Việt",
+        taxCode: "4101455201",
+        address: "Lô 01 đường Võ Duy Dương, phường Quang Trung, TP. Quy Nhơn, tỉnh Bình Định",
+        role: "Giải pháp nội thất bệnh viện chuyên dụng, vật liệu xây dựng và các hạng mục phụ trợ"
+      }
+    ],
+    coreBusiness: "thi công xây lắp y tế, cung cấp lắp đặt thiết bị y tế, thiết bị hồi sức cấp cứu ICU, máy thở, máy siêu âm màu 4D, máy theo dõi bệnh nhân monitor 5 thông số, máy khử rung tim, máy điện tim 3 kênh, máy hút dịch, máy khí dung siêu âm, hệ thống nội soi tiêu hóa, chẩn đoán ung thư sớm, giường hồi sức cấp cứu điều khiển điện, máy truyền dịch, bơm tiêm điện, bộ hồi sức trẻ sơ sinh, lồng ấp trẻ sơ sinh, máy làm ấm trẻ sơ sinh, máy súc rửa dạ dày, máy đo chức năng hô hấp, hệ thống khí y tế, trung tâm cung cấp khí nén y tế, HTM EQUIP, hệ thống hút chân không EU, ngõ ra cấp khí HEYER AEROTECH Đức, hộp đầu giường BHU, dàn gom oxy dự phòng, nội thất bệnh viện, giường bệnh viện inox 201, tủ đầu giường, thang máy chuyên dụng XIOLIFT, thang máy bệnh viện 1350kg, thang máy tải khách 800kg, máy phát điện dự phòng ISO 9001 110KVA 100KVA, hệ thống chuông gọi y tá 34 màn hình",
+    primaryLocations: "Bình Định, Gia Lai, Kon Tum, Đắk Lắk, Phú Yên, Quảng Ngãi, Quảng Nam",
+    equipmentCapabilities: {
+      icuGroup: [
+        "Máy thở (02 máy)",
+        "Máy siêu âm màu 4D - 04 đầu dò chuyên dụng (01 máy)",
+        "Máy theo dõi bệnh nhân (Monitor) 5 thông số (08 máy)",
+        "Máy khử rung tim (01 máy)",
+        "Máy điện tim 3 kênh (04 máy)",
+        "Máy hút dịch (05 máy)",
+        "Máy khí dung siêu âm (04 máy)",
+        "Hệ thống nội soi tiêu hóa dạ dày/đại tràng video chẩn đoán ung thư sớm (01 bộ)",
+        "Giường hồi sức cấp cứu điều khiển điện (20 cái)",
+        "Máy truyền dịch (10 máy)",
+        "Bơm tiêm điện (10 máy)",
+        "Bộ hồi sức trẻ sơ sinh (01 bộ)",
+        "Lồng ấp trẻ sơ sinh (02 cái)",
+        "Máy làm ấm trẻ sơ sinh (01 máy)",
+        "Máy súc rửa dạ dày (01 máy)",
+        "Máy đo chức năng hô hấp (01 máy)"
+      ],
+      gasGroup: [
+        "Trung tâm cung cấp khí nén y tế (Lắp ráp bởi HTM EQUIP)",
+        "Hệ thống hút chân không (Xuất xứ EU/tương đương)",
+        "Ngõ ra cấp khí y tế / Ổ khí y tế HEYER AEROTECH (Đức) - 187 bộ",
+        "Hộp đầu giường (BHU) gồm ổ điện & đèn chiếu sáng - 16 bộ",
+        "Dàn gom ô xy dự phòng đấu kết nối 2 nhánh x 10 bình"
+      ],
+      interiorGroup: [
+        "186 bộ Giường bệnh viện Inox 201 (1900x900x540mm) & Tủ đầu giường Inox 201 (430x330x840mm)",
+        "Hệ thống thang máy chuyên dụng XIOLIFT (Thang bệnh viện 1350kg/18 người, thang tải khách 800kg/10 người, 6 stops)",
+        "Hệ thống máy phát điện dự phòng ISO 9001/9002 (110KVA/88KW dự phòng, 100KVA/80KW liên tục)",
+        "Hệ thống chuông gọi y tá (34 màn hình hiển thị trực)"
+      ]
+    },
     projects: [
       {
         id: "kv-proj-1",
-        name: "Hợp đồng dịch vụ đấu giá quyền sử dụng đất đối với các lô đất thuộc Khu quy hoạch định cư xã Chư Á, thành phố Pleiku",
-        shortName: "UBND TP Pleiku",
-        investor: "UBND Thành phố Pleiku",
-        year: "2024",
-        value: 380000000,
-        category: "Đấu giá quyền sử dụng đất",
-        status: "Đã tổ chức đấu giá thành công tốt đẹp",
-        details: "Hợp đồng dịch vụ tổ chức đấu giá tài sản quyền sử dụng đất cho các lô đất tái định cư và đất thương mại dịch vụ; thù lao dịch vụ đạt 380 triệu VNĐ, tổng số tiền đấu giá thành thu ngân sách nhà nước đạt trên 85 tỷ VNĐ.",
-        websiteUrl: "https://daugiakieuviet.com.vn"
+        name: "Dự án Trung tâm Y tế thành phố Quy Nhơn (Hợp đồng số 15/2022/HĐ-XD)",
+        shortName: "TTYT TP Quy Nhơn",
+        investor: "Ban QLDA ĐTXD và phát triển quỹ đất TP Quy Nhơn",
+        year: "2022-2025",
+        value: 142403776000,
+        category: "Thi công xây dựng, Lắp đặt Thiết bị y tế, Khí y tế, Thang máy XIOLIFT & Nội thất",
+        status: "Đứng đầu Liên danh (TNHH Kiểu Việt: 41.406.581.000 VNĐ; CP Nội thất Kiểu Việt: 9.013.962.000 VNĐ)",
+        details: "Hợp đồng 142.4 tỷ VNĐ thi công xây dựng và lắp đặt toàn bộ thiết bị y tế, hệ thống khí y tế HEYER AEROTECH Đức, thang máy bệnh viện XIOLIFT và nội thất chuyên dụng. Tiến độ cam kết 900 ngày.",
+        websiteUrl: "https://kieuviet.com.vn"
       },
       {
         id: "kv-proj-2",
-        name: "Hợp đồng dịch vụ đấu giá lô tài sản công thanh lý dôi dư bao gồm xe ô tô, thiết bị văn phòng, máy tính cũ hỏng của Sở Tài chính tỉnh Gia Lai",
-        shortName: "Sở Tài chính Gia Lai",
-        investor: "Sở Tài chính tỉnh Gia Lai",
-        year: "2023",
-        value: 45000000,
-        category: "Đấu giá tài sản công thanh lý",
-        status: "Đã hoàn thành bàn giao hồ sơ đấu giá",
-        details: "Tổ chức đấu giá trọn gói lô xe thanh lý và thiết bị văn phòng của cơ quan hành chính nhà nước dôi dư theo đúng trình tự Luật Đấu giá tài sản.",
-        websiteUrl: "https://daugiakieuviet.com.vn"
+        name: "Dự án Trung tâm Y tế thị xã An Nhơn",
+        shortName: "TTYT TX An Nhơn",
+        investor: "Ban QLDA ĐTXD và phát triển quỹ đất TX An Nhơn",
+        year: "2023-2025",
+        value: 85000000000,
+        category: "Thi công xây dựng & Lắp đặt toàn bộ thiết bị y tế, khí y tế, thang máy & nội thất",
+        status: "Nhà thầu thi công xây dựng và lắp đặt toàn bộ thiết bị",
+        details: "Thi công xây dựng và cung cấp lắp đặt trọn gói toàn bộ thiết bị y tế Khoa Hồi sức cấp cứu (ICU), khí y tế, thang máy bệnh viện XIOLIFT và 186 bộ giường tủ inox 201 kiểm soát nhiễm khuẩn.",
+        websiteUrl: "https://kieuviet.com.vn"
       },
       {
         id: "kv-proj-3",
-        name: "Hợp đồng dịch vụ đấu giá vườn cây cao su thanh lý già cỗi để thu hồi đất tái canh của Công ty Cao su Mang Yang",
-        shortName: "Cao su Mang Yang",
-        investor: "Công ty Cổ phần Cao su Mang Yang",
-        year: "2025",
-        value: 120000000,
-        category: "Đấu giá tài sản doanh nghiệp",
-        status: "Đã đấu giá thành công thu vượt giá khởi điểm",
-        details: "Tổ chức bán đấu giá thanh lý tài sản vườn cây cao su hóa học hết chu kỳ khai thác, đạt giá bán vượt trội so với giá khởi điểm đề xuất ban đầu.",
-        websiteUrl: "https://daugiakieuviet.com.vn"
+        name: "Cung cấp & Lắp đặt Đồng bộ Hệ thống Khí y tế, Thiết bị Hồi sức Cấp cứu (ICU) & Nội thất Bệnh viện",
+        shortName: "Khí Y tế & Thiết bị ICU",
+        investor: "Trung tâm Y tế & Các Bệnh viện khu vực Miền Trung - Tây Nguyên",
+        year: "2024",
+        value: 28500000000,
+        category: "Cung cấp Thiết bị Y tế, Khí y tế & Nội thất Chuyên dụng",
+        status: "Đã hoàn thành bàn giao nghiệm thu & đưa vào vận hành",
+        details: "Cung cấp máy thở, máy siêu âm màu 4D (4 đầu dò), monitor 5 thông số, máy khử rung tim, hệ thống nội soi chẩn đoán ung thư sớm, 20 giường ICU điện, trung tâm khí nén y tế, ngõ ra HEYER AEROTECH và 186 bộ giường tủ bệnh viện.",
+        websiteUrl: "https://kieuviet.com.vn"
       }
     ]
   },
@@ -162,6 +209,12 @@ const PROFILE_TEMPLATES = {
 const DEFAULT_COMPANY_PROFILE = PROFILE_TEMPLATES.kieu_viet;
 
 let companyProfile = JSON.parse(localStorage.getItem("custom_company_profile")) || DEFAULT_COMPANY_PROFILE;
+
+// Tự động chuyển đổi nếu hồ sơ lưu trong Cache là bản mẫu cũ (đấu giá) sang Hồ sơ Năng lực Hệ sinh thái Y tế Kiểu Việt chính thức
+if (companyProfile && (companyProfile.name?.includes("Đấu giá") || !companyProfile.members)) {
+  companyProfile = JSON.parse(JSON.stringify(DEFAULT_COMPANY_PROFILE));
+  localStorage.setItem("custom_company_profile", JSON.stringify(companyProfile));
+}
 
 const statusLabels = {
   open: "Đang mở",
@@ -2867,12 +2920,34 @@ function renderKieuVietPortfolio(query = "") {
     labelEl.textContent = companyProfile.name || "Kiểu Việt";
   }
   
+  let membersHtml = "";
+  if (!cleanQuery && companyProfile.members && Array.isArray(companyProfile.members) && companyProfile.members.length > 0) {
+    membersHtml = `
+      <div style="background: #f0f7ff; border: 1px solid #bae0ff; border-radius: 8px; padding: 10px; margin-bottom: 12px; font-size: 11px; color: #1d3920;">
+        <div style="font-weight: 700; color: #0958d9; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+          <span>🏥 Thành viên Hệ sinh thái Kiểu Việt</span>
+          <span style="font-weight: 600; font-size: 10px; background: #e6f4ff; color: #0958d9; padding: 2px 6px; border-radius: 4px; border: 1px solid #91caff;">Liên danh Đứng đầu</span>
+        </div>
+        ${companyProfile.members.map((m, idx) => `
+          <div style="line-height: 1.4; margin-bottom: 6px; background: #fff; padding: 6px 8px; border-radius: 6px; border: 1px solid #e6f4ff;">
+            <strong style="color: #003eb3;">${idx + 1}. ${escapeHtml(m.name)}</strong>
+            <div style="color: #555; font-size: 10.5px; margin-top: 2px;">
+              • <strong>MST:</strong> ${escapeHtml(m.taxCode)}<br>
+              • <strong>Địa chỉ:</strong> ${escapeHtml(m.address)}<br>
+              • <strong>Nhiệm vụ:</strong> ${escapeHtml(m.role)}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
   if (filtered.length === 0) {
-    container.innerHTML = `<div style="text-align: center; padding: 20px; font-size: 11.5px; color: #888;">Không tìm thấy dự án phù hợp với từ khóa.</div>`;
+    container.innerHTML = membersHtml + `<div style="text-align: center; padding: 20px; font-size: 11.5px; color: #888;">Không tìm thấy dự án phù hợp với từ khóa.</div>`;
     return;
   }
   
-  container.innerHTML = filtered.map(p => {
+  container.innerHTML = membersHtml + filtered.map(p => {
     const val = Number(p.value) || 0;
     const valueFormatted = (val / 1000000000).toFixed(2) + " tỷ VNĐ";
     return `
