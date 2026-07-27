@@ -26,6 +26,143 @@ const state = {
   saved: loadSaved(),
 };
 
+// --- CORE COMPANY PROFILE DYNAMIC ENGINE & TEMPLATES ---
+const PROFILE_TEMPLATES = {
+  kieu_viet: {
+    name: "Công ty Đấu giá Hợp danh Kiểu Việt",
+    coreBusiness: "đấu giá tài sản, tổ chức đấu giá quyền sử dụng đất, tài sản công thanh lý, tang vật tịch thu, đấu giá tài sản trên đất, lựa chọn tổ chức đấu giá chuyên nghiệp, lập hồ sơ mời thầu đấu giá",
+    primaryLocations: "Gia Lai, Bình Định, Kon Tum, Đắk Lắk, Phú Yên",
+    projects: [
+      {
+        id: "kv-proj-1",
+        name: "Hợp đồng dịch vụ đấu giá quyền sử dụng đất đối với các lô đất thuộc Khu quy hoạch định cư xã Chư Á, thành phố Pleiku",
+        shortName: "UBND TP Pleiku",
+        investor: "UBND Thành phố Pleiku",
+        year: "2024",
+        value: 380000000,
+        category: "Đấu giá quyền sử dụng đất",
+        status: "Đã tổ chức đấu giá thành công tốt đẹp",
+        details: "Hợp đồng dịch vụ tổ chức đấu giá tài sản quyền sử dụng đất cho các lô đất tái định cư và đất thương mại dịch vụ; thù lao dịch vụ đạt 380 triệu VNĐ, tổng số tiền đấu giá thành thu ngân sách nhà nước đạt trên 85 tỷ VNĐ.",
+        websiteUrl: "https://daugiakieuviet.com.vn"
+      },
+      {
+        id: "kv-proj-2",
+        name: "Hợp đồng dịch vụ đấu giá lô tài sản công thanh lý dôi dư bao gồm xe ô tô, thiết bị văn phòng, máy tính cũ hỏng của Sở Tài chính tỉnh Gia Lai",
+        shortName: "Sở Tài chính Gia Lai",
+        investor: "Sở Tài chính tỉnh Gia Lai",
+        year: "2023",
+        value: 45000000,
+        category: "Đấu giá tài sản công thanh lý",
+        status: "Đã hoàn thành bàn giao hồ sơ đấu giá",
+        details: "Tổ chức đấu giá trọn gói lô xe thanh lý và thiết bị văn phòng của cơ quan hành chính nhà nước dôi dư theo đúng trình tự Luật Đấu giá tài sản.",
+        websiteUrl: "https://daugiakieuviet.com.vn"
+      },
+      {
+        id: "kv-proj-3",
+        name: "Hợp đồng dịch vụ đấu giá vườn cây cao su thanh lý già cỗi để thu hồi đất tái canh của Công ty Cao su Mang Yang",
+        shortName: "Cao su Mang Yang",
+        investor: "Công ty Cổ phần Cao su Mang Yang",
+        year: "2025",
+        value: 120000000,
+        category: "Đấu giá tài sản doanh nghiệp",
+        status: "Đã đấu giá thành công thu vượt giá khởi điểm",
+        details: "Tổ chức bán đấu giá thanh lý tài sản vườn cây cao su hóa học hết chu kỳ khai thác, đạt giá bán vượt trội so với giá khởi điểm đề xuất ban đầu.",
+        websiteUrl: "https://daugiakieuviet.com.vn"
+      }
+    ]
+  },
+  med_equip: {
+    name: "Công ty TNHH Thiết bị Y tế Quy Nhơn",
+    coreBusiness: "thiết bị y tế, máy chụp X-quang, máy CT-Scanner, máy siêu âm, máy nội soi, lắp đặt thiết bị phòng mổ, bảo trì máy chẩn đoán hình ảnh, cung cấp trang thiết bị phòng điều trị",
+    primaryLocations: "Bình Định, Gia Lai, Phú Yên, Quảng Ngãi",
+    projects: [
+      {
+        id: "med-proj-1",
+        name: "Cung cấp, lắp đặt trọn gói hệ thống máy chụp cắt lớp vi tính CT-Scanner 128 lát cắt và máy siêu âm màu 4D chuyên dụng GE Healthcare tại Bệnh viện Thành phố Quy Nhơn",
+        shortName: "Bệnh viện Quy Nhơn",
+        investor: "Bệnh viện Thành phố Quy Nhơn",
+        year: "2024",
+        value: 12450000000,
+        category: "Cung cấp Thiết bị y tế chẩn đoán hình ảnh",
+        status: "Đã bàn giao lắp đặt & đưa vào sử dụng thành công",
+        details: "Cung cấp lắp đặt bàn giao trọn gói máy CT-Scanner 128 lát cắt kèm theo bộ lưu điện chuyên dụng, máy siêu âm Doppler màu chuyên khoa tim mạch của hãng GE Healthcare Mỹ đạt tiêu chuẩn chất lượng y tế quốc tế.",
+        websiteUrl: "https://kieuviet.com.vn"
+      },
+      {
+        id: "med-proj-2",
+        name: "Cung cấp hệ thống máy chụp X-quang kỹ thuật số cao tần và bộ thiết bị xét nghiệm sinh hóa tự động cho Trung tâm Y tế Thị xã An Nhơn",
+        shortName: "TTYT Thị xã An Nhơn",
+        investor: "Trung tâm Y tế Thị xã An Nhơn",
+        year: "2023",
+        value: 6810000000,
+        category: "Cung cấp Thiết bị chẩn đoán & xét nghiệm",
+        status: "Nghiệm thu thanh toán & đưa vào phục vụ bệnh nhân",
+        details: "Cung cấp lắp đặt máy X-quang DR kỹ thuật số, hệ thống nội soi HD và thiết bị xét nghiệm sinh hóa, huyết học tự động đảm bảo độ chính xác kết quả cao.",
+        websiteUrl: "https://kieuviet.com.vn"
+      },
+      {
+        id: "med-proj-3",
+        name: "Cung cấp và chuyển giao công nghệ thiết bị phòng mổ vô trùng, máy gây mê kèm thở và đèn mổ LED cao cấp tại Phòng khám Đa khoa Hòa Đức",
+        shortName: "Phòng khám Đa khoa Hòa Đức",
+        investor: "Phòng khám Đa khoa Hòa Đức",
+        year: "2025",
+        value: 4250000000,
+        category: "Cung cấp Thiết bị phòng mổ",
+        status: "Đang vận hành tốt, bảo trì định kỳ đầy đủ",
+        details: "Cung cấp đồng bộ thiết bị bàn mổ đa năng, đèn mổ LED, máy gây mê kèm thở Dräger của Đức và hệ thống sưởi ấm bệnh nhân cho phòng mổ vô khuẩn.",
+        websiteUrl: "https://kieuviet.com.vn"
+      }
+    ]
+  },
+  med_supplies: {
+    name: "Công ty Cổ phần Dược phẩm & Vật tư Y tế Gia Lai",
+    coreBusiness: "vật tư y tế, hóa chất xét nghiệm, sinh phẩm chẩn đoán, dụng cụ tiêu hao y tế, chỉ phẫu thuật, bơm kim tiêm, găng tay y tế, dung dịch sát khuẩn, thuốc điều trị",
+    primaryLocations: "Gia Lai, Bình Định, Kon Tum, Đắk Lắk",
+    projects: [
+      {
+        id: "sup-proj-1",
+        name: "Cung cấp trọn gói vật tư tiêu hao y tế dùng trong phẫu thuật thường quy, bơm kim tiêm, chỉ khâu phẫu thuật và găng tay y tế vô trùng cho Bệnh viện Đa khoa tỉnh Bình Định",
+        shortName: "BVĐK tỉnh Bình Định",
+        investor: "Bệnh viện Đa khoa tỉnh Bình Định",
+        year: "2024",
+        value: 16113471000,
+        category: "Cung cấp Vật tư tiêu hao y tế",
+        status: "Đã hoàn thành nghiệm thu bàn giao đầy đủ số lượng",
+        details: "Cung ứng định kỳ hàng tháng các mặt hàng vật tư tiêu hao phòng mổ, bơm kim tiêm, bông băng gạc và chỉ khâu phẫu thuật đảm bảo chất lượng vô trùng tốt nhất.",
+        websiteUrl: "https://kieuviet.com.vn"
+      },
+      {
+        id: "sup-proj-2",
+        name: "Cung cấp hóa chất xét nghiệm huyết học, sinh phẩm chẩn đoán hình ảnh và bộ dụng cụ xét nghiệm miễn dịch thường quy cho Trung tâm Y tế Huyện Chư Păh",
+        shortName: "TTYT Huyện Chư Păh",
+        investor: "Trung tâm Y tế Huyện Chư Păh",
+        year: "2025",
+        value: 7869950000,
+        category: "Cung cấp Hóa chất & Sinh phẩm xét nghiệm",
+        status: "Nghiệm thu bàn giao theo từng giai đoạn đúng tiến độ",
+        details: "Cung cấp hóa chất chạy máy xét nghiệm tự động Beckman Coulter, test nhanh virus, sinh phẩm chẩn đoán đạt tiêu chuẩn của Bộ Y tế cấp phép lưu hành.",
+        websiteUrl: "https://kieuviet.com.vn"
+      },
+      {
+        id: "sup-proj-3",
+        name: "Cung cấp bộ kit test nhanh và hóa chất sát khuẩn y tế phục vụ công tác kiểm soát nhiễm khuẩn cho Trung tâm Y tế Thị xã An Khê",
+        shortName: "TTYT Thị xã An Khê",
+        investor: "Trung tâm Y tế Thị xã An Khê",
+        year: "2024",
+        value: 3500000000,
+        category: "Cung cấp Hóa chất & Vật tư phòng dịch",
+        status: "Đã nghiệm thu thanh quyết toán hoàn tất",
+        details: "Cung cấp đồng bộ hóa chất khử trùng Cloramin B, kit xét nghiệm nhanh và trang phục bảo hộ y tế chất lượng cao phòng chống lây nhiễm chéo.",
+        websiteUrl: "https://kieuviet.com.vn"
+      }
+    ]
+  }
+};
+
+const DEFAULT_COMPANY_PROFILE = PROFILE_TEMPLATES.kieu_viet;
+
+let companyProfile = JSON.parse(localStorage.getItem("custom_company_profile")) || DEFAULT_COMPANY_PROFILE;
+
 const statusLabels = {
   open: "Đang mở",
   urgent: "Sắp đóng",
@@ -1746,95 +1883,102 @@ function openKieuVietModal(tender) {
     `;
   };
 
-  // --- DYNAMIC ASSESSMENT FOR KIỂU VIỆT ---
-  const isMedDevice = (tender.category || "").toLowerCase().includes("thiết bị") || 
-                      (tender.category || "").toLowerCase().includes("vật tư") ||
-                      (tender.name || "").toLowerCase().includes("y tế") ||
-                      (tender.name || "").toLowerCase().includes("thiết bị") ||
-                      (tender.name || "").toLowerCase().includes("vật tư") ||
-                      (tender.name || "").toLowerCase().includes("hóa chất") ||
-                      (tender.name || "").toLowerCase().includes("sinh phẩm") ||
-                      (tender.name || "").toLowerCase().includes("thuốc");
-
+  // --- DYNAMIC ASSESSMENT BASED ON ACTIVE PROFILE ---
+  const companyProfileName = companyProfile.name || "Kiểu Việt";
+  const coreKeywords = (companyProfile.coreBusiness || "")
+    .toLowerCase()
+    .split(/[,;.\s]+/)
+    .map(k => k.trim())
+    .filter(k => k.length > 2);
+  
   const lowerName = (tender.name || "").toLowerCase();
   const lowerInv = (tender.investor || "").toLowerCase();
   const lowerLoc = (tender.location || "").toLowerCase();
-  const isQuyNhonHospital = (lowerInv.includes("quy nhơn") && (lowerInv.includes("thành phố") || lowerInv.includes("tp") || lowerInv.includes("t.p"))) || (lowerName.includes("quy nhơn") && (lowerName.includes("bệnh viện") || lowerName.includes("tế")));
-  const isAnNhonHospital = lowerInv.includes("an nhơn") || lowerName.includes("an nhơn") || lowerLoc.includes("an nhơn");
-  const isHoaDuc = lowerInv.includes("hòa đức") || lowerName.includes("hòa đức") || lowerLoc.includes("hòa đức");
+  const tenderText = `${lowerName} ${lowerInv} ${lowerLoc}`;
+
+  // Check if any keyword in core business matches the tender description/title
+  const matchedKeywords = coreKeywords.filter(kw => tenderText.includes(kw));
+  const isCoreMatch = matchedKeywords.length > 0;
+
+  // Check prior direct investor relation
+  const matchedPastProject = (companyProfile.projects || []).find(p => {
+    const pInv = (p.investor || "").toLowerCase();
+    return pInv.length > 3 && (lowerInv.includes(pInv) || pInv.includes(lowerInv));
+  });
 
   // 1. Phap Ly (Legal & Experience)
   let calcPhapLy = 40;
-  if (isQuyNhonHospital) {
+  const maxPastValue = (companyProfile.projects || []).reduce((max, p) => Math.max(max, Number(p.value) || 0), 0);
+
+  if (matchedPastProject) {
     calcPhapLy = 98;
-    phapLyExplain = "Kiểu Việt đã thực hiện thành công hợp đồng cung cấp bê tông cản xạ bọc chì phòng chụp bức xạ và đá xây dựng tại Bệnh viện Thành phố Quy Nhơn trị giá 4,25 tỷ VNĐ. Hợp đồng tương tự này đáp ứng điểm tối đa yêu cầu năng lực vật liệu và kết cấu đặc thù.";
-  } else if (isAnNhonHospital) {
-    calcPhapLy = 98;
-    phapLyExplain = "Kiểu Việt có hợp đồng tương tự hoàn hảo trị giá 6,81 tỷ VNĐ tại TTYT thị xã An Nhơn cung cấp bê tông tươi mác cao và thi công móng máy nâng cấp hạ tầng chẩn đoán hình ảnh. Năng lực pháp lý & kinh nghiệm tại đây đạt mức tuyệt đối.";
-  } else if (isHoaDuc) {
-    calcPhapLy = 95;
-    phapLyExplain = "Kiểu Việt đã cung cấp trọn gói bê tông thương phẩm mác cao, cát mỏ sông Ba và đá dăm móng xây dựng cải tạo Phòng khám Đa khoa Hòa Đức trị giá 12,45 tỷ VNĐ. Kinh nghiệm thực hiện hợp đồng tương tự rất mạnh mẽ.";
-  } else if (isMedDevice) {
-    if (price <= 2000000000) { // < 2 tỷ
-      calcPhapLy = 92;
-      phapLyExplain = "Hồ sơ năng lực cung cấp vật liệu xây dựng (bê tông, cát, đá) của Kiểu Việt (kinh nghiệm cung cấp cho các gói thầu hạ tầng y tế 7,8 tỷ tại Gia Lai và 16,1 tỷ tại Bình Định) hoàn toàn vượt mức yêu cầu năng lực tài chính và kết cấu phòng ban ở gói này.";
-    } else if (price <= 20000000000) { // 2 tỷ - 20 tỷ
-      calcPhapLy = 86;
-      phapLyExplain = "Nằm trong phân khúc sở trường cung ứng bê tông tươi mác cao và vật liệu cho hạ tầng y tế của Kiểu Việt (kinh nghiệm thầu gói 7,8B và 16,1B). Các hợp đồng cung cấp vật liệu xây dựng đáp ứng tối đa yêu cầu.";
-    } else if (price <= 50000000000) { // 20 tỷ - 50 tỷ
-      calcPhapLy = 62;
-      phapLyExplain = "Vượt quá quy mô cung cấp vật liệu đơn lẻ Kiểu Việt từng thầu (max 16,1B). Cần thiết lập liên danh cung cấp vật liệu kết cấu để đảm bảo đáp ứng e-HSMT.";
-    } else { // > 50 tỷ
-      calcPhapLy = 42;
-      phapLyExplain = "Gói thầu quy mô cực lớn. Nhà thầu chưa có hợp đồng cung cấp vật liệu đơn lẻ đạt tối thiểu 50% giá trị gói thầu này. Bắt buộc phải tham gia liên danh để cộng dồn năng lực.";
-    }
+    phapLyExplain = `${companyProfileName} đã thực hiện thành công hợp đồng tương tự "${matchedPastProject.name}" trị giá ${formatMoney(matchedPastProject.value, false)} tại ${tender.investor || "đơn vị này"}. Hợp đồng này đáp ứng điểm tối đa năng lực & kinh nghiệm thực tế.`;
+  } else if (maxPastValue >= price && maxPastValue > 0) {
+    calcPhapLy = 92;
+    phapLyExplain = `Hồ sơ kinh nghiệm của nhà thầu có hợp đồng tương tự lớn nhất đạt ${formatMoney(maxPastValue, false)}, hoàn toàn vượt quy mô gói thầu hiện tại (${formatMoney(price, false)}), đáp ứng tuyệt đối điều kiện năng lực tài chính.`;
+  } else if (maxPastValue >= price * 0.5 && maxPastValue > 0) {
+    calcPhapLy = 85;
+    phapLyExplain = `Hợp đồng tương tự lớn nhất trong hồ sơ đạt ${formatMoney(maxPastValue, false)}, đáp ứng trên 50% quy mô gói thầu này. Đủ điều kiện độc lập tham gia theo quy định thông thường của e-HSMT.`;
+  } else if (maxPastValue > 0) {
+    calcPhapLy = 58;
+    phapLyExplain = `Quy mô gói thầu (${formatMoney(price, false)}) vượt quá quy mô hợp đồng lớn nhất từng thực hiện (${formatMoney(maxPastValue, false)}). Khuyến khích liên danh với đối tác để cộng dồn năng lực kinh nghiệm đáp ứng yêu cầu.`;
   } else {
-    calcPhapLy = 30;
-    phapLyExplain = "Gói thầu không yêu cầu bê tông thương phẩm hay vật liệu xây dựng đặc thù. Kiểu Việt thiếu các hợp đồng tương tự phù hợp trong lĩnh vực phi xây dựng/vật liệu.";
+    calcPhapLy = 35;
+    phapLyExplain = `Chưa ghi nhận hợp đồng tương tự phù hợp trong hồ sơ năng lực của nhà thầu. Cần liên danh hoặc bổ sung kinh nghiệm thầu để vượt qua vòng đánh giá kỹ thuật.`;
   }
 
   // 2. Ky Thuat (Technical Capability)
   let calcKyThuat = 35;
-  if (isQuyNhonHospital) {
+  if (matchedPastProject) {
     calcKyThuat = 96;
-    kyThuatExplain = "Đội ngũ kỹ sư kết cấu Kiểu Việt cực kỳ am hiểu hạ tầng chịu lực và phòng cản xạ tại BV Quy Nhơn nhờ lịch sử cung cấp hệ thống bê tông nặng cản xạ chì bảo vệ phòng chụp X-quang, CT-Scanner tại đây.";
-  } else if (isAnNhonHospital) {
-    calcKyThuat = 95;
-    kyThuatExplain = "Kiểu Việt đã cung cấp bê tông thương phẩm mác cao và thi công hạ tầng móng bệ đặt máy chụp DR kỹ thuật số tại TTYT An Nhơn thành công, đảm bảo sự tương thích tối đa về kết cấu chống lún sụt.";
-  } else if (isHoaDuc) {
-    calcKyThuat = 94;
-    kyThuatExplain = "Kinh nghiệm thi công móng chịu lực lớn và đổ sàn chịu tải cao cho tổ hợp xét nghiệm, siêu âm cao cấp tại Phòng khám Hòa Đức giúp Kiểu Việt hoàn toàn chủ động về mặt kỹ thuật hạ tầng phòng máy.";
-  } else if (isMedDevice) {
+    kyThuatExplain = `Đội ngũ kỹ thuật của ${companyProfileName} cực kỳ am hiểu hiện trường và đặc thù vận hành của ${tender.investor || "chủ đầu tư"} nhờ lịch sử bàn giao thành công hợp đồng tương tự tại đây.`;
+  } else if (matchedKeywords.length >= 2) {
+    calcKyThuat = 90;
+    kyThuatExplain = `Hồ sơ kỹ thuật của nhà thầu tương thích cao với gói thầu này, khớp sâu nhiều từ khóa cốt lõi (${matchedKeywords.slice(0, 3).join(", ")}). Hoàn toàn làm chủ công nghệ giải pháp.`;
+  } else if (isCoreMatch) {
     calcKyThuat = 78;
-    kyThuatExplain = "Kiểu Việt có năng lực kỹ thuật đổ bê tông thương phẩm mác cao chuyên dụng và cung cấp vật liệu bệ móng máy y tế phong phú, đã từng đáp ứng hoàn hảo yêu cầu kết cấu hạ tầng ở gói thầu 16,1 tỷ tại BVĐK tỉnh Bình Định.";
+    kyThuatExplain = `Lĩnh vực hoạt động cốt lõi của nhà thầu khớp với yêu cầu kỹ thuật chính của gói thầu (giao thoa từ khóa: "${matchedKeywords[0]}"). Đủ năng lực kỹ thuật cơ bản.`;
   } else {
     calcKyThuat = 30;
-    kyThuatExplain = "Lĩnh vực không thuộc thế mạnh cung ứng bê tông hay vật liệu xây dựng. Yêu cầu kỹ thuật không tương thích với dải sản phẩm bê tông thương phẩm, cát mỏ sông Ba và đá mỏ Diên Phú của Kiểu Việt.";
+    kyThuatExplain = `Yêu cầu kỹ thuật hoặc danh mục hàng hóa của gói thầu nằm ngoài dải hoạt động sở trường của ${companyProfileName}. Cần tuyển dụng thêm chuyên gia hoặc hợp tác hãng sản xuất.`;
   }
 
   // 3. Dia Ban (Geographic Location)
   let calcDiaBan = 40;
   const targetProvLower = (tender.location || tender.investor || "Gia Lai").toLowerCase();
-  if (isQuyNhonHospital || isAnNhonHospital || isHoaDuc) {
+  const profileLocations = (companyProfile.primaryLocations || "")
+    .toLowerCase()
+    .split(/[,;]+/)
+    .map(l => l.trim())
+    .filter(l => l.length > 1);
+
+  const isDirectLocationMatch = profileLocations.some(loc => targetProvLower.includes(loc) || loc.includes(targetProvLower));
+
+  if (isDirectLocationMatch) {
     calcDiaBan = 100;
-    diaBanExplain = "Địa bàn Quy Nhơn / An Nhơn - tâm điểm tỉnh Bình Định, cực kỳ gần kho bãi và trụ sở cốt lõi của Kiểu Việt, giúp tối ưu 100% chi phí logistics và đảm bảo thời gian bảo hành, ứng trực khẩn cấp dưới 2 giờ.";
-  } else if (targetProvLower.includes("bình định") || targetProvLower.includes("gia lai") || targetProvLower.includes("hoài nhơn") || targetProvLower.includes("quy nhơn") || targetProvLower.includes("pleiku")) {
-    calcDiaBan = 95;
-    diaBanExplain = "Thuộc Bình Định / Gia Lai - địa bàn cốt lõi nơi Kiểu Việt đặt văn phòng, kho bãi và đội ngũ kỹ sư trực chiến. Tối ưu hoàn hảo chi phí logistics và bảo hành.";
+    diaBanExplain = `Địa bàn thực hiện thầu (${tender.location || "tại chỗ"}) thuộc vùng thế mạnh trọng điểm của ${companyProfileName}. Tối ưu 100% logistics, bảo trì tại chỗ và ứng trực hỗ trợ khẩn cấp dưới 2 giờ.`;
   } else {
-    const adjacent = ["kon tum", "đắk lắk", "phú yên", "quảng ngãi", "quảng nam", "khánh hòa"];
-    if (adjacent.some(adj => targetProvLower.includes(adj))) {
-      calcDiaBan = 75;
-      diaBanExplain = "Tỉnh lân cận khu vực Nam Trung Bộ - Tây Nguyên. Kiểu Việt có thể điều phối nhanh kỹ sư và thiết bị hỗ trợ hiện trường từ Pleiku hoặc Quy Nhơn.";
+    const adjacent = ["kon tum", "đắk lắk", "phú yên", "quảng ngãi", "quảng nam", "khánh hòa", "gia lai", "bình định"];
+    const isAdjacentMatch = adjacent.some(adj => targetProvLower.includes(adj)) && profileLocations.some(loc => adjacent.some(adj => loc.includes(adj)));
+    if (isAdjacentMatch) {
+      calcDiaBan = 80;
+      diaBanExplain = `Thuộc địa bàn lân cận khu vực Nam Trung Bộ - Tây Nguyên. Nhà thầu có thể dễ dàng điều phối kỹ sư và phương tiện kỹ thuật bảo hành từ văn phòng chi nhánh cốt lõi.`;
     } else {
       calcDiaBan = 45;
-      diaBanExplain = "Địa bàn nằm ngoài vùng phủ sóng cốt lõi. Gặp bất lợi rất lớn về chi phí vận chuyển, lắp đặt và cam kết thời gian ứng trực xử lý sự cố tại hiện trường.";
+      diaBanExplain = `Địa bàn nằm ngoài vùng phủ sóng hoạt động thường xuyên của nhà thầu. Gặp bất lợi đáng kể về chi phí vận chuyển, logistics và cam kết thời gian ứng trực kỹ thuật tại hiện trường.`;
     }
   }
 
   // 4. Thuong Mai (Commercial & Pricing)
-  let calcThuongMai = 48;
-  thuongMaiExplain = "Dữ liệu gói 16,1 tỷ tại BVĐK tỉnh Bình Định cho thấy Kiểu Việt bị đánh rớt vì lý do 'Xếp hạng 2 trở xuống' (vấp phải đối thủ chào giá thấp hơn). Khả năng cạnh tranh giá ở mức khá, chịu sức ép lớn từ các trạm trộn lân cận tối ưu được cự ly vận chuyển và giá cát, đá đầu vào.";
+  let calcThuongMai = 50;
+  if (matchedPastProject) {
+    calcThuongMai = 80;
+    thuongMaiExplain = `Nhà thầu từng trúng thầu tại đơn vị này nên có hiểu biết rất tốt về thói quen chào giá, biên lợi nhuận kỳ vọng và ngân sách dự toán, gia tăng đáng kể ưu thế thương thảo giá.`;
+  } else {
+    const scaleFactor = price > 10000000000 ? "lớn" : (price > 2000000000 ? "vừa" : "nhỏ");
+    calcThuongMai = price > 10000000000 ? 55 : 75;
+    thuongMaiExplain = `Khả năng cạnh tranh giá ở mức khá cho gói thầu quy mô ${scaleFactor}. Sức ép giá cả phụ thuộc trực tiếp vào cự ly logistics vận chuyển và mức chiết khấu thương mại đàm phán được từ hãng sản xuất.`;
+  }
 
   // 5. Tien Do (Preparation Timeline)
   let calcTienDo = 85;
@@ -1859,21 +2003,21 @@ function openKieuVietModal(tender) {
       tienDoExplain = "Còn " + daysDiff + " ngày đến hạn đóng. Thời gian vừa đủ để hoàn thành bộ hồ sơ tiêu chuẩn nếu triển khai ngay.";
     } else {
       calcTienDo = 95;
-      tienDoExplain = "Còn " + daysDiff + " ngày. Quỹ thời gian rất thênh thang, cho phép thương lượng sâu với hãng để lấy cấu hình tốt và chuẩn bị hồ sơ chu đáo nhất.";
+      tienDoExplain = "Còn " + daysDiff + " ngày. Quỹ thời gian rất thênh thang, cho phép chuẩn bị hồ sơ chu đáo nhất và thương lượng sâu với chuỗi cung ứng.";
     }
   }
 
   // 6. Lien Ket (Joint Venture Requirement)
   let calcLienKet = 85;
-  if (price <= 5000000000) {
+  if (price <= 5000000000 || price <= maxPastValue) {
     calcLienKet = 90;
-    lienKetExplain = "Gói quy mô nhỏ dưới 5 tỷ. Kiểu Việt hoàn toàn đủ năng lực tự đứng thầu độc lập, không cần liên danh san sẻ biên lợi nhuận.";
-  } else if (price <= 15000000000) {
+    lienKetExplain = `Nằm trong tầm kiểm soát tài chính độc lập của nhà thầu. ${companyProfileName} hoàn toàn tự tin đứng thầu độc lập một cách an toàn mà không cần liên danh san sẻ lợi nhuận.`;
+  } else if (price <= maxPastValue * 2) {
     calcLienKet = 70;
-    lienKetExplain = "Gói thầu quy mô vừa. Khuyến khích thiết lập liên danh phụ trợ để gia tăng thế mạnh kỹ thuật hoặc đa dạng hóa dải sản phẩm mời thầu.";
+    lienKetExplain = "Quy mô gói thầu hơi cao so với lịch sử thực tế thầu lớn nhất. Khuyến khích thiết lập liên danh phụ trợ hoặc liên danh ngang để tăng lực bảo lãnh và điểm kinh nghiệm.";
   } else {
     calcLienKet = 40;
-    lienKetExplain = "Quy mô gói thầu lớn vượt tầm tự thầu an toàn của Kiểu Việt. Bắt buộc cần liên danh với đối tác mạnh để cộng dồn năng lực và san sẻ gánh nặng bảo lãnh thầu.";
+    lienKetExplain = "Quy mô gói thầu lớn vượt tầm tự thầu độc lập của nhà thầu. Bắt buộc liên danh với đối tác mạnh để cộng dồn năng lực và san sẻ gánh nặng bảo lãnh thầu ngân hàng.";
   }
 
   suitability.phapLy = calcPhapLy;
@@ -1932,7 +2076,7 @@ function openKieuVietModal(tender) {
           </div>
         </div>
         <div class="kv-overview-content">
-          <span class="kv-free-pill" style="background:#e8f5e9; color:#1b5e20;">Phân tích Kiểu Việt</span>
+          <span class="kv-free-pill" style="background:#e8f5e9; color:#1b5e20;">Phân tích ${escapeHtml(companyProfileName)}</span>
           <h3 class="kv-overview-headline">Theo dõi và làm rõ</h3>
           <p class="kv-overview-lead">
             Theo dõi và làm rõ. Điểm phù hợp hiện tại ${score}/100; khả năng thành công ước tính ${successChance}%. Kết quả dựa trên hồ sơ công khai, quy mô gói, thời gian còn lại, địa bàn và các khoảng trống năng lực chưa xác minh.
@@ -1957,27 +2101,10 @@ function openKieuVietModal(tender) {
       </div>
     </div>
 
-    <!-- Hồ sơ năng lực thực tế của Kiểu Việt -->
-    <div style="background: #fdf6ec; border: 1px solid #f5dab1; border-radius: 8px; padding: 14px; margin: 15px 0; font-size: 12.5px; color: #6d5421; line-height: 1.5;">
-      <strong style="color: #b88230; font-size: 14px; display: block; margin-bottom: 6px;">📂 Hồ sơ Năng lực Công ty TNHH Kiểu Việt (Trích xuất từ CSDL Đấu thầu Quốc gia):</strong>
-      <ul style="list-style-type: disc; margin-left: 18px; margin-top: 4px; padding: 0; display: flex; flex-direction: column; gap: 4px;">
-        <li><strong>Lĩnh vực hoạt động cốt lõi:</strong> Sản xuất, cung ứng bê tông thương phẩm (bê tông tươi), đá, cát xây dựng chất lượng cao; thi công kết cấu hạ tầng kỹ thuật và bệ đặt máy chuyên dụng (phòng chì cản xạ X-quang, CT-Scanner, bệ móng chịu tải lớn bệnh viện).</li>
-        <li><strong>Địa bàn hoạt động thế mạnh:</strong> Tỉnh Gia Lai & Tỉnh Bình Định (vùng phủ sóng Nam Trung Bộ - Tây Nguyên).</li>
-        <li><strong>Các dự án & hợp đồng tiêu biểu đã hoàn thành:</strong>
-          <ul style="list-style-type: circle; margin-left: 15px; margin-top: 2px; padding: 0; display: flex; flex-direction: column; gap: 2px;">
-            <li>Bệnh viện Thành phố Quy Nhơn: Cung cấp bê tông tươi cản xạ chuyên dụng bọc chì phòng X-quang và CT-Scanner (<strong>4,25 tỷ VNĐ</strong>, đã nghiệm thu an toàn phóng xạ).</li>
-            <li>Trung tâm Y tế Thị xã An Nhơn: Cung cấp vật liệu cát xây dựng mỏ sông Ba, bê tông tươi mác cao đổ sàn bệ đặt máy chụp DR kỹ thuật số (<strong>6,81 tỷ VNĐ</strong>, hoàn thành bàn giao).</li>
-            <li>Phòng khám Đa khoa Hòa Đức: Cung cấp đồng bộ bê tông tươi Kiểu Việt mác cao, đá mỏ Diên Phú và gạch không nung thi công nền móng chịu tải phòng xét nghiệm tự động (<strong>12,45 tỷ VNĐ</strong>, vận hành ổn định).</li>
-            <li>Bệnh viện Đa khoa tỉnh Bình Định: Hợp đồng cung ứng vật liệu xây dựng và bê tông thương phẩm hoàn thiện hạ tầng khu điều trị (<strong>16.113.471.000 VNĐ</strong>, hoàn thành nghiệm thu).</li>
-            <li>Sở Y tế tỉnh Gia Lai / Dự án hạ tầng y tế cơ sở: Cung cấp vật liệu bê tông thương phẩm xây dựng cải tạo hạ tầng cụm trạm y tế (<strong>7.869.950.000 VNĐ</strong>, đã hoàn thành bàn giao).</li>
-          </ul>
-        </li>
-      </ul>
-      <span style="display: block; margin-top: 8px; font-style: italic; color: #846529;">💡 <strong>Cơ chế Đánh giá:</strong> Hệ thống tự động đối chiếu thông số thực tế của gói thầu này (quy mô giá trị, địa bàn địa lý, mức độ tương thích về vật liệu và hạng mục xây dựng hạ tầng kỹ thuật) với hồ sơ năng lực thực tế của Kiểu Việt để chấm điểm và đưa ra cảnh báo chính xác nhất.</span>
-    </div>
 
-    <!-- Mức độ phù hợp với Kiểu Việt -->
-    <div class="ai-section-title">Mức độ phù hợp với Kiểu Việt</div>
+
+    <!-- Mức độ phù hợp với Công ty -->
+    <div class="ai-section-title">Mức độ phù hợp với ${escapeHtml(companyProfileName)}</div>
     <div class="ai-suitability-grid">
       <div class="ai-suitability-card" style="display: flex; flex-direction: column;">
         <div class="ai-suitability-header">
@@ -2578,81 +2705,48 @@ if (elements.province) {
 updateDynamicPageTitles();
 loadData();
 
-// --- KIỂU VIỆT PORTFOLIO DATABASE & INTERACTIVE LIST ---
-const KIEU_VIET_OFFICIAL_PROJECTS = [
-  {
-    id: "kv-proj-1",
-    name: "Cung cấp bê tông cản xạ và đá xây dựng phục vụ thi công kết cấu phòng đặt máy y tế (X-quang, CT-Scanner) - Bệnh viện Thành phố Quy Nhơn",
-    shortName: "BV Thành phố Quy Nhơn",
-    investor: "Bệnh viện Thành phố Quy Nhơn",
-    year: "2024",
-    value: 4250000000,
-    category: "Vật liệu & Kết cấu cản xạ",
-    status: "Nghiệm thu & bàn giao hạng mục an toàn cản xạ",
-    details: "Cung cấp bê tông thương phẩm mác cao, bê tông nặng cản xạ chuyên dụng bọc chì bảo vệ phòng chụp X-quang, CT-Scanner; kết hợp đá dăm mỏ đá Diên Phú và cát sạch sông Ba hỗ trợ thi công móng máy siêu chính xác, đảm bảo độ phẳng và khả năng chịu tải nén nứt đạt chuẩn quy chuẩn kỹ thuật y tế quốc gia.",
-    websiteUrl: "https://kieuviet.com.vn"
-  },
-  {
-    id: "kv-proj-2",
-    name: "Cung cấp vật liệu bê tông tươi mác cao và thi công hạ tầng bệ đặt máy chẩn đoán hình ảnh kỹ thuật số - TTYT An Nhơn",
-    shortName: "TTYT Thị xã An Nhơn",
-    investor: "Trung tâm Y tế Thị xã An Nhơn",
-    year: "2023",
-    value: 6810000000,
-    category: "Vật liệu & Thi công móng máy",
-    status: "Đã thi công & đưa vào vận hành kết cấu thành công",
-    details: "Cung cấp bê tông thương phẩm mác cao Kiểu Việt (M300/M350) kết hợp mỏ cát xây dựng sông Ba phục vụ thi công đổ sàn chống rung, đúc bệ đặt máy chụp DR kỹ thuật số, hệ thống nội soi HD và nhà điều trị chất lượng cao.",
-    websiteUrl: "https://kieuviet.com.vn"
-  },
-  {
-    id: "kv-proj-3",
-    name: "Cung cấp bê tông thương phẩm Kiểu Việt, cát sông Ba, gạch không nung và đá móng xây dựng tổ hợp Phòng khám đa khoa chất lượng cao Hòa Đức",
-    shortName: "Phòng khám Đa khoa Hòa Đức",
-    investor: "Phòng khám Đa khoa Hòa Đức (Hòa Đức Clinic)",
-    year: "2025",
-    value: 12450000000,
-    category: "Vật liệu xây dựng & Kết cấu",
-    status: "Đã bàn giao kết cấu bền vững",
-    details: "Cung cấp đồng bộ bê tông thương phẩm chất lượng cao Kiểu Việt, cát mỏ sông Ba, đá móng mỏ Diên Phú và gạch không nung tiêu chuẩn cao phục vụ thi công cải tạo móng gia tải chịu lực lớn cho các phòng máy xét nghiệm tự động Beckman Coulter, hệ thống siêu âm GE Healthcare và sảnh đón tiếp bệnh nhân.",
-    websiteUrl: "https://kieuviet.com.vn"
-  }
-];
-
+// --- DYNAMIC PORTFOLIO RENDERING & CONFIGURATION CONTROLLER ---
 function renderKieuVietPortfolio(query = "") {
   const container = document.querySelector("#kv-portfolio-list");
   if (!container) return;
   
   const cleanQuery = query.toLowerCase().trim();
-  const filtered = KIEU_VIET_OFFICIAL_PROJECTS.filter(p => {
+  const filtered = (companyProfile.projects || []).filter(p => {
     if (!cleanQuery) return true;
-    return p.name.toLowerCase().includes(cleanQuery) || 
-           p.investor.toLowerCase().includes(cleanQuery) || 
-           p.details.toLowerCase().includes(cleanQuery) ||
-           p.shortName.toLowerCase().includes(cleanQuery);
+    return (p.name || "").toLowerCase().includes(cleanQuery) || 
+           (p.investor || "").toLowerCase().includes(cleanQuery) || 
+           (p.details || "").toLowerCase().includes(cleanQuery) ||
+           (p.shortName || "").toLowerCase().includes(cleanQuery);
   });
   
+  const labelEl = document.querySelector("#kv-display-name-label");
+  if (labelEl) {
+    labelEl.textContent = companyProfile.name || "Kiểu Việt";
+  }
+  
   if (filtered.length === 0) {
-    container.innerHTML = `<div style="text-align: center; padding: 15px; font-size: 11.5px; color: #888;">Không tìm thấy dự án phù hợp với từ khóa.</div>`;
+    container.innerHTML = `<div style="text-align: center; padding: 20px; font-size: 11.5px; color: #888;">Không tìm thấy dự án phù hợp với từ khóa.</div>`;
     return;
   }
   
   container.innerHTML = filtered.map(p => {
-    const valueFormatted = (p.value / 1000000000).toFixed(2) + " tỷ VNĐ";
+    const val = Number(p.value) || 0;
+    const valueFormatted = (val / 1000000000).toFixed(2) + " tỷ VNĐ";
     return `
-      <div class="kv-portfolio-item" data-proj-id="${p.id}" style="background: #fff; border: 1px solid var(--border-soft); border-radius: 8px; padding: 10px; cursor: pointer; transition: all 0.2s ease; position: relative;">
+      <div class="kv-portfolio-item" data-proj-id="${p.id}" style="background: #fff; border: 1px solid var(--border-soft); border-radius: 8px; padding: 10px; cursor: pointer; transition: all 0.2s ease; position: relative; margin-bottom: 8px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
-          <strong style="font-size: 12.5px; color: #222; line-height: 1.35; font-weight: 600;">${p.shortName}</strong>
+          <strong style="font-size: 12.5px; color: #222; line-height: 1.35; font-weight: 600;">${escapeHtml(p.shortName || p.investor)}</strong>
           <span style="font-size: 11px; background: #fdf6ec; color: #b88230; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap; border: 1px solid #f5dab1;">${valueFormatted}</span>
         </div>
-        <p style="font-size: 11px; color: #555; margin: 4px 0 0 0; line-height: 1.35; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${p.name}</p>
+        <p style="font-size: 11px; color: #555; margin: 4px 0 0 0; line-height: 1.35; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${escapeHtml(p.name)}</p>
         
         <div class="kv-portfolio-detail" style="display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e6dfd3; font-size: 11px; color: #444; line-height: 1.45;">
-          <div style="margin-bottom: 4px;"><strong>Chủ đầu tư:</strong> ${p.investor}</div>
-          <div style="margin-bottom: 4px;"><strong>Năm hoàn tất:</strong> ${p.year}</div>
-          <div style="margin-bottom: 4px;"><strong>Trạng thái:</strong> <span style="color: #1b5e20; font-weight: 600;">${p.status}</span></div>
-          <div style="margin-bottom: 6px;"><strong>Trang thiết bị cung cấp:</strong> ${p.details}</div>
+          <div style="margin-bottom: 4px;"><strong>Chủ đầu tư:</strong> ${escapeHtml(p.investor)}</div>
+          <div style="margin-bottom: 4px;"><strong>Năm hoàn tất:</strong> ${escapeHtml(p.year)}</div>
+          <div style="margin-bottom: 4px;"><strong>Trạng thái:</strong> <span style="color: #1b5e20; font-weight: 600;">${escapeHtml(p.status || "Nghiệm thu & bàn giao")}</span></div>
+          <div style="margin-bottom: 6px;"><strong>Chi tiết cung cấp:</strong> ${escapeHtml(p.details || "")}</div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; padding-top: 4px;">
-            <a href="${p.websiteUrl}" target="_blank" rel="noopener" style="color: #b88230; text-decoration: underline; font-weight: 600; display: inline-flex; align-items: center; gap: 2px;">Trang chủ công ty ↗</a>
+            <a href="${escapeHtml(p.websiteUrl || 'https://kieuviet.com.vn')}" target="_blank" rel="noopener" style="color: #b88230; text-decoration: underline; font-weight: 600; display: inline-flex; align-items: center; gap: 2px;">Trang chủ công ty ↗</a>
           </div>
         </div>
       </div>
@@ -2660,9 +2754,127 @@ function renderKieuVietPortfolio(query = "") {
   }).join("");
 }
 
+function renderContractsEditList() {
+  const container = document.querySelector("#kv-contracts-edit-list");
+  if (!container) return;
+
+  if (!companyProfile.projects || companyProfile.projects.length === 0) {
+    container.innerHTML = `<div style="text-align: center; color: #888; font-size: 11.5px; padding: 10px;">Chưa có hợp đồng nào. Click "Thêm hợp đồng" để bổ sung.</div>`;
+    return;
+  }
+
+  container.innerHTML = companyProfile.projects.map((p, idx) => {
+    return `
+      <div class="kv-contract-edit-card" data-idx="${idx}" style="background: #fdfdfd; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; margin-bottom: 12px; position: relative;">
+        <button type="button" class="kv-delete-contract-btn" data-idx="${idx}" style="position: absolute; top: 10px; right: 10px; background: #fee2e2; color: #dc2626; border: none; border-radius: 4px; padding: 4px 8px; font-size: 10.5px; font-weight: 600; cursor: pointer; transition: background 0.2s; z-index: 10;">
+          Xóa
+        </button>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; margin-top: 15px;">
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Tên viết tắt chủ đầu tư</label>
+            <input type="text" class="kv-edit-proj-short" value="${escapeHtml(p.shortName || '')}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Chủ đầu tư đầy đủ</label>
+            <input type="text" class="kv-edit-proj-investor" value="${escapeHtml(p.investor || '')}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+          </div>
+        </div>
+        <div style="margin-bottom: 8px;">
+          <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Tên hợp đồng đầy đủ</label>
+          <input type="text" class="kv-edit-proj-name" value="${escapeHtml(p.name || '')}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 8px;">
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Năm hoàn tất</label>
+            <input type="text" class="kv-edit-proj-year" value="${escapeHtml(p.year || '')}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Giá trị (VNĐ)</label>
+            <input type="number" class="kv-edit-proj-value" value="${p.value || 0}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Phân nhóm</label>
+            <input type="text" class="kv-edit-proj-category" value="${escapeHtml(p.category || '')}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+          </div>
+        </div>
+        <div style="margin-bottom: 8px;">
+          <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Trạng thái / nghiệm thu</label>
+          <input type="text" class="kv-edit-proj-status" value="${escapeHtml(p.status || '')}" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px;">
+        </div>
+        <div>
+          <label style="display: block; font-size: 11px; font-weight: 600; color: #666; margin-bottom: 3px;">Chi tiết cung cấp (Trang thiết bị, khối lượng...)</label>
+          <textarea class="kv-edit-proj-details" style="width: 100%; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; font-size: 11.5px; min-height: 50px; resize: vertical;">${escapeHtml(p.details || '')}</textarea>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  // Attach delete button click handlers
+  container.querySelectorAll(".kv-delete-contract-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const idx = parseInt(btn.getAttribute("data-idx"));
+      if (confirm("Bạn có chắc muốn xóa hợp đồng này khỏi hồ sơ năng lực?")) {
+        companyProfile.projects.splice(idx, 1);
+        renderContractsEditList();
+      }
+    });
+  });
+}
+
+function showToast(message, type = "success") {
+  const toast = document.createElement("div");
+  toast.className = `kv-toast ${type === "success" ? "bg-green-600 text-white" : "bg-red-600 text-white"}`;
+  toast.style.cssText = "position: fixed; bottom: 20px; right: 20px; padding: 12px 24px; border-radius: 8px; font-size: 13px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 99999; animation: slideIn 0.3s ease; opacity: 1; transition: opacity 0.3s ease; background: #2e7d32; border-left: 5px solid #1b5e20;";
+  if (type === "error") {
+    toast.style.background = "#c62828";
+    toast.style.borderLeftColor = "#b71c1c";
+  }
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
+}
+
+function setupProfileTabs() {
+  const tabPortfolio = document.querySelector("#tab-btn-portfolio");
+  const tabConfig = document.querySelector("#tab-btn-config");
+  const viewPortfolio = document.querySelector("#kv-tab-portfolio-view");
+  const viewConfig = document.querySelector("#kv-tab-profile-edit");
+
+  if (!tabPortfolio || !tabConfig || !viewPortfolio || !viewConfig) return;
+
+  tabPortfolio.addEventListener("click", () => {
+    tabPortfolio.classList.add("active");
+    tabConfig.classList.remove("active");
+    viewPortfolio.style.display = "block";
+    viewConfig.style.display = "none";
+  });
+
+  tabConfig.addEventListener("click", () => {
+    tabConfig.classList.add("active");
+    tabPortfolio.classList.remove("active");
+    viewPortfolio.style.display = "none";
+    viewConfig.style.display = "block";
+    
+    // Initialize form fields
+    const nameInput = document.querySelector("#kv-input-name");
+    const bizInput = document.querySelector("#kv-input-business");
+    const locInput = document.querySelector("#kv-input-locations");
+    
+    if (nameInput) nameInput.value = companyProfile.name || "";
+    if (bizInput) bizInput.value = companyProfile.coreBusiness || "";
+    if (locInput) locInput.value = companyProfile.primaryLocations || "";
+    renderContractsEditList();
+  });
+}
+
 // Add real-time search listener and accordion listener for portfolio
 document.addEventListener("DOMContentLoaded", () => {
   renderKieuVietPortfolio();
+  setupProfileTabs();
   
   const searchInput = document.querySelector("#kv-portfolio-search");
   if (searchInput) {
@@ -2687,8 +2899,205 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Add contract button
+  const addBtn = document.querySelector("#kv-add-contract-btn");
+  if (addBtn) {
+    addBtn.addEventListener("click", () => {
+      if (!companyProfile.projects) companyProfile.projects = [];
+      companyProfile.projects.push({
+        id: "kv-proj-" + Date.now(),
+        name: "",
+        shortName: "",
+        investor: "",
+        year: new Date().getFullYear().toString(),
+        value: 0,
+        category: "",
+        status: "Nghiệm thu & bàn giao",
+        details: "",
+        websiteUrl: "https://kieuviet.com.vn"
+      });
+      renderContractsEditList();
+    });
+  }
+
+  // Save profile form submission
+  const profileForm = document.querySelector("#kv-profile-form");
+  if (profileForm) {
+    profileForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      companyProfile.name = document.querySelector("#kv-input-name").value.trim();
+      companyProfile.coreBusiness = document.querySelector("#kv-input-business").value.trim();
+      companyProfile.primaryLocations = document.querySelector("#kv-input-locations").value.trim();
+
+      const cards = document.querySelectorAll(".kv-contract-edit-card");
+      const updatedProjects = [];
+      cards.forEach(card => {
+        const idx = parseInt(card.getAttribute("data-idx"));
+        const shortName = card.querySelector(".kv-edit-proj-short").value.trim();
+        const investor = card.querySelector(".kv-edit-proj-investor").value.trim();
+        const name = card.querySelector(".kv-edit-proj-name").value.trim();
+        const year = card.querySelector(".kv-edit-proj-year").value.trim();
+        const value = parseFloat(card.querySelector(".kv-edit-proj-value").value) || 0;
+        const category = card.querySelector(".kv-edit-proj-category").value.trim();
+        const status = card.querySelector(".kv-edit-proj-status").value.trim();
+        const details = card.querySelector(".kv-edit-proj-details").value.trim();
+
+        updatedProjects.push({
+          id: companyProfile.projects[idx]?.id || "kv-proj-" + Date.now() + Math.random(),
+          shortName,
+          investor,
+          name,
+          year,
+          value,
+          category,
+          status,
+          details,
+          websiteUrl: companyProfile.projects[idx]?.websiteUrl || "https://kieuviet.com.vn"
+        });
+      });
+
+      companyProfile.projects = updatedProjects;
+      localStorage.setItem("custom_company_profile", JSON.stringify(companyProfile));
+      
+      renderKieuVietPortfolio();
+      showToast("Hồ sơ năng lực đã được lưu thành công!");
+      
+      if (typeof render === "function") {
+        render();
+      }
+      
+      const tabPortfolio = document.querySelector("#tab-btn-portfolio");
+      if (tabPortfolio) tabPortfolio.click();
+    });
+  }
+
+  // Reset profile
+  const resetBtn = document.querySelector("#kv-reset-profile-btn");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      if (confirm("Bạn có chắc chắn muốn khôi phục hồ sơ năng lực về mặc định của Kiểu Việt?")) {
+        companyProfile = JSON.parse(JSON.stringify(DEFAULT_COMPANY_PROFILE));
+        localStorage.setItem("custom_company_profile", JSON.stringify(companyProfile));
+        renderKieuVietPortfolio();
+        renderContractsEditList();
+        showToast("Đã khôi phục hồ sơ năng lực về mặc định.");
+        if (typeof render === "function") render();
+      }
+    });
+  }
+
+  // Quick template selection click handler
+  document.querySelectorAll(".kv-tpl-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const tplKey = btn.getAttribute("data-tpl");
+      const template = PROFILE_TEMPLATES[tplKey];
+      if (template) {
+        companyProfile = JSON.parse(JSON.stringify(template));
+        localStorage.setItem("custom_company_profile", JSON.stringify(companyProfile));
+        
+        // Update input fields in UI if they are visible
+        const nameInput = document.querySelector("#kv-input-name");
+        const bizInput = document.querySelector("#kv-input-business");
+        const locInput = document.querySelector("#kv-input-locations");
+        if (nameInput) nameInput.value = companyProfile.name || "";
+        if (bizInput) bizInput.value = companyProfile.coreBusiness || "";
+        if (locInput) locInput.value = companyProfile.primaryLocations || "";
+        
+        renderKieuVietPortfolio();
+        renderContractsEditList();
+        
+        showToast(`Đã áp dụng mẫu "${companyProfile.name}"!`);
+        if (typeof render === "function") render();
+      }
+    });
+  });
+
+  // Export profile
+  const exportBtn = document.querySelector("#kv-export-profile-btn");
+  if (exportBtn) {
+    exportBtn.addEventListener("click", () => {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(companyProfile, null, 2));
+      const dlAnchorElem = document.createElement("a");
+      dlAnchorElem.setAttribute("href", dataStr);
+      dlAnchorElem.setAttribute("download", `profile_${(companyProfile.name || 'company').toLowerCase().replace(/\s+/g, '_')}.json`);
+      dlAnchorElem.click();
+      showToast("Đang tải xuống hồ sơ JSON...");
+    });
+  }
+
+  // File Upload JSON Input
+  const fileInput = document.querySelector("#kv-profile-file-input");
+  const dragZone = document.querySelector("#kv-drag-zone");
+
+  function handleProfileJSON(jsonText) {
+    try {
+      const parsed = JSON.parse(jsonText);
+      if (!parsed.name || !parsed.coreBusiness || !parsed.primaryLocations) {
+        alert("Cấu trúc JSON không hợp lệ! Cần chứa ít nhất các khóa: 'name', 'coreBusiness', và 'primaryLocations'.");
+        return;
+      }
+      if (!parsed.projects || !Array.isArray(parsed.projects)) {
+        parsed.projects = [];
+      }
+      companyProfile = parsed;
+      localStorage.setItem("custom_company_profile", JSON.stringify(companyProfile));
+      renderKieuVietPortfolio();
+      renderContractsEditList();
+      showToast("Nhập hồ sơ năng lực JSON thành công!");
+      if (typeof render === "function") render();
+    } catch (err) {
+      alert("Không thể giải mã tệp tin JSON! Vui lòng kiểm tra lại định dạng.");
+    }
+  }
+
+  if (fileInput) {
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          handleProfileJSON(event.target.result);
+        };
+        reader.readAsText(file);
+      }
+    });
+  }
+
+  if (dragZone) {
+    dragZone.addEventListener("click", () => {
+      if (fileInput) fileInput.click();
+    });
+
+    dragZone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dragZone.style.borderColor = "#b88230";
+      dragZone.style.background = "#fffbf5";
+    });
+
+    dragZone.addEventListener("dragleave", () => {
+      dragZone.style.borderColor = "#e0e0e0";
+      dragZone.style.background = "#fafafa";
+    });
+
+    dragZone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dragZone.style.borderColor = "#e0e0e0";
+      dragZone.style.background = "#fafafa";
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          handleProfileJSON(event.target.result);
+        };
+        reader.readAsText(file);
+      }
+    });
+  }
 });
 
 // Since DOMContentLoaded might have already fired, let's also initialize it immediately
 renderKieuVietPortfolio();
+setupProfileTabs();
 
