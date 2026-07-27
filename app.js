@@ -15,7 +15,7 @@ const state = {
   fetchedAt: "",
   query: "",
   category: "all",
-  province: "mientrung",
+  province: "gialai",
   days: 1095,
   status: "all",
   investor: "",
@@ -539,41 +539,86 @@ function filteredTenders() {
       
       if (state.province === "mientrung") {
         const centralKeywords = [
-          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư phư", "an khê", "ayun pa", "đak đoa", "đak pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai",
-          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan",
-          "đắk lắk", "dak lak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo",
-          "quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc"
+          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư pưh", "chư phư", "an khê", "ayun pa", "đak đoa", "đăk đoa", "đak pơ", "đăk pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai", "diên hồng", "phú túc", "hra", "trại giam gia trung", "bệnh viện 211", "bv 211", "bệnh viện 15", "bv 15", "bệnh viện 331", "bv 331", "331", "nhi tỉnh gia lai", "mắt tỉnh gia lai",
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong",
+          "đắk lắk", "dak lak", "daklak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo", "ea kar", "cư kuin", "ea súp", "krông ana", "krông bông", "m'đrắk",
+          "quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc", "thăng bình", "núi thành", "bắc trà my", "nam trà my", "duy xuyên", "nông sơn", "quế sơn", "tiên phước",
+          "kon tum", "đăk hà", "đăk tô", "măng đen", "ngọc hồi", "sa thầy", "tu mơ rông", "kon plông", "ia h'drai", "kon rẫy",
+          "phú yên", "tuy hòa", "sông cầu", "đông hòa", "đồng xuân", "phú hòa", "sơn hòa", "sông hinh", "tây hòa", "tuy an",
+          "quảng ngãi", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà",
+          "khánh hòa", "nha trang", "cam ranh", "ninh hòa", "cam lâm", "diên khánh", "khánh sơn", "khánh vĩnh", "vạn ninh",
+          "lâm đồng", "đà lạt", "bảo lộc", "bảo lâm", "di linh", "đơn dương", "đức trọng", "lạc dương", "lâm hà",
+          "đắk nông", "dak nong", "gia nghĩa", "cư jút", "đắk glong", "đắk mil", "đắk r'lấp", "đắk song", "krông nô", "tuy đức",
+          "ninh thuận", "phan rang", "tháp chàm", "bình thuận", "phan thiết", "la gi", "bắc bình", "hàm thuận", "tánh linh", "tuy phong",
+          "thừa thiên huế", "huế", "hương thủy", "hương trà", "quảng trị", "đông hà", "cam lộ", "gio linh", "triệu phong", "vĩnh linh", "quảng bình", "đồng hới", "ba đồn", "bố trạch", "lệ thủy"
         ];
         return centralKeywords.some(kw => combined.includes(kw));
       }
       
       if (state.province === "gialai") {
         const giaLaiKeywords = [
-          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư phư", "an khê", "ayun pa", "đak đoa", "đak pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai"
+          "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư pưh", "chư phư", "an khê", "ayun pa", "đak đoa", "đăk đoa", "đak pơ", "đăk pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai", "diên hồng", "phú túc", "hra", "trại giam gia trung", "bệnh viện 211", "bv 211", "bệnh viện 15", "bv 15", "bệnh viện 331", "bv 331", "331", "nhi tỉnh gia lai", "mắt tỉnh gia lai"
         ];
         return giaLaiKeywords.some(kw => combined.includes(kw));
       }
       
       if (state.province === "binhdinh") {
         const binhDinhKeywords = [
-          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan"
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong"
         ];
         return binhDinhKeywords.some(kw => combined.includes(kw));
       }
       
       if (state.province === "daklak") {
         const dakLakKeywords = [
-          "đắk lắk", "dak lak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo"
+          "đắk lắk", "dak lak", "daklak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo", "ea kar", "cư kuin", "ea súp", "krông ana", "krông bông", "m'đrắk"
         ];
         return dakLakKeywords.some(kw => combined.includes(kw));
       }
-      
-      if (state.province === "hn_hcm") {
-        const hnHcmKeywords = [
-          "hà nội", "hoàn kiếm", "cầu giấy", "đống đa", "hai bà trưng", "ba đình", "thanh xuân",
-          "hồ chí minh", "tphcm", "sài gòn", "thủ đức", "quận 1", "quận 3", "quận 5", "quận 10"
-        ];
-        return hnHcmKeywords.some(kw => combined.includes(kw));
+
+      if (state.province === "kontum") {
+        const konTumKeywords = ["kon tum", "đăk hà", "đăk tô", "măng đen", "ngọc hồi", "sa thầy", "tu mơ rông", "kon plông", "ia h'drai", "kon rẫy"];
+        return konTumKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "phuyen") {
+        const phuYenKeywords = ["phú yên", "tuy hòa", "sông cầu", "đông hòa", "đồng xuân", "phú hòa", "sơn hòa", "sông hinh", "tây hòa", "tuy an"];
+        return phuYenKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "quangngai") {
+        const quangNgaiKeywords = ["quảng ngãi", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà"];
+        return quangNgaiKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "quangnam") {
+        const quangNamKeywords = ["quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc", "thăng bình", "núi thành", "bắc trà my", "nam trà my", "duy xuyên", "nông sơn", "quế sơn", "tiên phước"];
+        return quangNamKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "khanhhoa") {
+        const khanhHoaKeywords = ["khánh hòa", "nha trang", "cam ranh", "ninh hòa", "cam lâm", "diên khánh", "khánh sơn", "khánh vĩnh", "vạn ninh"];
+        return khanhHoaKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "lamdong") {
+        const lamDongKeywords = ["lâm đồng", "đà lạt", "bảo lộc", "bảo lâm", "di linh", "đơn dương", "đức trọng", "lạc dương", "lâm hà"];
+        return lamDongKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "daknong") {
+        const dakNongKeywords = ["đắk nông", "dak nong", "gia nghĩa", "cư jút", "đắk glong", "đắk mil", "đắk r'lấp", "đắk song", "krông nô", "tuy đức"];
+        return dakNongKeywords.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "ninhthuan_binhthuan") {
+        const kwList = ["ninh thuận", "phan rang", "tháp chàm", "bình thuận", "phan thiết", "la gi", "bắc bình", "hàm thuận", "tánh linh", "tuy phong"];
+        return kwList.some(kw => combined.includes(kw));
+      }
+
+      if (state.province === "quangtri_quangbinh_hue") {
+        const kwList = ["thừa thiên huế", "huế", "hương thủy", "hương trà", "quảng trị", "đông hà", "cam lộ", "gio linh", "triệu phong", "vĩnh linh", "quảng bình", "đồng hới", "ba đồn", "bố trạch", "lệ thủy"];
+        return kwList.some(kw => combined.includes(kw));
       }
       
       return true;
@@ -1033,9 +1078,19 @@ function tenderEquipmentPreviewMarkup(tender) {
 async function preloadBatchSummaries(tendersList) {
   if (!Array.isArray(tendersList) || tendersList.length === 0) return;
 
+  // Tự động gán fallback nhanh cho các tỉnh ngoài Gia Lai (bỏ qua phân tích AI)
+  tendersList.forEach((t) => {
+    if (t.notifyNo && getTenderProvince(t) !== "Gia Lai" && !state.aiSummaries[t.notifyNo]) {
+      state.aiSummaries[t.notifyNo] = getFallbackSummary(t);
+    }
+  });
+
+  const giaLaiTenders = tendersList.filter((t) => getTenderProvince(t) === "Gia Lai");
+  if (giaLaiTenders.length === 0) return;
+
   const BATCH_SIZE = 10;
-  for (let i = 0; i < tendersList.length; i += BATCH_SIZE) {
-    const batch = tendersList.slice(i, i + BATCH_SIZE);
+  for (let i = 0; i < giaLaiTenders.length; i += BATCH_SIZE) {
+    const batch = giaLaiTenders.slice(i, i + BATCH_SIZE);
     
     // Check if all items in this batch are already preloaded
     const missingInBatch = batch.filter((t) => t.notifyNo && !state.aiSummaries[t.notifyNo]);
@@ -1219,6 +1274,14 @@ function getFallbackSummary(tender) {
 async function fetchAiSummary(tender) {
   if (state.aiSummaries[tender.notifyNo]) {
     return state.aiSummaries[tender.notifyNo];
+  }
+
+  // Tạm thời bỏ qua phân tích AI cho các tỉnh ngoài Gia Lai
+  if (getTenderProvince(tender) !== "Gia Lai") {
+    const fallback = getFallbackSummary(tender);
+    state.aiSummaries[tender.notifyNo] = fallback;
+    state.aiSummaryLoadingId = null;
+    return fallback;
   }
 
   state.aiSummaryLoadingId = tender.id;
@@ -1561,6 +1624,75 @@ function calculateSimilarity(t1, t2, cat1, cat2) {
   return Math.min(95, baseScore + kwScore + priceScore);
 }
 
+function getTenderProvince(tender) {
+  if (!tender) return "Gia Lai";
+  const text = `${tender.location || ""} ${tender.investor || ""} ${tender.name || ""}`.toLowerCase();
+
+  const binhDinhKeywords = [
+    "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước",
+    "phù cát", "phù mỹ", "hoài ân", "an lão", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong"
+  ];
+  if (binhDinhKeywords.some(kw => text.includes(kw))) return "Bình Định";
+
+  const giaLaiKeywords = [
+    "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư pưh", "chư phư",
+    "an khê", "ayun pa", "đak đoa", "đăk đoa", "đak pơ", "đăk pơ", "mang yang",
+    "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai", "diên hồng", "phú túc", "hra",
+    "trại giam gia trung", "bệnh viện 211", "bv 211", "bệnh viện 15", "bv 15", "bệnh viện 331", "bv 331", "331", "nhi tỉnh gia lai", "mắt tỉnh gia lai"
+  ];
+  if (giaLaiKeywords.some(kw => text.includes(kw))) return "Gia Lai";
+
+  const dakLakKeywords = [
+    "đắk lắk", "dak lak", "daklak", "buôn ma thuột", "krông pắc", "cư m'gar",
+    "buôn hồ", "ea h'leo", "ea kar", "cư kuin", "ea súp", "krông ana", "krông bông", "m'đrắk"
+  ];
+  if (dakLakKeywords.some(kw => text.includes(kw))) return "Đắk Lắk";
+
+  const konTumKeywords = [
+    "kon tum", "đăk hà", "đăk tô", "măng đen", "ngọc hồi", "sa thầy", "tu mơ rông", "kon plông", "ia h'drai", "kon rẫy"
+  ];
+  if (konTumKeywords.some(kw => text.includes(kw))) return "Kon Tum";
+
+  const phuYenKeywords = [
+    "phú yên", "tuy hòa", "sông cầu", "đông hòa", "đồng xuân", "phú hòa", "sơn hòa", "sông hinh", "tây hòa", "tuy an"
+  ];
+  if (phuYenKeywords.some(kw => text.includes(kw))) return "Phú Yên";
+
+  const quangNgaiKeywords = [
+    "quảng ngãi", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà"
+  ];
+  if (quangNgaiKeywords.some(kw => text.includes(kw))) return "Quảng Ngãi";
+
+  const quangNamKeywords = [
+    "quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc", "thăng bình", "núi thành", "bắc trà my", "nam trà my", "duy xuyên", "nông sơn", "quế sơn", "tiên phước"
+  ];
+  if (quangNamKeywords.some(kw => text.includes(kw))) return "Quảng Nam";
+
+  const khanhHoaKeywords = ["khánh hòa", "nha trang", "cam ranh", "ninh hòa", "cam lâm", "diên khánh", "khánh sơn", "khánh vĩnh", "vạn ninh"];
+  if (khanhHoaKeywords.some(kw => text.includes(kw))) return "Khánh Hòa";
+
+  const lamDongKeywords = ["lâm đồng", "đà lạt", "bảo lộc", "bảo lâm", "di linh", "đơn dương", "đức trọng", "lạc dương", "lâm hà"];
+  if (lamDongKeywords.some(kw => text.includes(kw))) return "Lâm Đồng";
+
+  const dakNongKeywords = ["đắk nông", "dak nong", "gia nghĩa", "cư jút", "đắk glong", "đắk mil", "đắk r'lấp", "đắk song", "krông nô", "tuy đức"];
+  if (dakNongKeywords.some(kw => text.includes(kw))) return "Đắk Nông";
+
+  const ninhThuanBinhThuan = ["ninh thuận", "phan rang", "tháp chàm", "bình thuận", "phan thiết", "la gi", "bắc bình", "hàm thuận", "tánh linh", "tuy phong"];
+  if (ninhThuanBinhThuan.some(kw => text.includes(kw))) return "Ninh Thuận / Bình Thuận";
+
+  const triThienHue = ["thừa thiên huế", "huế", "hương thủy", "hương trà", "quảng trị", "đông hà", "cam lộ", "gio linh", "triệu phong", "vĩnh linh", "quảng bình", "đồng hới", "ba đồn", "bố trạch", "lệ thủy"];
+  if (triThienHue.some(kw => text.includes(kw))) return "Trị Thiên Huế / Quảng Bình";
+
+  if (text.includes("hà nội") || text.includes("cầu giấy") || text.includes("hoàn kiếm") || text.includes("đống đa")) return "Hà Nội";
+  if (text.includes("hồ chí minh") || text.includes("tphcm") || text.includes("sài gòn") || text.includes("thủ đức")) return "TP.HCM";
+  if (text.includes("hải phòng")) return "Hải Phòng";
+
+  if (tender.location && tender.location.trim() && tender.location !== "Địa phương") {
+    return tender.location.trim();
+  }
+  return "Gia Lai";
+}
+
 function getProvinceWeight(locationStr, targetProvince) {
   const loc = (locationStr || "").toLowerCase();
   const target = (targetProvince || "gia lai").toLowerCase();
@@ -1586,7 +1718,7 @@ function openKieuVietModal(tender) {
 
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
   const formattedPrice = price ? formatMoney(price, false) : "Chưa công bố";
-  const locName = tender.location || tender.investor || "Gia Lai";
+  const locName = getTenderProvince(tender);
   const closeDateFormatted = formatDate(tender.closeDate, true) || "Chưa công bố";
 
   if (titleEl) titleEl.textContent = tender.name;
@@ -1668,7 +1800,7 @@ function openKieuVietModal(tender) {
   hospitalIdsSet.add(tender.id);
 
   const otherRegionalCandidates = tendersWithWinners.filter(t => !hospitalIdsSet.has(t.id));
-  const currentProv = tender.location || "Gia Lai";
+  const currentProv = getTenderProvince(tender);
 
   // Filter out candidates with completely mismatched budget scale (e.g. comparing 43B with 20M)
   const priceFilteredCandidates = otherRegionalCandidates.filter(candidate => {
@@ -1945,7 +2077,8 @@ function openKieuVietModal(tender) {
 
   // 3. Dia Ban (Geographic Location)
   let calcDiaBan = 40;
-  const targetProvLower = (tender.location || tender.investor || "Gia Lai").toLowerCase();
+  const detectedProv = getTenderProvince(tender);
+  const targetProvLower = `${detectedProv} ${tender.location || ""} ${tender.investor || ""}`.toLowerCase();
   const profileLocations = (companyProfile.primaryLocations || "")
     .toLowerCase()
     .split(/[,;]+/)
@@ -2446,10 +2579,12 @@ function tenderMarkup(tender) {
   const saved = state.saved.includes(String(tender.id));
   const hasResult = Boolean(tender.hasResult || tender.winnerNames?.length);
   const price = Number(tender.winningPrice) || Number(tender.price) || 0;
+  const provLabel = getTenderProvince(tender);
   return `<article class="tender-row" data-tender-id="${escapeHtml(tender.id)}">
     <button class="save-button${saved ? " saved" : ""}" data-action="save" data-id="${escapeHtml(tender.id)}" type="button" aria-label="${saved ? "Bỏ lưu" : "Lưu"} gói thầu">${saved ? "★" : "☆"}</button>
     <div class="tender-main">
       <div class="tender-meta">
+        <span class="province-badge" style="font-weight: 700; color: #1b5e20; background: #e8f5e9; padding: 1px 6px; border-radius: 4px; font-size: 10px; text-transform: uppercase; border: 1px solid #c8e6c9;">${escapeHtml(provLabel)}</span>
         <span>${escapeHtml(tender.notifyNo)}</span>
         <span>${escapeHtml(tender.category)}</span>
         ${hasResult ? '<span class="result-meta">Có kết quả</span>' : ""}
@@ -2568,12 +2703,20 @@ elements.form.addEventListener("submit", (event) => {
 
 function updateDynamicPageTitles() {
   const titles = {
-    mientrung: "Miền Trung",
-    all: "Toàn quốc",
+    mientrung: "Miền Trung & Tây Nguyên",
     gialai: "Gia Lai",
     binhdinh: "Bình Định",
     daklak: "Đắk Lắk",
-    hn_hcm: "Hà Nội - HCM"
+    kontum: "Kon Tum",
+    phuyen: "Phú Yên",
+    quangngai: "Quảng Ngãi",
+    quangnam: "Quảng Nam",
+    khanhhoa: "Khánh Hòa",
+    lamdong: "Lâm Đồng",
+    daknong: "Đắk Nông",
+    ninhthuan_binhthuan: "Ninh Thuận & Bình Thuận",
+    quangtri_quangbinh_hue: "Trị Thiên Huế & Quảng Bình",
+    all: "Toàn quốc"
   };
   const activeLabel = titles[state.province] || "Miền Trung";
   const heroTitle = document.querySelector("#hero-title");
