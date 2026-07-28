@@ -1,0 +1,952 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 93,
+    "items": [
+      {
+        "id": "2d459d1a-f909-4d23-90a9-db4443d73607",
+        "lotNo": "PP2600170491",
+        "name": "G-bond",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11403000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7e044ba0-2f2d-43f0-a224-b1fecd6a5e7b",
+        "lotNo": "PP2600170492",
+        "name": "Endomethason",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 15120000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3f9ff13c-57ba-45a9-b549-737f2d1556c9",
+        "lotNo": "PP2600170493",
+        "name": "Lentulo 25",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c8dd7f59-5bda-4779-a6d0-c57f729de362",
+        "lotNo": "PP2600170494",
+        "name": "Dụng cụ khâu cắt nối thẳng gập góc dùng cho mổ nội soi với ghim khâu 45mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 85776250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "518cf642-5aa1-4efd-9de6-cba1cdde4eb2",
+        "lotNo": "PP2600170495",
+        "name": "Ghim khâu (dùng kèm cho dụng cụ khâu cắt nối thẳng nội soi đa năng 45mm, dài 34cm, gập góc 45 độ)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 56570500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "92b8fda5-abd4-4857-a43e-73ca2c928eb4",
+        "lotNo": "PP2600170496",
+        "name": "Kiềm kẹp clip",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 43377600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3d602c81-2acf-4803-ab93-0bf6f505f660",
+        "lotNo": "PP2600170497",
+        "name": "Dụng cụ khâu cắt ruột dạng cong",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 74361000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e44d0db4-9573-4fa4-b7e2-a99518b7059f",
+        "lotNo": "PP2600170498",
+        "name": "Ghim khâu cắt ruột dạng cong",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 123935000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "48b14c0d-f0fd-48e5-a3b7-a67a3cf0a962",
+        "lotNo": "PP2600170499",
+        "name": "Dao siêu âm dài 36cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 726418000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "88424153-3c15-4d19-bbbb-db311ca5421c",
+        "lotNo": "PP2600170500",
+        "name": "Dao siêu âm dài 17cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 474201000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "340d34ce-abd7-4675-988f-f10fba9e1ec7",
+        "lotNo": "PP2600170501",
+        "name": "Dao siêu âm dài 9cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 736239000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "27504877-aeeb-42c1-9c90-b24641f26f87",
+        "lotNo": "PP2600170502",
+        "name": "Dây cáp dùng cho dao siêu âm mổ hở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 312738300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "836db826-d7f3-4c24-9ccb-569e3f50a403",
+        "lotNo": "PP2600170503",
+        "name": "Dây cáp dùng cho dao siêu âm mổ nội soi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 161094150,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "00f53398-84bc-4aba-9e1b-cab01b2d6ff5",
+        "lotNo": "PP2600170504",
+        "name": "Dụng cụ khâu cắt trĩ theo phương pháp Longo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1960000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1a6a9595-311c-4d4b-ab4b-95cad88a0bb1",
+        "lotNo": "PP2600170505",
+        "name": "Dụng cụ phẫu thuật trĩ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 735350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e03c795a-3409-4cc9-bb99-c917bb6c670a",
+        "lotNo": "PP2600170506",
+        "name": "Dụng cụ khâu nối ruột tự động dạng vòng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 379358000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9ec4e8c5-dd81-4b04-a055-751405df8547",
+        "lotNo": "PP2600170507",
+        "name": "Dụng cụ khâu cắt nối thẳng gập góc dùng cho mổ nội soi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 352091250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "efa418be-6feb-495f-a34f-09725e27dfa6",
+        "lotNo": "PP2600170508",
+        "name": "Dụng cụ khâu cắt nối ruột, thực quản",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1192000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "477bcdaa-35df-41b3-9c45-8b3aa51e930b",
+        "lotNo": "PP2600170509",
+        "name": "Dụng cụ dùng khâu cắt nối thẳng mổ hở 75mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 227612000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "46d772f5-e273-4fbd-b0fa-9a4f55f5e534",
+        "lotNo": "PP2600170510",
+        "name": "Dụng cụ khâu cắt đa năng dùng trong phẫu thuật mổ nội soi, có chốt điều khiển gập góc băng đạn chủ động 10 vị trí",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 140000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "10017677-fcc4-42d4-9081-b865c126957d",
+        "lotNo": "PP2600170511",
+        "name": "Dụng cụ cắt nối tự động mổ hở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 195000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cf672345-9608-4b1f-8551-7a0d08d4b0f2",
+        "lotNo": "PP2600170512",
+        "name": "Dụng cụ khâu cắt nối thẳng mổ hở 55mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 51215500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "73b4edd1-4ebf-417f-b3b2-6a624b33ec76",
+        "lotNo": "PP2600170513",
+        "name": "Băng đạn các cỡ dùng khâu cắt nối thẳng nội soi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 462000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6cae08f3-e64f-4e78-9c12-fbfa37f9616d",
+        "lotNo": "PP2600170514",
+        "name": "Băng đạn khâu cắt nối thẳng dùng trong phẫu thuật mổ mở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 228000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ceac835a-8873-4454-82a3-4f026bbc645d",
+        "lotNo": "PP2600170515",
+        "name": "Băng đạn dùng kèm dụng cụ khâu cắt nối thẳng mổ hở 75mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 330050000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a1518654-f1f6-4103-823d-e1cbe1f7c487",
+        "lotNo": "PP2600170516",
+        "name": "Băng đạn dùng kèm dụng cụ khâu cắt nối thẳng mổ hở 55mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 56904750,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "35588446-37f8-439a-af2d-37ec0d49683e",
+        "lotNo": "PP2600170517",
+        "name": "Mask khí dung người lớn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 163800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "28a71010-6e6e-4d13-8d94-a401d7dfee2c",
+        "lotNo": "PP2600170518",
+        "name": "Mask khí dung trẻ em",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 24570000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "092e3bc4-efad-4596-abf7-d956396dd019",
+        "lotNo": "PP2600170519",
+        "name": "Mask khí dung các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 129600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d5b81906-7fe6-40bf-a8bb-149dc5294fd8",
+        "lotNo": "PP2600170520",
+        "name": "Mask oxy nồng độ cao người lớn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 238140000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "27687cf4-ee99-485f-8602-800313747d56",
+        "lotNo": "PP2600170521",
+        "name": "Mask oxy nồng độ cao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 158760000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "20511ef5-6452-470d-ac0b-e74c6aa5a3fc",
+        "lotNo": "PP2600170522",
+        "name": "Băng keo chỉ thị nhiệt",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12980000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1264f88e-f05c-4354-aef3-dccae7574bd9",
+        "lotNo": "PP2600170523",
+        "name": "Điện cực tim",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 114912000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7b882156-cbf0-4848-88d0-d002bf404672",
+        "lotNo": "PP2600170524",
+        "name": "Que đè lưỡi gỗ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10584000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6af3cd23-0d56-48f6-8258-58dd03ee395d",
+        "lotNo": "PP2600170525",
+        "name": "Lọc cai máy thở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 120960000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9eeae91b-3308-4ba0-a929-e1779dad6209",
+        "lotNo": "PP2600170526",
+        "name": "Lọc khuẩn 3 chức năng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 86400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bb16f4ad-7f7f-4691-9284-9c98724c9c41",
+        "lotNo": "PP2600170527",
+        "name": "Lọc khuẩn người lớn, trẻ em có cổng đo CO2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 196257600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8120f6b5-75cd-4d4f-b2b8-2d98d611e7b9",
+        "lotNo": "PP2600170528",
+        "name": "Clip kẹp mạch titan cỡ 400",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 52840000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5f324f9a-75e9-4338-931b-e667190bae8f",
+        "lotNo": "PP2600170529",
+        "name": "Clip kẹp mạch titan cỡ 300",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 77350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "24f8ad9f-650c-4bb8-bc89-77301935ba4f",
+        "lotNo": "PP2600170530",
+        "name": "Bộ gây tê ngoài màng cứng đầy đủ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 129937500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bbe6062c-c84b-41da-98a5-fcfee1101e3e",
+        "lotNo": "PP2600170531",
+        "name": "Dụng cụ mở đường bộ đo huyết áp xâm lấn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 33600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6e06cafa-f1aa-45c9-a8d0-45e4f6f8b5d1",
+        "lotNo": "PP2600170532",
+        "name": "Dome đo huyết áp động mạch xâm lấn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 125160000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b61078f0-1091-4794-abfa-2b9d1460ce80",
+        "lotNo": "PP2600170533",
+        "name": "Dao hàn mạch máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 420000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0c364f29-88b1-41d9-8853-15fa161f193d",
+        "lotNo": "PP2600170534",
+        "name": "Kềm kelly",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 513000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cb4ddde2-5ecc-47dd-a1d5-69cf6a818d32",
+        "lotNo": "PP2600170535",
+        "name": "Kéo cắt chỉ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 70200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f5952ce3-10f1-4b9c-9e64-6d519b414fab",
+        "lotNo": "PP2600170536",
+        "name": "Dịch lọc máu dùng trong thận nhân tạo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4860000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b354863d-3ee9-42f0-832a-3f106493e48a",
+        "lotNo": "PP2600170537",
+        "name": "Dịch lọc máu liên tục các loại (Dịch lọc máu dùng trong thận nhân tạo)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3460800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "58255a00-91ab-4ee4-af1c-03aafd2ea618",
+        "lotNo": "PP2600170538",
+        "name": "Áo phẫu thuật 5 lớp L",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 24900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "75551f8d-9e45-42ef-adec-704c736c33dc",
+        "lotNo": "PP2600170539",
+        "name": "Áo phẫu thuật",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 24900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "376fa03d-096a-4b5d-9ca6-7aa10d8fea06",
+        "lotNo": "PP2600170540",
+        "name": "Bộ khăn chụp mạch vành C",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 88725000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1d762740-2782-40f6-bc97-41c822787b40",
+        "lotNo": "PP2600170541",
+        "name": "Bộ khăn can thiệp mạch vành (3 lỗ) kèm 3 áo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 199000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4168fa29-e265-494c-8d0d-ceee803e8431",
+        "lotNo": "PP2600170542",
+        "name": "Tấm trải nylon 100cm x 150 cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11340000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "764ea810-a67f-4d31-8295-fa76daa01500",
+        "lotNo": "PP2600170543",
+        "name": "Tấm trải nylon 80x120 cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9450000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6eae8054-b181-4d82-8b4a-1b3f7840a6f0",
+        "lotNo": "PP2600170544",
+        "name": "Bộ bảo dưỡng định kỳ mỗi 6 tháng cho máy hấp tiệt trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 38060000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1f2961f0-48b3-476f-9db3-519973fcff09",
+        "lotNo": "PP2600170545",
+        "name": "Bộ bảo dưỡng định kỳ mỗi 12 tháng cho máy hấp tiệt trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 29048250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a8d0dbd2-cdc0-48d2-9ff0-c2e61e837936",
+        "lotNo": "PP2600170546",
+        "name": "Giấy in 2 lớp dùng in kết quả máy hấp tiệt trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8316000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3aedb9ef-008c-4a9a-a94e-2b13f05fc336",
+        "lotNo": "PP2600170547",
+        "name": "Mực in dùng cho máy in máy hấp tiệt trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1640100,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c4759db5-5eef-4137-85bf-c94dc9bce761",
+        "lotNo": "PP2600170548",
+        "name": "Que chỉ thị hóa học H2O2 cho máy hấp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 14266000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d348b97b-3b2a-45d9-9bae-b0fd67fd9ffe",
+        "lotNo": "PP2600170549",
+        "name": "Test kiểm soát dụng cụ đã tiệt khuẩn bằng hơi nước",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 85000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b84357bb-9eeb-4496-9a3d-c0c4240f141d",
+        "lotNo": "PP2600170550",
+        "name": "Test kiểm soát tiệt trùng vi sinh 3h bằng hơi nước",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 21137500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "14973cda-cd67-4f39-ba83-537a5248d375",
+        "lotNo": "PP2600170551",
+        "name": "Test kiểm tra nồng độ đạt hiệu quả của các chất khử trùng cơ bản là acid peracetic / peroxide trong máy lọc máu được tái xử lý sau khi bảo quản và trước khi rửa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 178500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e9bf19a0-33f2-4e1a-80f2-556a698a53f3",
+        "lotNo": "PP2600170552",
+        "name": "Test kiểm tra tồn dư các chất khử trùng bằng acid peracetic / peroxide trong máy lọc máu sau khi rửa và/hoặc nước rửa sau khi khử trùng máy hoặc các đường phân phối nước",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 65835000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f1976108-3837-4fa5-892e-878ff1ad83af",
+        "lotNo": "PP2600170553",
+        "name": "Bộ dẫn truyền cảm ứng 1 đường (Transducer Sets)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 33579000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4087a1c1-4f99-4c8d-9a1b-10cee61f098c",
+        "lotNo": "PP2600170554",
+        "name": "Bộ hút đàm kín sử dụng 72 giờ các số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4190130,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3e7edb6c-d8f7-45a0-95e1-31e40c0e12d4",
+        "lotNo": "PP2600170555",
+        "name": "Khẩu trang 3 lớp tiệt trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 22680000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3bab104e-59ac-4b9e-a60c-f911ef996279",
+        "lotNo": "PP2600170556",
+        "name": "Khẩu trang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 144692190,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8f7a9ac2-d38c-42c1-9a0e-6ac5aca1c083",
+        "lotNo": "PP2600170557",
+        "name": "Ballon các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2625000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4922d778-c9fe-4ec8-ac4b-84f9bd6a1493",
+        "lotNo": "PP2600170558",
+        "name": "Bao khoan điện",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1134000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5a4734db-db72-45fb-ad74-e50c828b5334",
+        "lotNo": "PP2600170559",
+        "name": "Bình lọc phổi 1,5 lít",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10631250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1e757e79-671d-45ec-b519-f3045c173864",
+        "lotNo": "PP2600170560",
+        "name": "Dây garrot",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 15960000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "874af830-ea58-48d4-995c-67ee36755e45",
+        "lotNo": "PP2600170561",
+        "name": "Dây lọc phổi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10510500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0fde0cc1-fdae-4f29-a48b-c01c2c1f6062",
+        "lotNo": "PP2600170562",
+        "name": "Lamelles 22x40",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 23750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d1e732b6-8bbc-4d66-b543-321495234457",
+        "lotNo": "PP2600170563",
+        "name": "Nón nam, nữ các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 62984250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b32705d3-3ec2-4e01-8769-ddfde9464184",
+        "lotNo": "PP2600170564",
+        "name": "Giấy siêu âm trắng đen",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 21600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "860688e8-5fdf-438e-a225-2a66482b90e3",
+        "lotNo": "PP2600170565",
+        "name": "Giấy in 5.8",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 220000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "849c5543-7b5e-4bf1-a999-3023edd8c9f9",
+        "lotNo": "PP2600170566",
+        "name": "Giấy Monitor sản khoa 112mm x 30m",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 27000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4603bb72-db53-4af3-a53c-b81d110bc193",
+        "lotNo": "PP2600170567",
+        "name": "Giấy Monitor sản khoa 152mm x 30m",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 14490000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dd5f58f1-b954-41b7-a276-6f2902b55029",
+        "lotNo": "PP2600170568",
+        "name": "Bóp bóng người lớn, trẻ em các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 222000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "75034dc1-b1b6-423d-b0b3-ed6306ad552a",
+        "lotNo": "PP2600170569",
+        "name": "Vôi Soda",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 77175000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b31a34ed-758d-47c3-8b9f-590fcfd947c1",
+        "lotNo": "PP2600170570",
+        "name": "Chất trám tạm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2640000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "147b3c2e-4f73-4e2c-82e3-dcf61cd3b4b4",
+        "lotNo": "PP2600170571",
+        "name": "Vật liệu soi mòn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1725000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b350b0a8-8857-4a7e-94d3-bddf81d5fa64",
+        "lotNo": "PP2600170572",
+        "name": "Eugenol",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1374750,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4544f49a-e7c0-441f-ab7b-f85699f50073",
+        "lotNo": "PP2600170573",
+        "name": "Thuốc trám răng (Glass ionomer cement)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 35200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5e31f825-3584-4b7f-9729-d814489e0def",
+        "lotNo": "PP2600170574",
+        "name": "Kim gai nội nha (đủ màu)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12150000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1d163f94-62c7-4e3b-84f3-6d088fe58472",
+        "lotNo": "PP2600170575",
+        "name": "Mũi khoan kim cương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f93c4b48-da0c-4825-868e-6797382e3b9f",
+        "lotNo": "PP2600170576",
+        "name": "Mũi khoan thẳng các loại",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16110000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "090ead81-a0e4-42d2-a28e-54b2eb7a5bb5",
+        "lotNo": "PP2600170577",
+        "name": "Zinc Oxide",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "db0c05e5-9ded-4adb-b06c-50b5b1790af8",
+        "lotNo": "PP2600170578",
+        "name": "Trăm dũa ống tủy nhiều số: 10, 15, 20, 25, 30, 40, 50, dài 21mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10850000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8f825dde-e762-4d85-bc56-6040a1375a7a",
+        "lotNo": "PP2600170579",
+        "name": "Trăm dũa ống tủy nhiều số: 10, 15, 20, 25, 30, 40, 50, dài 25mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10850000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0a57805f-c1a0-40c4-aab6-289bae796abb",
+        "lotNo": "PP2600170580",
+        "name": "Thuốc trám thẩm mỹ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11749950,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "75c3cda7-2e69-4e91-a1ec-cdd54d5b0330",
+        "lotNo": "PP2600170581",
+        "name": "Vật liệu trám bít các lỗ hỏng trên răng, loại lỏng các loại (Composit lỏng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2220000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0230b744-229b-4205-87e3-7484405ecf0e",
+        "lotNo": "PP2600170582",
+        "name": "File H các loại, các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5544000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2c4fe857-a372-4daf-ae40-2d1b1199bb94",
+        "lotNo": "PP2600170583",
+        "name": "Reamer",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Gói thầu số 5: Vật tư y tế sử dụng trong chuyên khoa tai mũi họng, răng hàm mặt, tiêu hóa, tiết niệu và sử dụng trong chẩn đoán, điều trị khác (93 phần)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:25.250Z"
+}

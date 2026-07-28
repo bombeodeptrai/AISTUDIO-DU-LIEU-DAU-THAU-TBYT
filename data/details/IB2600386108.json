@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "60dd5b04-1a7f-40d8-9630-302541d2eada",
+        "lotNo": "BP2600534651",
+        "name": "Mua sắm máy siêu âm doppler xuyên sọ năm 2026 của Bệnh viện Đa khoa Trung ương Cần Thơ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 959047950,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm máy siêu âm doppler xuyên sọ",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:28.900Z"
+}

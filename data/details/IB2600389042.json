@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "0b38c744-4b25-4c7a-adb5-6df76ee855e5",
+        "lotNo": "PP2600295790",
+        "name": "Vật tư y tế tiêu hao tổng hợp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5274562070,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "48299fbb-64dd-427f-a513-daa989cf9012",
+        "lotNo": "PP2600295791",
+        "name": "Dụng cụ phẫu thuật",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1887857500,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:41.732Z"
+}

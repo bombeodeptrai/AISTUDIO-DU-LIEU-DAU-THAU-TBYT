@@ -1,5 +1,7 @@
 {
+  "schemaVersion": 3,
   "total": 23,
+  "bidders": [],
   "items": [
     {
       "id": "5a598f12-202e-46ed-9886-7ace305a55f4",
@@ -184,6 +186,63 @@
       "unit": "Cái",
       "quantity": 2,
       "unitPrice": 470327.6419,
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN SINH"
+      ],
+      "decisionNo": "202/QĐ-TTDC",
+      "decisionDate": "2026-07-20T16:53:16",
+      "resultPublishedDate": "2026-07-20T16:54:13"
+    },
+    {
+      "id": "eea59f13-cc6b-45d6-9ac7-c3690d8a2c38",
+      "name": "Dung dịch tẩy rửa đa enzyme",
+      "model": "MG249010/ MEGASEPT Z-5",
+      "brand": "MEGASEPT",
+      "manufacturer": "Công ty Cổ phần Công nghệ Lavitec",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dung dịch tẩy rửa đa enzyme dùng làm sạch dụng cụ y tế, dụng cụ phẫu thuật, ống nội soi. Thành phần gồm các enzyme phân hủy protein, chất béo, tinh bột/carbohydrate, chất nhầy và cặn hữu cơ như Protease, Lipase, Amylase, Cellulase, Mannanase hoặc enzyme tương đương; có chất hoạt động bề mặt/chất làm sạch và chất chống ăn mòn phù hợp. Không gây ăn mòn bất thường, không ảnh hưởng vật liệu dụng cụ/ống nội soi khi sử dụng đúng hướng dẫn. Đóng gói theo quy cách nhà sản xuất.",
+      "unit": "Lít",
+      "quantity": 3,
+      "unitPrice": 344326.0692,
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN Y TẾ TRUNG THỊNH PHÁT"
+      ],
+      "decisionNo": "202/QĐ-TTDC",
+      "decisionDate": "2026-07-20T16:53:16",
+      "resultPublishedDate": "2026-07-20T16:54:13"
+    },
+    {
+      "id": "3262b0be-4f89-45f3-8edf-4f1346bc99a6",
+      "name": "Nhíp y tế hai đầu tù không mấu",
+      "model": "15_322",
+      "brand": "15_322",
+      "manufacturer": "Prime Tech Surgico",
+      "origin": "PAKISTAN",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Nhíp y tế đầu tù, dùng để gắp bông, gạc. Chất liệu inox y tế không gỉ. Dạng nhíp, hai nhánh cân đối, đàn hồi tốt; đầu tù, không mấu; thân có rãnh chống trượt. Chiều dài khoảng 15 - 16 cm.",
+      "unit": "Cái",
+      "quantity": 4,
+      "unitPrice": 191010.6138,
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN SINH"
+      ],
+      "decisionNo": "202/QĐ-TTDC",
+      "decisionDate": "2026-07-20T16:53:16",
+      "resultPublishedDate": "2026-07-20T16:54:13"
+    },
+    {
+      "id": "ce78ab7a-fc05-4156-80c7-1bd6bb8081a4",
+      "name": "Khay quả đậu inox",
+      "model": "19-155…157",
+      "brand": "19-155…157",
+      "manufacturer": "Prime Tech Surgico",
+      "origin": "PAKISTAN",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Khay quả đậu dung tích khoảng 800 ml; dùng trong cơ sở y tế để đựng dụng cụ, bông, gạc, vật tư tiêu hao hoặc dịch thải trong khám, điều trị, thay băng, thủ thuật. Chất liệu inox 304 không gỉ. Dạng khay quả đậu, mép khay bo tròn, bề mặt nhẵn, dễ vệ sinh, không sắc cạnh, không gỉ sét. Kích thước tham khảo khoảng 245 × 125 × 40 mm. Có thể khử khuẩn/hấp tiệt khuẩn theo quy trình.",
+      "unit": "Cái",
+      "quantity": 2,
+      "unitPrice": 460729.1186,
       "winnerNames": [
         "CÔNG TY CỔ PHẦN SINH"
       ],
@@ -380,64 +439,21 @@
       "decisionNo": "202/QĐ-TTDC",
       "decisionDate": "2026-07-20T16:53:16",
       "resultPublishedDate": "2026-07-20T16:54:13"
-    },
-    {
-      "id": "eea59f13-cc6b-45d6-9ac7-c3690d8a2c38",
-      "name": "Dung dịch tẩy rửa đa enzyme",
-      "model": "MG249010/ MEGASEPT Z-5",
-      "brand": "MEGASEPT",
-      "manufacturer": "Công ty Cổ phần Công nghệ Lavitec",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Dung dịch tẩy rửa đa enzyme dùng làm sạch dụng cụ y tế, dụng cụ phẫu thuật, ống nội soi. Thành phần gồm các enzyme phân hủy protein, chất béo, tinh bột/carbohydrate, chất nhầy và cặn hữu cơ như Protease, Lipase, Amylase, Cellulase, Mannanase hoặc enzyme tương đương; có chất hoạt động bề mặt/chất làm sạch và chất chống ăn mòn phù hợp. Không gây ăn mòn bất thường, không ảnh hưởng vật liệu dụng cụ/ống nội soi khi sử dụng đúng hướng dẫn. Đóng gói theo quy cách nhà sản xuất.",
-      "unit": "Lít",
-      "quantity": 3,
-      "unitPrice": 344326.0692,
-      "winnerNames": [
-        "CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN Y TẾ TRUNG THỊNH PHÁT"
-      ],
-      "decisionNo": "202/QĐ-TTDC",
-      "decisionDate": "2026-07-20T16:53:16",
-      "resultPublishedDate": "2026-07-20T16:54:13"
-    },
-    {
-      "id": "3262b0be-4f89-45f3-8edf-4f1346bc99a6",
-      "name": "Nhíp y tế hai đầu tù không mấu",
-      "model": "15_322",
-      "brand": "15_322",
-      "manufacturer": "Prime Tech Surgico",
-      "origin": "PAKISTAN",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Nhíp y tế đầu tù, dùng để gắp bông, gạc. Chất liệu inox y tế không gỉ. Dạng nhíp, hai nhánh cân đối, đàn hồi tốt; đầu tù, không mấu; thân có rãnh chống trượt. Chiều dài khoảng 15 - 16 cm.",
-      "unit": "Cái",
-      "quantity": 4,
-      "unitPrice": 191010.6138,
-      "winnerNames": [
-        "CÔNG TY CỔ PHẦN SINH"
-      ],
-      "decisionNo": "202/QĐ-TTDC",
-      "decisionDate": "2026-07-20T16:53:16",
-      "resultPublishedDate": "2026-07-20T16:54:13"
-    },
-    {
-      "id": "ce78ab7a-fc05-4156-80c7-1bd6bb8081a4",
-      "name": "Khay quả đậu inox",
-      "model": "19-155…157",
-      "brand": "19-155…157",
-      "manufacturer": "Prime Tech Surgico",
-      "origin": "PAKISTAN",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Khay quả đậu dung tích khoảng 800 ml; dùng trong cơ sở y tế để đựng dụng cụ, bông, gạc, vật tư tiêu hao hoặc dịch thải trong khám, điều trị, thay băng, thủ thuật. Chất liệu inox 304 không gỉ. Dạng khay quả đậu, mép khay bo tròn, bề mặt nhẵn, dễ vệ sinh, không sắc cạnh, không gỉ sét. Kích thước tham khảo khoảng 245 × 125 × 40 mm. Có thể khử khuẩn/hấp tiệt khuẩn theo quy trình.",
-      "unit": "Cái",
-      "quantity": 2,
-      "unitPrice": 460729.1186,
-      "winnerNames": [
-        "CÔNG TY CỔ PHẦN SINH"
-      ],
-      "decisionNo": "202/QĐ-TTDC",
-      "decisionDate": "2026-07-20T16:53:16",
-      "resultPublishedDate": "2026-07-20T16:54:13"
     }
   ],
-  "fetchedAt": "2026-07-21T13:36:22.423Z"
+  "requirements": {
+    "total": 0,
+    "items": [],
+    "summary": "",
+    "disclosure": "missing-plan-detail-id"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:31.657Z"
 }

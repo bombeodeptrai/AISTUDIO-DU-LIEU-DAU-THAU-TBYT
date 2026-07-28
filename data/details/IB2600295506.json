@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "b62546b1-9af3-4ec3-b3d4-ec862afe3e81",
+      "contractorCode": "vn0102045497",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DƯỢC PHẨM TÂN THÀNH",
+      "status": "participating",
+      "lotNo": "PP2600218985",
+      "lotName": "Bộ dây và quả lọc máu liên tục dùng cho máy OMNI",
+      "bidPrice": 5240720000,
+      "finalPrice": 3521280000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-07T09:05:28.561",
+      "models": []
+    },
+    {
+      "id": "683daa02-7b12-4fa2-952e-8be1e7f77c58",
+      "contractorCode": "vn0102045497",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DƯỢC PHẨM TÂN THÀNH",
+      "status": "participating",
+      "lotNo": "PP2600218986",
+      "lotName": "Bộ dây và quả lọc máu liên tục kết hợp quả lọc hấp phụ dùng cho máy OMNI",
+      "bidPrice": 5240720000,
+      "finalPrice": 646800000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-07T09:05:28.561",
+      "models": []
+    },
+    {
+      "id": "51f8dad3-a14f-4e21-9d06-052e7075a78b",
+      "contractorCode": "vn0102045497",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DƯỢC PHẨM TÂN THÀNH",
+      "status": "participating",
+      "lotNo": "PP2600218987",
+      "lotName": "Bộ dây và màng lọc tách huyết tương cho máy OMNI",
+      "bidPrice": 5240720000,
+      "finalPrice": 1020000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-07T09:05:28.561",
+      "models": []
+    },
+    {
+      "id": "14a08b62-2a18-4e02-9db3-e8a05400b5de",
+      "contractorCode": "vn0102045497",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DƯỢC PHẨM TÂN THÀNH",
+      "status": "participating",
+      "lotNo": "PP2600218989",
+      "lotName": "Túi xả OMNI",
+      "bidPrice": 5240720000,
+      "finalPrice": 52640000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-07T09:05:28.561",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 0,
+    "items": [],
+    "summary": "",
+    "disclosure": "missing-plan-detail-id"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:33.457Z"
+}

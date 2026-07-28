@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 5,
+    "items": [
+      {
+        "id": "3375f0e8-8ddc-4bee-8699-401d9f28cb13",
+        "lotNo": "PP2600297729",
+        "name": "Phần lô 1. Nhóm : Hóa chất, vật tư xét nghiệm sử dụng cho máy sinh hóa tự động Furuno - CA 270",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2644834000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c4a29680-b5e0-4982-83ca-c0afd81d1b05",
+        "lotNo": "PP2600297730",
+        "name": "Phần lô 2. Nhóm : Hóa chất, vật tư xét nghiệm sử dụng cho máy huyết học tự động NIKHON KODEN MK 7300",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1320426000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "138dd97a-c188-4fc3-a778-01906c7b0347",
+        "lotNo": "PP2600297731",
+        "name": "Phần lô 3. Nhóm : Hóa chất, vật tư xét nghiệm sử dụng cho máy điện giải đồ EasyLyte Expand (MEDICA)và phụ kiện máy điện giải đồ khác : 09 mặt hàng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 215590000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cce6108a-b20d-496d-9f90-3dcec9d337e9",
+        "lotNo": "PP2600297732",
+        "name": "Phần lô 4. Nhóm : Test sinh phẩm xét nghiệm invitro gồm 16 mặt hàng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 519900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "17d6e16c-5504-4833-acd7-59746f8060ae",
+        "lotNo": "PP2600297733",
+        "name": "Phần lô 5. Nhóm :Test xét nghiệm nước tiểu sử dụng cho máy Ultrona Tm Urine Analyzer: 01 mặt hàng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 45000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Hóa Mua sắm Hóa chất xét nghiệm,Sinh phẩm Y tế năm 2026 của Trung tâm Y tế khu vực Thạnh Hóa cho việc chẩn đoán, điều trị tại đơn vị, phục vụ tốt hơn cho việc chăm sóc sức khoẻ cho nhân dân trên địa bàn.",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:23.292Z"
+}

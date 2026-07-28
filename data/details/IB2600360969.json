@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 9,
+    "items": [
+      {
+        "id": "46f22908-ed26-4672-9d10-a9fb786d413c",
+        "lotNo": "PP2600275815",
+        "name": "Dụng cụ bảo quản và tiệt trùng dụng cụ y tế",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2656657000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "761a6fbc-ef1e-4d03-9ef0-aa9a7269822b",
+        "lotNo": "PP2600275816",
+        "name": "Dụng cụ cắt, rạch trong phẫu thuật mổ mở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2762242000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fbe22ab0-daee-4d61-83a7-89f29c8dfb46",
+        "lotNo": "PP2600275817",
+        "name": "Dụng cụ kẹp giữ dùng cho phẫu thuật mổ mở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4542748000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f6929a9e-86d1-4910-b327-33752fbc6649",
+        "lotNo": "PP2600275818",
+        "name": "Dụng cụ mở phẫu trường trong mổ mở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 123318000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f55be591-33c8-4163-9052-45681b87d75c",
+        "lotNo": "PP2600275819",
+        "name": "Dụng cụ phẫu thuật chuyên dùng trong chấn thương chỉnh hình",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 901719000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2f8474c5-be02-4f44-95fe-adc7f61637ff",
+        "lotNo": "PP2600275820",
+        "name": "Dụng cụ và phụ kiện phẫu thuật nội soi ít xâm lấn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 386204000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "89c7177a-0b6f-45c1-a4aa-6c5d4b78a241",
+        "lotNo": "PP2600275821",
+        "name": "Dung dịch đệm PBS",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 127571000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f79bdb9b-0ceb-4798-ad1b-6137744c10b1",
+        "lotNo": "PP2600275822",
+        "name": "Huyết thanh bào thai bê",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 123488000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "954882da-29bf-4a50-8e81-c0665d5150f9",
+        "lotNo": "PP2600275823",
+        "name": "Hạt vi cầu không tải thuốc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1278000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua vật tư tiêu hao, hóa chất, công cụ dụng cụ (Gói thầu gồm 296 mặt hàng, chia làm 9 phần độc lập, chi tiết từng phần tại phụ lục 02 đính kèm)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:22.133Z"
+}

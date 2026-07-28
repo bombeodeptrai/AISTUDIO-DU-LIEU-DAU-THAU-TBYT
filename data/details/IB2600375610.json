@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "6bb236c9-001f-471e-a643-d2a5c0aa73e8",
+        "lotNo": "BP2600511159",
+        "name": "Gói số 1: Mua Hóa chất xét nghiệm năm 2026 phục vụ công tác chuyên môn tại Trung tâm y tế Bảo Lâm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 319745000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua Hóa chất xét nghiệm",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:07.940Z"
+}

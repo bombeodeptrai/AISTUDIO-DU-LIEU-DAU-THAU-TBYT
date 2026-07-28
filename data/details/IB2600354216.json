@@ -1,5 +1,7 @@
 {
+  "schemaVersion": 3,
   "total": 39,
+  "bidders": [],
   "items": [
     {
       "id": "95268b47-2fbd-4039-8f29-1c2819881c45",
@@ -230,6 +232,25 @@
       "resultPublishedDate": "2026-07-21T10:19:22"
     },
     {
+      "id": "f8af76ed-d273-4a39-842c-a45574d60cca",
+      "name": "Nẹp khóa đa hướng đùi đầu rắn",
+      "model": "34204; 34205; 34206; 34207; 34208; 34209; 34210; 34211; 34213",
+      "brand": "Jinlu - Multi-axial Proximal Femur Condyle Locking Plate",
+      "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "Năm 2025 trở về sau",
+      "specification": "Chất liệu: pure titanium.\r\n- Kích cỡ: 4; 5; 6; 7; 8; 9; 10; 11; 13lỗ. Chiều dài: 120; 138; 156; 174; 192; 210; 228; 246; 282mm.\r\n- Đặc tính: đầu nẹp có 4 lỗ vít khoá đa hướng.\r\n+ Sử dụng vít khoá đường kính 5.0mm và vít vỏ đường kính 5.0mm.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
+      "unit": "Cái",
+      "quantity": 2,
+      "unitPrice": 12000000,
+      "winnerNames": [
+        "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
+      ],
+      "decisionNo": "217/QĐ-TTPLE",
+      "decisionDate": "2026-07-21T10:17:02",
+      "resultPublishedDate": "2026-07-21T10:19:22"
+    },
+    {
       "id": "fd455370-8381-4de0-874f-373211cae5c9",
       "name": "Vít khóa đường kính 4.0mm",
       "model": "17812; 17814; 17816; 17818; 17820; 17822; 17824; 17826; 17828; 17830; 17832; 17834; 17836; 17838; 17840; 17842; 17844; 17846; 17848; 17850; 17852; 17854; 17856; 17858; 17860",
@@ -363,17 +384,55 @@
       "resultPublishedDate": "2026-07-21T10:19:22"
     },
     {
-      "id": "f8af76ed-d273-4a39-842c-a45574d60cca",
-      "name": "Nẹp khóa đa hướng đùi đầu rắn",
-      "model": "34204; 34205; 34206; 34207; 34208; 34209; 34210; 34211; 34213",
-      "brand": "Jinlu - Multi-axial Proximal Femur Condyle Locking Plate",
+      "id": "c537f5c9-adba-4738-816a-d8c2034b764b",
+      "name": "Đinh chốt titan đùi",
+      "model": "48501; 48502; 48503; 48504; 48505; 48506; 48507; 48508; 48509; 48510; 48511; 48512; 48513; 48514; 48515",
+      "brand": "Jinlu - Femur & Reconstruction Interlocking Nail (Expert Design)",
       "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
       "origin": "Trung Quốc",
       "manufactureYear": "Năm 2025 trở về sau",
-      "specification": "Chất liệu: pure titanium.\r\n- Kích cỡ: 4; 5; 6; 7; 8; 9; 10; 11; 13lỗ. Chiều dài: 120; 138; 156; 174; 192; 210; 228; 246; 282mm.\r\n- Đặc tính: đầu nẹp có 4 lỗ vít khoá đa hướng.\r\n+ Sử dụng vít khoá đường kính 5.0mm và vít vỏ đường kính 5.0mm.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
+      "specification": "Chất liệu: titanium alloy.\r\n- Kích cỡ: đường kính đinh 9; 10; 11mm. Chiều dài 340-420mm, mỗi bước tăng 20mm.\r\n- Đặc tính: Các loại vít như sau:\r\n+ Vít khoá Gamma đường kính 6.4mm với chiều dài 70-115mm, gia tăng số 5mm;\r\n+ Vít chốt khoá đường kính 4.7mm với chiều dài: 26-60 mm, gia số tăng 2mm, 64-84mm gia tăng số 4mm.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
+      "unit": "Cây",
+      "quantity": 5,
+      "unitPrice": 7500000,
+      "winnerNames": [
+        "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
+      ],
+      "decisionNo": "217/QĐ-TTPLE",
+      "decisionDate": "2026-07-21T10:17:02",
+      "resultPublishedDate": "2026-07-21T10:19:22"
+    },
+    {
+      "id": "a143fa2d-22be-4361-ac14-b25bb3968885",
+      "name": "Nẹp khóa đa hướng L nâng đỡ",
+      "model": "32504L; 32504R; 32505L; 32505R; 32506L; 32506R; 32507L; 32507R; 32508R; 32508L",
+      "brand": "Jinlu - Multi-axial Reconstruction L type Locking Plate (Left/Right)",
+      "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "Năm 2025 trở về sau",
+      "specification": "Chất liệu: pure titanium.\r\n- Kích cỡ: 4; 5; 6; 7; 8lỗ. Chiều dài: 80; 96; 112; 128; 144mm.\r\n- Đặc tính: Nẹp hình chữ L, đầu nẹp có lỗ vít đôi (gồm lỗ vít khoá đa hướng và lỗ vít vỏ).\r\n+ Sử dụng vít khoá đường kính 5.0mm và vít vỏ đường kính 5.0mm.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
       "unit": "Cái",
       "quantity": 2,
-      "unitPrice": 12000000,
+      "unitPrice": 9500000,
+      "winnerNames": [
+        "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
+      ],
+      "decisionNo": "217/QĐ-TTPLE",
+      "decisionDate": "2026-07-21T10:17:02",
+      "resultPublishedDate": "2026-07-21T10:19:22"
+    },
+    {
+      "id": "737e4634-18eb-4692-bede-a916e3c9a5be",
+      "name": "Vít xốp rỗng 7.3 mm",
+      "model": "47660; 47665; 47670; 47675; 47680; 47685; 47690; 47695; 476100; 476105; 476110; 476115",
+      "brand": "Jinlu - Femur Neck Cannulated Compresssion Screws",
+      "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "Năm 2025 trở về sau",
+      "specification": "- Chất liệu: thép y khoa (stainless steel).\r\n- Kích cỡ: đường kính 7.3mm, chiều dài: 60; 65; 70; 75; 80; 85; 90; 95; 100; 105; 110; 115mm.\r\n- Đặc tính: thân vít rỗng, thân không toàn ren; kèm loong đền đệm, đầu vít hình lục giác.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
+      "unit": "Cái",
+      "quantity": 10,
+      "unitPrice": 800000,
       "winnerNames": [
         "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
       ],
@@ -684,64 +743,21 @@
       "decisionNo": "217/QĐ-TTPLE",
       "decisionDate": "2026-07-21T10:17:02",
       "resultPublishedDate": "2026-07-21T10:19:22"
-    },
-    {
-      "id": "c537f5c9-adba-4738-816a-d8c2034b764b",
-      "name": "Đinh chốt titan đùi",
-      "model": "48501; 48502; 48503; 48504; 48505; 48506; 48507; 48508; 48509; 48510; 48511; 48512; 48513; 48514; 48515",
-      "brand": "Jinlu - Femur & Reconstruction Interlocking Nail (Expert Design)",
-      "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "Năm 2025 trở về sau",
-      "specification": "Chất liệu: titanium alloy.\r\n- Kích cỡ: đường kính đinh 9; 10; 11mm. Chiều dài 340-420mm, mỗi bước tăng 20mm.\r\n- Đặc tính: Các loại vít như sau:\r\n+ Vít khoá Gamma đường kính 6.4mm với chiều dài 70-115mm, gia tăng số 5mm;\r\n+ Vít chốt khoá đường kính 4.7mm với chiều dài: 26-60 mm, gia số tăng 2mm, 64-84mm gia tăng số 4mm.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
-      "unit": "Cây",
-      "quantity": 5,
-      "unitPrice": 7500000,
-      "winnerNames": [
-        "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
-      ],
-      "decisionNo": "217/QĐ-TTPLE",
-      "decisionDate": "2026-07-21T10:17:02",
-      "resultPublishedDate": "2026-07-21T10:19:22"
-    },
-    {
-      "id": "a143fa2d-22be-4361-ac14-b25bb3968885",
-      "name": "Nẹp khóa đa hướng L nâng đỡ",
-      "model": "32504L; 32504R; 32505L; 32505R; 32506L; 32506R; 32507L; 32507R; 32508R; 32508L",
-      "brand": "Jinlu - Multi-axial Reconstruction L type Locking Plate (Left/Right)",
-      "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "Năm 2025 trở về sau",
-      "specification": "Chất liệu: pure titanium.\r\n- Kích cỡ: 4; 5; 6; 7; 8lỗ. Chiều dài: 80; 96; 112; 128; 144mm.\r\n- Đặc tính: Nẹp hình chữ L, đầu nẹp có lỗ vít đôi (gồm lỗ vít khoá đa hướng và lỗ vít vỏ).\r\n+ Sử dụng vít khoá đường kính 5.0mm và vít vỏ đường kính 5.0mm.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
-      "unit": "Cái",
-      "quantity": 2,
-      "unitPrice": 9500000,
-      "winnerNames": [
-        "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
-      ],
-      "decisionNo": "217/QĐ-TTPLE",
-      "decisionDate": "2026-07-21T10:17:02",
-      "resultPublishedDate": "2026-07-21T10:19:22"
-    },
-    {
-      "id": "737e4634-18eb-4692-bede-a916e3c9a5be",
-      "name": "Vít xốp rỗng 7.3 mm",
-      "model": "47660; 47665; 47670; 47675; 47680; 47685; 47690; 47695; 476100; 476105; 476110; 476115",
-      "brand": "Jinlu - Femur Neck Cannulated Compresssion Screws",
-      "manufacturer": "Jiangsu Jinlu Group Medical Device Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "Năm 2025 trở về sau",
-      "specification": "- Chất liệu: thép y khoa (stainless steel).\r\n- Kích cỡ: đường kính 7.3mm, chiều dài: 60; 65; 70; 75; 80; 85; 90; 95; 100; 105; 110; 115mm.\r\n- Đặc tính: thân vít rỗng, thân không toàn ren; kèm loong đền đệm, đầu vít hình lục giác.\r\n- Đạt tiêu chuẩn chất lượng: ISO 13485, CE.",
-      "unit": "Cái",
-      "quantity": 10,
-      "unitPrice": 800000,
-      "winnerNames": [
-        "CÔNG TY TNHH  THƯƠNG MẠI DỊCH VỤ HÀO NAM"
-      ],
-      "decisionNo": "217/QĐ-TTPLE",
-      "decisionDate": "2026-07-21T10:17:02",
-      "resultPublishedDate": "2026-07-21T10:19:22"
     }
   ],
-  "fetchedAt": "2026-07-21T13:36:21.825Z"
+  "requirements": {
+    "total": 0,
+    "items": [],
+    "summary": "",
+    "disclosure": "missing-plan-detail-id"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:31.182Z"
 }

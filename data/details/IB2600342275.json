@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "bc1e814d-f9d5-460b-9948-d72f71c93379",
+      "contractorCode": "vn0102282177",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH SYNJECTOS VIỆT NAM",
+      "status": "participating",
+      "lotNo": "BP2600472918",
+      "lotName": "Gói thầu số 01: Mua sắm thiết bị y tế của Trung tâm Y tế khu vực Mai Châu",
+      "bidPrice": 5713000000,
+      "finalPrice": 5713000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:04:12.727",
+      "models": []
+    },
+    {
+      "id": "7cac437e-d0df-4c6e-9373-7afb02fd96c9",
+      "contractorCode": "vn0102264876",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH CÔNG NGHỆ VNS",
+      "status": "participating",
+      "lotNo": "BP2600472918",
+      "lotName": "Gói thầu số 01: Mua sắm thiết bị y tế của Trung tâm Y tế khu vực Mai Châu",
+      "bidPrice": 5700000000,
+      "finalPrice": 5700000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:04:13.044",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "15a103dc-6bdb-47fc-8bb5-5963448e6bdc",
+        "lotNo": "BP2600472918",
+        "name": "Gói thầu số 01: Mua sắm thiết bị y tế của Trung tâm Y tế khu vực Mai Châu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5713950000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm thiết bị y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:25.187Z"
+}

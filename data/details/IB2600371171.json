@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "cc75a28b-4f50-4be7-99b0-9f1f3547806a",
+      "contractorCode": "vn0107634136",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH Y TẾ HẢI NAM",
+      "status": "participating",
+      "lotNo": "BP2600521356",
+      "lotName": "Mua Hoá chất Sử dụng cho máy xét nghiệm sinh hóa tự động (Sử dụng cho máy xét nghiệm sinh hoá tự động Model: AU480; Hãng sản xuất/ nước sản xuất: Beckman/ Nhật Bản)",
+      "bidPrice": 32949000,
+      "finalPrice": 32949000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:00:18.816",
+      "models": []
+    },
+    {
+      "id": "2bd22f68-2194-4e2b-880a-b61e905588ed",
+      "contractorCode": "vn0107622998",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ VẠN AN",
+      "status": "participating",
+      "lotNo": "BP2600521356",
+      "lotName": "Mua Hoá chất Sử dụng cho máy xét nghiệm sinh hóa tự động (Sử dụng cho máy xét nghiệm sinh hoá tự động Model: AU480; Hãng sản xuất/ nước sản xuất: Beckman/ Nhật Bản)",
+      "bidPrice": 29505000,
+      "finalPrice": 29505000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:00:19.046",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "8c3891c4-2335-4fd2-8d80-13cb67d48528",
+        "lotNo": "BP2600521356",
+        "name": "Mua Hoá chất Sử dụng cho máy xét nghiệm sinh hóa tự động (Sử dụng cho máy xét nghiệm sinh hoá tự động Model: AU480; Hãng sản xuất/ nước sản xuất: Beckman/ Nhật Bản)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 32949000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua Hoá chất Sử dụng cho máy xét nghiệm sinh hóa tự động (Sử dụng cho máy xét nghiệm sinh hoá tự động Model: AU480; Hãng sản xuất/ nước sản xuất: Beckman/ Nhật Bản)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:19.267Z"
+}

@@ -1,5 +1,7 @@
 {
+  "schemaVersion": 3,
   "total": 121,
+  "bidders": [],
   "items": [
     {
       "id": "c2386355-2657-430a-97a0-ccc3cc52db7c",
@@ -1123,6 +1125,424 @@
       "resultPublishedDate": "2026-07-21T10:52:57"
     },
     {
+      "id": "34065aec-8b6c-4465-9c9b-ce073aae2980",
+      "name": "Băng keo vải",
+      "model": "BDL2.5.UGT",
+      "brand": "Băng dính cuộn vải lụa y tế UGOTANA, kích thước 2,5cm x 5m",
+      "manufacturer": "Tanaphar",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Băng vải lụa đan dệt taffeta, màu trắng, số sợi 44x18/cm². Bờ răng cưa hai bên giúp xé dễ dàng, không cần dùng kéo. Keo: Oxyd kẽm không dùng dung môi. Kích thước 2,5cm x 5m.",
+      "unit": "Cuộn",
+      "quantity": 1200,
+      "unitPrice": 22000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "803ce172-58d1-4ffa-8e33-b8cbaeed4669",
+      "name": "Băng thun y tế",
+      "model": "BT2",
+      "brand": "Băng thun y tế 3 móc 10cm x 5,5m",
+      "manufacturer": "An Lành",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Sản phẩm được làm từ sợi cotton se tròn hoặc polyester kết hợp với sợi cao su tự nhiên. Sợi mảnh, mềm, đàn hồi tốt. Kích thước: 10cm x 5,5m",
+      "unit": "Cuộn",
+      "quantity": 120,
+      "unitPrice": 24000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "ee76fcf5-8a60-480d-821b-86e38b174d03",
+      "name": "Gạc meche phẫu thuật",
+      "model": "MECHEVT3",
+      "brand": "Gạc meche phẫu thuật 3,5cm x 75cm x 6 lớp vô trùng",
+      "manufacturer": "An Lành",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Gạc được dệt từ sợi 100% cotton có độ thấm hút rất cao. Không có độc tố, đã được giặt sạch. Không chứa chất gây dị ứng, không có tinh bột hoặc Dextrin, không có xơ mùn hòa tan trong nước và dịch phủ tạng. Độ pH: trung tính. Muối kim loại: không quá hàm lượng cho phép. Tiệt trùng bằng khí EO.Gas. Kích thước: 3,5cm x 75cm x 6 lớp",
+      "unit": "Miếng",
+      "quantity": 1000,
+      "unitPrice": 2500,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "15197d19-91a2-46ab-ae9a-84091650dffe",
+      "name": "Gạc đắp vết thương",
+      "model": "BGDVT7",
+      "brand": "Bông gạc đắp vết thương 8 x 20cm vô trùng",
+      "manufacturer": "An Lành",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Sản phẩm được làm từ 2 lớp vải không dệt hút nước bên ngoài, và 1 lớp đệm bông tự nhiên tinh chế (100% cotton) ở giữa. Không có độc tố, không chứa chất gây dị ứng, không có tinh bột, không có xơ mùn hòa tan trong nước và dịch phủ tạng. Tiệt trùng bằng khí EO.Gas. Kích thước: 8 x 20cm",
+      "unit": "Miếng",
+      "quantity": 1000,
+      "unitPrice": 2800,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "387ab5ee-d421-4eae-9817-f39f169f6617",
+      "name": "Dây truyền dịch",
+      "model": "DTD02: MPV",
+      "brand": "Bộ dây truyền dịch sử dụng một lần MPV kim thường",
+      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Van khoá điều chỉnh, kim chai sản xuất từ hạt nhựa ABS nguyên sinh. Van thoát khí có thiết kế màng lọc khí vô khuẩn. Buồng nhỏ giọt thể tích ≥ 8,5ml, có màng lọc dịch ≤ 15µm. Dây dẫn cấu tạo từ chất liệu nhựa PVC nguyên sinh, mềm dẻo, dai, độ đàn hồi cao, không gãy gập khi bảo quản và sử dụng; Độ dài dây truyền ≥ 1700mm. Dây truyền dịch kèm kim thường 23Gx1\". Đầu nối Luer lock có cơ chế xoay giúp cho việc gắn kết với kim luồn chắc chắn và dễ thao tác khi sử dụng. Có giấy chứng nhận đạt tiêu chuẩn CE, ISO",
+      "unit": "Bộ",
+      "quantity": 8000,
+      "unitPrice": 8800,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "6bbbbf5f-8d87-4070-b537-5fc72a1a5d49",
+      "name": "Test ma túy 5 trong 1",
+      "model": "108585",
+      "brand": "Bảng xét nghiệm sàng lọc nhiều loại thuốc (nước tiểu) (Multi-Drug Screen Test Panel (Urine) for MOP/AMP/THC/COD/HER)",
+      "manufacturer": "Hangzhou Testsea Biotechnology Co., LTD",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Bảng xét nghiệm sàng lọc nhiều loại thuốc là xét nghiệm miễn dịch sắc ký dòng bên để phát hiện định tính nhiều loại thuốc và chất chuyển hóa thuốc trong nước tiểu ở nồng độ ngưỡng sau : MOP 300ng/ml ; AMP 500ng/ml; THC 50ng/ml; COD 300ng/ml ; HER 10ng/ml Theo GC/MS Độ nhạy : MOP 100% ; AMP 100% ; THC 100%; COD >99,9% ; HER >99,9% Độ chính xác : MOP >99,9% ; AMP >99,9% ; THC>99,9%; COD > 99,9% ; HER >99,9% Độ pH của mẫu nước tiểu từ 5-9 không làm thay đổi kết quả của test . Không phản ứng chéo với các cơ chất Acetylsalicylic acid , Tetracycline, Verapamil Thời gian đọc kết quả 3- 5 phút nhưng không đọc sau 10 phút",
+      "unit": "Test",
+      "quantity": 2000,
+      "unitPrice": 39000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "3955d859-0b59-4ef9-a43e-ba75a8cb4e8e",
+      "name": "Test thử nước tiểu 10 thông số",
+      "model": "93068",
+      "brand": "MEDI-TEST URYXXON STICK 10",
+      "manufacturer": "Macherey Nagel GmbH & Co. KG",
+      "origin": "Đức",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng cho máy xét nghiệm nước tiểu 10 thông số.",
+      "unit": "Test",
+      "quantity": 1000,
+      "unitPrice": 17000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "8e9c0171-f920-4b64-8e57-2a9225004817",
+      "name": "Test HPylori",
+      "model": "L031-10621",
+      "brand": "H. pylori Antibody Rapid Test Cassette (Serum/Plasma/Whole Blood)",
+      "manufacturer": "ACON Biotech (Hangzhou) Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Khay thử định tính phát hiện kháng thể kháng H. pylori trong huyết thanh, huyết tương hoặc máu toàn phần của người. Thành phần: chứa các phần tử phủ kháng nguyên H. pylori và kháng thể kháng IgG người phủ trên màng. - Độ nhạy tương quan: 94,7%; - Độ đặc hiệu tương quan: 99,4%; - Độ chính xác tương quan: 97,2% - Độ chính xác ngẫu nhiên lặp >99%. Không bị ảnh hưởng đến kết quả xét nghiệm bởi thuốc chống đông máu như heparin, EDTA và sodium citrate. Đọc kết quả ở phút thứ 10.",
+      "unit": "Test",
+      "quantity": 1000,
+      "unitPrice": 36300,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "10133e9f-92f9-4df8-b725-2bc7ee44d403",
+      "name": "Test máy đo đường huyết",
+      "model": "AGM-4000",
+      "brand": "Que thử đường huyết",
+      "manufacturer": "All Medicus Co., Ltd",
+      "origin": "Hàn Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng để xét nghiệm định lượng đường huyết trong máu toàn phần mao mạch tươi lấy từ đầu ngón tay.",
+      "unit": "Test",
+      "quantity": 200,
+      "unitPrice": 5250,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "1e1b2a26-1c54-4380-be93-d227df590b6d",
+      "name": "Lam kính xét nghiệm Lao",
+      "model": "GT201-7102-2",
+      "brand": "Lam kính xét nghiệm",
+      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Kích thước: 25.4 x 76.2mm. Loại trơn.",
+      "unit": "Hộp",
+      "quantity": 20,
+      "unitPrice": 24750,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "8491f1b9-dceb-4c7a-86f0-27b49d38b4d6",
+      "name": "Gel điện tim",
+      "model": "ECG-0001",
+      "brand": "Gel điện tim",
+      "manufacturer": "TURKUAZ SAGLIK HIZMETLERI MEDIKAL TEMIZLIK KIMYASAL URUNLER SAN. VE TIC. A.S",
+      "origin": "Thổ Nhĩ kỳ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Gel điện tim phù hợp điện cực máy điện tim, không chứa formaldehyde, không mẫn cảm da, không gây rát da. Chai 250ml",
+      "unit": "Chai",
+      "quantity": 5,
+      "unitPrice": 23100,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "0f7e59cf-0fbf-436a-9f74-9cb67c577ae1",
+      "name": "Nẹp cổ cứng các số",
+      "model": "Ortho HM-007 (S,M,L,XL)",
+      "brand": "Nẹp cổ cứng các cỡ",
+      "manufacturer": "CÔNG TY TNHH TM-DV-SX HIỂN MINH",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Chất liệu: EVA, khóa Velcro. Công dụng: Sơ cứu chấn thương cột sống cổ. Cố định đốt sống cổ sau chấn thương hoặc sau phẩu thuật. Các số.",
+      "unit": "Cái",
+      "quantity": 10,
+      "unitPrice": 110000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "7edf4031-ccf1-4bd9-b6b1-010d22597d87",
+      "name": "Mask thở Oxy người lớn",
+      "model": "MNO: MPV",
+      "brand": "Mặt nạ thở oxy MPV ( Người lớn)",
+      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "- Mặt nạ được sản xuất từ nhựa PVC nguyên sinh không chứa độc tố, màu trắng trong, không có chất tạo màu. - Dây dẫn có chiều dài ≥2m, lòng ống có khía chống gập được sản xuất từ chất liệu nhựa PVC nguyên sinh, màu trắng trong. Dây dẫn có khía đảm bảo khí oxy luôn được tuần hoàn. - Thanh nhôm mềm dẻo đảm bảo giữ kín khít mặt nạ và mũi bệnh nhân. - Dây chun cố định bộ mặt nạ và đầu bệnh nhân có độ đàn hồi cao. - Dùng cho người lớn - Sản phẩm được tiệt trùng bằng khí Ethylene Oxide (E.O). Túi 1 cái",
+      "unit": "Cái",
+      "quantity": 50,
+      "unitPrice": 23000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "eaa4c122-a0f0-429b-8276-cd7ce2893c6f",
+      "name": "Mask khí dung người lớn",
+      "model": "MNKD:MPV",
+      "brand": "Mặt nạ xông khí dung MPV ( Người lớn)",
+      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "- Mặt nạ được sản xuất từ nhựa PVC nguyên sinh, màu trắng trong, không có chất tạo màu. Có bộ khí dung. - Dây dẫn có chiều dài ≥2.1m, lòng ống có khía chống gập được sản xuất từ chất liệu nhựa PVC nguyên sinh, màu trắng trong. Dây dẫn có khía đảm bảo khí oxy luôn được tuần hoàn. - Thanh nhôm mềm dẻo đảm bảo giữ kín khít mặt nạ và mũi bệnh nhân. - Dây chun cố định bộ mặt nạ và đầu bệnh nhân có độ đàn hồi cao. - Dùng cho người lớn. - Sản phẩm được tiệt trùng bằng khí Ethylene Oxide (E.O)",
+      "unit": "Cái",
+      "quantity": 200,
+      "unitPrice": 22000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "03655384-86c9-4318-adcb-ca9bf8f66384",
+      "name": "Mask khí dung trẻ em",
+      "model": "MNKD:MPV",
+      "brand": "Mặt nạ xông khí dung MPV ( Trẻ em)",
+      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "- Mặt nạ được sản xuất từ nhựa PVC nguyên sinh, màu trắng trong, không có chất tạo màu. Có bộ khí dung. - Dây dẫn có chiều dài ≥2.1m, lòng ống có khía chống gập được sản xuất từ chất liệu nhựa PVC nguyên sinh, màu trắng trong. Dây dẫn có khía đảm bảo khí oxy luôn được tuần hoàn. - Thanh nhôm mềm dẻo đảm bảo giữ kín khít mặt nạ và mũi bệnh nhân. - Dây chun cố định bộ mặt nạ và đầu bệnh nhân có độ đàn hồi cao. - Dùng cho trẻ em. - Sản phẩm được tiệt trùng bằng khí Ethylene Oxide (E.O)",
+      "unit": "Cái",
+      "quantity": 80,
+      "unitPrice": 19800,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "5a150589-1e95-465b-af92-27cfd948b80a",
+      "name": "Dây hút đàm nhớt có khóa các Số",
+      "model": "DHD: MPV",
+      "brand": "Dây hút dịch MPV sử dụng một lần",
+      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "- Các số 5-6-8-10-12-14-16-18. Sản phẩm được kết cấu 02 phần. Khóa van và dây dẫn. - Dây có độ dài ≥ 50cm. Khoá van chia nhiều màu dễ phân biệt giữa các số, có 2 loại có nắp và không nắp.",
+      "unit": "Cái",
+      "quantity": 200,
+      "unitPrice": 5775,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "a4f17eff-86cc-4222-a1e4-835fa83545d6",
+      "name": "Bộ hút điều hòa kinh nguyệt",
+      "model": "Sài Gòn 2",
+      "brand": "BỘ ĐIỀU KINH KARMAN BAO GỒM ỐNG HÚT ĐIỀU KINH SÀI GÒN CÁC CỠ TỪ SỐ 4 - 10",
+      "manufacturer": "Công ty TNHH nhựa y tế Sài Gòn",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng để điều hoà kinh nguyệt. Bộ gồm: Xilanh và piston; Ống hút.",
+      "unit": "Túi",
+      "quantity": 30,
+      "unitPrice": 85800,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "bbeeff08-cd4b-4aec-a16e-66974229c4de",
+      "name": "Ống đặt nội khí quản số 3",
+      "model": "GT014-100",
+      "brand": "Ống đặt nội khí quản có bóng số 3",
+      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Được làm từ PVC không độc hại, trong suốt, mềm và mịn, loại có bóng chèn. Số 3.",
+      "unit": "Cái",
+      "quantity": 10,
+      "unitPrice": 17500,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "f090571d-69cb-4034-931f-8fa06a5d38c5",
+      "name": "Ống thông tiểu 1 nhánh số 14",
+      "model": "GT022-100",
+      "brand": "Ống thông tiểu 1 nhánh ( số 14)",
+      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Được sản xuất từ cao su thiên nhiên.Được phủ 1 lớp silicone. Loại 1 nhánh, số 14.",
+      "unit": "Cái",
+      "quantity": 50,
+      "unitPrice": 13500,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "2e69a920-d3a3-4a03-a6e4-e1428a7ef3ab",
+      "name": "Canuyn Mayo đặt nội khí quản các số",
+      "model": "GT016-100",
+      "brand": "Dụng cụ chống cắn lưỡi",
+      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Chất liệu: Làm từ polyethylene không độc hại. Duy trì đường thở không bị cản trở trong quá trình gây mê. Các số.",
+      "unit": "Cái",
+      "quantity": 30,
+      "unitPrice": 6125,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "29bf2b16-19f8-4723-a1ba-070a717c895e",
+      "name": "Lọ đựng phân",
+      "model": "LON_355MN ON3P3N1",
+      "brand": "Lọ nhựa đựng mẫu PS 55ml HTM nắp đỏ, có nhãn",
+      "manufacturer": "Hồng Thiện Mỹ",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Nhựa PS 55ml HTM nắp đỏ, có nhãn.",
+      "unit": "Lọ",
+      "quantity": 300,
+      "unitPrice": 1404,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
+      "id": "9f33a545-3d64-411b-9db6-ab749fd04907",
+      "name": "Bóng đèn hồng ngoại",
+      "model": "GT154-100",
+      "brand": "Bóng đèn hồng ngoại",
+      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Điện áp nguồn: 220V AC - 50Hz, công suất 250W.",
+      "unit": "Cái",
+      "quantity": 15,
+      "unitPrice": 85000,
+      "winnerNames": [
+        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
+      ],
+      "decisionNo": "1121/QĐ-TTIP",
+      "decisionDate": "2026-07-21T23:59:59",
+      "resultPublishedDate": "2026-07-21T10:52:57"
+    },
+    {
       "id": "9969fe1c-4816-45aa-9fec-45b8825eb756",
       "name": "Chỉ Nilon 2-0 kim tam giác",
       "model": "M30E26",
@@ -1881,425 +2301,21 @@
       "decisionNo": "1121/QĐ-TTIP",
       "decisionDate": "2026-07-21T23:59:59",
       "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "34065aec-8b6c-4465-9c9b-ce073aae2980",
-      "name": "Băng keo vải",
-      "model": "BDL2.5.UGT",
-      "brand": "Băng dính cuộn vải lụa y tế UGOTANA, kích thước 2,5cm x 5m",
-      "manufacturer": "Tanaphar",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Băng vải lụa đan dệt taffeta, màu trắng, số sợi 44x18/cm². Bờ răng cưa hai bên giúp xé dễ dàng, không cần dùng kéo. Keo: Oxyd kẽm không dùng dung môi. Kích thước 2,5cm x 5m.",
-      "unit": "Cuộn",
-      "quantity": 1200,
-      "unitPrice": 22000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "803ce172-58d1-4ffa-8e33-b8cbaeed4669",
-      "name": "Băng thun y tế",
-      "model": "BT2",
-      "brand": "Băng thun y tế 3 móc 10cm x 5,5m",
-      "manufacturer": "An Lành",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Sản phẩm được làm từ sợi cotton se tròn hoặc polyester kết hợp với sợi cao su tự nhiên. Sợi mảnh, mềm, đàn hồi tốt. Kích thước: 10cm x 5,5m",
-      "unit": "Cuộn",
-      "quantity": 120,
-      "unitPrice": 24000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "ee76fcf5-8a60-480d-821b-86e38b174d03",
-      "name": "Gạc meche phẫu thuật",
-      "model": "MECHEVT3",
-      "brand": "Gạc meche phẫu thuật 3,5cm x 75cm x 6 lớp vô trùng",
-      "manufacturer": "An Lành",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Gạc được dệt từ sợi 100% cotton có độ thấm hút rất cao. Không có độc tố, đã được giặt sạch. Không chứa chất gây dị ứng, không có tinh bột hoặc Dextrin, không có xơ mùn hòa tan trong nước và dịch phủ tạng. Độ pH: trung tính. Muối kim loại: không quá hàm lượng cho phép. Tiệt trùng bằng khí EO.Gas. Kích thước: 3,5cm x 75cm x 6 lớp",
-      "unit": "Miếng",
-      "quantity": 1000,
-      "unitPrice": 2500,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "15197d19-91a2-46ab-ae9a-84091650dffe",
-      "name": "Gạc đắp vết thương",
-      "model": "BGDVT7",
-      "brand": "Bông gạc đắp vết thương 8 x 20cm vô trùng",
-      "manufacturer": "An Lành",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Sản phẩm được làm từ 2 lớp vải không dệt hút nước bên ngoài, và 1 lớp đệm bông tự nhiên tinh chế (100% cotton) ở giữa. Không có độc tố, không chứa chất gây dị ứng, không có tinh bột, không có xơ mùn hòa tan trong nước và dịch phủ tạng. Tiệt trùng bằng khí EO.Gas. Kích thước: 8 x 20cm",
-      "unit": "Miếng",
-      "quantity": 1000,
-      "unitPrice": 2800,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "387ab5ee-d421-4eae-9817-f39f169f6617",
-      "name": "Dây truyền dịch",
-      "model": "DTD02: MPV",
-      "brand": "Bộ dây truyền dịch sử dụng một lần MPV kim thường",
-      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Van khoá điều chỉnh, kim chai sản xuất từ hạt nhựa ABS nguyên sinh. Van thoát khí có thiết kế màng lọc khí vô khuẩn. Buồng nhỏ giọt thể tích ≥ 8,5ml, có màng lọc dịch ≤ 15µm. Dây dẫn cấu tạo từ chất liệu nhựa PVC nguyên sinh, mềm dẻo, dai, độ đàn hồi cao, không gãy gập khi bảo quản và sử dụng; Độ dài dây truyền ≥ 1700mm. Dây truyền dịch kèm kim thường 23Gx1\". Đầu nối Luer lock có cơ chế xoay giúp cho việc gắn kết với kim luồn chắc chắn và dễ thao tác khi sử dụng. Có giấy chứng nhận đạt tiêu chuẩn CE, ISO",
-      "unit": "Bộ",
-      "quantity": 8000,
-      "unitPrice": 8800,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "6bbbbf5f-8d87-4070-b537-5fc72a1a5d49",
-      "name": "Test ma túy 5 trong 1",
-      "model": "108585",
-      "brand": "Bảng xét nghiệm sàng lọc nhiều loại thuốc (nước tiểu) (Multi-Drug Screen Test Panel (Urine) for MOP/AMP/THC/COD/HER)",
-      "manufacturer": "Hangzhou Testsea Biotechnology Co., LTD",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Bảng xét nghiệm sàng lọc nhiều loại thuốc là xét nghiệm miễn dịch sắc ký dòng bên để phát hiện định tính nhiều loại thuốc và chất chuyển hóa thuốc trong nước tiểu ở nồng độ ngưỡng sau : MOP 300ng/ml ; AMP 500ng/ml; THC 50ng/ml; COD 300ng/ml ; HER 10ng/ml Theo GC/MS Độ nhạy : MOP 100% ; AMP 100% ; THC 100%; COD >99,9% ; HER >99,9% Độ chính xác : MOP >99,9% ; AMP >99,9% ; THC>99,9%; COD > 99,9% ; HER >99,9% Độ pH của mẫu nước tiểu từ 5-9 không làm thay đổi kết quả của test . Không phản ứng chéo với các cơ chất Acetylsalicylic acid , Tetracycline, Verapamil Thời gian đọc kết quả 3- 5 phút nhưng không đọc sau 10 phút",
-      "unit": "Test",
-      "quantity": 2000,
-      "unitPrice": 39000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "3955d859-0b59-4ef9-a43e-ba75a8cb4e8e",
-      "name": "Test thử nước tiểu 10 thông số",
-      "model": "93068",
-      "brand": "MEDI-TEST URYXXON STICK 10",
-      "manufacturer": "Macherey Nagel GmbH & Co. KG",
-      "origin": "Đức",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Dùng cho máy xét nghiệm nước tiểu 10 thông số.",
-      "unit": "Test",
-      "quantity": 1000,
-      "unitPrice": 17000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "8e9c0171-f920-4b64-8e57-2a9225004817",
-      "name": "Test HPylori",
-      "model": "L031-10621",
-      "brand": "H. pylori Antibody Rapid Test Cassette (Serum/Plasma/Whole Blood)",
-      "manufacturer": "ACON Biotech (Hangzhou) Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Khay thử định tính phát hiện kháng thể kháng H. pylori trong huyết thanh, huyết tương hoặc máu toàn phần của người. Thành phần: chứa các phần tử phủ kháng nguyên H. pylori và kháng thể kháng IgG người phủ trên màng. - Độ nhạy tương quan: 94,7%; - Độ đặc hiệu tương quan: 99,4%; - Độ chính xác tương quan: 97,2% - Độ chính xác ngẫu nhiên lặp >99%. Không bị ảnh hưởng đến kết quả xét nghiệm bởi thuốc chống đông máu như heparin, EDTA và sodium citrate. Đọc kết quả ở phút thứ 10.",
-      "unit": "Test",
-      "quantity": 1000,
-      "unitPrice": 36300,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "10133e9f-92f9-4df8-b725-2bc7ee44d403",
-      "name": "Test máy đo đường huyết",
-      "model": "AGM-4000",
-      "brand": "Que thử đường huyết",
-      "manufacturer": "All Medicus Co., Ltd",
-      "origin": "Hàn Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Dùng để xét nghiệm định lượng đường huyết trong máu toàn phần mao mạch tươi lấy từ đầu ngón tay.",
-      "unit": "Test",
-      "quantity": 200,
-      "unitPrice": 5250,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "1e1b2a26-1c54-4380-be93-d227df590b6d",
-      "name": "Lam kính xét nghiệm Lao",
-      "model": "GT201-7102-2",
-      "brand": "Lam kính xét nghiệm",
-      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Kích thước: 25.4 x 76.2mm. Loại trơn.",
-      "unit": "Hộp",
-      "quantity": 20,
-      "unitPrice": 24750,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "8491f1b9-dceb-4c7a-86f0-27b49d38b4d6",
-      "name": "Gel điện tim",
-      "model": "ECG-0001",
-      "brand": "Gel điện tim",
-      "manufacturer": "TURKUAZ SAGLIK HIZMETLERI MEDIKAL TEMIZLIK KIMYASAL URUNLER SAN. VE TIC. A.S",
-      "origin": "Thổ Nhĩ kỳ",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Gel điện tim phù hợp điện cực máy điện tim, không chứa formaldehyde, không mẫn cảm da, không gây rát da. Chai 250ml",
-      "unit": "Chai",
-      "quantity": 5,
-      "unitPrice": 23100,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "0f7e59cf-0fbf-436a-9f74-9cb67c577ae1",
-      "name": "Nẹp cổ cứng các số",
-      "model": "Ortho HM-007 (S,M,L,XL)",
-      "brand": "Nẹp cổ cứng các cỡ",
-      "manufacturer": "CÔNG TY TNHH TM-DV-SX HIỂN MINH",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Chất liệu: EVA, khóa Velcro. Công dụng: Sơ cứu chấn thương cột sống cổ. Cố định đốt sống cổ sau chấn thương hoặc sau phẩu thuật. Các số.",
-      "unit": "Cái",
-      "quantity": 10,
-      "unitPrice": 110000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "7edf4031-ccf1-4bd9-b6b1-010d22597d87",
-      "name": "Mask thở Oxy người lớn",
-      "model": "MNO: MPV",
-      "brand": "Mặt nạ thở oxy MPV ( Người lớn)",
-      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "- Mặt nạ được sản xuất từ nhựa PVC nguyên sinh không chứa độc tố, màu trắng trong, không có chất tạo màu. - Dây dẫn có chiều dài ≥2m, lòng ống có khía chống gập được sản xuất từ chất liệu nhựa PVC nguyên sinh, màu trắng trong. Dây dẫn có khía đảm bảo khí oxy luôn được tuần hoàn. - Thanh nhôm mềm dẻo đảm bảo giữ kín khít mặt nạ và mũi bệnh nhân. - Dây chun cố định bộ mặt nạ và đầu bệnh nhân có độ đàn hồi cao. - Dùng cho người lớn - Sản phẩm được tiệt trùng bằng khí Ethylene Oxide (E.O). Túi 1 cái",
-      "unit": "Cái",
-      "quantity": 50,
-      "unitPrice": 23000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "eaa4c122-a0f0-429b-8276-cd7ce2893c6f",
-      "name": "Mask khí dung người lớn",
-      "model": "MNKD:MPV",
-      "brand": "Mặt nạ xông khí dung MPV ( Người lớn)",
-      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "- Mặt nạ được sản xuất từ nhựa PVC nguyên sinh, màu trắng trong, không có chất tạo màu. Có bộ khí dung. - Dây dẫn có chiều dài ≥2.1m, lòng ống có khía chống gập được sản xuất từ chất liệu nhựa PVC nguyên sinh, màu trắng trong. Dây dẫn có khía đảm bảo khí oxy luôn được tuần hoàn. - Thanh nhôm mềm dẻo đảm bảo giữ kín khít mặt nạ và mũi bệnh nhân. - Dây chun cố định bộ mặt nạ và đầu bệnh nhân có độ đàn hồi cao. - Dùng cho người lớn. - Sản phẩm được tiệt trùng bằng khí Ethylene Oxide (E.O)",
-      "unit": "Cái",
-      "quantity": 200,
-      "unitPrice": 22000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "03655384-86c9-4318-adcb-ca9bf8f66384",
-      "name": "Mask khí dung trẻ em",
-      "model": "MNKD:MPV",
-      "brand": "Mặt nạ xông khí dung MPV ( Trẻ em)",
-      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "- Mặt nạ được sản xuất từ nhựa PVC nguyên sinh, màu trắng trong, không có chất tạo màu. Có bộ khí dung. - Dây dẫn có chiều dài ≥2.1m, lòng ống có khía chống gập được sản xuất từ chất liệu nhựa PVC nguyên sinh, màu trắng trong. Dây dẫn có khía đảm bảo khí oxy luôn được tuần hoàn. - Thanh nhôm mềm dẻo đảm bảo giữ kín khít mặt nạ và mũi bệnh nhân. - Dây chun cố định bộ mặt nạ và đầu bệnh nhân có độ đàn hồi cao. - Dùng cho trẻ em. - Sản phẩm được tiệt trùng bằng khí Ethylene Oxide (E.O)",
-      "unit": "Cái",
-      "quantity": 80,
-      "unitPrice": 19800,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "5a150589-1e95-465b-af92-27cfd948b80a",
-      "name": "Dây hút đàm nhớt có khóa các Số",
-      "model": "DHD: MPV",
-      "brand": "Dây hút dịch MPV sử dụng một lần",
-      "manufacturer": "Công ty cổ phần Nhựa y tế Việt Nam (MPV)",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "- Các số 5-6-8-10-12-14-16-18. Sản phẩm được kết cấu 02 phần. Khóa van và dây dẫn. - Dây có độ dài ≥ 50cm. Khoá van chia nhiều màu dễ phân biệt giữa các số, có 2 loại có nắp và không nắp.",
-      "unit": "Cái",
-      "quantity": 200,
-      "unitPrice": 5775,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "a4f17eff-86cc-4222-a1e4-835fa83545d6",
-      "name": "Bộ hút điều hòa kinh nguyệt",
-      "model": "Sài Gòn 2",
-      "brand": "BỘ ĐIỀU KINH KARMAN BAO GỒM ỐNG HÚT ĐIỀU KINH SÀI GÒN CÁC CỠ TỪ SỐ 4 - 10",
-      "manufacturer": "Công ty TNHH nhựa y tế Sài Gòn",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Dùng để điều hoà kinh nguyệt. Bộ gồm: Xilanh và piston; Ống hút.",
-      "unit": "Túi",
-      "quantity": 30,
-      "unitPrice": 85800,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "bbeeff08-cd4b-4aec-a16e-66974229c4de",
-      "name": "Ống đặt nội khí quản số 3",
-      "model": "GT014-100",
-      "brand": "Ống đặt nội khí quản có bóng số 3",
-      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Được làm từ PVC không độc hại, trong suốt, mềm và mịn, loại có bóng chèn. Số 3.",
-      "unit": "Cái",
-      "quantity": 10,
-      "unitPrice": 17500,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "f090571d-69cb-4034-931f-8fa06a5d38c5",
-      "name": "Ống thông tiểu 1 nhánh số 14",
-      "model": "GT022-100",
-      "brand": "Ống thông tiểu 1 nhánh ( số 14)",
-      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Được sản xuất từ cao su thiên nhiên.Được phủ 1 lớp silicone. Loại 1 nhánh, số 14.",
-      "unit": "Cái",
-      "quantity": 50,
-      "unitPrice": 13500,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "2e69a920-d3a3-4a03-a6e4-e1428a7ef3ab",
-      "name": "Canuyn Mayo đặt nội khí quản các số",
-      "model": "GT016-100",
-      "brand": "Dụng cụ chống cắn lưỡi",
-      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Chất liệu: Làm từ polyethylene không độc hại. Duy trì đường thở không bị cản trở trong quá trình gây mê. Các số.",
-      "unit": "Cái",
-      "quantity": 30,
-      "unitPrice": 6125,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "29bf2b16-19f8-4723-a1ba-070a717c895e",
-      "name": "Lọ đựng phân",
-      "model": "LON_355MN ON3P3N1",
-      "brand": "Lọ nhựa đựng mẫu PS 55ml HTM nắp đỏ, có nhãn",
-      "manufacturer": "Hồng Thiện Mỹ",
-      "origin": "Việt Nam",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Nhựa PS 55ml HTM nắp đỏ, có nhãn.",
-      "unit": "Lọ",
-      "quantity": 300,
-      "unitPrice": 1404,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
-    },
-    {
-      "id": "9f33a545-3d64-411b-9db6-ab749fd04907",
-      "name": "Bóng đèn hồng ngoại",
-      "model": "GT154-100",
-      "brand": "Bóng đèn hồng ngoại",
-      "manufacturer": "Ningbo Greetmed Medical Instruments Co., Ltd",
-      "origin": "Trung Quốc",
-      "manufactureYear": "2025 trở về sau",
-      "specification": "Điện áp nguồn: 220V AC - 50Hz, công suất 250W.",
-      "unit": "Cái",
-      "quantity": 15,
-      "unitPrice": 85000,
-      "winnerNames": [
-        "CÔNG TY TNHH XUẤT NHẬP KHẨU VẬT TƯ THIẾT BỊ Y TẾ TRANG MINH HẠNH"
-      ],
-      "decisionNo": "1121/QĐ-TTIP",
-      "decisionDate": "2026-07-21T23:59:59",
-      "resultPublishedDate": "2026-07-21T10:52:57"
     }
   ],
-  "fetchedAt": "2026-07-21T13:36:35.708Z"
+  "requirements": {
+    "total": 0,
+    "items": [],
+    "summary": "",
+    "disclosure": "missing-plan-detail-id"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:35.544Z"
 }

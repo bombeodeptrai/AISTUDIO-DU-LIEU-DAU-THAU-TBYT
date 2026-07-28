@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 34,
+    "items": [
+      {
+        "id": "0ae07dc6-53b2-4aa7-9c3b-22172efcac41",
+        "lotNo": "PP2600278554",
+        "name": "PHẦN 01. KHÍ Y TẾ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2429796900,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "25a6eed7-c7de-4d75-b6f2-d44dd15fd587",
+        "lotNo": "PP2600278555",
+        "name": "PHẦN 02. KHÍ HỖ TRỢ LÀM LÀNH VẾT THƯƠNG SAU PHẪU THUẬT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7500000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ac870b8c-8b97-47c3-892b-749be5981a91",
+        "lotNo": "PP2600278556",
+        "name": "PHẦN 03. KHÍ HỖ TRỢ ĐIỀU TRỊ VẾT THƯƠNG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3000000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b5ffed2f-2d92-4825-9f76-2640947c5c5c",
+        "lotNo": "PP2600278557",
+        "name": "PHẦN 04. BƠM TIÊM CÁC LOẠI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1353365000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b630025f-6304-41fb-8607-475bb2042241",
+        "lotNo": "PP2600278558",
+        "name": "PHẦN 05. VẬT TƯ TRUYỀN MÁU, TRUYỀN DỊCH",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1680000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0a8b132a-d017-443b-933a-4161cefe3345",
+        "lotNo": "PP2600278559",
+        "name": "PHẦN 06. VẬT TƯ TIÊU HAO DÙNG CHO HỒI SỨC- CẤP CỨU",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3584061000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "69c9f496-05bb-4344-a5d2-c59a6149a688",
+        "lotNo": "PP2600278560",
+        "name": "PHẦN 07. VẬT TƯ TIÊU HAO DÙNG CHO GÂY MÊ - HỒI SỨC",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2248097000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a69013a6-1b88-46b5-a66b-d91b937fd863",
+        "lotNo": "PP2600278561",
+        "name": "PHẦN 08. KIM. ỐNG THÔNG, SONDE CÁC LOẠI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4169750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d8649a01-e11d-4a93-8db4-3d539ec8b3d1",
+        "lotNo": "PP2600278562",
+        "name": "PHẦN 09. BÔNG, BĂNG, CỒN, GẠC",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2906465400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dc2b39ee-63ce-4e4f-8c3a-4b1461b903cc",
+        "lotNo": "PP2600278563",
+        "name": "PHẦN 10. VẬT TƯ DÙNG CHO KHÁM SỨC KHỎE",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1944964660,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "848bb4aa-37c9-4fb7-ac9e-04bb42c369fc",
+        "lotNo": "PP2600278564",
+        "name": "PHẦN 11. ỐNG NGHIỆM THEO MÁY",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1197861000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ececf31a-24da-4cd0-a4c2-006537ce6826",
+        "lotNo": "PP2600278565",
+        "name": "PHẦN 12. VẬT TƯ LẤY MÁU XÉT NGHIỆM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1740775800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "12928979-06d3-4c6f-a733-5287e58d7b8b",
+        "lotNo": "PP2600278566",
+        "name": "PHẦN 13. CHỐNG DÍNH TRONG PHẪU THUẬT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1415000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "38eb345e-fad1-45ed-b4e2-39987d93e145",
+        "lotNo": "PP2600278567",
+        "name": "PHẦN 14. TAY DAO PHẪU THUẬT CÁC LOẠI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3643500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7dead1e6-ff86-458e-a0b6-2e43b78a54d1",
+        "lotNo": "PP2600278568",
+        "name": "PHẦN 15. VẬT TƯ DÙNG CHO PHẪU THUẬT ĐƯỜNG TIÊU HÓA",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 820500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "22fd140b-e50a-4ecb-a1ad-01ea57522063",
+        "lotNo": "PP2600278570",
+        "name": "PHẦN 17. GẠC, BĂNG DÍNH PHẪU THUẬT CÁC LOẠI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4172310000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d87ba14a-92b6-44ca-a014-bab20cfaf3f0",
+        "lotNo": "PP2600278569",
+        "name": "PHẦN 16. VẬT TƯ DÙNG CHO MỔ NỘI SOI, MỔ MỞ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1113000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4fb54bab-7902-48b6-80c8-fc5a1e119458",
+        "lotNo": "PP2600278571",
+        "name": "PHẦN 18. BĂNG DÍNH DÁN SAU PHẪU THUẬT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 666528000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f2d304ff-9de1-4f7e-a7b2-37235468f00e",
+        "lotNo": "PP2600278572",
+        "name": "PHẦN 19. BÔNG LÓT, BỘT BÓ, VẬT TƯ TRONG CHẤN THƯƠNG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1906088000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "255b7214-8573-4a50-ae6e-f3118bae0de6",
+        "lotNo": "PP2600278573",
+        "name": "PHẦN 20. VẬT TƯ THU THẬP VÀ TÁCH MÁU TOÀN PHẦN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4384454500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1b24bda7-9316-4733-b180-6dffc0dd5438",
+        "lotNo": "PP2600278574",
+        "name": "PHẦN 21. GĂNG TAY CÁC LOẠI CÁC CỠ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1728960000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "34f9e5bd-9499-4067-beab-c6196f1a235d",
+        "lotNo": "PP2600278575",
+        "name": "PHẦN 22. VẬT TƯ BẢO HỘ LAO ĐỘNG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2052956000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ca8ebdad-2ae7-4457-a126-3deeab869c15",
+        "lotNo": "PP2600278576",
+        "name": "PHẦN 23. TÚI ÉP CÁC LOẠI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1231740000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "07e34056-5e2b-4eb9-a155-ae4316c85ff3",
+        "lotNo": "PP2600278577",
+        "name": "PHẦN 24. VẬT TƯ KIỂM SOÁT NHIỄM KHUẨN BỆNH VIỆN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1123121650,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a69df02e-ff21-4485-9eda-35e97fe041df",
+        "lotNo": "PP2600278578",
+        "name": "PHẦN 25. VẬT TƯ ĐIỆN TIM, SIÊU ÂM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 870765000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d1fcbb66-a1ed-41cc-a83d-ca49b2787f71",
+        "lotNo": "PP2600278579",
+        "name": "PHẦN 26. VẬT TƯ CÁC PHÒNG THỦ THUẬT, PHẪU THUẬT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2060058506,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "afbe4cdb-57d7-467c-8f2b-f5683564a806",
+        "lotNo": "PP2600278580",
+        "name": "PHẦN 27. VẬT TƯ DÙNG CHO XÉT NGHIỆM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 845500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f02eaf47-a876-4973-b7d7-4f8a6f60b099",
+        "lotNo": "PP2600278581",
+        "name": "PHẦN 28. CÔNG CỤ DỤNG CỤ INOX",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1627030896,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "87c8e9fe-cabe-4ae6-b696-f970ff6aab67",
+        "lotNo": "PP2600278582",
+        "name": "PHẦN 29.CÁC LOẠI XYLANH DÙNG BƠM THUỐC CẢN QUANG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3220000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4b43028e-682a-468f-b42c-216a45c19c76",
+        "lotNo": "PP2600278583",
+        "name": "PHẦN 30. HÓA CHẤT KHỬ KHUẨN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3454657000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ea9eee3c-8ec7-41ac-9c0e-af574517d5fd",
+        "lotNo": "PP2600278584",
+        "name": "PHẦN 31. CHỈ PHẪU THUẬT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5763720000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e07f7aaf-326f-4f94-af10-3f51ca7ec839",
+        "lotNo": "PP2600278585",
+        "name": "PHẦN 32. CHỈ PHẪU THUẬT TIM MẠCH",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4854447232,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9bf0dc76-b827-4f48-a1e7-e6ccce941f43",
+        "lotNo": "PP2600278586",
+        "name": "PHẦN 33. VẬT TƯ TRONG PHẪU THUẬT NỘI SOI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1568400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e4194f83-0ac8-46da-96df-295f58672b31",
+        "lotNo": "PP2600278587",
+        "name": "PHẦN 34. VẬT TƯ TIÊU HAO THÔNG THƯỜNG KHÁC",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3139681000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "PHẦN 01. KHÍ Y TẾ PHẦN 02. KHÍ HỖ TRỢ LÀM LÀNH VẾT THƯƠNG SAU PHẪU THUẬT PHẦN 03. KHÍ HỖ TRỢ ĐIỀU TRỊ VẾT THƯƠNG PHẦN 04. BƠM TIÊM CÁC LOẠI PHẦN 05. VẬT TƯ TRUYỀN MÁU, TRUYỀN DỊCH PHẦN 06. VẬT TƯ TIÊU HAO DÙNG CHO HỒI SỨC- CẤP CỨU PHẦN 07. VẬT TƯ TIÊU HAO DÙNG CHO GÂY MÊ - HỒI SỨC PHẦN 08. KIM. ỐNG THÔNG, SONDE CÁC LOẠI PHẦN 09. BÔNG, BĂNG, CỒN, GẠC PHẦN 10. VẬT TƯ DÙNG CHO KHÁM SỨC KHỎE PHẦN 11. ỐNG NGHIỆM THEO MÁY PHẦN 12. VẬT TƯ LẤY MÁU XÉT NGHIỆM PHẦN 13. CHỐNG DÍNH TRONG PHẪU THUẬT PHẦN 14. TAY DAO PHẪU THUẬT CÁC LOẠI PHẦN 15. VẬT TƯ DÙNG CHO PHẪU THUẬT ĐƯỜNG TIÊU HÓA PHẦN 16. VẬT TƯ DÙNG CHO MỔ NỘI SOI, MỔ MỞ PHẦN 17. GẠC, BĂNG DÍNH PHẪU THUẬT CÁC LOẠI PHẦN 18. BĂNG DÍNH DÁN SAU PHẪU THUẬT PHẦN 19. BÔNG LÓT, BỘT BÓ, VẬT TƯ TRONG CHẤN THƯƠNG PHẦN 20. VẬT TƯ THU THẬP VÀ TÁCH MÁU TOÀN PHẦN PHẦN 21. GĂNG TAY CÁC LOẠI CÁC CỠ PHẦN 22. VẬT TƯ BẢO HỘ LAO ĐỘNG PHẦN 23. TÚI ÉP CÁC LOẠI PHẦN 24. VẬT TƯ KIỂM SOÁT NHIỄM KHUẨN BỆNH VIỆN PHẦN 25. VẬT TƯ ĐIỆN TIM, SIÊU ÂM PHẦN 26. VẬT TƯ CÁC PHÒNG THỦ THUẬT, PHẪU THUẬT PHẦN 27. VẬT TƯ DÙNG CHO XÉT NGHIỆM PHẦN 28. CÔNG CỤ DỤNG CỤ INOX PHẦN 29.CÁC LOẠI XYLANH DÙNG BƠM THUỐC CẢN QUANG PHẦN 30. HÓA CHẤT KHỬ KHUẨN PHẦN 31. CHỈ PHẪU THUẬT PHẦN 32. CHỈ PHẪU THUẬT TIM MẠCH PHẦN 33. VẬT TƯ TRONG PHẪU THUẬT NỘI SOI PHẦN 34. VẬT TƯ TIÊU HAO THÔNG THƯỜNG KHÁC",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:22.164Z"
+}

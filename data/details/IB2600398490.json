@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 5,
+    "items": [
+      {
+        "id": "348e14d0-6a59-4222-bc2e-ab7dade77dda",
+        "lotNo": "PP2600305115",
+        "name": "Máy theo dõi bệnh nhân",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1170000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b6b1255d-2e08-413f-b9c5-c37b05df9ee4",
+        "lotNo": "PP2600305116",
+        "name": "Bơm tiêm điện",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 235000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6cc0b910-0efd-4442-ace8-fef25093016b",
+        "lotNo": "PP2600305117",
+        "name": "Buồng đếm tinh trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 27916000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4595046f-f3b4-481f-96eb-22138444c3dc",
+        "lotNo": "PP2600305118",
+        "name": "Máy khí dung các loại",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 24350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "468c71be-476a-4dd6-875c-37d175c7d926",
+        "lotNo": "PP2600305119",
+        "name": "Máy X quang răng (Máy X quang răng cận chóp cầm tay)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 260000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Lập HSMT, đánh giá HSDT, thẩm định kết quả LCNT Mua sắm Thiết bị y tế lần 2 năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:21.953Z"
+}

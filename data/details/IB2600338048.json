@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 11,
+    "items": [
+      {
+        "id": "733433cd-6145-4633-8e34-934845d4c53b",
+        "lotNo": "PP2600263928",
+        "name": "Phần 1: Cung cấp, lắp đặt thiết bị siêu âm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8000000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "68977062-01db-4ebc-ab2f-c598c1fa188e",
+        "lotNo": "PP2600263929",
+        "name": "Phần 2: Cung cấp, lắp đặt thiết bị nội soi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 15150000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "65d9896e-eaf8-409e-8bf1-8408061f74b3",
+        "lotNo": "PP2600263930",
+        "name": "Phần 3: Cung cấp, lắp đặt thiết bị xét nghiệm và hỗ trợ xét nghiệm liệu pháp tế bào và ngân hàng mô",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 49375881000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9ad3fa55-97fa-4a27-9882-1a9c4930cc91",
+        "lotNo": "PP2600263931",
+        "name": "Phần 4: Cung cấp, lắp đặt Thiết bị đông y",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2222800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b7914942-f689-4ff9-92e1-8e3ceb090eef",
+        "lotNo": "PP2600263932",
+        "name": "Phần 5: Cung cấp, lắp đặt thiết bị xét nghiệm và hỗ trợ xét nghiệm miễn dịch trị liệu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 55594100000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2976ce2f-55a9-436a-acd7-0c2a09d8f9c8",
+        "lotNo": "PP2600263933",
+        "name": "Phần 6: Cung cấp, lắp đặt thiết bị xét nghiệm và hỗ trợ xét nghiệm kỹ thuật FISH",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12980000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "56b95b93-d12b-42df-8478-29c02b92ac37",
+        "lotNo": "PP2600263934",
+        "name": "Phần 7: Cung cấp, lắp đặt thiết bị đo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8918704000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a1fb3536-dbb8-474b-9123-bc76004dce7c",
+        "lotNo": "PP2600263935",
+        "name": "Phần 8: Cung cấp, lắp đặt thiết bị bơm tiêm điện, bơm truyền dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5578200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5f1eb893-e637-4bde-8742-c3589d16057f",
+        "lotNo": "PP2600263936",
+        "name": "Phần 9: Cung cấp, lắp đặt máy theo dõi bệnh nhân; máy thở và gây mê kèm thở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 17345000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "04d999ff-e3ed-4b05-b0dc-f05e1796ca1d",
+        "lotNo": "PP2600263937",
+        "name": "Phần 10: Cung cấp, lắp đặt hệ thống tim phổi nhân tạo, máy truyền máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13035100000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5135a171-1579-48d7-8c5b-8fcffdc37e66",
+        "lotNo": "PP2600263938",
+        "name": "Phần 11: Cung cấp, lắp đặt Thiết bị giường bệnh, bàn mổ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9300000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm trang thiết bị y tế gồm 82 khoản chia làm 11 lô: Lô 1: 1 mặt hàng Lô 2: 2 mặt hàng Lô 3: 26 mặt hàng Lô 4: 8 mặt hàng Lô 5: 21 mặt hàng Lô 6: 3 mặt hàng Lô 7: 5 mặt hàng Lô 8: 4 mặt hàng Lô 9: 5 mặt hàng Lô 10: 5 mặt hàng Lô 11: 2 mặt hàng",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:03.703Z"
+}

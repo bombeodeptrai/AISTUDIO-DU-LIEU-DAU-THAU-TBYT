@@ -10,7 +10,15 @@ const LOT_OPEN_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-sele
 const CONTRACTOR_RESULT_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-selection-v2/services/expose/contractor-input-result/get?token=public";
 const PLAN_BID_DETAIL_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-selection-v2/services/lcnt/bid-po-bidp-plan-project-view/get-bidp-plan-detail-by-id?token=public";
 const ONLINE_REOFFER_HSMT_URL = "https://muasamcong.mpi.gov.vn/o/egp-portal-contractor-selection-v2/services/lcnt_tbmcgtt_hsmt";
-const PROVINCE_CODES = ["52", "50", "54", "51", "53", "49", "48", "56", "58", "55", "57", "60", "46", "45", "44"];
+const PROVINCE_CODES = [
+  "01", "02", "04", "06", "08", "10", "11", "12", "14", "15",
+  "17", "19", "20", "22", "24", "25", "26", "27", "30", "31",
+  "33", "34", "35", "36", "37", "38", "40", "42", "44", "45",
+  "46", "48", "49", "50", "51", "52", "53", "54", "55", "56",
+  "57", "58", "60", "62", "64", "66", "67", "68", "70", "72",
+  "74", "75", "77", "79", "80", "82", "83", "84", "86", "87",
+  "89", "91", "92", "93", "94", "95", "96"
+];
 const DAYS = 3 * 365;
 const INCREMENTAL_DAYS = 14;
 const STATUS_SCHEMA_VERSION = 4;
@@ -72,7 +80,7 @@ function dateWindows(days = DAYS) {
   return windows;
 }
 
-function searchPayload(pageNumber, from, to) {
+function searchPayload(pageNumber, from, to, keyWord = "") {
   return [{
     pageSize: PAGE_SIZE,
     pageNumber,
@@ -80,9 +88,9 @@ function searchPayload(pageNumber, from, to) {
     sortType: "DESC",
     query: [{
       index: "es-contractor-selection",
-      keyWord: "",
+      keyWord,
       matchType: "exact",
-      matchFields: ["notifyNo", "bidName", "investorName"],
+      matchFields: ["bidName"],
       filters: [
         { fieldName: "type", searchType: "in", fieldValues: ["es-notify-contractor"] },
         { fieldName: "locations.provCode", searchType: "in", fieldValues: PROVINCE_CODES },
@@ -127,9 +135,10 @@ function delay(ms) {
 
 async function postJson(url, body, timeoutMs = 25_000) {
   let lastError;
-  const maxAttempts = 6;
+  const maxAttempts = 8;
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
+      await delay(200);
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -151,7 +160,7 @@ async function postJson(url, body, timeoutMs = 25_000) {
       return JSON.parse(text);
     } catch (error) {
       lastError = error;
-      if (attempt < maxAttempts) await delay(attempt * 2_000);
+      if (attempt < maxAttempts) await delay(attempt * 1_500 + Math.random() * 1_000);
     }
   }
   throw lastError;
@@ -170,23 +179,36 @@ async function mapLimited(values, concurrency, mapper) {
   return results;
 }
 
-async function fetchWindow(window, windowIndex, totalWindows) {
+async function fetchWindowKeyword(keyword, window, windowIndex, totalWindows) {
   try {
-    const first = await postJson(SEARCH_URL, searchPayload(0, window.from, window.to));
+    const first = await postJson(SEARCH_URL, searchPayload(0, window.from, window.to, keyword));
     const totalPages = Math.max(1, Number(first.page?.totalPages) || 1);
     const pageNumbers = Array.from({ length: totalPages - 1 }, (_, index) => index + 1);
     const remaining = await mapLimited(pageNumbers, 2, (pageNumber) =>
-      postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to)),
+      postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to, keyword)),
     );
-    const items = [first, ...remaining].flatMap((payload) => payload.page?.content || []);
-    process.stdout.write(
-      `Khoảng ${windowIndex + 1}/${totalWindows}: ${items.length} bản ghi, ${totalPages} trang\n`,
-    );
-    return items;
+    return [first, ...remaining].flatMap((payload) => payload.page?.content || []);
   } catch (error) {
-    process.stderr.write(`Cảnh báo khoảng ${windowIndex + 1}/${totalWindows} thất bại: ${error.message}\n`);
+    process.stderr.write(`Cảnh báo từ khóa "${keyword}" khoảng ${windowIndex + 1}/${totalWindows} thất bại: ${error.message}\n`);
     return [];
   }
+}
+
+async function fetchWindow(window, windowIndex, totalWindows) {
+  process.stdout.write(`Đang quét khoảng ${windowIndex + 1}/${totalWindows} (${window.from.split('T')[0]} đến ${window.to.split('T')[0]})...\n`);
+  const results = await mapLimited(SEARCH_KEYWORDS, 3, (keyword) =>
+    fetchWindowKeyword(keyword, window, windowIndex, totalWindows)
+  );
+  const items = results.flat();
+  const uniqueItems = new Map();
+  items.forEach((item) => {
+    const key = item.notifyId || item.id || item.notifyNo;
+    if (key) uniqueItems.set(key, item);
+  });
+  process.stdout.write(
+    `Hoàn thành khoảng ${windowIndex + 1}/${totalWindows}: tìm thấy ${uniqueItems.size} gói thầu y tế\n`,
+  );
+  return [...uniqueItems.values()];
 }
 
 async function fetchHistoricalPair(pair, pairIndex, totalPairs, from, to) {
@@ -389,11 +411,72 @@ function sourceUrl(item) {
   return `https://muasamcong.mpi.gov.vn/web/guest/contractor-selection?${params}`;
 }
 
+function detectLocationAndProvCode(item) {
+  let provCode = item.locations?.[0]?.provCode || "";
+  let location = item.locations?.map((l) => [l.districtName, l.provName].filter(Boolean).join(", ")).filter(Boolean).join("; ") || "";
+
+  const text = `${item.investorName || ""} ${item.procuringEntityName || ""} ${(item.bidName || []).join(" ")}`.toLowerCase();
+
+  const PROVINCE_MAP = [
+    { code: "52", name: "Tỉnh Gia Lai", keywords: ["gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư pưh", "an khê", "ayun pa", "đak đoa", "đăk đoa", "đak pơ", "đăk pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai"] },
+    { code: "50", name: "Tỉnh Bình Định", keywords: ["bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "an lao", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong"] },
+    { code: "54", name: "Tỉnh Đắk Lắk", keywords: ["đắk lắk", "dak lak", "daklak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo", "ea kar", "cư kuin", "ea súp", "krông ana", "krông bông", "m'đrắk"] },
+    { code: "53", name: "Tỉnh Kon Tum", keywords: ["kon tum", "đăk hà", "đăk tô", "măng đen", "ngọc hồi", "sa thầy", "tu mơ rông", "kon plông", "ia h'drai", "kon rẫy"] },
+    { code: "49", name: "Tỉnh Phú Yên", keywords: ["phú yên", "tuy hòa", "sông cầu", "đông hòa", "đồng xuân", "phú hòa", "sơn hòa", "sông hinh", "tây hòa", "tuy an"] },
+    { code: "51", name: "Tỉnh Quảng Ngãi", keywords: ["quảng ngãi", "quang ngai", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà"] },
+    { code: "48", name: "Tỉnh Quảng Nam", keywords: ["quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc", "thăng bình", "núi thành", "bắc trà my", "nam trà my", "duy xuyên", "nông sơn", "quế sơn", "tiên phước"] },
+    { code: "56", name: "Tỉnh Khánh Hòa", keywords: ["khánh hòa", "nha trang", "cam ranh", "ninh hòa", "cam lâm", "diên khánh", "khánh sơn", "khánh vĩnh", "vạn ninh"] },
+    { code: "58", name: "Tỉnh Lâm Đồng", keywords: ["lâm đồng", "đà lạt", "bảo lộc", "bảo lâm", "di linh", "đơn dương", "đức trọng", "lạc dương", "lâm hà"] },
+    { code: "55", name: "Tỉnh Đắk Nông", keywords: ["đắk nông", "dak nong", "gia nghĩa", "cư jút", "đắk glong", "đắk mil", "đắk r'lấp", "đắk song", "krông nô", "tuy đức"] },
+    { code: "57", name: "Tỉnh Ninh Thuận", keywords: ["ninh thuận", "phan rang", "tháp chàm"] },
+    { code: "60", name: "Tỉnh Bình Thuận", keywords: ["bình thuận", "phan thiết", "la gi", "bắc bình", "hàm thuận", "tánh linh", "tuy phong"] },
+    { code: "46", name: "Tỉnh Thừa Thiên Huế", keywords: ["thừa thiên huế", "huế", "hương thủy", "hương trà"] },
+    { code: "45", name: "Tỉnh Quảng Trị", keywords: ["quảng trị", "đông hà", "cam lộ", "gio linh", "triệu phong", "vĩnh linh"] },
+    { code: "44", name: "Tỉnh Quảng Bình", keywords: ["quảng bình", "đồng hới", "ba đồn", "bố trạch", "lệ thủy"] },
+  ];
+
+  const allProvincesMap = {
+    "01": "Thành phố Hà Nội", "02": "Tỉnh Hà Giang", "04": "Tỉnh Cao Bằng", "06": "Tỉnh Bắc Kạn", "08": "Tỉnh Tuyên Quang",
+    "10": "Tỉnh Lào Cai", "11": "Tỉnh Điện Biên", "12": "Tỉnh Lai Châu", "14": "Tỉnh Sơn La", "15": "Tỉnh Yên Bái",
+    "17": "Tỉnh Hòa Bình", "19": "Tỉnh Thái Nguyên", "20": "Tỉnh Lạng Sơn", "22": "Tỉnh Quảng Ninh", "24": "Tỉnh Bắc Giang",
+    "25": "Tỉnh Phú Thọ", "26": "Tỉnh Vĩnh Phúc", "27": "Tỉnh Bắc Ninh", "30": "Tỉnh Hải Dương", "31": "Thành phố Hải Phòng",
+    "33": "Tỉnh Hưng Yên", "34": "Tỉnh Thái Bình", "35": "Tỉnh Hà Nam", "36": "Tỉnh Nam Định", "37": "Tỉnh Ninh Bình",
+    "38": "Tỉnh Thanh Hóa", "40": "Tỉnh Nghệ An", "42": "Tỉnh Hà Tĩnh", "44": "Tỉnh Quảng Bình", "45": "Tỉnh Quảng Trị",
+    "46": "Tỉnh Thừa Thiên Huế", "48": "Thành phố Đà Nẵng", "49": "Tỉnh Quảng Nam", "50": "Tỉnh Bình Định", "51": "Tỉnh Quảng Ngãi",
+    "52": "Tỉnh Gia Lai", "53": "Tỉnh Kon Tum", "54": "Tỉnh Đắk Lắk", "55": "Tỉnh Đắk Nông", "56": "Tỉnh Khánh Hòa",
+    "57": "Tỉnh Ninh Thuận", "58": "Tỉnh Lâm Đồng", "60": "Tỉnh Bình Thuận", "62": "Tỉnh Long An", "64": "Tỉnh Đồng Tháp",
+    "66": "Tỉnh An Giang", "67": "Tỉnh Tiền Giang", "68": "Tỉnh Kiên Giang", "70": "Tỉnh Bình Dương", "72": "Tỉnh Tây Ninh",
+    "74": "Tỉnh Bình Phước", "75": "Tỉnh Đồng Nai", "77": "Tỉnh Bà Rịa - Vũng Tàu", "79": "Thành phố Hồ Chí Minh",
+    "80": "Tỉnh Long An", "82": "Tỉnh Tiền Giang", "83": "Tỉnh Bến Tre", "84": "Tỉnh Trà Vinh", "86": "Tỉnh Vĩnh Long",
+    "87": "Tỉnh Đồng Tháp", "89": "Tỉnh An Giang", "91": "Tỉnh Kiên Giang", "92": "Thành phố Cần Thơ", "93": "Tỉnh Hậu Giang",
+    "94": "Tỉnh Sóc Trăng", "95": "Tỉnh Bạc Liêu", "96": "Tỉnh Cà Mau"
+  };
+
+  if (!provCode) {
+    const matched = PROVINCE_MAP.find((p) => p.keywords.some((kw) => text.includes(kw)));
+    if (matched) provCode = matched.code;
+  }
+
+  if (!location) {
+    const matched = PROVINCE_MAP.find((p) => p.code === provCode || p.keywords.some((kw) => text.includes(kw)));
+    if (matched) {
+      location = matched.name;
+    } else if (provCode && allProvincesMap[provCode]) {
+      location = allProvincesMap[provCode];
+    } else {
+      location = "Khu vực Toàn quốc";
+    }
+  }
+
+  return { provCode, location };
+}
+
 function normalizeTender(item) {
   const name = (item.bidName?.join(" ") || "Gói thầu chưa có tên").replace(/\s+/g, " ").trim();
   const bidderCount = item.numBidderJoin === null || item.numBidderJoin === undefined
     ? null
     : Number(item.numBidderJoin);
+  const locInfo = detectLocationAndProvCode(item);
   return {
     id: item.notifyId || item.id || item.notifyNo,
     notifyId: item.notifyId || item.id || "",
@@ -406,7 +489,8 @@ function normalizeTender(item) {
     notifyNo: item.notifyNo || "—",
     name,
     investor: item.investorName || "Chưa công bố",
-    location: item.locations?.map((location) => location.districtName || location.provName).filter(Boolean).join(", ") || "Tỉnh Gia Lai",
+    provCode: locInfo.provCode,
+    location: locInfo.location,
     closeDate: item.bidCloseDate || "",
     publicDate: item.publicDate || "",
     price: (item.bidPrice || []).reduce((sum, value) => sum + (Number(value) || 0), 0),
@@ -796,16 +880,12 @@ function enrichTender(tender, detail) {
 
 async function main() {
   const previous = await previousData();
-  const previousDays = Number(previous.collection?.days) || 0;
-  const previousStatusSchema = Number(previous.collection?.statusSchemaVersion) || 0;
-  const fullRefresh = !previous.tenders?.length
-    || previousDays < DAYS
-    || previousStatusSchema < STATUS_SCHEMA_VERSION;
-  const scanDays = fullRefresh ? DAYS : INCREMENTAL_DAYS;
+  const fullRefresh = process.argv.includes("--full");
+  const scanDays = fullRefresh ? DAYS : (previous.tenders?.length ? INCREMENTAL_DAYS : 90);
   const windows = dateWindows(scanDays);
   process.stdout.write(fullRefresh
     ? `Quét bù toàn bộ ${DAYS} ngày lần đầu\n`
-    : `Cập nhật tăng dần ${INCREMENTAL_DAYS} ngày gần nhất\n`);
+    : `Cập nhật tăng dần ${scanDays} ngày gần nhất\n`);
   const windowConcurrency = fullRefresh ? 1 : 2;
   const provinceItems = (await mapLimited(windows, windowConcurrency, (window, index) =>
     fetchWindow(window, index, windows.length))).flat();

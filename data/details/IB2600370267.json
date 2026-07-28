@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 6,
+    "items": [
+      {
+        "id": "8571a3d2-f979-4779-b924-6f2cace4cd07",
+        "lotNo": "PP2600291219",
+        "name": "Phần số 01: Bông, băng, gạc, vật liệu cầm máu, điều trị vết thương (gồm 12 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 101892140,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "16e53e12-4ce8-44bb-aa90-733e1877ca3c",
+        "lotNo": "PP2600291220",
+        "name": "Phần số 02: Dung dịch sát khuẩn, rửa vết thương, Hóa chất xử lý nước thải, Nước cất (gồm 04 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 152060000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f03042c4-a487-4e49-ab5e-7c2714aeed86",
+        "lotNo": "PP2600291221",
+        "name": "Phần số 03: Khẩu trang, giấy đo điện tim, giấy in nhiệt, que đè lưỡi gỗ, vật tư tiêu hao khác (gồm 14 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 38981680,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7de18a34-2ebf-4009-a68f-a3628737618a",
+        "lotNo": "PP2600291222",
+        "name": "Phần số 04: Nhóm vật tư xét nghiệm (gồm 08 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 69622000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d14a5b92-4f85-45d9-836f-f4d532f906aa",
+        "lotNo": "PP2600291223",
+        "name": "Phần số 05: Que thử nước tiểu 10 thông số, sử dụng cho máy SIEMENS Clinitek Status + (gồm 01 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 27540000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6e95be94-887b-4e06-a792-d8e6563a48cb",
+        "lotNo": "PP2600291224",
+        "name": "Phần số 06: Thiết bị y tế (gồm 05 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 54620000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua vật tư y tế, vật tư xét nghiệm, sinh phẩm chẩn đoán invitro, thiết bị y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:57.320Z"
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "e4b198db-6bde-4455-90b5-25c1fd9f20f9",
+        "lotNo": "BP2600562162",
+        "name": "Gói số 2: Mua sắm gấp hóa chất xét nghiệm đông máu tự động sử dụng phương pháp đo từ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1952591040,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm gấp 02 mặt hàng hóa chất xét nghiệm đông máu tự động sử dụng phương pháp đo từ",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "7524146557243363",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Xét nghiệm Fibrin monomers",
+        "unit": "ml",
+        "quantity": 504,
+        "code": "-",
+        "brand": "-",
+        "manufacturer": "-",
+        "origin": "-",
+        "manufactureYear": "-",
+        "specification": "- Hóa chất định lượng Fibrin monomer (FM) huyết tương bằng phương pháp miễn dịch độ đục.\n- Thành phần: Gồm 2 loại thuốc thử, dung dịch đệm (thuốc thử 1) và dung dịch huyền phù vi hạt latex được phủ bởi các kháng thể đơn dòng chuột kháng đơn phân fibrin người (thuốc thử 2)\n- Kết quả không bị nhiễu bởi hemoglobin (lên đến 5 g/l), bilirubin (lên đến 200 mg/l), heparins không phân đoạn (lên đến 1 IU/ml), heparins trọng lượng phân tử thấp (lên đến 2 anti-Xa IU/ml).\n- Xuất xứ: G7\n- Tiêu chuẩn chất lượng: ISO 9001 hoặc ISO 13485 hoặc FDA hoặc CE hoặc tương đương",
+        "otherRequirement": "-",
+        "projectPlace": "Bệnh viện Từ Dũ, 284 Cống Quỳnh, P. Bến Thành, TP.HCM",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1957",
+        "chapterName": "Mẫu số 02A. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng trọn gói)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "10003223947410772",
+        "position": "2",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Xét nghiệm D-Dimer",
+        "unit": "ml",
+        "quantity": 1584,
+        "code": "-",
+        "brand": "-",
+        "manufacturer": "-",
+        "origin": "-",
+        "manufactureYear": "-",
+        "specification": "- Hóa chất định lượng D-Dimer huyết tương tĩnh mạch bằng phương pháp đo miễn dịch độ đục, kèm mã vạch được cung cấp trong hộp. Mã vạch này chứa các thông tin: số lô, số mã kit, số mã thuốc thử, hạn sử dụng và các giá trị hiệu chuẩn, giá trị tiền hiệu chuẩn này có giá trị cho tất cả bộ kit cùng lô\n- Thành phần:\n+ Thuốc thử 1: Dung dịch đệm chứa tác nhân ngăn chặn dị kháng thể, đóng gói 6 lọ x 5 ml/ hộp.\n+ Thuốc thử 2: dung dịch huyền phù vi hạt latex được phủ bởi hai kháng thể đơn dòng khác nhau kháng D-dimer người, đóng gói 6 lọ x 6 ml/ hộp.\n- Hóa chất ổn định trên máy lên được tới 15 ngày.\n- Xuất xứ: G7\n- Tiêu chuẩn chất lượng: ISO 9001 hoặc ISO 13485 hoặc FDA hoặc CE hoặc tương đương",
+        "otherRequirement": "-",
+        "projectPlace": "Bệnh viện Từ Dũ, 284 Cống Quỳnh, P. Bến Thành, TP.HCM",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1957",
+        "chapterName": "Mẫu số 02A. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng trọn gói)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1957",
+        "name": "Mẫu số 02A. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng trọn gói)",
+        "parentCode": "",
+        "orderIndex": 0
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:23.088Z"
+}

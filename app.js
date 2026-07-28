@@ -588,17 +588,54 @@ function filteredTenders() {
 
     const provinceMatches = (() => {
       if (state.province === "all") return true;
+
+      const provCodeMap = {
+        gialai: ["52"],
+        binhdinh: ["50"],
+        daklak: ["54"],
+        kontum: ["53"],
+        phuyen: ["49"],
+        quangngai: ["51"],
+        quangnam: ["48"],
+        khanhhoa: ["56"],
+        lamdong: ["58"],
+        daknong: ["55"],
+        ninhthuan_binhthuan: ["57", "60"],
+        quangtri_quangbinh_hue: ["46", "45", "44"],
+        mientrung: ["52", "50", "54", "53", "49", "51", "48", "56", "58", "55", "57", "60", "46", "45", "44"]
+      };
+
+      let targetProvCodes = provCodeMap[state.province] ? [...provCodeMap[state.province]] : [];
+      
+      // Xử lý địa giới hành chính theo thời gian: 
+      // Ví dụ: Gia Lai và Bình Định sáp nhập thành Gia Lai từ ngày 01/07/2025.
+      // Nếu lọc Gia Lai, và kết quả có ngày thông báo trước 1/7/2025 thì sẽ lấy cả Bình Định (50).
+      if (state.province === "gialai") {
+        const tenderDateStr = tender.pubDate || tender.notifyDate || tender.bidCloseDate || tender.fetchedAt;
+        if (tenderDateStr) {
+          const tenderDate = new Date(tenderDateStr);
+          const mergerDate = new Date("2025-07-01");
+          if (tenderDate < mergerDate) {
+            targetProvCodes.push("50"); // Thêm mã Bình Định vào kết quả tìm kiếm của Gia Lai
+          }
+        }
+      }
+
+      if (tender.provCode && targetProvCodes.includes(String(tender.provCode))) {
+        return true;
+      }
+
       const combined = `${tender.investor || ""} ${tender.location || ""} ${tender.name || ""}`.toLowerCase();
       
       if (state.province === "mientrung") {
         const centralKeywords = [
           "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư pưh", "chư phư", "an khê", "ayun pa", "đak đoa", "đăk đoa", "đak pơ", "đăk pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai", "diên hồng", "phú túc", "hra", "trại giam gia trung", "bệnh viện 211", "bv 211", "bệnh viện 15", "bv 15", "bệnh viện 331", "bv 331", "331", "nhi tỉnh gia lai", "mắt tỉnh gia lai",
-          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong",
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "an lao", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong",
           "đắk lắk", "dak lak", "daklak", "buôn ma thuột", "krông pắc", "cư m'gar", "buôn hồ", "ea h'leo", "ea kar", "cư kuin", "ea súp", "krông ana", "krông bông", "m'đrắk",
           "quảng nam", "tam kỳ", "hội an", "điện bàn", "đại lộc", "thăng bình", "núi thành", "bắc trà my", "nam trà my", "duy xuyên", "nông sơn", "quế sơn", "tiên phước",
           "kon tum", "đăk hà", "đăk tô", "măng đen", "ngọc hồi", "sa thầy", "tu mơ rông", "kon plông", "ia h'drai", "kon rẫy",
           "phú yên", "tuy hòa", "sông cầu", "đông hòa", "đồng xuân", "phú hòa", "sơn hòa", "sông hinh", "tây hòa", "tuy an",
-          "quảng ngãi", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà",
+          "quảng ngãi", "quang ngai", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà",
           "khánh hòa", "nha trang", "cam ranh", "ninh hòa", "cam lâm", "diên khánh", "khánh sơn", "khánh vĩnh", "vạn ninh",
           "lâm đồng", "đà lạt", "bảo lộc", "bảo lâm", "di linh", "đơn dương", "đức trọng", "lạc dương", "lâm hà",
           "đắk nông", "dak nong", "gia nghĩa", "cư jút", "đắk glong", "đắk mil", "đắk r'lấp", "đắk song", "krông nô", "tuy đức",
@@ -609,15 +646,27 @@ function filteredTenders() {
       }
       
       if (state.province === "gialai") {
-        const giaLaiKeywords = [
+        let giaLaiKeywords = [
           "gia lai", "pleiku", "đức cơ", "chư sê", "chư prông", "chư păh", "chư pưh", "chư phư", "an khê", "ayun pa", "đak đoa", "đăk đoa", "đak pơ", "đăk pơ", "mang yang", "kông chro", "kbang", "phú thiện", "krông pa", "ia pa", "ia grai", "diên hồng", "phú túc", "hra", "trại giam gia trung", "bệnh viện 211", "bv 211", "bệnh viện 15", "bv 15", "bệnh viện 331", "bv 331", "331", "nhi tỉnh gia lai", "mắt tỉnh gia lai"
         ];
+        
+        const tenderDateStr = tender.pubDate || tender.notifyDate || tender.bidCloseDate || tender.fetchedAt;
+        if (tenderDateStr) {
+          const tenderDate = new Date(tenderDateStr);
+          const mergerDate = new Date("2025-07-01");
+          if (tenderDate < mergerDate) {
+            // Bao gồm từ khóa của Bình Định cũ nếu trước 1/7/2025
+            giaLaiKeywords = giaLaiKeywords.concat([
+              "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "an lao", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong"
+            ]);
+          }
+        }
         return giaLaiKeywords.some(kw => combined.includes(kw));
       }
       
       if (state.province === "binhdinh") {
         const binhDinhKeywords = [
-          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong"
+          "bình định", "quy nhơn", "bồng sơn", "hoài nhơn", "an nhơn", "tuy phước", "phù cát", "phù mỹ", "hoài ân", "an lão", "an lao", "tây sơn", "vân canh", "vĩnh thạnh", "tam quan", "phú phong"
         ];
         return binhDinhKeywords.some(kw => combined.includes(kw));
       }
@@ -640,7 +689,7 @@ function filteredTenders() {
       }
 
       if (state.province === "quangngai") {
-        const quangNgaiKeywords = ["quảng ngãi", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà"];
+        const quangNgaiKeywords = ["quảng ngãi", "quang ngai", "đức phổ", "bình sơn", "sơn tịnh", "tư nghĩa", "mộ đức", "nghĩa hành", "trà bồng", "ba tơ", "lý sơn", "minh long", "sơn hà"];
         return quangNgaiKeywords.some(kw => combined.includes(kw));
       }
 
@@ -1679,6 +1728,28 @@ function calculateSimilarity(t1, t2, cat1, cat2) {
 
 function getTenderProvince(tender) {
   if (!tender) return "Gia Lai";
+
+  const codeNameMap = {
+    "01": "Hà Nội", "02": "Hà Giang", "04": "Cao Bằng", "06": "Bắc Kạn", "08": "Tuyên Quang",
+    "10": "Lào Cai", "11": "Điện Biên", "12": "Lai Châu", "14": "Sơn La", "15": "Yên Bái",
+    "17": "Hòa Bình", "19": "Thái Nguyên", "20": "Lạng Sơn", "22": "Quảng Ninh", "24": "Bắc Giang",
+    "25": "Phú Thọ", "26": "Vĩnh Phúc", "27": "Bắc Ninh", "30": "Hải Dương", "31": "Hải Phòng",
+    "33": "Hưng Yên", "34": "Thái Bình", "35": "Hà Nam", "36": "Nam Định", "37": "Ninh Bình",
+    "38": "Thanh Hóa", "40": "Nghệ An", "42": "Hà Tĩnh", "44": "Quảng Bình", "45": "Quảng Trị",
+    "46": "Thừa Thiên Huế", "48": "Đà Nẵng", "49": "Quảng Nam", "50": "Bình Định", "51": "Quảng Ngãi",
+    "52": "Gia Lai", "53": "Kon Tum", "54": "Đắk Lắk", "55": "Đắk Nông", "56": "Khánh Hòa",
+    "57": "Ninh Thuận", "58": "Lâm Đồng", "60": "Bình Thuận", "62": "Long An", "64": "Đồng Tháp",
+    "66": "An Giang", "67": "Tiền Giang", "68": "Kiên Giang", "70": "Bình Dương", "72": "Tây Ninh",
+    "74": "Bình Phước", "75": "Đồng Nai", "77": "Bà Rịa - Vũng Tàu", "79": "TP. Hồ Chí Minh",
+    "80": "Long An", "82": "Tiền Giang", "83": "Bến Tre", "84": "Trà Vinh", "86": "Vĩnh Long",
+    "87": "Đồng Tháp", "89": "An Giang", "91": "Kiên Giang", "92": "Cần Thơ", "93": "Hậu Giang",
+    "94": "Sóc Trăng", "95": "Bạc Liêu", "96": "Cà Mau"
+  };
+
+  if (tender.provCode && codeNameMap[tender.provCode]) {
+    return codeNameMap[tender.provCode];
+  }
+
   const text = `${tender.location || ""} ${tender.investor || ""} ${tender.name || ""}`.toLowerCase();
 
   const binhDinhKeywords = [

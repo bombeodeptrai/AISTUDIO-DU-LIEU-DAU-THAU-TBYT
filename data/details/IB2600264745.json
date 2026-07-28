@@ -1,5 +1,7 @@
 {
+  "schemaVersion": 3,
   "total": 2,
+  "bidders": [],
   "items": [
     {
       "id": "059dea4a-ac07-40b4-9669-0d6476fa597e",
@@ -40,5 +42,19 @@
       "resultPublishedDate": "2026-07-07T10:32:33"
     }
   ],
-  "fetchedAt": "2026-07-21T13:36:36.983Z"
+  "requirements": {
+    "total": 0,
+    "items": [],
+    "summary": "",
+    "disclosure": "missing-plan-detail-id"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:35.404Z"
 }

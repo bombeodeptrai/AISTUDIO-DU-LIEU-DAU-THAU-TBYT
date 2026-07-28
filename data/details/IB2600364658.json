@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "86a46c08-7d12-4eae-a482-3fee022cbd05",
+        "lotNo": "BP2600400806",
+        "name": "Mua sắm máy siêu âm tổng quát 5D",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1250000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm máy siêu âm tổng quát 5D, thuộc dự toán mua sắm Sở Y tế giao cho Trung tâm Giám định Y khoa năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:12.759Z"
+}

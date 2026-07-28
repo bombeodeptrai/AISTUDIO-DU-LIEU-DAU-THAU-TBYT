@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "77505159-6d9a-43f0-8f0d-2fdcdd9df5a3",
+      "contractorCode": "vn0102738205",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ VÀ CÔNG NGHIỆP AN PHÁT",
+      "status": "participating",
+      "lotNo": "BP2600445854",
+      "lotName": "Gói thầu số 5: Cung cấp thiết bị bơm thoát nước, máy nén khí, hệ thống họp trực tuyến, máy kiểm tra máy thở và bếp từ công nghiệp",
+      "bidPrice": 12782658750,
+      "finalPrice": 12782658750,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-24T14:47:45.687",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "ebe3ff2b-e1e8-4253-9286-a6eb25b8ada3",
+        "lotNo": "BP2600445854",
+        "name": "Gói thầu số 5: Cung cấp thiết bị bơm thoát nước, máy nén khí, hệ thống họp trực tuyến, máy kiểm tra máy thở và bếp từ công nghiệp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8382670000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm các thiết bị bơm thoát nước, máy nén khí, hệ thống họp trực tuyến, máy kiểm tra máy thở và bếp từ công nghiệp",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:29.674Z"
+}

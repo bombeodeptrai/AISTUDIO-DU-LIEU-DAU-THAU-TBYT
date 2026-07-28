@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 5,
+    "items": [
+      {
+        "id": "d4977448-45e0-4fb3-8295-33a4fc1253cc",
+        "lotNo": "PP2600283124",
+        "name": "Vật tư phụ kiện thay thế cho máy phaco Faros Hãng sản xuất Oertli",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 821800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1ba0ffed-29dd-46c5-bb29-866b4f3db095",
+        "lotNo": "PP2600283125",
+        "name": "Vật tư phụ kiện thay thế cho máy cắt dịch kính Constellation Hãng sản xuất Alcon",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 122474000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2f6a389e-cf34-407e-82b0-be8f8000f8f7",
+        "lotNo": "PP2600283126",
+        "name": "Vật tư phụ kiện thay thế cho máy phaco Centurion Vision System Hãng sản xuất Alcon",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 566806504,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ee49ff84-1e7c-4700-bf18-43820a509b32",
+        "lotNo": "PP2600283127",
+        "name": "Vật tư phụ kiện thay thế cho máy đông máu ACL TOP550 Hãng sản xuất: Instrumentation Laboratory Company",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 258416400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8eb5dede-ef57-4ccb-af7d-df461f1f33c0",
+        "lotNo": "PP2600283128",
+        "name": "Vật tư phụ kiện thay thế cho tủ an toàn sinh học cấp II Hãng sản xuất: ESCO",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 66744000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Lựa chọn đơn vị cung cấp linh kiện, phụ kiện thay thế cho các thiết bị y tế năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:48.546Z"
+}

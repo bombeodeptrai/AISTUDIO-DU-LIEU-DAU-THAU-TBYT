@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 11,
+    "items": [
+      {
+        "id": "1a38129c-ec1a-42d7-981f-4430aadd6132",
+        "lotNo": "PP2600266516",
+        "name": "Phần 1: Cung cấp, lắp đặt thiết bị xét nghiệm mô bệnh học",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1932950000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c5d664f8-0296-49bf-b1ea-11447120ca48",
+        "lotNo": "PP2600266517",
+        "name": "Phần 2: Cung cấp, lắp đặt thiết bị khoa xét nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2161000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "54734d55-527e-49a1-b831-167e48d28f71",
+        "lotNo": "PP2600266518",
+        "name": "Phần 3: Cung cấp, lắp đặt thiết bị khoa khám bệnh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 605000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5e2d9a7c-0491-4a16-b4a3-5ad7961ecb87",
+        "lotNo": "PP2600266519",
+        "name": "Phần 4: Cung cấp, lắp đặt thiết bị khoa phụ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 933200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "53714d6f-2ea8-48d5-aee5-82861b65ae13",
+        "lotNo": "PP2600266520",
+        "name": "Phần 5: Cung cấp, lắp đặt thiết bị khoa nhi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 338899000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "696dd87a-1b5a-4649-853d-bb90dee7f3b7",
+        "lotNo": "PP2600266521",
+        "name": "Phần 6: Cung cấp, lắp đặt thiết bị khoa gây mê hồi sức và kiểm soát nhiễm khuẩn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2025700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2aa81cd0-27f8-442f-ba4c-b1ceeb65dc59",
+        "lotNo": "PP2600266522",
+        "name": "Phần 7: Cung cấp, lắp đặt máy cắt Amidan và nạo VA bằng Coblator",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 690790000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "733a12d4-f6fc-4436-bef4-1a527e26b3a0",
+        "lotNo": "PP2600266523",
+        "name": "Phần 8: Cung cấp, lắp đặt máy lọc máu HDF Online",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 950000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "68e525d9-fd80-49ab-9f4d-77683e7b5870",
+        "lotNo": "PP2600266524",
+        "name": "Phần 9: Cung cấp, lắp đặt máy chiếu tia UVB",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1299000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1d5d4a49-866e-4217-a607-6abf89b1e581",
+        "lotNo": "PP2600266525",
+        "name": "Phần 10: Cung cấp, lắp đặt máy laser nội mạch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 300000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5f8f26d1-e263-4d0a-abba-bb48e3929087",
+        "lotNo": "PP2600266526",
+        "name": "Phần 11: Cung cấp, lắp đặt máy phá rung tim",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 370000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung cấp, vận chuyển, lắp đặt thiết bị y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:36.664Z"
+}

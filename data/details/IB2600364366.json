@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "b6aa1ea9-118e-461d-add6-b1a831ade6cf",
+      "contractorCode": "vn0309381128",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ HOÀNG PHÚC",
+      "status": "participating",
+      "lotNo": "BP2600299941",
+      "lotName": "Mua sắm máy, thiết bị y tế sử dụng cho nhu cầu khám chữa bệnh tại trung tâm y tế khu vực Tân Phú",
+      "bidPrice": 256262000,
+      "finalPrice": 256262000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-25T15:04:56.998",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "ebf08372-ade3-40e5-a3b8-e385a7f4143e",
+        "lotNo": "BP2600299941",
+        "name": "Mua sắm máy, thiết bị y tế sử dụng cho nhu cầu khám chữa bệnh tại trung tâm y tế khu vực Tân Phú",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 329514000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm máy, thiết bị y tế sử dụng cho nhu cầu khám chữa bệnh tại trung tâm y tế khu vực Tân Phú",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:28.095Z"
+}

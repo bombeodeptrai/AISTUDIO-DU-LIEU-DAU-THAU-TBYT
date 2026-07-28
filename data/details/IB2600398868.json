@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "7e9eae6c-fa47-4b91-917a-83e958002a06",
+        "lotNo": "BP2600569322",
+        "name": "Mua sắm linh kiện điện tử, vật tư tiêu hao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3606942968,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm 243 danh mục linh kiện điện tử, 23 danh mục vật tư tiêu hao",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:17.639Z"
+}

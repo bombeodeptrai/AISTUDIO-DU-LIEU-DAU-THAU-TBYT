@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "d061bdda-fe0b-407f-88f4-d0a9e4eac102",
+        "lotNo": "BP2600540532",
+        "name": "Mua vật tư phẫu thuật mắt",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1229350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua vật tư phẫu thuật mắt",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:44.597Z"
+}

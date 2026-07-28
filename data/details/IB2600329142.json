@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "4b63ce28-d4e2-4ef7-8d41-72bff25a92cc",
+        "lotNo": "BP2600443984",
+        "name": "Cung cấp vật tư, hóa chất xét nghiệm Hóa sinh máu trên hệ thống máy hóa sinh tự động (có kèm khối điện giải) năm 2026-2027",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 25373241992,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm 93 danh mục vật tư, hóa chất xét nghiệm Hóa sinh máu trên hệ thống máy hóa sinh tự động (có kèm khối điện giải) năm 2026-2027",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:18.432Z"
+}

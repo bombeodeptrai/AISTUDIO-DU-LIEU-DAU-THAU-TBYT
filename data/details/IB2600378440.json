@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 49,
+    "items": [
+      {
+        "id": "471202e6-5c3e-4bea-b320-39fe47540ea6",
+        "lotNo": "PP2600260117",
+        "name": "Lô 1: Bộ đinh nội tuỷ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1560000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ec886351-3310-4e98-ba01-e1f3b90d4fdb",
+        "lotNo": "PP2600260118",
+        "name": "Lô 2: Bộ nẹp khoá đầu dưới xương quay",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 307500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0f0ebbcb-ee57-4e38-b1aa-63814d9f2351",
+        "lotNo": "PP2600260119",
+        "name": "Lô 3: Bộ nẹp khoá đầu trên xương cánh tay",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 487200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "30476345-8ff9-4e49-9ccf-773ff535b9c8",
+        "lotNo": "PP2600260120",
+        "name": "Lô 4: Bộ nẹp khoá đầu dưới xương cánh tay",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 97460000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d555cdea-47a3-426b-8a9f-fc0bd7d009e9",
+        "lotNo": "PP2600260121",
+        "name": "Lô 5: Bộ nẹp khoá đầu trên xương chày mặt ngoài",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 642500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a1dd0e0b-e7a4-4a3d-b2e4-1df4258b51c7",
+        "lotNo": "PP2600260122",
+        "name": "Lô 6: Bộ nẹp khoá đầu trên xương chày mặt ngoài",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 172920000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "10337439-8524-42cf-a303-d7e40b2a8002",
+        "lotNo": "PP2600260123",
+        "name": "Lô 7: Bộ nẹp khoá đầu trên xương chày mặt trong",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 294000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "16e5ae93-2d75-4914-9ea2-acb81214665c",
+        "lotNo": "PP2600260124",
+        "name": "Lô 8: Bộ nẹp khoá đầu dưới xương chày",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 294350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e4377d32-a9b8-4c7c-ac7b-7dfbab76dee0",
+        "lotNo": "PP2600260125",
+        "name": "Lô 9: Bộ nẹp khoá đầu trên xương đùi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 962500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "02c49df8-699d-49e5-82af-e3984d4fb4a3",
+        "lotNo": "PP2600260126",
+        "name": "Lô 10: Bộ nẹp khoá đầu trên xương đùi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1075500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "156a33ea-00c3-4925-9fcc-8a5cad6cddfb",
+        "lotNo": "PP2600260127",
+        "name": "Lô 11: Bộ nẹp khoá đầu dưới xương đùi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 307250000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "79724ec3-404a-407b-88c6-02ab5d763c57",
+        "lotNo": "PP2600260128",
+        "name": "Lô 12: Bộ nẹp lòng máng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 37600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "74c01fc9-c99d-414c-80d0-fece4c77cc4a",
+        "lotNo": "PP2600260129",
+        "name": "Lô 13: Bộ nẹp khoá xương gót",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 132120000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dc6960c6-0a3a-45f4-bb8a-e627844262e9",
+        "lotNo": "PP2600260130",
+        "name": "Lô 14: Bộ nẹp khoá xương đòn chữ S",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 417700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "54be1b07-62bd-4d25-aa26-b929ded80614",
+        "lotNo": "PP2600260131",
+        "name": "Lô 15: Bộ nẹp khoá đầu ngoài xương đòn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 151500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1759a624-dfbd-408c-a214-98cc4fc10fd2",
+        "lotNo": "PP2600260132",
+        "name": "Lô 16: Bộ nẹp khoá mặt bên đầu dưới xương mác",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 427500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f11ba140-8fee-44ec-9695-b3088b599915",
+        "lotNo": "PP2600260133",
+        "name": "Lô 17: Bộ nẹp khoá bản rộng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 368750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a9f22905-4f6b-459b-870b-b5987ecb6b72",
+        "lotNo": "PP2600260134",
+        "name": "Lô 18: Bộ nẹp khoá bản hẹp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 395000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4ffe911d-c60e-4f22-9dfc-1d89e53dc3ca",
+        "lotNo": "PP2600260135",
+        "name": "Lô 19: Bộ nẹp khoá bản nhỏ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 257000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3246bbd8-516c-4b4b-bb4d-6b3724206ff1",
+        "lotNo": "PP2600260136",
+        "name": "Lô 20: Bộ nẹp khoá DHS",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 546160000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a0deeae2-0e3f-404f-b0c9-3231436246d4",
+        "lotNo": "PP2600260137",
+        "name": "Lô 21: Bộ nẹp bản hẹp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 91200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6442a448-b29c-4f21-8c7c-a3f12d0fcbfd",
+        "lotNo": "PP2600260138",
+        "name": "Lô 22: Bộ nẹp bản rộng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 230000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4c89f8e2-cf7f-45cf-a7ef-1bbee62c001c",
+        "lotNo": "PP2600260139",
+        "name": "Lô 23: Bộ nẹp bản nhỏ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 174600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e379a127-177f-4a08-a1cb-e93ef811df5b",
+        "lotNo": "PP2600260140",
+        "name": "Lô 24: Bộ nẹp chữ T nhỏ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 191000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "16e2c244-ab42-4a55-8bf1-ed3207c3a69f",
+        "lotNo": "PP2600260141",
+        "name": "Lô 25: Bộ nẹp khoá mắt xích",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 283360000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fb214ec2-1516-4cfe-9246-28c1c428392a",
+        "lotNo": "PP2600260142",
+        "name": "Lô 26: Bộ nẹp mắt xích",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 134400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c1f3646e-f3e5-4dbe-94b9-b03b1d59b5fc",
+        "lotNo": "PP2600260143",
+        "name": "Lô 27: Nội soi viêm hoạt mạc, cắt sụn chêm, dính khớp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1040000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0fecd163-b51e-4533-b544-c90afe86ca7c",
+        "lotNo": "PP2600260144",
+        "name": "Lô 28: Bộ nội soi tái tạo dây chằng khớp gối",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3220000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c940d2ee-10d3-49e9-aee5-b2bc62147b3f",
+        "lotNo": "PP2600260145",
+        "name": "Lô 29: Bộ nội soi khâu chóp xoay khớp vai",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2440000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e0b1a54f-6d83-4a14-987c-39ceaa8b6be2",
+        "lotNo": "PP2600260146",
+        "name": "Lô 30: Bộ nội soi khâu sụn viền khớp vai",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 408000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5c192f27-0c97-4b12-991b-f4594713071b",
+        "lotNo": "PP2600260147",
+        "name": "Lô 31: Khớp gối toàn phần có xi măng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2700000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b183345e-7a3a-4208-9d5f-462b6b76a427",
+        "lotNo": "PP2600260148",
+        "name": "Lô 32: Khớp háng bán phần có xi măng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 350000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "87da091f-f590-47fe-bc77-4be931bcd1a4",
+        "lotNo": "PP2600260149",
+        "name": "Lô 33: Bộ khớp háng bán phần không xi măng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6150000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bb1ca864-8cc4-4fa0-8846-7da4bd4afc1a",
+        "lotNo": "PP2600260150",
+        "name": "Lô 34: Bộ khớp háng toàn phần không xi măng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6100000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3a88d17f-c107-4c34-81b6-04ecc3569fe8",
+        "lotNo": "PP2600260151",
+        "name": "Lô 35: Bộ khớp háng toàn phần không xi măng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2250000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "beb160f5-761d-4190-8f21-4f2babd5642a",
+        "lotNo": "PP2600260152",
+        "name": "Lô 36: Đinh kít ne đường kính các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 87500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "523a7da0-f900-428a-be81-ff326a3487de",
+        "lotNo": "PP2600260153",
+        "name": "Lô 37: Đinh rush đường kính các loại",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4a351843-5b1e-4712-aea0-2f4750238e91",
+        "lotNo": "PP2600260154",
+        "name": "Lô 38: Đinh Metaizeau các loại các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 84600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d2364ee5-0b24-4071-bae3-3ddd697c12ad",
+        "lotNo": "PP2600260155",
+        "name": "Lô 39: Vít xốp đường kính 4.0mm các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 41500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6ebab1fa-2471-4f2d-8314-e625aa8f556b",
+        "lotNo": "PP2600260156",
+        "name": "Lô 40: Vít xốp đường kính 6.5mm các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 190000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "011f48fa-ff53-4d63-b1ed-211c4d1da0bf",
+        "lotNo": "PP2600260157",
+        "name": "Lô 41: Vít xốp rỗng nòng 7.0 các loại các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 91000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b50b6bc9-10d9-4be7-8663-113359a00071",
+        "lotNo": "PP2600260158",
+        "name": "Lô 42: Vít xốp rỗng nòng 4.5 các loại các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 35000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8c16726b-e2bc-4f00-9c76-4dd1c472c297",
+        "lotNo": "PP2600260159",
+        "name": "Lô 43: Bộ khung cố định ngoại vi thân xương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 95025000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b1f4ca32-e58a-4ff3-9ea4-5e77b06bde85",
+        "lotNo": "PP2600260160",
+        "name": "Lô 44: Bộ khung cố định ngoài đầu xương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 109000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9cb92a03-856d-4b4f-b27f-ce6e3559140d",
+        "lotNo": "PP2600260161",
+        "name": "Lô 45: Chỉ thép liền kim số 5",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 67000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "82c86f05-d558-433f-9aa1-99f8e46c063e",
+        "lotNo": "PP2600260162",
+        "name": "Lô 46: Mũi khoan xương các số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 75075000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "343b638f-fc80-4c68-9ab3-7033ccc96fb3",
+        "lotNo": "PP2600260163",
+        "name": "Lô 47: Băng bó bột 10cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 119250000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dfcfb87a-1d20-46a9-9119-7acf25a2a4ef",
+        "lotNo": "PP2600260164",
+        "name": "Lô 48: Bộ khăn nội soi khớp gối không thấm nước dùng 1 lần",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 106344000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f12f948b-0cbd-45b8-b586-43bfb818b577",
+        "lotNo": "PP2600260165",
+        "name": "Lô 49: Chỉ khâu siêu bền",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 216000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư, thiết bị y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:25.989Z"
+}

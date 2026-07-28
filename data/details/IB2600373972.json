@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "5e6b244d-d0f3-4fd4-a12c-e54e87e3e220",
+      "contractorCode": "vn0312175252",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN THIẾT BỊ KHOA HỌC KỸ THUẬT HOÀNG PHÁT",
+      "status": "participating",
+      "lotNo": "PP2600290250",
+      "lotName": "Mua sắm công cụ dụng cụ, vật tư tiêu hao thông thường phục vụ quan trắc và phân tích môi trường",
+      "bidPrice": 2503571000,
+      "finalPrice": 2503571000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:16:49.958",
+      "models": []
+    },
+    {
+      "id": "54d56c67-2792-45ca-8da3-aae02a18d290",
+      "contractorCode": "vn0101403090",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN VẬT TƯ KỸ THUẬT ĐÔNG DƯƠNG",
+      "status": "participating",
+      "lotNo": "PP2600290250",
+      "lotName": "Mua sắm công cụ dụng cụ, vật tư tiêu hao thông thường phục vụ quan trắc và phân tích môi trường",
+      "bidPrice": 3958866000,
+      "finalPrice": 2295000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:16:50.481",
+      "models": []
+    },
+    {
+      "id": "4e7a2dee-4df3-4643-8b69-5e1d3ae690dc",
+      "contractorCode": "vn0305812567",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH CÔNG NGHỆ MÔI TRƯỜNG TRẦN NGUYỄN",
+      "status": "participating",
+      "lotNo": "PP2600290250",
+      "lotName": "Mua sắm công cụ dụng cụ, vật tư tiêu hao thông thường phục vụ quan trắc và phân tích môi trường",
+      "bidPrice": 5905678300,
+      "finalPrice": 2506552600,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:16:50.285",
+      "models": []
+    },
+    {
+      "id": "70bf8a33-d744-4a56-959f-3d4e392a0b47",
+      "contractorCode": "vn0305812567",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH CÔNG NGHỆ MÔI TRƯỜNG TRẦN NGUYỄN",
+      "status": "participating",
+      "lotNo": "PP2600290251",
+      "lotName": "Mua sắm Vật tư, phụ kiện và linh kiện chuyên dụng phục vụ thiết bị phân tích môi trường",
+      "bidPrice": 5905678300,
+      "finalPrice": 1624211600,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:16:50.285",
+      "models": []
+    },
+    {
+      "id": "3f2cffc8-9938-403a-ac2e-019570119cac",
+      "contractorCode": "vn0101403090",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN VẬT TƯ KỸ THUẬT ĐÔNG DƯƠNG",
+      "status": "participating",
+      "lotNo": "PP2600290251",
+      "lotName": "Mua sắm Vật tư, phụ kiện và linh kiện chuyên dụng phục vụ thiết bị phân tích môi trường",
+      "bidPrice": 3958866000,
+      "finalPrice": 1663866000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:16:50.481",
+      "models": []
+    },
+    {
+      "id": "ca90c712-35b0-4f24-84cf-63e0ccdc0321",
+      "contractorCode": "vn0305812567",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH CÔNG NGHỆ MÔI TRƯỜNG TRẦN NGUYỄN",
+      "status": "participating",
+      "lotNo": "PP2600290252",
+      "lotName": "Mua sắm Vật tư, linh kiện và phụ kiện chuyên dụng cho hệ thống quan trắc môi trường tự động",
+      "bidPrice": 5905678300,
+      "finalPrice": 1774914100,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:16:50.285",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "d3a19f8e-fa5d-4606-a27f-cdb93b327e60",
+        "lotNo": "PP2600290250",
+        "name": "Mua sắm công cụ dụng cụ, vật tư tiêu hao thông thường phục vụ quan trắc và phân tích môi trường",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2555965800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "de44c80a-b233-4616-9242-aa59d0db0629",
+        "lotNo": "PP2600290251",
+        "name": "Mua sắm Vật tư, phụ kiện và linh kiện chuyên dụng phục vụ thiết bị phân tích môi trường",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1715682600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f9f79e7c-cd9a-40b3-a510-a508fb8b544d",
+        "lotNo": "PP2600290252",
+        "name": "Mua sắm Vật tư, linh kiện và phụ kiện chuyên dụng cho hệ thống quan trắc môi trường tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1801863960,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm công cụ dụng cụ, vật tư tiêu hao phục vụ công tác quan trắc, phân tích mẫu và vận hành trạm quan trắc tự động đợt 1 của Trung tâm năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:10.138Z"
+}

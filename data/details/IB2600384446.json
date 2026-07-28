@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 9,
+    "items": [
+      {
+        "id": "b89fcc19-9d1b-4244-b37a-251095c3c74f",
+        "lotNo": "PP2600280101",
+        "name": "Phần 1: Hóa chất máy miễn dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6399377738,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b4e4770e-d3be-4030-892f-2a5889f13217",
+        "lotNo": "PP2600280102",
+        "name": "Phần 2: Hóa chất xét nghiệm huyết học",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2628714896,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5b3927f5-26ba-43fb-8421-56b4cc95645b",
+        "lotNo": "PP2600280103",
+        "name": "Phần 3: Hóa chất xét nghiệm sinh hóa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12192979610,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8443440d-cff7-4a0d-a8f6-26e863b7931b",
+        "lotNo": "PP2600280104",
+        "name": "Phần 4: Vật tư cho máy xét nghiệm sinh hóa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 220657800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dc275cca-fba0-40cd-a8ef-4db188d03dfa",
+        "lotNo": "PP2600280105",
+        "name": "Phần 5: API",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 111213250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b0c859d2-9b78-45e5-a5d1-add1a7ec5e66",
+        "lotNo": "PP2600280106",
+        "name": "Phần 6: Thuốc thử Kovac",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 782000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9f4c7de7-5801-4415-aee6-e33b0e5fcdaa",
+        "lotNo": "PP2600280107",
+        "name": "Phần 7: NIN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1556000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "81ddbb49-d978-44fe-8122-dda9c2a8dbd0",
+        "lotNo": "PP2600280108",
+        "name": "Phần 8: Các loại Anti",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 97795000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6f67905f-33b0-47c4-869a-fcb2da542721",
+        "lotNo": "PP2600280109",
+        "name": "Phần 9 : Hóa chất định danh vi sinh vật",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 37563750,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung cấp hóa chất xét nghiệm",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:41.383Z"
+}

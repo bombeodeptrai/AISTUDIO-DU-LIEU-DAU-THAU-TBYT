@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "118f53d7-7cf8-4a60-8c80-b016cb49ccfa",
+        "lotNo": "BP2600571354",
+        "name": "Mua vật tư y tế cho máy lọc máu (bao gồm 03 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 18315800,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua vật tư y tế cho máy lọc máu (bao gồm 03 mặt hàng)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "8404491481798006",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Bộ kit lọc máu cho nhi",
+        "unit": "Kít",
+        "quantity": 2,
+        "code": "_",
+        "brand": "_",
+        "manufacturer": "Fresenius Medical care",
+        "origin": "Đức",
+        "manufactureYear": "_",
+        "specification": "Bộ kit trong lọc máu liên tục gồm:\n- 01 quả siêu lọc: chất liệu màng polysulfone, diện tích màng 0,7m2.\n- 01 bộ cassette\n- Thể tích mồi (quả lọc) máu/dịch: 52ml/135ml\n- Thể tích máu cần mồi (toàn bộ kit): 135ml\n- Tiệt trùng bằng hơi nước\n- Tốc độ máu khuyến cáo: 50-200ml/phút\n- Tốc độ dòng dịch (thải) tối đa: 20% của tốc độ máu.\n- Áp lực xuyên màng tối đa: 600mmHg\n- Thời gian sử dụng tối đa: 72 giờ",
+        "otherRequirement": "Đơn vị tham gia chào giá trực tuyến phải đáp ứng đúng thông số kỹ thuật yêu cầu của chủ đầu tư. Nếu tương đương hoặc cao hơn phải có văn bản xác nhận của cơ quan có thẩm quyền; khi được đề xuất trúng thầu, nhà thầu phải cung cấp hồ sơ tài liệu kỹ thuật có xác nhận ( đóng dấu) từ đơn vị sản xuất hoặc đơn vị chịu trách nhiệm công bố hoặc đơn vị được uỷ quyền phân phối cho chủ đầu tư để đối chiếu; nếu không đáp ứng thì không được chọn trúng thầu và sẽ bị công khai tên trên Hệ thống mạng đấu thầu quốc gia.",
+        "projectPlace": "Bệnh viện Sản - Nhi Trà Vinh (Địa chỉ: Khóm Bến Có, Phường Nguyệt Hoá, tỉnh Vĩnh Long)",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "11012264859731624",
+        "position": "2",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Túi thải",
+        "unit": "Cái",
+        "quantity": 2,
+        "code": "_",
+        "brand": "_",
+        "manufacturer": "Kabomed for Medical Industries Company",
+        "origin": "Ai Cập",
+        "manufactureYear": "_",
+        "specification": "Túi dịch thải, có đầu kết nối male lure-lock",
+        "otherRequirement": "Đơn vị tham gia chào giá trực tuyến phải đáp ứng đúng thông số kỹ thuật yêu cầu của chủ đầu tư. Nếu tương đương hoặc cao hơn phải có văn bản xác nhận của cơ quan có thẩm quyền; khi được đề xuất trúng thầu, nhà thầu phải cung cấp hồ sơ tài liệu kỹ thuật có xác nhận ( đóng dấu) từ đơn vị sản xuất hoặc đơn vị chịu trách nhiệm công bố hoặc đơn vị được uỷ quyền phân phối cho chủ đầu tư để đối chiếu; nếu không đáp ứng thì không được chọn trúng thầu và sẽ bị công khai tên trên Hệ thống mạng đấu thầu quốc gia.",
+        "projectPlace": "Bệnh viện Sản - Nhi Trà Vinh (Địa chỉ: Khóm Bến Có, Phường Nguyệt Hoá, tỉnh Vĩnh Long)",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "11658777928795118",
+        "position": "3",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Catheter lọc máu hai nòng 8F",
+        "unit": "Cái",
+        "quantity": 2,
+        "code": "_",
+        "brand": "_",
+        "manufacturer": "Joline GmbH & Co. KG",
+        "origin": "Đức",
+        "manufactureYear": "_",
+        "specification": "- Nguyên liệu Tecoflex, dây dẫn nitinol phủ PTFE\n- Thiết kế đầu catheter dạng bậc thang, không lỗ bên giảm nguy cơ máu đông, giảm tắc ngẽn\n- Tốc độ dòng truyền ≥ 200ml/ph ở áp lực 250mmHg\n- 01 catheter 8F chiều dài 100mm/125mm/150mm  ± 5%, 1 cây nong 8F, 1 dây dẫn đường dạng J (0.8mm x 500mm ± 5%) nitinol phủ PTFE, 1 kim dẫn đường 18G, 2 nút chặn kim luồn.\n- Tiệt trùng.",
+        "otherRequirement": "Đơn vị tham gia chào giá trực tuyến phải đáp ứng đúng thông số kỹ thuật yêu cầu của chủ đầu tư. Nếu tương đương hoặc cao hơn phải có văn bản xác nhận của cơ quan có thẩm quyền; khi được đề xuất trúng thầu, nhà thầu phải cung cấp hồ sơ tài liệu kỹ thuật có xác nhận ( đóng dấu) từ đơn vị sản xuất hoặc đơn vị chịu trách nhiệm công bố hoặc đơn vị được uỷ quyền phân phối cho chủ đầu tư để đối chiếu; nếu không đáp ứng thì không được chọn trúng thầu và sẽ bị công khai tên trên Hệ thống mạng đấu thầu quốc gia.",
+        "projectPlace": "Bệnh viện Sản - Nhi Trà Vinh (Địa chỉ: Khóm Bến Có, Phường Nguyệt Hoá, tỉnh Vĩnh Long)",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1958",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:16.451Z"
+}

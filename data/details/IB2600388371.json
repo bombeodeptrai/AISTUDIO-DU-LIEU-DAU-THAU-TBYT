@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 5,
+    "items": [
+      {
+        "id": "71e70109-5d75-4822-bb89-6a92f9490d2c",
+        "lotNo": "PP2600251476",
+        "name": "Bơm kim tiêm nhựa tự khoá loại 0,5ml kèm kim 25G1\"",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 477700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "064c3079-6ff6-447b-a3a2-f798e675aa57",
+        "lotNo": "PP2600251477",
+        "name": "Bơm kim tiêm nhựa dùng 1 lần loại 5ml kèm kim 22G1^1/2\"",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0d052177-e5dc-428b-be3a-4165ab9d60ea",
+        "lotNo": "PP2600251478",
+        "name": "Thiết bị theo dõi nhiệt độ tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 122310000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6db86270-0d62-434e-942c-07374e11fff7",
+        "lotNo": "PP2600251479",
+        "name": "Chỉ thị đông băng điện tử",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 183600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ea145e93-cf58-4365-b8db-d7da30767d2a",
+        "lotNo": "PP2600251480",
+        "name": "Miếng xốp chuyên dụng phích vắc xin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 97956000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Gói thầu gồm 05 phần, mỗi phần là một mặt hàng về vật tư, thiết bị y tế trong Tiêm chủng mở rộng",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:49.507Z"
+}

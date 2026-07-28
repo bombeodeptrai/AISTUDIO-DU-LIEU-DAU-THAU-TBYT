@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "a9b4e1c0-c928-4795-8cfa-29701a2c3c85",
+      "contractorCode": "vn0101877171",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH KỸ THUẬT THANH HÀ",
+      "status": "participating",
+      "lotNo": "BP2600521336",
+      "lotName": "Mua Vật tư, hoá chất sử dụng cho máy xét nghiệm đông máu (Sử dụng cho máy xét nghiệm đông máu Model: ACL TOP 350 CTS; Hãng sản xuất/Nước sản xuất: Instrumentation Laboratory/Mỹ)",
+      "bidPrice": 333057270,
+      "finalPrice": 333057270,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T09:01:19.208",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "cc573c4f-543b-4e7a-9521-eb66edccd9bf",
+        "lotNo": "BP2600521336",
+        "name": "Mua Vật tư, hoá chất sử dụng cho máy xét nghiệm đông máu (Sử dụng cho máy xét nghiệm đông máu Model: ACL TOP 350 CTS; Hãng sản xuất/Nước sản xuất: Instrumentation Laboratory/Mỹ)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 333234510,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua Vật tư, hoá chất sử dụng cho máy xét nghiệm đông máu (Sử dụng cho máy xét nghiệm đông máu Model: ACL TOP 350 CTS; Hãng sản xuất/Nước sản xuất: Instrumentation Laboratory/Mỹ)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:19.389Z"
+}

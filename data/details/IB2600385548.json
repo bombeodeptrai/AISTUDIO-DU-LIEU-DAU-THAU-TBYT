@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 48,
+    "items": [
+      {
+        "id": "d421de26-70cd-4982-9e6e-141e35321303",
+        "lotNo": "PP2600280340",
+        "name": "Phần 1: Băng, gạc cầm máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1125250000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c09bd6f4-f7d8-46ad-b55b-88aee4786db2",
+        "lotNo": "PP2600280341",
+        "name": "Phần 2: Găng tay và vật tư y tế sử dụng trong chăm sóc người bệnh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2895675000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5dee8868-a3c0-4d56-b392-1399e02d75ea",
+        "lotNo": "PP2600280342",
+        "name": "Phần 3: Khẩu trang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 223100000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d4725fb9-8d55-46d2-9b43-bf125abe3d71",
+        "lotNo": "PP2600280343",
+        "name": "Phần 4: Bơm, kim tiêm, dây truyền",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2269880000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d7acdb41-4ffc-476d-9497-665ce40765d8",
+        "lotNo": "PP2600280344",
+        "name": "Phần 5: Ống thông, ống dẫn lưu, ống nối, dây nối, chạc nối, catheter",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 793686750,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "12584c3b-cb50-42c4-a05a-a03755c25368",
+        "lotNo": "PP2600280345",
+        "name": "Phần 6: Chỉ khâu số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1631527300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "56271251-43d2-4978-ae78-1872edec2be9",
+        "lotNo": "PP2600280346",
+        "name": "Phần 7: Chỉ khâu số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2363744368,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cc3bed5c-db1b-4029-b1ac-fa0f9989333c",
+        "lotNo": "PP2600280347",
+        "name": "Phần 8: Dây truyền, kim tiêm, ống nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4695271000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b5a85056-6158-4472-b132-f936b556202d",
+        "lotNo": "PP2600280348",
+        "name": "Phần 9: Vật tư răng hàm mặt",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 780326800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "814b29a9-c4c5-4dc7-90a5-87a3b07f0cb8",
+        "lotNo": "PP2600280349",
+        "name": "Phần 10: Test đường huyết",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 216150000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8a65ad3e-f86a-409f-9c5f-a98446580043",
+        "lotNo": "PP2600280350",
+        "name": "Phần 11: Test đường huyết có mao dẫn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 399000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c34c57b5-44ac-410a-a6df-5b352abcada0",
+        "lotNo": "PP2600280351",
+        "name": "Phần 12: Test HP",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 149100000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6c02d899-0fd0-4d41-b794-134408bf2df4",
+        "lotNo": "PP2600280352",
+        "name": "Phần 13: Vật tư, hóa chất sát khuẩn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 313543400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "83e6e8e2-c4c5-4eac-9251-3184b5ceaf85",
+        "lotNo": "PP2600280353",
+        "name": "Phần 14: Javen",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 39000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2992938f-59e4-4d7c-8c65-00a33bc6f7ad",
+        "lotNo": "PP2600280354",
+        "name": "Phần 15: Tay dao và dây dao siêu âm mổ nội soi tương thích với máy Harmonic (Gen 11)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 759605700,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "815de952-ed03-4762-a67c-192d61e7d108",
+        "lotNo": "PP2600280355",
+        "name": "Phần 16: Tay dao và dây dao siêu âm mổ mở tương thích với máy Harmonic (Gen 11)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 445592700,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "26c50730-3d37-495a-b5e4-c617ec34bd44",
+        "lotNo": "PP2600280356",
+        "name": "Phần 17 : Clip các loại",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 51009000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "decb9dbc-8510-40e2-9d53-0ece1cac4b06",
+        "lotNo": "PP2600280357",
+        "name": "Phần 18: Tấm dán điện cực",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 14000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4bd94037-a148-401e-9a80-6cc40dcd071e",
+        "lotNo": "PP2600280358",
+        "name": "Phần 19: Bộ dụng cụ, băng ghim khâu cắt dùng cho mổ nội soi số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 995000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0c188e5a-c305-4ab3-b189-455d05575dba",
+        "lotNo": "PP2600280359",
+        "name": "Phần 20: Bộ dụng cụ, băng ghim khâu cắt dùng cho mổ nội soi số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 938000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5997b8b6-937d-4b53-b8e4-95bb2fd91bed",
+        "lotNo": "PP2600280360",
+        "name": "Phần 21: Bộ dụng cụ, băng ghim khâu cắt thẳng dùng cho mổ mở số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 570000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2822ce48-aa65-43a6-ba98-e885b3fdfe4b",
+        "lotNo": "PP2600280361",
+        "name": "Phần 22: Bộ dụng cụ, băng ghim khâu cắt thẳng dùng cho mổ mở số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 610750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8f68c000-f72d-45f0-bf8f-e95e31d33837",
+        "lotNo": "PP2600280362",
+        "name": "Phần 23: Miếng thoát vị",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 142000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6bb58bfe-8f27-4860-8f78-981773074008",
+        "lotNo": "PP2600280363",
+        "name": "Phần 24: Dây dẫn đường",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 73500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "00142ac3-ed87-4525-b8b4-ba2545408a16",
+        "lotNo": "PP2600280364",
+        "name": "Phần 25: Dung dịch chăm sóc vết thương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 130235700,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "489f79ed-b594-4378-88b9-2797d19d9a99",
+        "lotNo": "PP2600280365",
+        "name": "Phần 26: Khí các loại",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 700886000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5ab69112-c167-491b-82bf-1f656bed412d",
+        "lotNo": "PP2600280366",
+        "name": "Phần 27: Phim Xquang kĩ thuật số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2460000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6071ced6-f804-4b99-85c9-1dad061faf36",
+        "lotNo": "PP2600280367",
+        "name": "Phần 28: Vật tư, hóa chất xét nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 126243000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6ed77d7c-30ab-4d6e-8fcf-c1ec3280ddf3",
+        "lotNo": "PP2600280368",
+        "name": "Phần 29: Đai, nẹp, bột bó",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 613510000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ed6999a0-a6f5-42ab-a821-a8fc47655792",
+        "lotNo": "PP2600280369",
+        "name": "Phần 30: Dao mổ phaco, dịch nhầy số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1257000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f42ce67a-ddf7-41cc-9a12-8801334d866b",
+        "lotNo": "PP2600280370",
+        "name": "Phần 31: Dao mổ phaco, dịch nhầy số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 550000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0ae5706c-50be-4432-bfc2-25e70c62ba6c",
+        "lotNo": "PP2600280371",
+        "name": "Phần 32: Thủy tinh thể đơn tiêu số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 947200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1b623b54-fe5e-495c-98cc-e4db10661dec",
+        "lotNo": "PP2600280372",
+        "name": "Phần 33: Thủy tinh thể đơn tiêu số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1195200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "308187ec-a8c1-479c-bd36-dacdcf9c59eb",
+        "lotNo": "PP2600280376",
+        "name": "Phần 37: Thủy tinh thể nhân tạo mềm, đơn tiêu, tăng cường thị lực trung gian",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1036000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "30cf91c2-8fcb-476e-998e-a81505f5a920",
+        "lotNo": "PP2600280373",
+        "name": "Phần 34: Thủy tinh thể đơn tiêu số 3",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1120000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8e20ba1d-733c-4a52-87bb-670895e5a756",
+        "lotNo": "PP2600280374",
+        "name": "Phần 35: Thủy tinh thể đơn tiêu số 4",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1500000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "acba58e7-700e-4b88-ba24-a66b7be7f0f0",
+        "lotNo": "PP2600280375",
+        "name": "Phần 36: Thủy tinh thể nhân tạo mềm, đơn tiêu, kéo dài dải tiêu cự",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1140000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ea128f1d-1ca7-4850-8629-4b9604d242b5",
+        "lotNo": "PP2600280377",
+        "name": "Phần 38: Dung dịch rửa, khử trùng quả lọc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 66000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "29fbf0f3-a397-47ee-8326-0d01f91e48b6",
+        "lotNo": "PP2600280378",
+        "name": "Phần 39: Dịch lọc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8320000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "59351588-1269-46ff-9b04-f8ae1f95c67c",
+        "lotNo": "PP2600280379",
+        "name": "Phần 40: Dung dịch vệ sinh máy lọc thận",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 281043000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3e06a8f6-b895-467b-bfce-fcbdc01d6475",
+        "lotNo": "PP2600280380",
+        "name": "Phần 41: Quả lọc High - Flux số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1314000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3a3b070c-e142-47f1-8cf1-c2926310e6d9",
+        "lotNo": "PP2600280381",
+        "name": "Phần 42: Quả lọc High - Flux số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1070000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0db47eb9-a171-479e-a7df-32c97f0d9f23",
+        "lotNo": "PP2600280382",
+        "name": "Phần 43: Quả lọc Low - Flux số 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1449000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "15237d42-c64c-4062-b493-7dc29ab9a269",
+        "lotNo": "PP2600280383",
+        "name": "Phần 44: Quả lọc Low - Flux số 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4288830000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3f99c74d-04f1-479f-b88f-00a80c833a24",
+        "lotNo": "PP2600280384",
+        "name": "Phần 45: Quả lọc Low - Flux số 3",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1108749600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6465debf-2fb1-443e-85d4-a9776ffd7d46",
+        "lotNo": "PP2600280385",
+        "name": "Phần 46: Dây dẫn và màng lọc dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 298666800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d4cc2345-ee35-463c-b1b3-181b4b0b30f9",
+        "lotNo": "PP2600280386",
+        "name": "Phần 47: Quả lọc hấp phụ và dây nối",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 379950000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ad6fd890-58af-46ad-b64c-056e002add35",
+        "lotNo": "PP2600280387",
+        "name": "Phần 48: Catheter lọc máu 2 nòng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 47145000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung cấp vật tư y tế tiêu hao, hóa chất",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:39.242Z"
+}

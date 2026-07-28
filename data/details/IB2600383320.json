@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "e4d68931-3cf0-4178-bb3d-ffb23083081f",
+        "lotNo": "PP2600296736",
+        "name": "Hệ thống chụp cộng hưởng từ 1.5 Tesla trở lên và Hệ thống chụp mạch số hóa xóa nền (DSA)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 60760000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "78f22e7f-becd-4880-8fe4-5310d0c67e72",
+        "lotNo": "PP2600296737",
+        "name": "Hệ thống nội soi tiêu hóa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7081860000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm thiết bị y tế phục vụ chuyên môn năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:32.398Z"
+}

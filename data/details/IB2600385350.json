@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "81f96b11-ec3c-4a62-ad8b-51b3cbb5be60",
+        "lotNo": "BP2600358891",
+        "name": "Mua sắm trang thiết bị y tế cho khoa Kiểm soát nhiễm khuẩn; Nội thận tiết niệu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2091120000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm trang thiết bị y tế cho khoa Kiểm soát nhiễm khuẩn; Nội thận tiết niệu",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:18.362Z"
+}

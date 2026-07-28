@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 11,
+    "items": [
+      {
+        "id": "b98bc6ea-a8be-4478-9222-cf4dede0d3e3",
+        "lotNo": "PP2600296690",
+        "name": "Sinh phẩm chẩn đoán Invitro",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4066226500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f8287bb6-f6cd-4baf-9560-9a64629fd7dd",
+        "lotNo": "PP2600296691",
+        "name": "Hóa chất xét nghiệm nước tiểu 11 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1828200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e98cc0b2-7134-4b40-ba64-298d9d840f56",
+        "lotNo": "PP2600296692",
+        "name": "Hóa chất xét nghiệm nước tiểu 10 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 701350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "94f0471c-e318-45f4-a202-2da6895142cb",
+        "lotNo": "PP2600296693",
+        "name": "Hóa chất khác",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 282890000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "01b0cc4b-036f-4c7d-8049-bfe56d4caab8",
+        "lotNo": "PP2600296694",
+        "name": "Hóa chất xét nghiệm PCR",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6390448340,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "92d016ff-9b3d-47b8-bdcb-99bfa17fc2e6",
+        "lotNo": "PP2600296695",
+        "name": "Hóa chất giun sán",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2831305600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "32113d97-fd12-4aed-8ba2-1f857f482b6c",
+        "lotNo": "PP2600296696",
+        "name": "Hóa chất xét nghiệm HbA1c",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2263200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "deae8989-b1ad-4a34-a6cb-d80d0f9b14a7",
+        "lotNo": "PP2600296697",
+        "name": "Hóa chất xét nghiệm khí máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 904800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4baa4bd3-fe7c-4211-97b5-2a27af5a0d41",
+        "lotNo": "PP2600296698",
+        "name": "Hóa chất sàng lọc sơ sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2511180000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d60779dc-44ce-4bba-8799-f54f8936dc86",
+        "lotNo": "PP2600296699",
+        "name": "Hóa chất máy xét nghiệm điện di",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 419900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "58be6368-8417-46b9-af27-0ed1f364dfae",
+        "lotNo": "PP2600296700",
+        "name": "Bộ chẩn đoán vi khuẩn HP qua hơi thở",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 390000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm hóa chất, vật liệu dùng trong xét nghiệm, sinh phẩm chẩn đoán invitro phục vụ cho công tác điều trị (Gồm: 84 mặt hàng chia làm 11 phần của gói thầu)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:20.367Z"
+}

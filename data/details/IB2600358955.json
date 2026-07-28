@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 4,
+    "items": [
+      {
+        "id": "ea142043-fe68-4571-bdaf-a69608eaae7a",
+        "lotNo": "PP2600283085",
+        "name": "Phần I. Hóa chất, vật tư sử dụng cho máy xét nghiệm huyết học SPINCELL 5",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 745308000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c746dace-30c4-491e-bbbd-88b6f7441878",
+        "lotNo": "PP2600283086",
+        "name": "Phần II. Hóa chất, vật tư sử dụng cho máy xét nghiệm sinh hóa (COBAS C311)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 290210254,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ecbc69c2-17a4-4164-ac98-771e41836d35",
+        "lotNo": "PP2600283087",
+        "name": "Phần III. Hóa chất, vật tư sử dụng cho máy xét nghiệm miễn dịch (HISCL 5000)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 247383480,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "09f80bfe-8128-4055-8c1e-a52d9a64c933",
+        "lotNo": "PP2600283088",
+        "name": "Phần IV. Hóa chất, vật tư sử dụng cho máy xét nghiệm điện giải đồ 9180 Electrolyte Analyzer",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 218248359,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm bổ sung hoá chất, vật tư theo máy xét nghiệm phục vụ công tác điều trị người bệnh",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:52.565Z"
+}

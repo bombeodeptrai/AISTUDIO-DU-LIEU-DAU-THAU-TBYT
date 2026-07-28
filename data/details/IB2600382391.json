@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "c5c60fd8-230e-4ad6-b1fb-35ff8314ac12",
+        "lotNo": "BP2600541197",
+        "name": "Vật tư y tế: Kim điện cực đốt sóng cao tần đầu cố định",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 243000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Vật tư y tế: Kim điện cực đốt sóng cao tần đầu cố định",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:54.327Z"
+}

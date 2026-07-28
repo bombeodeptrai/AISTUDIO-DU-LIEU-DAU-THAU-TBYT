@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "efc0a5e0-8495-4146-a86b-bdc1e10c96ff",
+        "lotNo": "PP2600294729",
+        "name": "Nhóm hàng I",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 420761000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "49b86272-8758-4007-8247-5f408b3bf837",
+        "lotNo": "PP2600294730",
+        "name": "Nhóm hàng II",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 341583440,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4a148dbc-7891-4f84-8be3-5e25a45fcc9e",
+        "lotNo": "PP2600294731",
+        "name": "Nhóm hàng III",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 316200500,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Vật tư tiêu hao và thiết bị sinh hoạt văn phòng, mỡ nhớt cho Giàn CNV",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:13.620Z"
+}

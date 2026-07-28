@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 47,
+    "items": [
+      {
+        "id": "1ee58303-cbf3-4e2f-87cf-69f3f4a9ff8c",
+        "lotNo": "PP2600265806",
+        "name": "Dung dịch rửa màng lọc thận nhân tạo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 49500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4120243a-4816-4711-880b-d2e59ee80a09",
+        "lotNo": "PP2600265807",
+        "name": "Cồn 70 độ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 36750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4e85c322-2edd-44ce-8c00-a5d4af710df8",
+        "lotNo": "PP2600265808",
+        "name": "Cồn 90 độ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 355000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a3f57a77-cd22-4dc9-af83-be2d4c308268",
+        "lotNo": "PP2600265809",
+        "name": "Dung dịch khử khuẩn dụng cụ nội soi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 55000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3b9f7bed-095c-4c41-a098-fcba15278bab",
+        "lotNo": "PP2600265810",
+        "name": "Sodium Dichloroisocyan urate khan (Troclosense Sodium)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4e7f59a3-d3a4-41d5-8f0b-a25d5329a3e2",
+        "lotNo": "PP2600265811",
+        "name": "Dung dịch khử khuẩn bề mặt môi trường, máy móc phòng mổ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1575000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "21865c6f-849a-4e57-877d-69cc1502be07",
+        "lotNo": "PP2600265812",
+        "name": "Dung dịch làm sạch và tiền khử khuẩn dụng cụ phẫu thuật y tế, thiết bị nội soi, thiết bị không chịu nhiệt, các dụng cụ lấy mẫu trong y tế.",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 71250000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5b2578b9-e8e8-4a7a-98dd-8e396583b7ea",
+        "lotNo": "PP2600265813",
+        "name": "Dung dịch khử khuẩn máy thận nhân tạo thành phần acid Citric 50%.",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 99375000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f0507252-12d7-43f8-bece-b3410c2643f4",
+        "lotNo": "PP2600265814",
+        "name": "Cồn y tế 99,5 (Cồn tuyệt đối)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 210000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e42eef9f-e3d6-4205-a724-e307933fd483",
+        "lotNo": "PP2600265815",
+        "name": "Bộ định danh vi khuẩn IDS",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1134000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "44eca05c-010d-4650-98cc-6290e7c33cf6",
+        "lotNo": "PP2600265816",
+        "name": "Bộ nhuộm gram",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 210000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f18fd852-6010-49e0-930f-3661ac14186a",
+        "lotNo": "PP2600265817",
+        "name": "Dầu sả",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cfebf9d3-d63c-4955-998c-01416f63cc62",
+        "lotNo": "PP2600265818",
+        "name": "Môi trường BA",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d440e608-4592-485e-9f84-cc359d0e30eb",
+        "lotNo": "PP2600265819",
+        "name": "Môi trường BHI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 525000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c1d8107d-dd2a-4ade-8161-75228271d020",
+        "lotNo": "PP2600265820",
+        "name": "Môi trường chuyên chở cary blair",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1102500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3bd4d271-5517-401d-ae00-58e1e14c1df7",
+        "lotNo": "PP2600265821",
+        "name": "Môi trường MC",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 735000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8e468a2e-7b56-4753-84ee-08fc6af97e1e",
+        "lotNo": "PP2600265822",
+        "name": "Môi trường MHA",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1224000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f8140a3c-e676-4fb8-b0ad-0ec041b9f41a",
+        "lotNo": "PP2600265823",
+        "name": "Môi trường Sabouraud",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1605450,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bee88ed2-d814-486d-ba3b-b29e620dfcac",
+        "lotNo": "PP2600265824",
+        "name": "Môi trường SS",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1139250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9c9b552a-a2d2-4603-a1ed-e27b5b1c134c",
+        "lotNo": "PP2600265825",
+        "name": "Môi trường TCBS",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1176000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b523962f-b468-4f31-955f-61809e1825ca",
+        "lotNo": "PP2600265826",
+        "name": "Môi trường Samonella",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2646000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "154bc4fb-3017-4461-8a11-1a82220c1a06",
+        "lotNo": "PP2600265827",
+        "name": "Môi trường EMB",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 81600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "319d52d4-4729-4634-b236-bab94e4e1c4a",
+        "lotNo": "PP2600265828",
+        "name": "Môi Trường Pepton Kiềm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 504000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7421511d-ea09-4b90-b273-ccf062ffad91",
+        "lotNo": "PP2600265829",
+        "name": "Sofnolime (Vôi hạt)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4140000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5aca5e7e-4893-4951-91bb-7157e6745525",
+        "lotNo": "PP2600265830",
+        "name": "Gel Siêu âm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3952000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "34f44801-a963-4eae-9ce8-f6a557a40fec",
+        "lotNo": "PP2600265831",
+        "name": "Test kiểm tra chất lượng lò hấp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 19000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "65d5cfec-9b75-4e11-b2c9-cb82961d0155",
+        "lotNo": "PP2600265832",
+        "name": "Chỉ thị hóa học kiểm tra gói hấp đồ vải",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5040000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3f87a64e-a99d-4367-836a-65b4e376982b",
+        "lotNo": "PP2600265833",
+        "name": "Nước muối sinh lý 0.85%",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 525000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "82f3ff10-e989-4bd7-af0a-3fdf39b3d405",
+        "lotNo": "PP2600265835",
+        "name": "Anti B",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1484445,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "89bf5d3d-5b2b-4ab7-b2ac-3ea97211d80b",
+        "lotNo": "PP2600265834",
+        "name": "Anti A",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1484445,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bdbf7fbc-b2f6-41e3-ace1-f9603b53f6dd",
+        "lotNo": "PP2600265836",
+        "name": "Anti D",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2039820,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0bcc09b0-02d5-4142-bc49-810a9db4cc6f",
+        "lotNo": "PP2600265837",
+        "name": "Anti HBs",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13097600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4ac4d5b0-3cc7-47d6-bd6f-b121a8b91a61",
+        "lotNo": "PP2600265838",
+        "name": "Anti HCV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7481600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f4b52f70-85ac-403d-9bc5-ad2b92360572",
+        "lotNo": "PP2600265839",
+        "name": "Xét nghiệm định tính ASO",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 850000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e5aa521b-efe3-4c1f-b6cb-3639c194f447",
+        "lotNo": "PP2600265840",
+        "name": "Xét nghiệm định tính CRP",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 17000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0112d729-2925-4983-8230-333300c47030",
+        "lotNo": "PP2600265841",
+        "name": "Test phát hiện nhanh Hecolibacter Pylori trong dạ dày",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11977900,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "942c2d1b-bfec-4f78-b129-f56baeca0c43",
+        "lotNo": "PP2600265842",
+        "name": "Test phát hiện nhanh Hecolibacter Pylori trong huyết thanh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13760000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7db11df4-4d7b-4eed-8dcb-aeef1023e2d1",
+        "lotNo": "PP2600265843",
+        "name": "HIV 1/2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 55500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ee0c7f04-2e76-4008-9e7c-763a7c466b6e",
+        "lotNo": "PP2600265844",
+        "name": "HIV 1/2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8007000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0cd69f09-b975-486e-8243-1a286e6d63a2",
+        "lotNo": "PP2600265845",
+        "name": "HIV 1/2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 26044200,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "08ab28bf-1133-4cd4-bfaa-b573aa065b02",
+        "lotNo": "PP2600265846",
+        "name": "Xét nghiệm định tính RF",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 650000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a07a068a-123b-4752-8d43-4630e866fa67",
+        "lotNo": "PP2600265847",
+        "name": "Anti Human Globulin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3300000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "09a25997-aae6-4976-b42f-d2950b2b55ce",
+        "lotNo": "PP2600265848",
+        "name": "Low lonic Strength Solution (Liss)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1485000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "265d4a52-5da6-4020-8417-ab9c3a367015",
+        "lotNo": "PP2600265849",
+        "name": "Widal (bộ/8 loại: AO, AH, BO, BH, CO, CH, TO, TH)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6b7b97f3-de57-4080-88e1-11ecd74b2302",
+        "lotNo": "PP2600265850",
+        "name": "Que thử đường huyết ( kèm 12 máy)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 66430000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a72bf162-0a27-4acc-b0ba-a946cbd1695c",
+        "lotNo": "PP2600265851",
+        "name": "Bộ nhuộm xét nghiệm lao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1848000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a3771f0d-8bc6-444d-a96c-102a4d4a2cbf",
+        "lotNo": "PP2600265852",
+        "name": "Xét nghiệm nhanh định tính Rubella",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 40681200,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua vật tư y tế tiêu hao, hóa chất sát khuẩn, sinh phẩm chẩn đoán sử dụng năm 2026-2027. Gồm 47 khoản.",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:00.791Z"
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 9,
+    "items": [
+      {
+        "id": "3ff99037-2edb-4b3d-9944-e193fb84c21e",
+        "lotNo": "PP2600260515",
+        "name": "Giấy in máy điện tim 110mm*140mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 15051720,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6ed767c2-602b-4433-b73f-5244f0dfc365",
+        "lotNo": "PP2600260516",
+        "name": "Pipette 5ml",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16387280,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f207f9cd-280a-433e-9eab-b4f77049940b",
+        "lotNo": "PP2600260517",
+        "name": "Bơm tiêm sử dụng trong TTON 1ml kim 26",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 26535600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f22a2db3-1549-456c-aee3-c5e26c06eb67",
+        "lotNo": "PP2600260518",
+        "name": "Băng keo hấp chỉ thị màu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 27037167,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e4f4f619-93b4-4fa9-8804-47aad1b6c6c7",
+        "lotNo": "PP2600260519",
+        "name": "Gạc hút tiệt trùng 20 x 7cm x 8 lớp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 46765236,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1753179a-c660-45ba-8494-1338eb1abdab",
+        "lotNo": "PP2600260520",
+        "name": "Khẩu trang 3 lớp tiệt trùng dây cột",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 211146320,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d6a5fe4a-b84f-4e59-b7c7-3980642f95f6",
+        "lotNo": "PP2600260521",
+        "name": "Dao mổ các loại",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 288969240,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "78741ff0-79f7-47b6-9d75-da3219525f1f",
+        "lotNo": "PP2600260522",
+        "name": "Bộ dây bơm hút dịch phẫu thuật nội soi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 542120670,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6e810d41-ff88-424a-aacc-8eab47609e11",
+        "lotNo": "PP2600260523",
+        "name": "Bộ điều kinh (Karman 1 vale)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1288602000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm gấp đợt 2 gồm 9 mặt hàng nhóm 17 vtyt thuộc dự toán mua sắm vật tư y tế lần 2 năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:55.365Z"
+}

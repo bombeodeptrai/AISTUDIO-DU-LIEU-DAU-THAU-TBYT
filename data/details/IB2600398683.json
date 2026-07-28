@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "5b8c7af6-f35b-44e7-93b2-1ef3ec9b4207",
+        "lotNo": "BP2600569108",
+        "name": "Mua bổ sung vật tư, thiết bị y tế của Bệnh viện Phú Lương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 158880000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư, thiết bị y tế (Gồm 03 danh mục, chia thành 01 phần)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "10558757627690914",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Phim X.Quang cho máy AGFA (10x12in)",
+        "unit": "Tờ",
+        "quantity": 5000,
+        "code": "Drystar DT 5.000I B",
+        "brand": "Drystar DT 5.000I B",
+        "manufacturer": "Agfa Gevaert N.V.",
+        "origin": "Bỉ",
+        "manufactureYear": "2025;2026",
+        "specification": "Nền PET dày 168 μm, phủ lớp muối bạc nhạy nhiệt. Kích thước: 10x12 in",
+        "otherRequirement": "Sau khi có kết quả chào giá, nhà thầu xếp hạng 1 phải gửi hồ sơ chứng minh tư cách hợp lệ, hồ sơ sản phẩm chứng minh sự phù hợp của hàng hoá dự thầu. Hồ sơ gửi trước qua gmail: ttytphuluong@gmail.com và gửi bản tài liệu khi giao hàng.",
+        "projectPlace": "xã Phú Lương, tỉnh Thái Nguyên",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "9235096836616788",
+        "position": "2",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Chỉ phẫu thuật tự tiêu tổng hợp Polyglactin số 1",
+        "unit": "Sợi",
+        "quantity": 240,
+        "code": "TG40HR40L90",
+        "brand": "CPT",
+        "manufacturer": "Công ty TNHH chỉ phẫu thuật CPT",
+        "origin": "Việt Nam",
+        "manufactureYear": "2025;2026",
+        "specification": "Chỉ tiêu tổng hợp đa sợi Polyglactin 910 số 1 dài 90cm, kim tròn 1/2c, dài 40mm ,Kim thép 302 phủ silicon Đóng gói bằng giấy tiệt trùng 80gsm (100 micron) độ bền cao, ngăn khuẩn hiệu quả",
+        "otherRequirement": "Sau khi có kết quả chào giá, nhà thầu xếp hạng 1 phải gửi hồ sơ chứng minh tư cách hợp lệ, hồ sơ sản phẩm chứng minh sự phù hợp của hàng hoá dự thầu. Hồ sơ gửi trước qua gmail: ttytphuluong@gmail.com và gửi bản tài liệu khi giao hàng.",
+        "projectPlace": "xã Phú Lương, tỉnh Thái Nguyên",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "8549211934662364",
+        "position": "3",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Băng keo lụa 5cm x 5m",
+        "unit": "Cuộn",
+        "quantity": 200,
+        "code": "Urgosyval",
+        "brand": "Urgosyval",
+        "manufacturer": "Urgo Healthcare Products Co., Ltd",
+        "origin": "Thái Lan",
+        "manufactureYear": "2025;2026",
+        "specification": "Vải lụa Taffeta trắng, làm bằng sợi celluloseacetate - Keo hỗn hợp nóng chảy: Zinc oxide, Zinc dibutyl dithiocarbamate, SIS copolymer, Lanolin stellux AIPF, Titanium dioxide, Styrenic Block Copolymers, dầu khoáng trắng. Độ nhớt 8.100-12.700 cP",
+        "otherRequirement": "Sau khi có kết quả chào giá, nhà thầu xếp hạng 1 phải gửi hồ sơ chứng minh tư cách hợp lệ, hồ sơ sản phẩm chứng minh sự phù hợp của hàng hoá dự thầu. Hồ sơ gửi trước qua gmail: ttytphuluong@gmail.com và gửi bản tài liệu khi giao hàng.",
+        "projectPlace": "xã Phú Lương, tỉnh Thái Nguyên",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1958",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:32:24.754Z"
+}

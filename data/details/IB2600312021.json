@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "6f6d4643-0cd6-4c62-acb9-181dac0e6f1e",
+      "contractorCode": "vn0109451258",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN CÔNG NGHỆ 4M VIỆT NAM",
+      "status": "participating",
+      "lotNo": "BP2600391904",
+      "lotName": "Gói thầu số 1: Mua sắm vật tư tiêu hao 04 trạm quan trắc tự động, liên tục thuộc Kinh phí sự nghiệp môi trường năm 2026",
+      "bidPrice": 930457000,
+      "finalPrice": 930457000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-22T14:16:48.868",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "1904df35-6657-41b4-a67f-c93991e25755",
+        "lotNo": "BP2600391904",
+        "name": "Gói thầu số 1: Mua sắm vật tư tiêu hao 04 trạm quan trắc tự động, liên tục thuộc Kinh phí sự nghiệp môi trường năm 2026",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 937470000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư tiêu hao 04 trạm quan trắc tự động, liên tục thuộc Kinh phí sự nghiệp môi trường năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:15.879Z"
+}

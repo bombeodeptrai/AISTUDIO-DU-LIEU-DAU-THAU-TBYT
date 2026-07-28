@@ -1,6 +1,6 @@
 {
   "name": "Thầu Y tế Gia Lai",
-  "description": "Bảng tổng hợp & Phân tích Gói thầu Thiết bị Y tế Gia Lai tích hợp AI tóm tắt thông tin gói thầu",
+  "description": "Bảng tổng hợp & Phân tích Gói thầu Thiết bị Y tế Gia Lai & Toàn quốc tích hợp AI tóm tắt thông tin gói thầu",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "743b7205-2e61-474e-b9eb-adc3bf3f3ec2",
+        "lotNo": "PP2600292948",
+        "name": "Nhóm I: Khí kỹ thuật",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 284436350,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fad1439a-c790-4101-98e2-acd2427c5c16",
+        "lotNo": "PP2600292949",
+        "name": "Nhóm II: Vật tư tiêu hao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 444595360,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Vật tư tiêu hao hạ thủy và chằng buộc (Đại Hùng Nam) / DVN-VT-2557/26-XL-TTH",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:28.920Z"
+}

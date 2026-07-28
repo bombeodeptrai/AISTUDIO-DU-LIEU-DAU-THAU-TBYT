@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "e8c1e6c4-4cd1-4d7c-9f2b-f185e1c6b533",
+        "lotNo": "BP2600289844",
+        "name": "Mua sắm công cụ, dụng cụ và vật tư tiêu hao phục vụ quan trắc hiện trường và phân tích trong phòng thí nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1250000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Tổ chức mua sắm công cụ, dụng cụ và vật liệu phục vụ công tác quan trắc hiện trường và phân tích trong phòng thí nghiệm",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-27T23:33:06.933Z"
+}
