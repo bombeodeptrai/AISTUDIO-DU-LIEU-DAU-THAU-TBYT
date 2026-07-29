@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "fbc81edc-4a80-4c12-a338-2cbbe8483eb0",
+        "lotNo": "BP2600553742",
+        "name": "Gói thầu 01.MS: Mua sắm hóa chất sinh phẩm năm 2026 phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Đức Thọ năm 2026-2027",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6680000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm hóa chất sinh phẩm năm 2026 phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Đức Thọ năm 2026-2027",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:21.752Z"
+}

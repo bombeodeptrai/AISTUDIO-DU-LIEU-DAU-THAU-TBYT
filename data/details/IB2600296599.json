@@ -677,16 +677,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "6d050ace-b366-428c-835c-de77b130811c",
-        "lotNo": "PP2600237359",
-        "name": "Cóng phản ứng dạng khay dùng cho hệ thống máy đông máu tự động",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 8484000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "5996afdc-84f0-4e6e-b8fe-fee31e699ec4",
         "lotNo": "PP2600237357",
         "name": "Hóa chất đo thời gian APTT dành cho máy phân tích đông máu",
@@ -703,6 +693,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1181174400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6d050ace-b366-428c-835c-de77b130811c",
+        "lotNo": "PP2600237359",
+        "name": "Cóng phản ứng dạng khay dùng cho hệ thống máy đông máu tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8484000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -877,16 +877,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "ad46fa48-f7ae-482a-9926-3c0e6456fe8b",
-        "lotNo": "PP2600237379",
-        "name": "Đầu bơm côn nhiệt EQ - V Refillable cartridge 25g",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 5650000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "7c9df45e-6d44-4ea2-959e-6cf9f2e0c790",
         "lotNo": "PP2600237377",
         "name": "Đầu vòi bơm cao su 25ml (Intra oral tip)",
@@ -903,6 +893,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 64125000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ad46fa48-f7ae-482a-9926-3c0e6456fe8b",
+        "lotNo": "PP2600237379",
+        "name": "Đầu bơm côn nhiệt EQ - V Refillable cartridge 25g",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5650000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1107,16 +1107,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "062b4449-d0be-44a1-8d80-9a2808206a83",
-        "lotNo": "PP2600237403",
-        "name": "Vật liệu tẩy đốm trắng bề mặt răng",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 57420000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "ce2d6efe-d2c4-4e38-8069-39ba69b9d4a6",
         "lotNo": "PP2600237400",
         "name": "Trâm nội nha độ thuôn lớn dùng tay",
@@ -1143,6 +1133,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 325507500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "062b4449-d0be-44a1-8d80-9a2808206a83",
+        "lotNo": "PP2600237403",
+        "name": "Vật liệu tẩy đốm trắng bề mặt răng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 57420000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1337,16 +1337,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "f3d5452f-203b-4279-89fe-51771999a1ad",
-        "lotNo": "PP2600237426",
-        "name": "Kẹp kim khâu 16cm",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 9450000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "48098fb3-535b-46e9-bf01-f423d2c7493d",
         "lotNo": "PP2600237423",
         "name": "Kẹp phẫu tích 14cm",
@@ -1373,6 +1363,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1008000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f3d5452f-203b-4279-89fe-51771999a1ad",
+        "lotNo": "PP2600237426",
+        "name": "Kẹp kim khâu 16cm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9450000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1418,5 +1418,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:11.823Z"
+  "fetchedAt": "2026-07-29T11:45:16.648Z"
 }

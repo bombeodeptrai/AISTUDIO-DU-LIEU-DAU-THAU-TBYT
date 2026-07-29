@@ -187,22 +187,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "d3583d05-9058-40e7-a4c8-5e8080cc13a7",
-        "lotNo": "PP2600297851",
-        "name": "Dụng cụ cắt trĩ Longo",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 28500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "e8fa03a9-eb1c-4767-b374-81ccc5e483d0",
         "lotNo": "PP2600297850",
         "name": "Dụng cụ cắt bao quy đầu",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 8662500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d3583d05-9058-40e7-a4c8-5e8080cc13a7",
+        "lotNo": "PP2600297851",
+        "name": "Dụng cụ cắt trĩ Longo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 28500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -337,16 +337,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "cd6c3b46-2ce1-4043-8c4e-b63f4e75297a",
-        "lotNo": "PP2600297803",
-        "name": "Bao bì có chữ và logo Bệnh viện loại nhỏ",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 30000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "76c4e893-79c0-48b1-8b3c-693d54bc15c9",
         "lotNo": "PP2600297800",
         "name": "Cuộn màng đóng túi thuốc sắc",
@@ -373,6 +363,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3399840,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cd6c3b46-2ce1-4043-8c4e-b63f4e75297a",
+        "lotNo": "PP2600297803",
+        "name": "Bao bì có chữ và logo Bệnh viện loại nhỏ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 30000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -457,32 +457,12 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "a04ae8fa-33e1-4e22-adda-35860613dc34",
-        "lotNo": "PP2600297812",
-        "name": "Chỉ tan tổng hợp đa sợi Polyglactin 910 số 4/0",
+        "id": "d3fd3952-538a-4e4f-b598-b3082d59c52e",
+        "lotNo": "PP2600297865",
+        "name": "Kéo thẳng 18cm",
         "quantity": 0,
         "unit": "",
-        "plannedPrice": 3660000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
-        "id": "2ee725f9-4e30-4e2a-a789-5c490123327d",
-        "lotNo": "PP2600297813",
-        "name": "Chỉ khâu phẫu thuật không tan tổng hợp đơn sợi số 1/0",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 630000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
-        "id": "72996063-b7da-4027-9576-cb270ba1e4cb",
-        "lotNo": "PP2600297814",
-        "name": "Chỉ khâu phẫu thuật không tan tổng hợp đơn sợi số 4/0",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1140000,
+        "plannedPrice": 500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -493,16 +473,6 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 8175000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
-        "id": "d3fd3952-538a-4e4f-b598-b3082d59c52e",
-        "lotNo": "PP2600297865",
-        "name": "Kéo thẳng 18cm",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -567,16 +537,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "012e58a7-f9fb-4cb5-ad05-c596a328fac1",
-        "lotNo": "PP2600297818",
-        "name": "Găng tay phẫu thuật vô trùng",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 13577840,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "86096169-5011-4abd-95df-8167fe2175d5",
         "lotNo": "PP2600297815",
         "name": "Chỉ khâu phẫu thuật không tan tổng hợp đơn sợi số 5/0",
@@ -603,6 +563,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 11467690,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "012e58a7-f9fb-4cb5-ad05-c596a328fac1",
+        "lotNo": "PP2600297818",
+        "name": "Găng tay phẫu thuật vô trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13577840,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -737,16 +707,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "917a4320-556e-4ebf-b56d-0e64aa91756c",
-        "lotNo": "PP2600297876",
-        "name": "Ống dây bơm 2.79 mm",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 16698000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "609deaa1-3edc-430b-93b8-c88b7b3e7e3f",
         "lotNo": "PP2600297873",
         "name": "Xi lanh hút hóa chất dùng cho máy xét nghiệm hóa sinh",
@@ -773,6 +733,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 13189000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "917a4320-556e-4ebf-b56d-0e64aa91756c",
+        "lotNo": "PP2600297876",
+        "name": "Ống dây bơm 2.79 mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16698000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -833,6 +803,36 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 442934063,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "72996063-b7da-4027-9576-cb270ba1e4cb",
+        "lotNo": "PP2600297814",
+        "name": "Chỉ khâu phẫu thuật không tan tổng hợp đơn sợi số 4/0",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1140000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a04ae8fa-33e1-4e22-adda-35860613dc34",
+        "lotNo": "PP2600297812",
+        "name": "Chỉ tan tổng hợp đa sợi Polyglactin 910 số 4/0",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3660000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2ee725f9-4e30-4e2a-a789-5c490123327d",
+        "lotNo": "PP2600297813",
+        "name": "Chỉ khâu phẫu thuật không tan tổng hợp đơn sợi số 1/0",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 630000,
         "specification": "",
         "sourceStage": "invitation"
       }
@@ -3320,5 +3320,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:49.543Z"
+  "fetchedAt": "2026-07-29T11:44:19.088Z"
 }

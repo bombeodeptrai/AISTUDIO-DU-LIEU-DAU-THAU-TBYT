@@ -1,8 +1,645 @@
 {
   "schemaVersion": 3,
-  "total": 0,
-  "bidders": [],
-  "items": [],
+  "total": 22,
+  "bidders": [
+    {
+      "id": "d3dbb0d5-e14e-4eda-b526-a060699b6dbe",
+      "contractorCode": "vn0101849706",
+      "taxCode": "0101849706",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ VÀ HOÁ CHẤT HOÀNG PHƯƠNG",
+      "status": "won",
+      "lotNo": "PP2600295954",
+      "lotName": "Phần 1: VTYT Thông thường",
+      "bidPrice": 105953700,
+      "finalPrice": 105953700,
+      "winningPrice": 105953700,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.695",
+      "models": [
+        "TNT",
+        "PTL.150",
+        "BTK5: MPV",
+        "0301-10ML; 0301-10L; 0301-10XL",
+        "Citric acid"
+      ]
+    },
+    {
+      "id": "b6860509-98f4-42a0-be55-79db8e959c0c",
+      "contractorCode": "vn0106215710",
+      "taxCode": "0106215710",
+      "contractorName": "CÔNG TY CỔ PHẦN VẬT TƯ VÀ TRANG THIẾT BỊ Y TẾ CƯỜNG AN",
+      "status": "won",
+      "lotNo": "PP2600295955",
+      "lotName": "Phần 2: VTYT Khoa Thăm dò chức năng",
+      "bidPrice": 10000000,
+      "finalPrice": 10000000,
+      "winningPrice": 10000000,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "ROCC-x-26-xxx-C-S"
+      ]
+    },
+    {
+      "id": "e81ffe92-bb30-4600-b4d5-116077d4bd89",
+      "contractorCode": "vn0107748567",
+      "taxCode": "0107748567",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ ĐỨC TÍN",
+      "status": "won",
+      "lotNo": "PP2600295956",
+      "lotName": "Phần 3: VTYT Khoa Chẩn đoán hình ảnh",
+      "bidPrice": 85000000,
+      "finalPrice": 85000000,
+      "winningPrice": 85000000,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "HK-10042; HK-10014; HK-10021; HK-10024; HK-10016"
+      ]
+    },
+    {
+      "id": "ee816cfa-8f72-424a-98f3-d383dc1dbab8",
+      "contractorCode": "vn0106932073",
+      "taxCode": "0106932073",
+      "contractorName": "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG",
+      "status": "won",
+      "lotNo": "PP2600295957",
+      "lotName": "Phần 4: VTYT Khoa Giải phẫu bệnh",
+      "bidPrice": 119292000,
+      "finalPrice": 119292000,
+      "winningPrice": 119292000,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "RRSP124-D",
+        "XY1004",
+        "0011-0070",
+        "UF1000cs",
+        "RRSP29-D",
+        "Không yêu cầu",
+        "NC100",
+        "RRSP54-E"
+      ]
+    },
+    {
+      "id": "e7ae3600-e9dd-4d85-83ea-56ecbb4cd945",
+      "contractorCode": "vn0110836037",
+      "taxCode": "0110836037",
+      "contractorName": "CÔNG TY TNHH HÓA CHẤT VÀ THIẾT BỊ VẬT TƯ HOÀNG HÀ",
+      "status": "won",
+      "lotNo": "PP2600295958",
+      "lotName": "Phần 5: VTYT Khoa Hóa sinh-Vi sinh",
+      "bidPrice": 30570000,
+      "finalPrice": 30570000,
+      "winningPrice": 30570000,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "NAOH",
+        "1046990500",
+        "1013840100"
+      ]
+    },
+    {
+      "id": "efcfa207-531f-4439-86fc-848b2951df91",
+      "contractorCode": "vn0101581745",
+      "taxCode": "0101581745",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ HOÀNG ANH",
+      "status": "won",
+      "lotNo": "PP2600295959",
+      "lotName": "Phần 6: VTYT Khoa Ngoại Thần kinh-Lồng ngực",
+      "bidPrice": 300000000,
+      "finalPrice": 300000000,
+      "winningPrice": 300000000,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "SWM-KIT-T4; SWM-KIT-T4-1; SWM-KIT-T4-2; SWM-KIT-T4-3; SWM-KIT-T4-4 và Opacem"
+      ]
+    },
+    {
+      "id": "1d715f19-bc0e-41c9-8468-e15995dfc95e",
+      "contractorCode": "vn0101581745",
+      "taxCode": "0101581745",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ HOÀNG ANH",
+      "status": "lost",
+      "lotNo": "PP2600295960",
+      "lotName": "Phần 7: VTYT Khoa Nội thận-Tiết niệu lọc máu",
+      "bidPrice": 4330000,
+      "finalPrice": 4330000,
+      "winningPrice": 0,
+      "reason": "Xếp hạng 2 về giá",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "SWM-KIT-T4; SWM-KIT-T4-1; SWM-KIT-T4-2; SWM-KIT-T4-3; SWM-KIT-T4-4 và Opacem"
+      ]
+    },
+    {
+      "id": "cf369c13-0e78-423e-bc27-40bd17f26379",
+      "contractorCode": "vn0110214734",
+      "taxCode": "0110214734",
+      "contractorName": "CÔNG TY CỔ PHẦN KỸ THUẬT THIẾT BỊ Y TẾ ĐÔNG NAM Á",
+      "status": "won",
+      "lotNo": "PP2600295960",
+      "lotName": "Phần 7: VTYT Khoa Nội thận-Tiết niệu lọc máu",
+      "bidPrice": 4050000,
+      "finalPrice": 4050000,
+      "winningPrice": 4050000,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:21:53.696",
+      "models": [
+        "5106",
+        "5167",
+        "5129"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "9062182950144336",
+      "name": "NaOH",
+      "model": "NAOH",
+      "brand": "Xilong Scientific",
+      "manufacturer": "Xilong Scientific Co.,Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Công thức hóa học: NaOH - Hàm lượng  ≥96 %.",
+      "unit": "Chai",
+      "quantity": 15,
+      "unitPrice": 150280.7891,
+      "amount": 2254211.8369,
+      "contractorCode": "vn0110836037",
+      "winnerNames": [
+        "CÔNG TY TNHH HÓA CHẤT VÀ THIẾT BỊ VẬT TƯ HOÀNG HÀ"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11245211537399456",
+      "name": "Dầu soi kính hiển vi",
+      "model": "1046990500",
+      "brand": "Merck",
+      "manufacturer": "Merck KGaA",
+      "origin": "Đức",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng để soi kính hiển vi.",
+      "unit": "Chai",
+      "quantity": 16,
+      "unitPrice": 1763994.5903,
+      "amount": 28223913.4448,
+      "contractorCode": "vn0110836037",
+      "winnerNames": [
+        "CÔNG TY TNHH HÓA CHẤT VÀ THIẾT BỊ VẬT TƯ HOÀNG HÀ"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11536045097884122",
+      "name": "Dung dịch xanh cresyl ánh",
+      "model": "1013840100",
+      "brand": "Brilliant Cresyl Blue",
+      "manufacturer": "Merck KGaA",
+      "origin": "Đức",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng để nhuộm hồng cầu lưới.",
+      "unit": "Chai",
+      "quantity": 1,
+      "unitPrice": 91874.7182,
+      "amount": 91874.7182,
+      "contractorCode": "vn0110836037",
+      "winnerNames": [
+        "CÔNG TY TNHH HÓA CHẤT VÀ THIẾT BỊ VẬT TƯ HOÀNG HÀ"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "10997777561267032",
+      "name": "Bơm tiêm thuốc cản quang",
+      "model": "HK-10042; HK-10014; HK-10021; HK-10024; HK-10016",
+      "brand": "Không yêu cầu",
+      "manufacturer": "Jiangxi Hawk Medical Supplies Co., Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Bơm tiêm điện, dùng để bơm tiêm thuốc cản quang sử dụng cho máy chụp cắt lớp vi tính, loại 200ml.",
+      "unit": "Cái",
+      "quantity": 500,
+      "unitPrice": 170000,
+      "amount": 85000000,
+      "contractorCode": "vn0107748567",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ ĐỨC TÍN"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "10406158650172968",
+      "name": "Clip cầm máu (Loại kèm tay cầm)",
+      "model": "ROCC-x-26-xxx-C-S",
+      "brand": "Không yêu cầu",
+      "manufacturer": "Micro-tech (nanjing) co., ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Clip cầm máu dùng một lần có đường kính mở 11mm hoặc 16mm, loại xoay 2 chiều 360 độ với độ mở 135 độ; \r\nChiều dài các cỡ 1950mm, 2300mm. Sau khi bắn ra, clip có độ dài stem 10.1mm hoặc 13.3mm\r\n Đường kính ngoài của ống tube 2,6mm. Kênh làm việc tối thiểu 2,8mm. \r\nĐóng mở được nhiều lần.",
+      "unit": "Cái",
+      "quantity": 20,
+      "unitPrice": 500000,
+      "amount": 10000000,
+      "contractorCode": "vn0106215710",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN VẬT TƯ VÀ TRANG THIẾT BỊ Y TẾ CƯỜNG AN"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "8590016486457882",
+      "name": "Bộ hóa chất nhuộm Periodic Acid-Schiff (PAS)",
+      "model": "RRSP124-D",
+      "brand": "Periodic Acid (1% Aqueous)",
+      "manufacturer": "Atom Scientific Ltd/",
+      "origin": "Anh Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Bộ gồm 2 chai 500ml.\r\n- Dung dịch acid Periodic 1%, dạng lỏng, trong, không màu, không mùi. \r\n- Dung dịch Schiff chứa: Sodium Metabishulphate <4% , Hydrochloric acid 37% <5%.",
+      "unit": "Bộ",
+      "quantity": 2,
+      "unitPrice": 3150000,
+      "amount": 6300000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11850872376443888",
+      "name": "Xylen",
+      "model": "XY1004",
+      "brand": "Xylene",
+      "manufacturer": "Cancer Diagnostics, Inc. (CDI)",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Tính chất vật lý: Dung dịch lỏng, không màu, mùi Hydrocarbon\r\n- Thành phần gồm có:\r\nXylenes (o-, m-, p- isomers): 80-95%\r\nEthylbenzene: 5-20%.",
+      "unit": "Can",
+      "quantity": 10,
+      "unitPrice": 1835400,
+      "amount": 18354000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "8471091519508143",
+      "name": "Dung dịch Formaldehyde (Formalin)",
+      "model": "0011-0070",
+      "brand": "Chất cố định mẫu bệnh phẩm",
+      "manufacturer": "Citotest Labware Manufacturing Co.,Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Formol 10% pha sẵn trong dung dịch đệm có pH 6.8 -7.2, sử dụng cho cố định bệnh phẩm tươi.\r\nThành phần gồm có: Sodium phosphate dibasic 1.5%, Sodium phosphate monobasic 0.4%, Methanol 1.2%, Formaldehyde 3.7%, Water 93.2%. Tỷ trọng 1,00-1,03g/ml,  tan trong nước.",
+      "unit": "Can",
+      "quantity": 30,
+      "unitPrice": 472500,
+      "amount": 14175000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11140104087438818",
+      "name": "Dung dịch cố định bệnh phẩm cắt lạnh: Cryo Glue (Gel cắt lạnh bệnh phẩm)",
+      "model": "UF1000cs",
+      "brand": "UltraFreeze",
+      "manufacturer": "Cancer Diagnostics Inc",
+      "origin": "Hoa Kỳ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Hóa chất dạng lỏng nhớt, màu trong đến vàng nhạt, mùi cồn nhẹ, tan trong nước. Sử dụng cho sự chuẩn bị các mẫu bệnh phẩm đông lạnh.",
+      "unit": "Lọ",
+      "quantity": 10,
+      "unitPrice": 650000,
+      "amount": 6500000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "9904295018637484",
+      "name": "Keo gắn lam kính",
+      "model": "RRSP29-D",
+      "brand": "AtomScientific",
+      "manufacturer": "AtomScientific Ltd",
+      "origin": "Anh Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Hóa chất dùng để gắn lamen dạng chất lỏng, không màu.\r\n- Thành phần gồm có:\r\nXylene, nhựa.",
+      "unit": "Chai",
+      "quantity": 20,
+      "unitPrice": 2184000,
+      "amount": 43680000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "10940090024850910",
+      "name": "Thuốc nhuộm INSTANT Eosin",
+      "model": "Không yêu cầu",
+      "brand": "Không yêu cầu",
+      "manufacturer": "Richard-Allan Scientific LLC (a subsidiary of Epredia)",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Thành phần: Sucrose 55-60%, Monosodium phosphate 25-30%, Eosin-Y Dye 10-15%, Sodium phosphate dibasic 1-2%.",
+      "unit": "Bộ",
+      "quantity": 2,
+      "unitPrice": 8181500,
+      "amount": 16363000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11719392612363944",
+      "name": "Dung dịch HNO3",
+      "model": "NC100",
+      "brand": "Dung dịch khử xương -Niter-Cal",
+      "manufacturer": "Cancer Diagnostics, Inc. (CDI)",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng khử calxi trong xương.\r\nDung dịch dạng lỏng không màu, độ PH<2\r\nThành phần gồm có: Acid Nitrit 95% và Nước 5%.",
+      "unit": "Chai",
+      "quantity": 3,
+      "unitPrice": 1890000,
+      "amount": 5670000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "7601418915040799",
+      "name": "Giemsa",
+      "model": "RRSP54-E",
+      "brand": "AtomScientific",
+      "manufacturer": "AtomScientific Ltd",
+      "origin": "Anh Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dung dịch dùng để thực hiện xét nghiệm soi nhuộm Giemsa để quan sát trực tiếp các mẫu bệnh phẩm hoặc mẫu vi khuẩn.",
+      "unit": "Lít",
+      "quantity": 5,
+      "unitPrice": 1650000,
+      "amount": 8250000,
+      "contractorCode": "vn0106932073",
+      "winnerNames": [
+        "CÔNG TY TNHH DỊCH VỤ THƯƠNG MẠI VÀ ĐẦU TƯ GIA HƯNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "9281952524745728",
+      "name": "Bộ dụng cụ bơm/ đổ xi măng không bóng",
+      "model": "SWM-KIT-T4; SWM-KIT-T4-1; SWM-KIT-T4-2; SWM-KIT-T4-3; SWM-KIT-T4-4 và Opacem",
+      "brand": "Không yêu cầu",
+      "manufacturer": "Seawon Meditech Co., Ltd. .",
+      "origin": "Hàn Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Bộ bao gồm: - Súng bơm xi măng: (cấu tạo có tay cò + Thân súng + núm chyển kênh khi thực hiện bơm, piston lò xo, tay hãm đẩy xi măng) - Ông đựng xi măng kết nối với đường ống dẫn cong - Kim chọc cuống sống: có 2 kích cỡ 11G, 13G có ren kết nối - Xi măng sinh học kèm dung dịch pha.",
+      "unit": "Cái",
+      "quantity": 30,
+      "unitPrice": 10000000,
+      "amount": 300000000,
+      "contractorCode": "vn0101581745",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ HOÀNG ANH"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "8042908374664352",
+      "name": "Que thử nồng độ axit peracetic",
+      "model": "5106",
+      "brand": "Serim",
+      "manufacturer": "Serim Research Corporation",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Dùng để thử nồng độ của axit paracetic trong dung dịch sát khuẩn quả lọc.",
+      "unit": "Lọ",
+      "quantity": 1,
+      "unitPrice": 773595.5056,
+      "amount": 773595.5056,
+      "contractorCode": "vn0110214734",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN KỸ THUẬT THIẾT BỊ Y TẾ ĐÔNG NAM Á"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "10265174812021844",
+      "name": "Test kiểm tra nồng độ Chlorine",
+      "model": "5167",
+      "brand": "Serim",
+      "manufacturer": "Serim Research Corporation",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Test kiểm tra nồng độ Chlorine: Thử nồng độ Clo tồn dư còn lại trong nước sau khi khử trùng thiết bị thẩm tách máu.",
+      "unit": "Lọ",
+      "quantity": 2,
+      "unitPrice": 819101.1236,
+      "amount": 1638202.2472,
+      "contractorCode": "vn0110214734",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN KỸ THUẬT THIẾT BỊ Y TẾ ĐÔNG NAM Á"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11459161198828152",
+      "name": "Test thử nước cứng",
+      "model": "5129",
+      "brand": "Serim",
+      "manufacturer": "Serim Research Corporation",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Test thử dùng kiểm tra độ cứng của nước trong chạy thận nhân tạo.",
+      "unit": "Lọ",
+      "quantity": 2,
+      "unitPrice": 819101.1236,
+      "amount": 1638202.2472,
+      "contractorCode": "vn0110214734",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN KỸ THUẬT THIẾT BỊ Y TẾ ĐÔNG NAM Á"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11259675866943644",
+      "name": "Túi đựng nước tiểu",
+      "model": "TNT",
+      "brand": "MPV",
+      "manufacturer": "Công ty Cổ Phần nhựa y tế Việt Nam",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Chất liệu: nhựa y tế PVC, không độc hại. Kích cỡ 2000m, độ dày 1.2mm, phân vạch rõ ràng. Có vạch dung tích mỗi 100ml. Đảm bảo kín không rò rỉ. Có bảng chia vạch nghiêng cho phép theo dõi lượng nước tiểu cực ít (25ml) trong những trường hợp bệnh nhân thiểu niệu. - Van xả thoát đáy chữ T, chống trào ngược, ống đầu vào 90cm. Có quai treo bằng nhựa PVC. Tiệt trùng bằng khí Ethylene Oxide (E.O).",
+      "unit": "Túi",
+      "quantity": 1000,
+      "unitPrice": 6000,
+      "amount": 6000000,
+      "contractorCode": "vn0101849706",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ VÀ HOÁ CHẤT HOÀNG PHƯƠNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "8883317740269917",
+      "name": "Dây nối bơm tiêm điện",
+      "model": "PTL.150",
+      "brand": "KLF",
+      "manufacturer": "Wenzhou K.L.F. Medical Plastics Co., -Trung Quốc",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Chất liệu nhựa  PVC, không độc, không  DEHP, không chất gây sốt.Độ dài 150cm, đường kính dây 1,0mm. Dây mềm, đầu nối khít theo tiêu chuẩn phù hợp với loại máy bệnh viện đang dùng. Đã  tiệt trùng .",
+      "unit": "Cái",
+      "quantity": 3000,
+      "unitPrice": 6950,
+      "amount": 20850000,
+      "contractorCode": "vn0101849706",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ VÀ HOÁ CHẤT HOÀNG PHƯƠNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "10173605018714860",
+      "name": "Bơm tiêm nhựa dùng một lần 5ml",
+      "model": "BTK5: MPV",
+      "brand": "MPV",
+      "manufacturer": "Công ty CP Nhựa Y tế Việt Nam",
+      "origin": "Việt Nam",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Xy lanh dung tích 5ml, được sản xuất từ nhựa y tế nguyên sinh trong suốt, nhẵn bóng, không cong vênh, không có ba via. Vạch chia dung tích rõ nét. Pít tông có khía bẻ gãy để hủy, không có ba via. - Kim làm bằng thép không gỉ, sắc nhọn, vát 3 cạnh. Kim các cỡ 23Gx1\", 25Gx1\".",
+      "unit": "Cái",
+      "quantity": 24000,
+      "unitPrice": 850,
+      "amount": 20400000,
+      "contractorCode": "vn0101849706",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ VÀ HOÁ CHẤT HOÀNG PHƯƠNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "11489928644379960",
+      "name": "Clip kẹp mạch máu",
+      "model": "0301-10ML; 0301-10L; 0301-10XL",
+      "brand": "Click'aV Plus",
+      "manufacturer": "Grena Ltd.",
+      "origin": "Anh Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Chất liệu: polymer không tiêu. Dùng để kẹp các cấu trúc mô dạng ống hoặc mạch máu trong quá trình phẫu thuật để cầm máu khi cần sử dụng các clip không tiêu. - Kẹp được mạch máu cỡ 3 mm đến 16 mm. - Chiều dài chân clip ngoài lần lượt: 9,5-13-17,8mm.",
+      "unit": "Cái",
+      "quantity": 240,
+      "unitPrice": 95000,
+      "amount": 22800000,
+      "contractorCode": "vn0101849706",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ VÀ HOÁ CHẤT HOÀNG PHƯƠNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    },
+    {
+      "id": "8188254550864937",
+      "name": "Acid Citric",
+      "model": "Citric acid",
+      "brand": "Ensign",
+      "manufacturer": "Shandong Ensign Industry Co.,Ltd",
+      "origin": "Trung Quốc",
+      "manufactureYear": "2025 trở về sau",
+      "specification": "Axit citric ≥ 99.5%.",
+      "unit": "Kg",
+      "quantity": 900,
+      "unitPrice": 39893,
+      "amount": 35903700,
+      "contractorCode": "vn0101849706",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ Y TẾ VÀ HOÁ CHẤT HOÀNG PHƯƠNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1270/QĐ-BVĐK",
+      "decisionDate": "2026-07-28T16:13:50",
+      "resultPublishedDate": "2026-07-28T16:22:00"
+    }
+  ],
   "requirements": {
     "total": 7,
     "items": [
@@ -579,6 +1216,6 @@
     "files": [],
     "disclosure": "public-structured-hsmt"
   },
-  "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:01.201Z"
+  "modelDisclosure": "winning-bidders-only",
+  "fetchedAt": "2026-07-29T11:44:53.160Z"
 }

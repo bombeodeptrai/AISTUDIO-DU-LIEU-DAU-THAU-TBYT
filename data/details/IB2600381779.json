@@ -447,16 +447,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "9bf895f2-e4fb-480f-8ef8-793802680995",
-        "lotNo": "PP2600297324",
-        "name": "Kim luồn mạch máu số 20",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1195000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "71af66a9-a1d3-4c33-b5e0-1b6adc06e4b1",
         "lotNo": "PP2600297321",
         "name": "Kim lấy thuốc số 18",
@@ -483,6 +473,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3055500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9bf895f2-e4fb-480f-8ef8-793802680995",
+        "lotNo": "PP2600297324",
+        "name": "Kim luồn mạch máu số 20",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1195000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -677,16 +677,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "b0c8c3a4-cfba-4a4f-aa03-7dcb37659afe",
-        "lotNo": "PP2600297346",
-        "name": "Môi trường MIU",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1782000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "551dd783-0597-40e4-b91d-e4b7df49df2c",
         "lotNo": "PP2600297344",
         "name": "Môi trường KIA",
@@ -703,6 +693,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1638000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b0c8c3a4-cfba-4a4f-aa03-7dcb37659afe",
+        "lotNo": "PP2600297346",
+        "name": "Môi trường MIU",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1782000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1127,16 +1127,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "dff8cc73-ddb9-486c-9787-e9d2778d63bf",
-        "lotNo": "PP2600297392",
-        "name": "Tấm trải nylon",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 5600000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "ff7f9367-94de-458f-aa09-c659635d3f33",
         "lotNo": "PP2600297389",
         "name": "Săng mổ 60x80cm vô trùng không có lỗ",
@@ -1163,6 +1153,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dff8cc73-ddb9-486c-9787-e9d2778d63bf",
+        "lotNo": "PP2600297392",
+        "name": "Tấm trải nylon",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5600000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1347,16 +1347,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "f5a74872-edb0-49ed-bf90-290d5b3fbba9",
-        "lotNo": "PP2600297414",
-        "name": "Thạch Sabouraud Dextrose Agar (SDA)",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1764000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "dfc400d0-2464-4ace-a83d-6932fa843ca2",
         "lotNo": "PP2600297411",
         "name": "Thạch môi trường Cary Blair",
@@ -1383,6 +1373,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 2478000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f5a74872-edb0-49ed-bf90-290d5b3fbba9",
+        "lotNo": "PP2600297414",
+        "name": "Thạch Sabouraud Dextrose Agar (SDA)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1764000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1467,16 +1467,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "8e4741a0-c577-4b03-863c-85a069986f81",
-        "lotNo": "PP2600297426",
-        "name": "Thuốc thử KOH",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 105800,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "88af5061-8ea4-4ddb-8482-c7912e47e914",
         "lotNo": "PP2600297423",
         "name": "Thuốc thử Alpha Naptthol",
@@ -1500,6 +1490,16 @@
         "id": "0d9375bc-1771-4429-8de8-60e39044d4d4",
         "lotNo": "PP2600297425",
         "name": "Thuốc thử FeCl3",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 105800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8e4741a0-c577-4b03-863c-85a069986f81",
+        "lotNo": "PP2600297426",
+        "name": "Thuốc thử KOH",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 105800,
@@ -1677,16 +1677,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "c3a44250-5426-4ef4-925b-d974e00fb4f2",
-        "lotNo": "PP2600297176",
-        "name": "Anti A",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 2280000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "8d090815-598c-4a55-8f2c-df19a00d6f4c",
         "lotNo": "PP2600297174",
         "name": "Acetic acid",
@@ -1703,6 +1693,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 2150000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c3a44250-5426-4ef4-925b-d974e00fb4f2",
+        "lotNo": "PP2600297176",
+        "name": "Anti A",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2280000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1827,16 +1827,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "fc6390dd-7c7b-49bc-8b24-bf1a70eb8eb5",
-        "lotNo": "PP2600297192",
-        "name": "Bộ thuốc nhuộm Ziehl-Neelsen",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 22100000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "39009251-7af2-4f9e-bcc5-c52c0f1b3684",
         "lotNo": "PP2600297189",
         "name": "Bi từ hỗ trợ sử dụng máy phân tích đông máu bán tự động",
@@ -1863,6 +1853,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 15015000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fc6390dd-7c7b-49bc-8b24-bf1a70eb8eb5",
+        "lotNo": "PP2600297192",
+        "name": "Bộ thuốc nhuộm Ziehl-Neelsen",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 22100000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2047,16 +2047,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "37ea5068-2fbf-44bb-a43e-e55f471e3d3b",
-        "lotNo": "PP2600297214",
-        "name": "Chỉ khâu phẫu thuật liền kim Nylon số 2-0",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 25200000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "63488c3d-d2b0-44f4-bc84-1db47e3a0064",
         "lotNo": "PP2600297211",
         "name": "Chỉ khâu phẫu thuật liền kim Catgut Chromic số 2-0",
@@ -2083,6 +2073,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 4300000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "37ea5068-2fbf-44bb-a43e-e55f471e3d3b",
+        "lotNo": "PP2600297214",
+        "name": "Chỉ khâu phẫu thuật liền kim Nylon số 2-0",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 25200000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2227,16 +2227,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "9f303e8d-1973-44f0-b38e-856d2238ef04",
-        "lotNo": "PP2600297234",
-        "name": "Chỉ thép khâu xương bánh chè số 7",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1504500,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "c55e3902-b49b-4cde-9674-fc9891618184",
         "lotNo": "PP2600297229",
         "name": "Chỉ siêu bền có kim cỡ chỉ số 2 dài 36 inch",
@@ -2283,6 +2273,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 5796000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9f303e8d-1973-44f0-b38e-856d2238ef04",
+        "lotNo": "PP2600297234",
+        "name": "Chỉ thép khâu xương bánh chè số 7",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1504500,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2487,22 +2487,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "28b205d8-248e-4e94-9f36-47c7faa9564b",
-        "lotNo": "PP2600297256",
-        "name": "Dây truyền dịch",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 300000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "4191b8f2-9740-4098-8807-94c47ee8577f",
         "lotNo": "PP2600297255",
         "name": "Dây thở oxy 2 hai nhánh trẻ em",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3850000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "28b205d8-248e-4e94-9f36-47c7faa9564b",
+        "lotNo": "PP2600297256",
+        "name": "Dây truyền dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 300000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2718,5 +2718,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:58.374Z"
+  "fetchedAt": "2026-07-29T11:44:40.975Z"
 }

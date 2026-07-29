@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "7f19c58c-c668-428b-8189-60e690f61d2f",
+      "contractorCode": "vn0317031173",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH Y TẾ ĐẶNG GIA",
+      "status": "participating",
+      "lotNo": "PP2600279559",
+      "lotName": "Phần 1. Hoá chất, vật tư dùng cho các xét nghiệm thông thường",
+      "bidPrice": 1256807000,
+      "finalPrice": 1256807000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T10:03:49.553",
+      "models": []
+    },
+    {
+      "id": "f7d703e4-455d-4240-be4e-4e8761fa79e9",
+      "contractorCode": "vn0101509481",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN GROUP PHÁT TRIỂN SỨC KHỎE",
+      "status": "participating",
+      "lotNo": "PP2600279560",
+      "lotName": "Phần 2. Hóa chất xét nghiệm nuôi cấy lao MGIT",
+      "bidPrice": 402716700,
+      "finalPrice": 402716700,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T10:03:53.023",
+      "models": []
+    },
+    {
+      "id": "9c202ecd-0eba-4e39-85f8-f79ef2ea5ee1",
+      "contractorCode": "vn0900108278",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN DƯỢC PHẨM HƯNG YÊN",
+      "status": "participating",
+      "lotNo": "PP2600279561",
+      "lotName": "Phần 3. Sinh phẩm y tế, vật tư y tế",
+      "bidPrice": 2880519768,
+      "finalPrice": 2880519768,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T10:03:44.665",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "23c63c2b-5dd5-464f-a73d-d0d119f0c284",
+        "lotNo": "PP2600279559",
+        "name": "Phần 1. Hoá chất, vật tư dùng cho các xét nghiệm thông thường",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1256807000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a567da47-4390-496a-8fc4-5f6313a9878b",
+        "lotNo": "PP2600279560",
+        "name": "Phần 2. Hóa chất xét nghiệm nuôi cấy lao MGIT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 402718333,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "428b0f86-d5ce-4518-94c3-5f912572dc62",
+        "lotNo": "PP2600279561",
+        "name": "Phần 3. Sinh phẩm y tế, vật tư y tế",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3120164186,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư, hoá chất xét nghiệm, sinh phẩm y tế của Bệnh viện Phổi Hưng Yên năm 2026-2027 (gồm 03 phần (lô))",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:45:02.067Z"
+}

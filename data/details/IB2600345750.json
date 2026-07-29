@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 5,
+    "items": [
+      {
+        "id": "abf9e7bf-b23c-4f9e-977d-9fc72afc3382",
+        "lotNo": "PP2600269279",
+        "name": "Phần 1. Hoá chất cho máy sinh hóa DxC 700 AU Beckman coulter",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2261348082,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "98b32165-8804-414d-b83f-ecd357305705",
+        "lotNo": "PP2600269280",
+        "name": "Phần 2. Hoá chất, sinh phẩm, vật tư xét nghiệm sinh hóa 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3598400297,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "360c7a0a-fe94-41d0-ad4b-01b284aa2a83",
+        "lotNo": "PP2600269281",
+        "name": "Phần 3. Hoá chất cho máy miễn dịch Cobas e 402 analytical unit",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2934598288,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bc2a5b8d-b758-441d-81a0-bd16252c2c7e",
+        "lotNo": "PP2600269282",
+        "name": "Phần 4: Hóa chất sử dụng cho máy xét nghiệm HbA1C tự động ADAMS A1c HS-8190V",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1005264032,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cba5658c-48d0-44c4-a8ef-90a5e06a7429",
+        "lotNo": "PP2600269283",
+        "name": "Phần 5: Hóa chất sử dụng cho Máy phân tích nước tiểu tự động Aution Max AX-4060",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 503724000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Lựa chọn nhà thầu cung cấp thiết bị y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:52.087Z"
+}

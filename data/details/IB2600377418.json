@@ -847,16 +847,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "5c73ed95-6e4d-4ea9-aacb-9ca5739fa9ba",
-        "lotNo": "PP2600260418",
-        "name": "Bộ bảo dưỡng kit 2 máy hấp nhiệt độ thấp",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 161741250,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "988df898-4ae1-4828-a6a0-5ebd8e7b09aa",
         "lotNo": "PP2600260415",
         "name": "Catheter tĩnh mạch rốn các cỡ Fr 4;5",
@@ -883,6 +873,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 143747892,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5c73ed95-6e4d-4ea9-aacb-9ca5739fa9ba",
+        "lotNo": "PP2600260418",
+        "name": "Bộ bảo dưỡng kit 2 máy hấp nhiệt độ thấp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 161741250,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1148,5 +1148,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:06.634Z"
+  "fetchedAt": "2026-07-29T11:45:04.251Z"
 }

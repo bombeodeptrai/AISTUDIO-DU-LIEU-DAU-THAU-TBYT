@@ -1277,16 +1277,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "19dd96a9-264f-478a-b385-e84f147ff1f4",
-        "lotNo": "PP2600276097",
-        "name": "Dung dịch khử khuẩn mức độ cao dụng cụ y tế ortho-Phthalaldehyde (w/w), can >= 5 lít",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 5040000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "eb9b8274-218e-4faf-bf73-899b3fb05506",
         "lotNo": "PP2600276095",
         "name": "Dung dịch làm sạch và tiền khử khuẩn dụng cụ y tế, chai >= 1 lít",
@@ -1303,6 +1293,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 17010000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "19dd96a9-264f-478a-b385-e84f147ff1f4",
+        "lotNo": "PP2600276097",
+        "name": "Dung dịch khử khuẩn mức độ cao dụng cụ y tế ortho-Phthalaldehyde (w/w), can >= 5 lít",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5040000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1358,5 +1358,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:01.802Z"
+  "fetchedAt": "2026-07-29T11:44:53.498Z"
 }

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "2e19806a-f829-435e-ace5-b50881652e3e",
+        "lotNo": "PP2600296113",
+        "name": "Phần 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 870000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "722cd14e-bf3a-4b6e-aa6d-49cd3aae81d8",
+        "lotNo": "PP2600296114",
+        "name": "Phần 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 460000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm thiết bị y tế tiêu hao phục vụ công tác khám chữa bệnh",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "2026620161756630",
+        "position": "1.1",
+        "lotNo": "PP2600296113",
+        "lotName": "Phần 1",
+        "name": "Bông y tế thấm nước",
+        "unit": "kg",
+        "quantity": 7500,
+        "code": "BHN07WK001",
+        "brand": "Không yêu cầu",
+        "manufacturer": "Tổng Công ty CP Y tế Danameco",
+        "origin": "Việt Nam",
+        "manufactureYear": "2026 trở đi",
+        "specification": "Thành phần - 100% sợi cotton từ bông xơ tự nhiên - Bông không có tạp chất, không ẩm ướt, không mùi lạ - Giới hạn acid - kiềm: Đạt trung tính - Chất hoạt động bề mặt: ≤ 2mm - Tốc độ chìm: ≤ 8s - Khả năng hút nước: ≥100g - Chất tan trong ether: không quá 0.5% - Chất tan trong nước: không quá 0.5% - Mất khối lượng do sấy khô: Không quá 8% - Tro sunfat: không quá 0.4% - Tiêu chuẩn chất lượng: ISO 13485",
+        "otherRequirement": "Nhà thầu xếp hạng 1 và được đề nghị trúng thầu phải cung cấp đầy đủ các tài liệu về thông tin sản phẩm trúng thầu trước khi ký hợp đồng bao gồm: Bản phân loại; Giấy phép lưu hành/Giấy phép nhập khẩu/Phiếu tiếp nhận Hồ sơ công bố tiêu chuẩn áp dụng của thiết bị y tế; Catalogue/tài liệu kỹ thuật của nhà sản xuất; Tiêu chuẩn chất lượng: như đã nêu trong TBMT. Yêu cầu: Bản cứng gửi về Tổ mua sắm số 2 , Bệnh viện Hữu Nghị Việt Tiệp Số 01, Đường Nhà Thương, Phường Lê Chân, Thành Phố Hải Phòng",
+        "projectPlace": "Bệnh viện Hữu Nghị Việt Tiệp",
+        "earliestDeliveryDate": "01 ngày",
+        "latestDeliveryDate": "05 ngày",
+        "formCode": "BD.DT.02.1960",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "2026620161940638",
+        "position": "2.1",
+        "lotNo": "PP2600296114",
+        "lotName": "Phần 2",
+        "name": "Gạc cầu đa khoa",
+        "unit": "cái",
+        "quantity": 1000000,
+        "code": "GCA04WV010",
+        "brand": "Không yêu cầu",
+        "manufacturer": "Tổng Công ty CP Y tế Danameco",
+        "origin": "Việt Nam",
+        "manufactureYear": "2026 trở đi",
+        "specification": "- Sản xuất từ gạc hút nước 100% cotton có độ thấm hút cao. - Tốc độ hút nước ≤5 giây. Độ ngậm nước ≥ 5gr nước/lgr gạc. - Chất tan trong nước ≤ 0.5%. Độ pH: trung tính. - Độ ẩm không quá 8%. - Kích thước: Fi 40 x 1 lớp, vô trùng. - Tiệt trùng đạt tiêu chuẩn sử dụng trong y tế - Tiêu chuẩn chất lượng: ISO 13485",
+        "otherRequirement": "Nhà thầu xếp hạng 1 và được đề nghị trúng thầu phải cung cấp đầy đủ các tài liệu về thông tin sản phẩm trúng thầu trước khi ký hợp đồng bao gồm: Bản phân loại; Giấy phép lưu hành/Giấy phép nhập khẩu/Phiếu tiếp nhận Hồ sơ công bố tiêu chuẩn áp dụng của thiết bị y tế; Catalogue/tài liệu kỹ thuật của nhà sản xuất; Tiêu chuẩn chất lượng: như đã nêu trong TBMT. Yêu cầu: Bản cứng gửi về Tổ mua sắm số 2 , Bệnh viện Hữu Nghị Việt Tiệp Số 01, Đường Nhà Thương, Phường Lê Chân, Thành Phố Hải Phòng",
+        "projectPlace": "Bệnh viện Hữu Nghị Việt Tiệp",
+        "earliestDeliveryDate": "01 ngày",
+        "latestDeliveryDate": "05 ngày",
+        "formCode": "BD.DT.02.1960",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1960",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:47.911Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "6fcc91aa-bb45-465c-b2b9-5de185aca82c",
+        "lotNo": "BP2600550644",
+        "name": "Hóa chất máy huyết học",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5628256190,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua hóa chất xét nghiệm",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:25.318Z"
+}

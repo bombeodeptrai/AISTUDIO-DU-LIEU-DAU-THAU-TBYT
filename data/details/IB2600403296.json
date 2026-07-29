@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 8,
+    "items": [
+      {
+        "id": "8e3c7f6b-49bb-4677-867b-a9ec571f7572",
+        "lotNo": "PP2600303433",
+        "name": "Phần 1: Hóa chất xét nghiệm sinh hóa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 801213410,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9f40a6e6-9cc5-40e0-8324-22a7e56b1395",
+        "lotNo": "PP2600303434",
+        "name": "Phần 2: Hóa chất xét nghiệm miễn dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 171084000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c979c6a8-734c-497a-84f7-04be77957a95",
+        "lotNo": "PP2600303435",
+        "name": "Phần 3: Hóa chất xét nghiệm huyết học",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 665730009,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cba5a4ba-ef07-4985-851a-221494b7f394",
+        "lotNo": "PP2600303436",
+        "name": "Phần 4: Hóa chất, Vật tư dùng cho máy xét nghiệm điện giải 910C Plus",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 105800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cbfb80ff-808b-4052-8fdd-7606ad2bc855",
+        "lotNo": "PP2600303437",
+        "name": "Phần 5: Hoá chất xét nghiệm đông máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 137180000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a23a9bcb-12f0-494c-a62f-6b498337c58e",
+        "lotNo": "PP2600303438",
+        "name": "Phần 6: Định nhóm máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2074800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ce54e2a2-139f-4e30-92c6-dedea6ddc7bb",
+        "lotNo": "PP2600303439",
+        "name": "Phần 7: Hóa chất nuôi cấy vi sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 68490000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "99a49b78-acf2-4370-80b8-eb4b412219cf",
+        "lotNo": "PP2600303440",
+        "name": "Phần 8: Hóa chất vật tư xét nghiệm khác",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 444718250,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm 94 mặt hàng hóa chất và sinh phẩm chẩn đoán (Gói thầu chia thành 08 phần)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:47.809Z"
+}

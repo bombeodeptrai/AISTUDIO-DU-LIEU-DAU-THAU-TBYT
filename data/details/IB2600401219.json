@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "65ad312a-1b1d-4a7b-901c-5d6a8e0c2634",
+        "lotNo": "BP2600571934",
+        "name": "Mua sắm Thiết bị Y tế (Hóa chất xét nghiệm) bổ sung sử dụng năm 2026- 2027 tại Bệnh viện đa khoa khu vực Đakrông",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 121900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Thiết bị Y tế (Hóa chất xét nghiệm) bổ sung sử dụng năm 2026- 2027 tại Bệnh viện đa khoa khu vực Đakrông",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 4,
+    "items": [
+      {
+        "id": "202662715236891",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Hóa chất dùng cho xét nghiệm LDL- Cholesterol",
+        "unit": "ml",
+        "quantity": 1360,
+        "code": "không yêu cầu",
+        "brand": "không yêu cầu",
+        "manufacturer": "không yêu cầu",
+        "origin": "không yêu cầu",
+        "manufactureYear": "không yêu cầu",
+        "specification": "không yêu cầu",
+        "otherRequirement": "",
+        "projectPlace": "Khoa Dược-TTB-VTYT, Bệnh viện đa khoa khu vực Đakrông",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "2026627152419359",
+        "position": "2",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Hóa chất dùng cho xét nghiệm HDL Cholesterol",
+        "unit": "ml",
+        "quantity": 1440,
+        "code": "không yêu cầu",
+        "brand": "không yêu cầu",
+        "manufacturer": "không yêu cầu",
+        "origin": "không yêu cầu",
+        "manufactureYear": "không yêu cầu",
+        "specification": "không yêu cầu",
+        "otherRequirement": "",
+        "projectPlace": "khoa Dược-TTB-VTYT, Bệnh viện đa khoa khu vực Đakrông",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "2026627152547322",
+        "position": "3",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Hóa chất đo thời gian đông máu Prothrombin Time",
+        "unit": "ml",
+        "quantity": 100,
+        "code": "không yêu cầu",
+        "brand": "không yêu cầu",
+        "manufacturer": "không yêu cầu",
+        "origin": "không yêu cầu",
+        "manufactureYear": "không yêu cầu",
+        "specification": "không yêu cầu",
+        "otherRequirement": "",
+        "projectPlace": "khoa Dược-TTB-VTYT, Bệnh viện đa khoa khu vực Đakrông",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "2026627152750288",
+        "position": "4",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Dung dịch pha loảng hồng cầu",
+        "unit": "ml",
+        "quantity": 600000,
+        "code": "không yêu cầu",
+        "brand": "không yêu cầu",
+        "manufacturer": "không yêu cầu",
+        "origin": "không yêu cầu",
+        "manufactureYear": "không yêu cầu",
+        "specification": "Sử dụng phù hợp, tương thích với máy phân tích huyết học XP-100, Sysmex",
+        "otherRequirement": "",
+        "projectPlace": "khoa Dược-TTB-VTYT, Bệnh viện đa khoa khu vực Đakrông",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1958",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:14.625Z"
+}

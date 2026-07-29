@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "32591b83-d5ed-429e-89d7-c27a0ffe1882",
+        "lotNo": "PP2600276747",
+        "name": "Phần 1. Cung cấp Hóa chất bổ sung cho khoa Hóa sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2119471200,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "31a6d839-59e8-499d-bc6f-a7d7f1d4fdf7",
+        "lotNo": "PP2600276748",
+        "name": "Phần 2. Cung cấp hóa chất bổ sung cho khoa Vi sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1881600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Phần 1: Cung cấp hóa chất bổ sung cho khoa Hóa sinh Phần 2: Cung cấp hóa chất bổ sung cho khoa Vi sinh",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:05.619Z"
+}

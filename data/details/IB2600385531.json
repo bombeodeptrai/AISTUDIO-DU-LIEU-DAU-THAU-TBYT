@@ -357,16 +357,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "603b15b4-1c98-46a7-9c0b-430bebf61762",
-        "lotNo": "PP2600282880",
-        "name": "Lô 39: Vật tư phòng khám đa khoa",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 248878797,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "d9102477-2ec9-48a5-865b-f77c0ea2930b",
         "lotNo": "PP2600282877",
         "name": "Lô 36: Vật tư cho máy theo dõi bệnh nhân",
@@ -393,6 +383,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 76050000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "603b15b4-1c98-46a7-9c0b-430bebf61762",
+        "lotNo": "PP2600282880",
+        "name": "Lô 39: Vật tư phòng khám đa khoa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 248878797,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -438,5 +438,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:44.392Z"
+  "fetchedAt": "2026-07-29T11:44:08.253Z"
 }

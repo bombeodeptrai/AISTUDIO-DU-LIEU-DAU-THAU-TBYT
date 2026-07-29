@@ -2748,16 +2748,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "88af827e-bba2-4057-a05a-638a572e2cc8",
-        "lotNo": "PP2600264135",
-        "name": "CREATININE",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 11952360,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "dbd10ef1-376f-46fc-808c-5b71d2210926",
         "lotNo": "PP2600264132",
         "name": "HDL- CHOLESTEROL CALIBRATOR",
@@ -2784,6 +2774,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 7728672,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "88af827e-bba2-4057-a05a-638a572e2cc8",
+        "lotNo": "PP2600264135",
+        "name": "CREATININE",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11952360,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -3208,22 +3208,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "1c561ef3-fb35-4823-b09c-3a20b10b0891",
-        "lotNo": "PP2600264179",
-        "name": "HCV",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 6750000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "da00bedf-16b1-4003-a997-0fbe73ae270e",
         "lotNo": "PP2600264178",
         "name": "RF định tính",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 5340000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1c561ef3-fb35-4823-b09c-3a20b10b0891",
+        "lotNo": "PP2600264179",
+        "name": "HCV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6750000,
         "specification": "",
         "sourceStage": "invitation"
       }
@@ -3239,5 +3239,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:10.807Z"
+  "fetchedAt": "2026-07-29T11:45:14.499Z"
 }

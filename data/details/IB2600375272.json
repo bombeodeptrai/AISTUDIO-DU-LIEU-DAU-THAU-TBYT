@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "86870d9e-73f6-4ba0-8cee-7b9645488f8c",
+        "lotNo": "PP2600286252",
+        "name": "BỘ DỤNG CỤ PHẪU THUẬT LẤY THẬN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 750257371,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "299ee845-9d84-4cf7-9a67-64eda94fef7f",
+        "lotNo": "PP2600286253",
+        "name": "BỘ DỤNG CỤ PHẪU THUẬT RỬA THẬN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 112014195,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c36fff93-44c9-458e-9ebb-39e1093a0b00",
+        "lotNo": "PP2600286254",
+        "name": "BỘ DỤNG CỤ PHẪU THUẬT GHÉP THẬN",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 763046062,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm dụng cụ phẫu thuật cho phẫu thuật ghép thận",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:03.625Z"
+}

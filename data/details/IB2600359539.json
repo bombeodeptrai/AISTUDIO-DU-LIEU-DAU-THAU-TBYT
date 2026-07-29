@@ -1507,16 +1507,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "440feb1e-0849-492d-9d1b-cf91e65ab596",
-        "lotNo": "PP2600279106",
-        "name": "Anti-HCV miễn dịch tự động (vi hạt hóa phát quang) - chất chuẩn",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 32735988,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "c0950c67-6818-426b-9462-1a1c370a4faa",
         "lotNo": "PP2600279103",
         "name": "Anti-HBc IgM miễn dịch tự động (vi hạt hóa phát quang) - chất chuẩn",
@@ -1543,6 +1533,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 2434000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "440feb1e-0849-492d-9d1b-cf91e65ab596",
+        "lotNo": "PP2600279106",
+        "name": "Anti-HCV miễn dịch tự động (vi hạt hóa phát quang) - chất chuẩn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 32735988,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -3558,5 +3558,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:45.483Z"
+  "fetchedAt": "2026-07-29T11:44:10.153Z"
 }

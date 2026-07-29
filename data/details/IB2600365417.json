@@ -1,7 +1,23 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "df9167de-bc6d-4198-936e-a84eedc99397",
+      "contractorCode": "vn0101403090",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN VẬT TƯ KỸ THUẬT ĐÔNG DƯƠNG",
+      "status": "participating",
+      "lotNo": "BP2600289844",
+      "lotName": "Mua sắm công cụ, dụng cụ và vật tư tiêu hao phục vụ quan trắc hiện trường và phân tích trong phòng thí nghiệm",
+      "bidPrice": 1242186000,
+      "finalPrice": 1242186000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T10:21:28.477",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 1,
@@ -28,5 +44,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:06.933Z"
+  "fetchedAt": "2026-07-29T11:45:05.565Z"
 }

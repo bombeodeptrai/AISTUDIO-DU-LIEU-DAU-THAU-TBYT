@@ -717,16 +717,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "f2a59e51-6345-4656-b533-ef5cf3893ce9",
-        "lotNo": "PP2600272725",
-        "name": "Gạc Povidine",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 950000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "a9d09a58-87ca-46fb-9bb4-1b246d0b21b7",
         "lotNo": "PP2600272722",
         "name": "Đinh kirschner Dia 1.8mm x 310mm",
@@ -753,6 +743,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 2300000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f2a59e51-6345-4656-b533-ef5cf3893ce9",
+        "lotNo": "PP2600272725",
+        "name": "Gạc Povidine",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 950000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -957,16 +957,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "57f1137e-2833-426c-8b77-397c7adafc4d",
-        "lotNo": "PP2600272749",
-        "name": "Lame kính hiển vi",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1093500,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "d7a9c152-04db-4efb-96c5-7c978713ee15",
         "lotNo": "PP2600272746",
         "name": "Kim lấy thuốc, các số",
@@ -993,6 +983,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3308000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "57f1137e-2833-426c-8b77-397c7adafc4d",
+        "lotNo": "PP2600272749",
+        "name": "Lame kính hiển vi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1093500,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1407,16 +1407,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "7ab1aba8-ef2c-4021-b0d2-956e52667391",
-        "lotNo": "PP2600272773",
-        "name": "Ống nghe",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 6500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "aac59950-be78-49da-aa09-a4d7efa95496",
         "lotNo": "PP2600272770",
         "name": "Ống dẫn lưu ổ bụng mềm (Penrose drain)",
@@ -1443,6 +1433,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 4999900,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7ab1aba8-ef2c-4021-b0d2-956e52667391",
+        "lotNo": "PP2600272773",
+        "name": "Ống nghe",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1647,16 +1647,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "6207334e-c3b9-4760-8b0f-734f1c4b3263",
-        "lotNo": "PP2600272839",
-        "name": "Cây Bougie đặt NKQ",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1365000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "83352a4a-65e4-4fd3-b089-b84887b2602a",
         "lotNo": "PP2600272836",
         "name": "Gon thun troca 5 trong dụng cụ phẫu thuật nội soi",
@@ -1683,6 +1673,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 26249950,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6207334e-c3b9-4760-8b0f-734f1c4b3263",
+        "lotNo": "PP2600272839",
+        "name": "Cây Bougie đặt NKQ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1365000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1827,16 +1827,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "be32bda9-226b-4b7f-b89a-50bbd658a9b8",
-        "lotNo": "PP2600272797",
-        "name": "Dung dịch rửa tay phẫu thuật",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 10500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "2acac3ee-0c19-4213-a4cc-1575d1619b1d",
         "lotNo": "PP2600272794",
         "name": "Dung dịch khử khuẩn bề mặt dụng cụ (Cidex)",
@@ -1863,6 +1853,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 29000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "be32bda9-226b-4b7f-b89a-50bbd658a9b8",
+        "lotNo": "PP2600272797",
+        "name": "Dung dịch rửa tay phẫu thuật",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2037,16 +2037,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "d2bd1f8f-bc42-4c0c-bd1f-6dc546cb66e6",
-        "lotNo": "PP2600272857",
-        "name": "Trâm K (Kim khoan răng)",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 5040000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "60a21b18-335b-48dc-850b-5b1781178c7e",
         "lotNo": "PP2600272854",
         "name": "Đầu kim tiêm cho bút tiêm tiểu đường",
@@ -2073,6 +2063,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 7200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d2bd1f8f-bc42-4c0c-bd1f-6dc546cb66e6",
+        "lotNo": "PP2600272857",
+        "name": "Trâm K (Kim khoan răng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5040000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2147,16 +2147,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "69346da2-419d-4c59-8f82-87f4acb00731",
-        "lotNo": "PP2600272868",
-        "name": "Giấy cắn 1 mặt",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 19750000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "962040af-b35f-470f-b7ab-7e740fd83803",
         "lotNo": "PP2600272865",
         "name": "Cây tháo mão",
@@ -2183,6 +2173,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1165500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "69346da2-419d-4c59-8f82-87f4acb00731",
+        "lotNo": "PP2600272868",
+        "name": "Giấy cắn 1 mặt",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 19750000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2368,5 +2368,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:46.549Z"
+  "fetchedAt": "2026-07-29T11:44:12.882Z"
 }

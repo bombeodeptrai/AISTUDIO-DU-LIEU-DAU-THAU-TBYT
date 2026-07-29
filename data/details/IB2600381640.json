@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "678333b0-8a10-47d3-b1c2-886354f2f82b",
+        "lotNo": "PP2600297727",
+        "name": "Phim X-quang khô laser 8 x 10 inch (20x25cm)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 285705000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "68ca374a-1a38-4e56-8a23-927161cefe8d",
+        "lotNo": "PP2600297728",
+        "name": "Phim X-quang nha khoa 3 x 4cm kèm nước rửa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung cấp Phim X-Quang năm 2026 - 2027 cho Trung tâm Y tế khu vực Tân Phước",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "11037638284918012",
+        "position": "1.1",
+        "lotNo": "PP2600297727",
+        "lotName": "Phim X-quang khô laser 8 x 10 inch (20x25cm)",
+        "name": "Phim X-quang khô laser 8 x 10 inch (20x25cm)",
+        "unit": "tấm",
+        "quantity": 15000,
+        "code": "Không yêu cầu",
+        "brand": "Không yêu cầu",
+        "manufacturer": "Không yêu cầu",
+        "origin": "Không yêu cầu",
+        "manufactureYear": "Năm 2025 trở về sau",
+        "specification": "- Được dùng cho máy in kỹ thuật số Konica SD - S Drypro Sigma/Drypro Sigma 2.\n- Kích thước 8 x 10 inch (20cm x 25cm)\n- Bao gói: Màng nhôm",
+        "otherRequirement": "Nhà thầu xếp hạng nhất cung cấp các tài liệu sau về cho TTYT xem xét trước khi ký kết hợp đồng: Giấy đủ điều kiện mua bán thiết bị y tế/Số lưu hành của thiết bị y tế/Giấy chứng nhận đủ điều kiện sản xuất thiết bị y tế (đối với hàng hóa tham dự thầu được sản xuất tại Việt Nam)/Tài liệu kỹ thuật, catalogue, hình ảnh,...về đặc tính kỹ thuật/Giấy chứng nhận đạt tiêu chuẩn chất lượng ISO 13485 còn hiệu lực của cơ sở sản xuất hàng hóa dự thầu. Biểu mẫu dự thầu gồm các thông tin sau: Tên thương mại, thông số kỹ thuật và các tiêu chuẩn, ký mã hiệu, nhãn hiệu, Năm sản xuất, xuất xứ, hãng sản xuất, số lưu hành thiết bị y tế, quy cách đóng gói, đơn vị tính, đơn giá trúng thầu qua mail: ttytkhoaduoctp@gmail.com",
+        "projectPlace": "Tại Trung tâm Y tế khu vực Tân Phước, địa chỉ: ấp Mỹ Thành, xã Tân Phước 1, tỉnh Đồng Tháp",
+        "earliestDeliveryDate": "Giao hàng từng đợt theo nhu cầu thực tế của bệnh viện. Ngày giao hàng sớm nhất là 03 ngày làm việc",
+        "latestDeliveryDate": "Giao hàng từng đợt theo nhu cầu thực tế của bệnh viện. Ngày giao hàng muộn nhất là 05 ngày làm việc",
+        "formCode": "BD.DT.02.1960",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "10449349836696132",
+        "position": "2.1",
+        "lotNo": "PP2600297728",
+        "lotName": "Phim X-quang nha khoa 3 x 4cm kèm nước rửa",
+        "name": "Phim X-quang nha khoa 3 x 4cm kèm nước rửa",
+        "unit": "tấm",
+        "quantity": 200,
+        "code": "Không yêu cầu",
+        "brand": "Không yêu cầu",
+        "manufacturer": "Không yêu cầu",
+        "origin": "Không yêu cầu",
+        "manufactureYear": "Năm 2025 trở về sau",
+        "specification": "Film chụp X-Quang Nha khoa (rửa liền) (Không cần máy rửa buồng tối)\nQuy cách: 1 hộp/bộ: gồm 50 phim + dung dịch rửa phim X-quang nha khoa 250 ml + ống chích nhựa 5 ml",
+        "otherRequirement": "Nhà thầu xếp hạng nhất cung cấp các tài liệu sau về cho TTYT xem xét trước khi ký kết hợp đồng: Giấy đủ điều kiện mua bán thiết bị y tế/Số lưu hành của thiết bị y tế/Giấy chứng nhận đủ điều kiện sản xuất thiết bị y tế (đối với hàng hóa tham dự thầu được sản xuất tại Việt Nam)/Tài liệu kỹ thuật, catalogue, hình ảnh,...về đặc tính kỹ thuật/Giấy chứng nhận đạt tiêu chuẩn chất lượng ISO 13485 còn hiệu lực của cơ sở sản xuất hàng hóa dự thầu. Biểu mẫu dự thầu gồm các thông tin sau: Tên thương mại, thông số kỹ thuật và các tiêu chuẩn, ký mã hiệu, nhãn hiệu, Năm sản xuất, xuất xứ, hãng sản xuất, số lưu hành thiết bị y tế, quy cách đóng gói, đơn vị tính, đơn giá trúng thầu qua mail: ttytkhoaduoctp@gmail.com",
+        "projectPlace": "Tại Trung tâm Y tế khu vực Tân Phước, địa chỉ: ấp Mỹ Thành, xã Tân Phước 1, tỉnh Đồng Tháp",
+        "earliestDeliveryDate": "Giao hàng từng đợt theo nhu cầu thực tế của bệnh viện. Ngày giao hàng sớm nhất là 03 ngày làm việc",
+        "latestDeliveryDate": "Giao hàng từng đợt theo nhu cầu thực tế của bệnh viện. Ngày giao hàng muộn nhất là 05 ngày làm việc",
+        "formCode": "BD.DT.02.1960",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1960",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:56.660Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "d632a3d3-82ac-47cd-a8e4-4b5baeb64057",
+        "lotNo": "PP2600302383",
+        "name": "Phần 1: Hóa chất xét nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 579777644,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "77bb4db3-bf9d-4e35-8ca6-b8a6ae26d4f4",
+        "lotNo": "PP2600302384",
+        "name": "Phần 2: Vật tư y tế",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1058808000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cecae727-b522-41d8-80d1-5874957a1f98",
+        "lotNo": "PP2600302385",
+        "name": "Phần 3: Các vật tư y tế, hóa chất khác",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 65725000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư y tế và hóa chất xét nghiệm phục vụ công tác khám bệnh, chữa bệnh",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:12.755Z"
+}

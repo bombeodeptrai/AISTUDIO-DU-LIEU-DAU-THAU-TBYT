@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 7,
+    "items": [
+      {
+        "id": "419d384d-a93f-473f-8bc9-a379bbf00f0c",
+        "lotNo": "PP2600294609",
+        "name": "Vật tư, hóa chất xét nghiệm sử dụng cho hệ thống máy miễn dịch Cobas E411",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5287025199,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "35391963-eaaa-4c11-ae17-180765f334f8",
+        "lotNo": "PP2600294610",
+        "name": "Vật tư, hóa chất xét nghiệm sử dụng cho hệ thống máy miễn dịch Unicel DxI 800",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5733849460,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "29e97f04-0f53-4859-b708-be592e3d03ae",
+        "lotNo": "PP2600294611",
+        "name": "Vật tư, hóa chất xét nghiệm sử dụng cho hệ thống máy phân tích miễn dịch tự động công nghệ hóa phát quang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7308036510,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f6edb88f-4333-41f5-93fb-939c4303a373",
+        "lotNo": "PP2600294612",
+        "name": "Vật tư, hóa chất xét nghiệm sử dụng cho hệ thống xét nghiệm sinh hóa AU680, DxC700",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6201961000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "636779fd-74b1-4848-bd23-bf95a0f2cdfd",
+        "lotNo": "PP2600294613",
+        "name": "Vật tư, hóa chất xét nghiệm sử dụng cho hệ thống xét nghiệm huyết học XP-100, XN-1000, đông máu CA-620",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3046696160,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "225864aa-8678-4d01-9f75-cb9203e4c842",
+        "lotNo": "PP2600294614",
+        "name": "Test nhanh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 313116000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ba045f8f-3d66-47ec-a400-7c5b30009d7a",
+        "lotNo": "PP2600294615",
+        "name": "Vật tư, hóa chất xét nghiệm khác",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 869050000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm 146 khoản hóa chất, vật tư",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:44.998Z"
+}

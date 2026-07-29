@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "f9f65927-1085-4062-94dc-029569cbe328",
+        "lotNo": "BP2600546522",
+        "name": "Gói thầu số 09: Dụng cụ nội soi tổng quát + Ung bướu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4655160000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Dụng cụ nội soi tổng quát + Ung bướu",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:44.358Z"
+}

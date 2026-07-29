@@ -1,7 +1,23 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "3151b3e0-b5d3-477c-a001-414db3758acf",
+      "contractorCode": "vn0107273786",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH KHOA HỌC KỸ THUẬT HƯỚNG DƯƠNG",
+      "status": "participating",
+      "lotNo": "BP2600511159",
+      "lotName": "Gói số 1: Mua Hóa chất xét nghiệm năm 2026 phục vụ công tác chuyên môn tại Trung tâm y tế Bảo Lâm",
+      "bidPrice": 319745000,
+      "finalPrice": 319745000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T10:09:45.197",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 1,
@@ -28,5 +44,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:07.940Z"
+  "fetchedAt": "2026-07-29T11:45:06.782Z"
 }

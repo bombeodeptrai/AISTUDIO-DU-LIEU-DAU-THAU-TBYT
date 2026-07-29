@@ -237,16 +237,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "95a9d8af-4da1-47e7-b8f4-8a0e0ba975aa",
-        "lotNo": "PP2600299025",
-        "name": "Bộ đo nhãn áp",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 10100000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "79d53767-3653-4ff0-a918-3046e9cbccf3",
         "lotNo": "PP2600299022",
         "name": "Bộ kìm nhổ răng người lớn",
@@ -273,6 +263,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3625000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "95a9d8af-4da1-47e7-b8f4-8a0e0ba975aa",
+        "lotNo": "PP2600299025",
+        "name": "Bộ đo nhãn áp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10100000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -317,16 +317,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "c41ca3af-a6b3-4db5-beb9-d94d9a626cac",
-        "lotNo": "PP2600299064",
-        "name": "Vỏ bình oxy 10 lít",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 9900000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "29463275-2fde-4508-b31b-d7ee2a868c8b",
         "lotNo": "PP2600299061",
         "name": "Kim luồn tĩnh mạch có cánh, có cổng bơm thuốc các cỡ",
@@ -353,6 +343,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c41ca3af-a6b3-4db5-beb9-d94d9a626cac",
+        "lotNo": "PP2600299064",
+        "name": "Vỏ bình oxy 10 lít",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9900000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1882,5 +1882,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:56.706Z"
+  "fetchedAt": "2026-07-29T11:44:39.582Z"
 }

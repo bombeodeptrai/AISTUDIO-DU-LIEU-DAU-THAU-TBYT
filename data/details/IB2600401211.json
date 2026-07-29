@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 34,
+    "items": [
+      {
+        "id": "c3d2fe17-3c14-47c5-a013-11a3bc320f68",
+        "lotNo": "PP2600283279",
+        "name": "Phần 1. Nhóm hóa chất xét nghiệm tổng phân tích tế bào máu ngoại vi với tối thiểu 51 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13499570910,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7b85cf4e-6ece-4bcb-a770-b4b29b6f70c4",
+        "lotNo": "PP2600283280",
+        "name": "Phần 2. Nhóm hóa chất xét nghiệm tổng phân tích tế bào máu ngoại vi với tối thiểu 55 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4455806565,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7083f010-4827-454d-8a76-ea9e81d12675",
+        "lotNo": "PP2600283281",
+        "name": "Phần 3. Nhóm hóa chất xét nghiệm tổng phân tích tế bào máu ngoại vi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5108341314,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ea989936-1cba-481f-874d-bff867e9b15d",
+        "lotNo": "PP2600283282",
+        "name": "Phần 4. Nhóm hóa chất xét nghiệm huyết học dùng cho công nghệ phân tích tế bào SF cube cho bạch cầu, 6 thành phần",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3000780960,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bec98fca-b80a-4611-becc-c85856807731",
+        "lotNo": "PP2600283283",
+        "name": "Phần 5. Nhóm hóa chất dùng cho máy xét nghiệm tế bào",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4349227560,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7984518b-4504-43c9-be8b-72fc0c72c0ef",
+        "lotNo": "PP2600283284",
+        "name": "Phần 6. Nhóm hóa chất cho xét nghiệm đông máu kỹ thuật đo quang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5248742667,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6d5be33e-f669-4d48-9b6a-4ebadca45ee8",
+        "lotNo": "PP2600283285",
+        "name": "Phần 7. Nhóm hóa chất cho xét nghiệm đông máu kỹ thuật đo quang kết hợp bi từ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1624564500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "64dfa7e6-6ed2-44bc-9794-36b7a780b940",
+        "lotNo": "PP2600283286",
+        "name": "Phần 8. Nhóm hóa chất định nhóm máu tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2666538000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9003015e-4a72-4d6c-a027-f3eacdeb6fdc",
+        "lotNo": "PP2600283287",
+        "name": "Phần 9. Nhóm hoá chất cho các xét nghiệm miễn dịch chuyên biệt bằng công nghệ hoá phát quang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 21224019430,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3357a1a5-53b5-45d5-b5db-ad540555be1b",
+        "lotNo": "PP2600283288",
+        "name": "Phần 10. Nhóm hoá chất cho xét nghiệm cặn lắng nước tiểu tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1239723282,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a4fb4250-0d59-49e8-a95d-53f0db5df451",
+        "lotNo": "PP2600283289",
+        "name": "Phần 11. Nhóm Hoá chất, tiêu hao cho xét nghiệm phân tích thành phần huyết sắc tố",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1010309160,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6c6e9116-5a50-414e-927b-0cd6521d15e4",
+        "lotNo": "PP2600283290",
+        "name": "Phần 12. Nhóm hóa chất cho xét nghiệm miễn dịch bằng công nghệ hóa phát quang bền",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12141750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b0f9f53c-506d-4699-b343-76e584eb6347",
+        "lotNo": "PP2600283291",
+        "name": "Phần 13. Nhóm hóa chất cho xét nghiệm miễn dịch bằng công nghệ Hóa phát quang gắn Acridinium Ester",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 37811949580,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0e389442-fbe7-4723-b892-54d574a1a2b5",
+        "lotNo": "PP2600283292",
+        "name": "Phần 14. Nhóm hóa chất cho xét nghiệm miễn dịch bằng công nghệ Hóa phát quang gắn enzyme",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 68187178491,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5d2cf454-76d4-4052-a3e0-a810c4a51457",
+        "lotNo": "PP2600283293",
+        "name": "Phần 15. Nhóm hóa chất cho xét nghiệm miễn dịch bằng công nghệ điện hóa phát quang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 99094883414,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "487d15a6-6140-40d1-a5e2-d0ea845553c6",
+        "lotNo": "PP2600283294",
+        "name": "Phần 16. Nhóm hoá chất cho xét nghiệm miễn dịch bằng công nghệ hoá phát quang nhanh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 32423623045,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bee2c87b-eebb-4116-b89a-215d240ff19c",
+        "lotNo": "PP2600283295",
+        "name": "Phần 17. Nhóm hóa chất cho xét nghiệm miễn dịch bằng công nghệ phát xạ huỳnh quang độ ổn định cao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3692261000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4a436e08-c0e7-48dc-b857-def78da034cf",
+        "lotNo": "PP2600283296",
+        "name": "Phần 18. Nhóm hoá chất cho các xét nghiệm miễn dịch chuyên biệt bằng công nghệ hoá phát quang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3906759758,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "22c06de6-ed6b-4e45-b9fb-7025c165aaf7",
+        "lotNo": "PP2600283297",
+        "name": "Phần 19. Nhóm Hóa chất cho xét nghiệm sinh hóa thường quy công nghệ vi thể tích và đa cảm biến tích hợp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 35075488272,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f407b348-3190-48e7-8524-0ad3ef0ab302",
+        "lotNo": "PP2600283298",
+        "name": "Phần 20. Nhóm hóa chất cho xét nghiệm sinh hóa thường quy",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 73455802844,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0354fae2-449e-4266-b464-bdc3f78888a2",
+        "lotNo": "PP2600283299",
+        "name": "Phần 21. Nhóm hóa chất cho xét nghiệm sinh hóa thường quy công suất cao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8788883360,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2bb543b5-450b-4a6a-a4f8-ff13ea0f90e2",
+        "lotNo": "PP2600283300",
+        "name": "Phần 22. Nhóm Hóa chất cho xét nghiệm nước tiểu 11 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3255840000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6ac9641c-70a9-4184-9214-b9b0394f9c31",
+        "lotNo": "PP2600283301",
+        "name": "Phần 23. Nhóm Hoá chất xét nghiệm nước tiểu 10 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 837904275,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "35230ff5-a30c-48cb-8387-ffdce9a1b38c",
+        "lotNo": "PP2600283302",
+        "name": "Phần 24. Nhóm Hóa chất xét nghiệm nước tiểu 12 thông số",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4242126000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "16075b6f-9792-4c47-ad98-7ace161323b6",
+        "lotNo": "PP2600283303",
+        "name": "Phần 25. Nhóm hóa chất cho xét nghiệm HbA1C bằng nguyên lý HPLC ái lực Boronate",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7809743865,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "235216ff-6d1d-4138-b05a-83d110db90b6",
+        "lotNo": "PP2600283304",
+        "name": "Phần 26. Nhóm hóa chất cho xét nghiệm HbA1C nguyên lý đo sắc kí lỏng cao áp trao đổi ion pha đảo HPLC",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6050682000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "28d67d6a-b548-4fdd-91b7-59722a43cf24",
+        "lotNo": "PP2600283305",
+        "name": "Phần 27. Nhóm hoá chất xét nghiệm HbA1c bằng phương pháp sắc kí lỏng cao áp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6991435000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "807d8cfd-3fd7-4987-86c1-11e0ae26c4ea",
+        "lotNo": "PP2600283306",
+        "name": "Phần 28. Hóa chất xét nghiệm HbA1c dựa trên công nghệ điện di mao quản",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2098323943,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1b737392-a5dd-45ba-b37f-29a1e39194c7",
+        "lotNo": "PP2600283307",
+        "name": "Phần 29. Nhóm Hoá chất cho xét nghiệm khí máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2548500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f30e467a-6bfe-4445-b7ec-171e1791f58a",
+        "lotNo": "PP2600283308",
+        "name": "Phần 30. Nhóm Hoá chất xét nghiệm HBV, HCV, HPV tự động hoàn toàn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10657873105,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "be1b18a7-6db8-4518-978f-22058836223f",
+        "lotNo": "PP2600283309",
+        "name": "Phần 31. Nhóm hoá chất cho xét nghiệm Virus Viêm gan B, C",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2683800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ed3c1351-f467-46f0-b1a3-372a1b16142a",
+        "lotNo": "PP2600283310",
+        "name": "Phần 32. Nhóm hoá chất, vật tư cho xét nghiệm sinh học phân tử tự động Real-time PCR",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4222661388,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "738904da-4542-4364-805d-c51ddcfddad0",
+        "lotNo": "PP2600283311",
+        "name": "Phần 33. Nhóm hoá chất đột biến gen",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10880935500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "df169401-b7d8-4175-8f30-294b8c0b7a3c",
+        "lotNo": "PP2600283312",
+        "name": "Phần 34. Nhóm hoá chất cho xét nghiệm ngoại kiểm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 401072000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Hoá chất, vật tư tiêu hao chạy máy xét nghiệm phục vụ công tác khám và chữa bệnh tại Bệnh viện",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:09.334Z"
+}

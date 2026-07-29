@@ -227,16 +227,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "d3cf96ef-e05e-443e-86ad-dd78302da4e5",
-        "lotNo": "PP2600303129",
-        "name": "Hộp đựng gòn inox",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 510000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "3de86c58-98d1-408a-95bc-3464aad968ae",
         "lotNo": "PP2600303126",
         "name": "Giấy thấm Cellulose chuyên dụng",
@@ -263,6 +253,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 3480000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d3cf96ef-e05e-443e-86ad-dd78302da4e5",
+        "lotNo": "PP2600303129",
+        "name": "Hộp đựng gòn inox",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 510000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -377,16 +377,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "6ab1750e-5eed-4270-ac65-2803dc8f10b2",
-        "lotNo": "PP2600303143",
-        "name": "Kit tạo dòng TAcloning",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 28646000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "50a0987d-6f92-4461-adfd-44c781533334",
         "lotNo": "PP2600303141",
         "name": "Kit tách DNA từ mô (giun sán)",
@@ -403,6 +393,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6ab1750e-5eed-4270-ac65-2803dc8f10b2",
+        "lotNo": "PP2600303143",
+        "name": "Kit tạo dòng TAcloning",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 28646000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -527,16 +527,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "3fc0b000-eb32-4abd-818a-782a3b14e417",
-        "lotNo": "PP2600303159",
-        "name": "Probe Real timePCR SR/SXH",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 37500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "4bece637-ce99-40b2-8724-6ce4909732ba",
         "lotNo": "PP2600303156",
         "name": "Pen gắp cong",
@@ -563,6 +553,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 2500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3fc0b000-eb32-4abd-818a-782a3b14e417",
+        "lotNo": "PP2600303159",
+        "name": "Probe Real timePCR SR/SXH",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 37500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1946,5 +1946,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:38.548Z"
+  "fetchedAt": "2026-07-29T11:44:00.020Z"
 }

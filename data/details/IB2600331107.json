@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 6,
+    "items": [
+      {
+        "id": "fa13d5cd-cdfe-462f-bd90-4ac07ec476ba",
+        "lotNo": "PP2600265793",
+        "name": "Test nhanh và vật tư xét nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 782322300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b83125e2-82ed-46af-8dbb-dfa8208a7f5c",
+        "lotNo": "PP2600265794",
+        "name": "Hóa chất xét nghiệm huyết học",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1040974000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a2146489-c111-4129-8a9e-489071255997",
+        "lotNo": "PP2600265795",
+        "name": "Hóa chất xét nghiệm sinh hóa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 672438900,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "acd61293-1d2a-4a94-bb3d-22b83698097a",
+        "lotNo": "PP2600265796",
+        "name": "Hóa chất xét nghiệm điện giải đồ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 489456000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c6ba1dab-563e-4d8d-a77b-c13256f6ba95",
+        "lotNo": "PP2600265797",
+        "name": "Test xét nghiệm phương pháp miễn dịch huỳnh quang",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 482625000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0cc9dd6d-71c9-485a-938b-e2da97bfc91f",
+        "lotNo": "PP2600265798",
+        "name": "Hóa chất vi sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 21340000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Lựa chọn nhà thầu cung cấp vật tư, hóa chất, sinh phẩm xét nghiệm",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:52.126Z"
+}

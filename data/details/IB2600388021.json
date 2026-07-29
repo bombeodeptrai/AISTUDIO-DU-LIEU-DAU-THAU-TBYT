@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "ec88cc55-a5da-4953-a61c-584237ffd816",
+        "lotNo": "PP2600283080",
+        "name": "Máy siêu âm chuyên tim mạch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2190000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5f743a45-f59e-43d4-add5-fbbc6a61dd64",
+        "lotNo": "PP2600283081",
+        "name": "Máy móc, thiết bị phục hồi chức năng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 867320000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "- Phần 1: Mua sắm Máy siêu âm chuyên tim mạch - Phần 2: Mua sắm Máy móc, thiết bị phục hồi chức năng",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:14.945Z"
+}

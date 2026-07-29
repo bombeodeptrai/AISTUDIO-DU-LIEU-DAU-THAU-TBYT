@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "3f5a8c8d-1de1-4710-b502-09be206fb466",
+        "lotNo": "BP2600521367",
+        "name": "Mua dụng cụ, vật tư y tế năm 2026 tại Bệnh viện đa khoa Yên Thế",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 395595000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua dụng cụ, vật tư y tế năm 2026 tại Bệnh viện đa khoa Yên Thế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:04.037Z"
+}

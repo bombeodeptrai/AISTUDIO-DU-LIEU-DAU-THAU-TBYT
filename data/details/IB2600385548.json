@@ -337,16 +337,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "308187ec-a8c1-479c-bd36-dacdcf9c59eb",
-        "lotNo": "PP2600280376",
-        "name": "Phần 37: Thủy tinh thể nhân tạo mềm, đơn tiêu, tăng cường thị lực trung gian",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1036000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "30cf91c2-8fcb-476e-998e-a81505f5a920",
         "lotNo": "PP2600280373",
         "name": "Phần 34: Thủy tinh thể đơn tiêu số 3",
@@ -373,6 +363,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1140000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "308187ec-a8c1-479c-bd36-dacdcf9c59eb",
+        "lotNo": "PP2600280376",
+        "name": "Phần 37: Thủy tinh thể nhân tạo mềm, đơn tiêu, tăng cường thị lực trung gian",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1036000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -498,5 +498,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:39.242Z"
+  "fetchedAt": "2026-07-29T11:44:00.021Z"
 }

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "40355422-0d81-4f97-9aa5-6249b10b2d2a",
+        "lotNo": "BP2600556323",
+        "name": "Gói thầu số 01: Mua sắm vật tư y tế phục vụ công tác khám chữa bệnh năm 2026 của Trung tâm Y tế khu vực Yên Bái",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1292751850,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm 104 mặt hàng vật tư y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:47.924Z"
+}

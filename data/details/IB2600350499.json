@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 39,
+    "items": [
+      {
+        "id": "5248ce6e-d7d2-4297-8d8a-f1293a9ad06f",
+        "lotNo": "PP2600273274",
+        "name": "Đinh Steinman",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a174156e-ffd7-402f-8dba-20308ea6bb06",
+        "lotNo": "PP2600273275",
+        "name": "Đinh Kirschner",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 90000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b847aadb-a390-40fb-bb9e-da26bbf4f482",
+        "lotNo": "PP2600273276",
+        "name": "Đinh Metaizeau",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 875000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9731a93f-8568-48f9-a2fc-a716ded6316b",
+        "lotNo": "PP2600273277",
+        "name": "Bộ đinh nội tuỷ xương chày đa phương diện loại 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1640000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "131694f6-f571-470d-a472-a375d836a4a9",
+        "lotNo": "PP2600273278",
+        "name": "Bộ đinh nội tuỷ xương chày đa phương diện loại 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1124400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "aa46f0f6-8e8b-4b14-bbf8-1cc95595b089",
+        "lotNo": "PP2600273279",
+        "name": "Bộ đinh nội tuỷ rỗng nòng xương chày đóng dưới xương bánh chè",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1230000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8ff40d1d-38fc-456e-8e86-56d17f417fe5",
+        "lotNo": "PP2600273280",
+        "name": "Bộ đinh nội tuỷ xương đùi đa phương diện loại 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 787200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ed863808-a9de-472f-8f88-84699f780b84",
+        "lotNo": "PP2600273281",
+        "name": "Bộ đinh nội tuỷ xương đùi đa phương diện loại 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 559500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5509cc15-ee14-4208-8772-7a7e160e8a1e",
+        "lotNo": "PP2600273282",
+        "name": "Bộ đinh nội tuỷ xương đùi ngược dòng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0ceb18e1-285a-477c-b81e-2e5c1c805f41",
+        "lotNo": "PP2600273283",
+        "name": "Bộ đinh nội tuỷ đầu trên xương đùi chống xoay, loại ngắn (loại 1)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7116000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d55c3d02-d3f3-496b-9739-16148b8c7c4f",
+        "lotNo": "PP2600273284",
+        "name": "Bộ đinh nội tuỷ đầu trên xương đùi chống xoay, loại ngắn (loại 2)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2051100000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ad09206e-43eb-455a-95c9-bd95005ea2bc",
+        "lotNo": "PP2600273285",
+        "name": "Bộ đinh nội tuỷ đầu trên xương đùi chống xoay, loại dài (loại 1)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1448800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d3a73fde-be42-402d-a853-3bdd5748da23",
+        "lotNo": "PP2600273286",
+        "name": "Bộ đinh nội tuỷ rỗng nòng đầu trên xương đùi chống xoay, loại dài (loại 2)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 417520000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f17498ef-0caf-4e8d-9e46-43cd561d2cb7",
+        "lotNo": "PP2600273287",
+        "name": "Bộ nẹp khoá đầu trên xương đùi nhi khoa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 143800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a5e1d6aa-9616-4f3a-91dc-b10896f9df42",
+        "lotNo": "PP2600273288",
+        "name": "Bộ nẹp khoá xương đòn loại 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3733900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1ace589e-b2e7-4c2f-b271-5790f94c8fb7",
+        "lotNo": "PP2600273289",
+        "name": "Bộ nẹp khóa xương đòn loại 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1388220000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cc959109-9450-4bc1-8df5-e8ca36914e84",
+        "lotNo": "PP2600273290",
+        "name": "Bộ nẹp khoá xương cánh tay loại 1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2763000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "51d7bab6-fdc7-4800-9832-c68791fc5544",
+        "lotNo": "PP2600273291",
+        "name": "Bộ nẹp khóa đầu dưới xương cánh tay loại 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 368070000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5aca6bd3-4292-4d59-881e-f3ff066f65e9",
+        "lotNo": "PP2600273292",
+        "name": "Bộ nẹp khoá đầu dưới xương quay",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2997700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1a500ebd-3d75-400c-bd14-acfa033f146f",
+        "lotNo": "PP2600273293",
+        "name": "Bộ nẹp khoá đa hướng đầu dưới xương quay",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1653600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1c5b5778-5e75-45c0-83cb-7b72823fd7f3",
+        "lotNo": "PP2600273294",
+        "name": "Bộ nẹp khoá 2.7mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 236000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f1f58f48-9d3d-4246-bbc8-15fb5bc14732",
+        "lotNo": "PP2600273295",
+        "name": "Bộ nẹp khoá vít 2.0mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 855000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "059ec8f4-895c-47e7-aeee-41d73780c347",
+        "lotNo": "PP2600273296",
+        "name": "Bộ nẹp khoá vít 1.5mm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 864000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "848cf5f4-c244-4bf2-9928-d80b9aa8f1f5",
+        "lotNo": "PP2600273297",
+        "name": "Bộ nẹp khoá đa huớng đầu trên xương chày",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3808000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d7fc5898-71a1-4540-80c9-83a750a4f28e",
+        "lotNo": "PP2600273298",
+        "name": "Bộ nẹp khoá đầu dưới xương chày",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 78900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6cdffa68-f493-4458-9dfe-f2b35524b4ca",
+        "lotNo": "PP2600273299",
+        "name": "Bộ nẹp khoá đầu dưới xương đùi",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 994550000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cde9df44-225b-4f4d-bbbb-bd0b308a8719",
+        "lotNo": "PP2600273300",
+        "name": "Bộ nẹp khoá đầu dưới xương mác",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1850500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9cbf2a97-ba6f-4c70-a3ae-cd5a1d080bf4",
+        "lotNo": "PP2600273301",
+        "name": "Bộ nẹp khoá đa hướng đầu dưới xương trụ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 379200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ae7cc879-f572-4308-842c-eb1d7f8045ff",
+        "lotNo": "PP2600273302",
+        "name": "Bộ nẹp khoá đầu trên xương trụ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 417900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b6228596-7558-4459-8f66-79fde0778f86",
+        "lotNo": "PP2600273303",
+        "name": "Bộ nẹp khoá bản nhỏ và nẹp khóa mắt xích",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1267400000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1504f7fa-dfd0-4818-b0d0-00cea0df4faa",
+        "lotNo": "PP2600273304",
+        "name": "Bộ nẹp khóa bản nhỏ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 368750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "048a34bc-1ab7-4b7c-83cb-347e82ad3469",
+        "lotNo": "PP2600273308",
+        "name": "Xi măng ngoại khoa có kháng sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 117200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a7f6ccae-2bbc-4989-ac22-665e07381e0b",
+        "lotNo": "PP2600273305",
+        "name": "Bộ nẹp khóa mắt xích xương chậu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 107500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fd67ba0a-861e-4530-a787-26ef0272c8d7",
+        "lotNo": "PP2600273306",
+        "name": "Bộ nẹp khóa bản hẹp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 140910000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e39dccbf-0a9d-46d8-b8c0-4b4e5701af70",
+        "lotNo": "PP2600273307",
+        "name": "Chỉ thép đường kính các cỡ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 125000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "efe9b474-ecc4-4bb0-a1b1-544e84236196",
+        "lotNo": "PP2600273309",
+        "name": "Xương ghép nhân tạo loại có thể pha kháng sinh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2175000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "15171f97-f0f9-464d-9f91-c760a8a604a7",
+        "lotNo": "PP2600273310",
+        "name": "Sản phẩm sinh học thay thế xương thể tích >= 30cc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1812000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6d78ba18-ad58-4be9-bf79-fdd64102ecc7",
+        "lotNo": "PP2600273311",
+        "name": "Sản phẩm sinh học thay thế xương thể tích >= 10cc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2097000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "902efd94-f5bc-4900-aeaf-6d8832302afd",
+        "lotNo": "PP2600273312",
+        "name": "Máy tưới rửa trong phẫu thuật, dùng 1 lần",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 899850000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Gói thầu được chia làm 39 phần gồm 107 mặt hàng mua vật tư cho hai khoa chấn thương chỉnh hình",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:34.357Z"
+}

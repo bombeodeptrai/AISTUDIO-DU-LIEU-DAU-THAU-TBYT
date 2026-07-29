@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "0fdfcbdc-e6d8-442c-bb15-9841f19b9410",
+        "lotNo": "BP2600575919",
+        "name": "Gói thầu: Mua sắm Phim X-quang của Bệnh viện đa khoa Văn Giang năm 2026",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1097500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Phim X-quang của Bệnh viện đa khoa Văn Giang năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "11937924818535332",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Phim in laser 20x25cm (8x10'')",
+        "unit": "Tờ",
+        "quantity": 25000,
+        "code": "AMV 20x25cm (8x10\"), 6707871",
+        "brand": "AMV 20x25cm (8x10\"), 6707871",
+        "manufacturer": "Rayco (Xiamen) Medical Products Company Limited",
+        "origin": "Trung Quốc",
+        "manufactureYear": "2025 trở về sau",
+        "specification": "- Phim in laser 20x25cm (8x10''), có độ phân giải cao, hình ảnh quang nhiệt.\n- Phim được cấu tạo 4 lớp bao gồm: 2 lớp bảo vệ; 1 lớp nhũ tương nhạy sáng và 1 lớp nền polyester.\n- Hỗ trợ lớp nền 7-mil polyester.\n- Phim có thành phần cấu tạo hóa học bao gồm: 90-95% Polyethylene terephthalate; 1-5% Polyvinyl butyral-polyvinyl alcohol-polyvinyl acetate terpolymer; 1-5% Axit docosanoic, muối bạc(1+) và < 3% Cellulose acetate butyrate.\n- Phim có thể lưu lại trên đèn đọc phim > 24 giờ, ở điều kiện nhiệt độ 16–27 °C hoặc 60–80 °F và điều kiện độ ẩm 30–50 % RH\n- Mật độ hình ảnh Dmax: 3.3.\n- Phim có mật độ điểm ảnh tối đa 650 ppi.\n- Tương thích với hệ thống máy in phim laser Trimax của hãng Carestrem.\n- Quy cách đóng gói 125 tờ/ hộp.\n- Đạt tiêu chuẩn chất lượng ISO 13485,FDA.\n- Chứng nhận lưu hành tự do: Mỹ",
+        "otherRequirement": "Thông tin liên hệ: Nguyễn Thị Lý 0916801013",
+        "projectPlace": "Bệnh viện đa khoa Văn Giang",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "9186661622680376",
+        "position": "2",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Phim in laser 25x30cm (10x12'')",
+        "unit": "Tờ",
+        "quantity": 25000,
+        "code": "AMV 25x30cm (10x12\"), 6707863",
+        "brand": "AMV 25x30cm (10x12\"), 6707863",
+        "manufacturer": "Rayco (Xiamen) Medical Products Company Limited",
+        "origin": "Trung Quốc",
+        "manufactureYear": "2025 trở về sau",
+        "specification": "- Phim in laser 25x30cm (10x12''), có độ phân giải cao, hình ảnh quang nhiệt.\n- Phim được cấu tạo 4 lớp bao gồm: 2 lớp bảo vệ; 1 lớp nhũ tương nhạy sáng và 1 lớp nền polyester.\n- Hỗ trợ lớp nền 7-mil polyester.\n- Phim có thành phần cấu tạo hóa học bao gồm: 90-95% Polyethylene terephthalate; 1-5% Polyvinyl butyral-polyvinyl alcohol-polyvinyl acetate terpolymer; 1-5% Axit docosanoic, muối bạc(1+) và < 3% Cellulose acetate butyrate.\n- Phim có thể lưu lại trên đèn đọc phim > 24 giờ, ở điều kiện nhiệt độ 16–27 °C hoặc 60–80 °F và điều kiện độ ẩm 30–50 % RH\n- Mật độ hình ảnh Dmax: 3.3.\n- Phim có mật độ điểm ảnh tối đa 650 ppi.\n- Tương thích với hệ thống máy in phim laser Trimax của hãng Carestrem.\n- Quy cách đóng gói 125 tờ/ hộp.\n- Đạt tiêu chuẩn chất lượng ISO 13485,FDA.\n- Chứng nhận lưu hành tự do: Mỹ",
+        "otherRequirement": "Thông tin liên hệ: Nguyễn Thị Lý 0916801013",
+        "projectPlace": "Bệnh viện đa khoa Văn Giang",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1958",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:10.981Z"
+}

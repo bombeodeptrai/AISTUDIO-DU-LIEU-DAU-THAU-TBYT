@@ -1,7 +1,23 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "1e4745db-1bfb-459f-a988-085cffc6c87b",
+      "contractorCode": "vn0305920259",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH TRANG THIẾT BỊ Y TẾ VÀ TƯ VẤN MÔI TRƯỜNG TÂM THY",
+      "status": "participating",
+      "lotNo": "BP2600458368",
+      "lotName": "Vật tư y tế dùng trong phẫu thuật khớp háng, khớp gối",
+      "bidPrice": 6520500000,
+      "finalPrice": 6520500000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:24:12.639",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 1,
@@ -28,5 +44,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:45.669Z"
+  "fetchedAt": "2026-07-29T11:44:10.996Z"
 }

@@ -387,22 +387,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "14315e0b-dc70-4db6-9d79-62bc6a94a3fa",
-        "lotNo": "PP2600285881",
-        "name": "Bộ nội soi cột sống 2 cổng",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 2917500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "60a3568a-5c09-4c11-92b2-9f5899716261",
         "lotNo": "PP2600285880",
         "name": "Bộ nẹp khóa lồi cầu bản nhỏ các cỡ",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 263700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "14315e0b-dc70-4db6-9d79-62bc6a94a3fa",
+        "lotNo": "PP2600285881",
+        "name": "Bộ nội soi cột sống 2 cổng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2917500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -817,16 +817,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "ff46af1e-8831-42fa-bb68-877dd94458ad",
-        "lotNo": "PP2600285926",
-        "name": "Dây truyền dẫn lưu",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 40572000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "9f774b58-ccaa-4d7a-bf06-b72eaec77e25",
         "lotNo": "PP2600285923",
         "name": "Bơm chân không hút dịch dùng cho máy xét nghiệm đông máu",
@@ -855,6 +845,16 @@
         "plannedPrice": 24000000,
         "specification": "",
         "sourceStage": "invitation"
+      },
+      {
+        "id": "ff46af1e-8831-42fa-bb68-877dd94458ad",
+        "lotNo": "PP2600285926",
+        "name": "Dây truyền dẫn lưu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 40572000,
+        "specification": "",
+        "sourceStage": "invitation"
       }
     ],
     "summary": "Cung cấp 85 danh mục vật tư y tế các chuyên khoa",
@@ -868,5 +868,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:45.608Z"
+  "fetchedAt": "2026-07-29T11:44:10.764Z"
 }

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "507630e3-5888-4c36-ae9d-12c9cbc86dd9",
+        "lotNo": "PP2600293485",
+        "name": "Phần 1: Sinh phẩm thử chất gây nghiện",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 70520000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8c8a8a31-27b6-4350-b2d4-6c419d1fead6",
+        "lotNo": "PP2600293486",
+        "name": "Phần 2: Sinh phẩm chẩn đoán sốt xuất huyết, HIV, viêm gan, vi khuẩn HP",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 144856040,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "306871ab-e455-41c3-b5c7-1bbcf2bc5e75",
+        "lotNo": "PP2600293487",
+        "name": "Phần3: Sinh phẩm xét nghiệm nhóm máu, vi sinh, nước tiểu, miễn dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 42527840,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm sinh phẩm y tế năm 2026-2027 của Bệnh viện đa khoa Buôn Hồ",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:42.629Z"
+}

@@ -157,12 +157,12 @@ function delay(ms) {
   return new Promise((resolveDelay) => setTimeout(resolveDelay, ms));
 }
 
-async function postJson(url, body, timeoutMs = 25_000) {
+async function postJson(url, body, timeoutMs = 45_000) {
   let lastError;
   const maxAttempts = 8;
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
-      await delay(200);
+      await delay(1000);
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -207,20 +207,27 @@ async function fetchWindowKeyword(keyword, window, windowIndex, totalWindows) {
   try {
     const first = await postJson(SEARCH_URL, searchPayload(0, window.from, window.to, keyword));
     const totalPages = Math.max(1, Number(first.page?.totalPages) || 1);
-    const pageNumbers = Array.from({ length: totalPages - 1 }, (_, index) => index + 1);
-    const remaining = await mapLimited(pageNumbers, 2, (pageNumber) =>
-      postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to, keyword)),
-    );
+    const pagesToFetch = Math.min(totalPages - 1, 10);
+    const pageNumbers = Array.from({ length: pagesToFetch }, (_, index) => index + 1);
+    const remaining = await mapLimited(pageNumbers, 1, async (pageNumber) => {
+      try {
+        await delay(500);
+        return await postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to, keyword));
+      } catch (e) {
+        process.stderr.write(`Cảnh báo từ khóa "${keyword}" trang ${pageNumber} thất bại: ${e.message}\n`);
+        return { page: { content: [] } };
+      }
+    });
     return [first, ...remaining].flatMap((payload) => payload.page?.content || []);
   } catch (error) {
-    process.stderr.write(`Cảnh báo từ khóa "${keyword}" khoảng ${windowIndex + 1}/${totalWindows} thất bại: ${error.message}\n`);
+    process.stderr.write(`Cảnh báo từ khóa "${keyword}" khoảng ${windowIndex + 1}/${totalWindows} thất bại trang đầu: ${error.message}\n`);
     return [];
   }
 }
 
 async function fetchWindow(window, windowIndex, totalWindows) {
   process.stdout.write(`Đang quét khoảng ${windowIndex + 1}/${totalWindows} (${window.from.split('T')[0]} đến ${window.to.split('T')[0]})...\n`);
-  const results = await mapLimited(API_SEARCH_KEYWORDS, 3, (keyword) =>
+  const results = await mapLimited(API_SEARCH_KEYWORDS, 1, (keyword) =>
     fetchWindowKeyword(keyword, window, windowIndex, totalWindows)
   );
   const items = results.flat();
@@ -276,10 +283,11 @@ async function fetchHistoricalFallback() {
     fetchHistoricalPair(pair, index, pairs.length, from, to))).flat();
 }
 
-function isMedical(item) {
+function analyzeMedical(item) {
   const originalTitle = String(item.bidName?.join(" ") || "").toLocaleLowerCase("vi-VN");
   const title = normalizeText(originalTitle);
   const investor = normalizeText(item.investorName);
+  
   const excludedTerms = [
     // Xây dựng, vận hành và mua sắm hành chính.
     "xay lap", "xay dung", "cai tao", "sua chua nha", "suat an", "thuc pham", "bao ve",
@@ -303,7 +311,9 @@ function isMedical(item) {
     "trau, bo", "cho, meo", "gia cam", "lo mom long mong", "viem da noi cuc",
     "phuc vu che bien", "san xuat phan vi sinh",
   ];
-  if (excludedTerms.some((term) => title.includes(term))) return false;
+  if (excludedTerms.some((term) => title.includes(term))) {
+    return { matched: false, reason: "Bị loại (từ khóa ngoài phạm vi)" };
+  }
 
   // Chỉ các cụm từ tự thân xác định rõ thiết bị/vật tư y tế mới được giữ lại.
   const explicitMedicalTerms = [
@@ -313,7 +323,9 @@ function isMedical(item) {
     "hóa chất khử khuẩn", "hoá chất khử khuẩn", "hóa chất định nhóm máu",
     "hoá chất định nhóm máu", "vật tư xét nghiệm", "vật tư nha khoa",
   ];
-  if (explicitMedicalTerms.some((term) => originalTitle.includes(term))) return true;
+  if (explicitMedicalTerms.some((term) => originalTitle.includes(term))) {
+    return { matched: true, reason: "Được nhận (Từ khóa y tế rõ ràng)" };
+  }
 
   // Tên riêng của máy móc, vật tư và sinh phẩm chuyên môn.
   const medicalProductTerms = [
@@ -334,7 +346,9 @@ function isMedical(item) {
     "vật tư thận niệu", "vật tư tim mạch can thiệp", "vật tư can thiệp mạch não",
     "áo, khăn phẫu thuật", "que đè lưỡi", "dây garo",
   ];
-  if (medicalProductTerms.some((term) => originalTitle.includes(term))) return true;
+  if (medicalProductTerms.some((term) => originalTitle.includes(term))) {
+    return { matched: true, reason: "Được nhận (Hàng hóa chuyên môn)" };
+  }
 
   // Hóa chất/sinh phẩm chỉ được giữ khi gắn với xét nghiệm hoặc chẩn đoán y khoa.
   const laboratoryTerms = [
@@ -343,22 +357,41 @@ function isMedical(item) {
     "miễn dịch", "elisa", "pcr", "hba1c", "nước tiểu", "đông máu", "sinh học phân tử", "máy phân tích",
     "giải phẫu bệnh", "tế bào học", "mô bệnh học"
   ];
-  const laboratorySupplies = ["hóa chất", "hoá chất", "sinh phẩm", "vật tư", "chủng vi sinh"];
+  const laboratorySupplies = ["hóa chất", "hoá chất", "sinh phẩm", "vật tư", "chủng vi sinh", "thuốc thử", "chất hiệu chuẩn", "reagent"];
   if (laboratoryTerms.some((term) => originalTitle.includes(term))
-    && laboratorySupplies.some((term) => originalTitle.includes(term))) return true;
+    && laboratorySupplies.some((term) => originalTitle.includes(term))) {
+    return { matched: true, reason: "Được nhận (Sinh phẩm/hóa chất phòng xét nghiệm)" };
+  }
 
-  // Tiêu đề chung chỉ được nhận khi vừa có vật tư/hóa chất, vừa có ngữ cảnh khám chữa bệnh,
-  // và chủ đầu tư rõ ràng là cơ sở y tế. Không dùng tên chủ đầu tư làm điều kiện duy nhất.
   const medicalInvestors = [
     "so y te", "benh vien", "trung tam y te", "tram y te", "trung tam kiem soat benh tat",
     "cdc", "phong kham", "benh xa", "y khoa", "y duoc", "da khoa", "chuyen khoa",
     "trung tam phap y", "trung tam kiem nghiem",
   ];
-  const genericSupplyTerms = ["vat tu", "hoa chat", "sinh pham", "dung cu"];
+
+  // Hóa chất/sinh phẩm dùng trên máy phân tích
+  const machineUsageTerms = ["sử dụng trên máy", "sử dụng cho máy", "chạy máy", "dùng cho máy", "dùng trên máy"];
+  if (medicalInvestors.some((term) => investor.includes(term))
+      && laboratorySupplies.some((term) => originalTitle.includes(term))
+      && machineUsageTerms.some((term) => originalTitle.includes(term))) {
+    return { matched: true, reason: "Được nhận (Hóa chất/sinh phẩm dùng trên máy)" };
+  }
+
+  // Tiêu đề chung chỉ được nhận khi vừa có vật tư/hóa chất, vừa có ngữ cảnh khám chữa bệnh,
+  // và chủ đầu tư rõ ràng là cơ sở y tế. Không dùng tên chủ đầu tư làm điều kiện duy nhất.
+  const genericSupplyTerms = ["vat tu", "hoa chat", "sinh pham", "dung cu", "thuoc thu"];
   const clinicalTerms = ["kham chua benh", "kham benh", "chua benh", "dieu tri", "phong mo"];
-  return medicalInvestors.some((term) => investor.includes(term))
+  if (medicalInvestors.some((term) => investor.includes(term))
     && genericSupplyTerms.some((term) => title.includes(term))
-    && clinicalTerms.some((term) => title.includes(term));
+    && clinicalTerms.some((term) => title.includes(term))) {
+    return { matched: true, reason: "Được nhận (Vật tư/hóa chất chung phục vụ điều trị)" };
+  }
+  
+  return { matched: false, reason: "Bị loại (Không thỏa quy tắc y tế)" };
+}
+
+function isMedical(item) {
+  return analyzeMedical(item).matched;
 }
 
 function isStoredTenderMedical(tender) {
@@ -924,10 +957,23 @@ async function main() {
   });
 
   const medicalUnique = new Map();
-  [...allUnique.values()].filter(isMedical).forEach((item) => {
-    const key = item.notifyId || item.id || item.notifyNo;
-    if (key) medicalUnique.set(key, item);
+  const filterStats = {};
+  [...allUnique.values()].forEach((item) => {
+    const result = analyzeMedical(item);
+    filterStats[result.reason] = (filterStats[result.reason] || 0) + 1;
+    if (result.matched) {
+      const key = item.notifyId || item.id || item.notifyNo;
+      if (key) medicalUnique.set(key, item);
+    }
   });
+
+  process.stdout.write(`\n--- THỐNG KÊ LỌC HỒ SƠ ---\n`);
+  process.stdout.write(`Tổng số hồ sơ thô tìm thấy: ${allUnique.size}\n`);
+  for (const [reason, count] of Object.entries(filterStats).sort((a, b) => b[1] - a[1])) {
+    process.stdout.write(`- ${reason}: ${count} hồ sơ\n`);
+  }
+  process.stdout.write(`--------------------------\n\n`);
+
   const freshTenders = [...medicalUnique.values()].map(normalizeTender);
   const now = Date.now();
   const cutoff = now - DAYS * 86_400_000;

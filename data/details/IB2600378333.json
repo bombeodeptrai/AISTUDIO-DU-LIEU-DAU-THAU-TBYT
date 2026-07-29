@@ -1,7 +1,23 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "474fb75e-b9a6-4cdc-a4fe-635fe3b1b340",
+      "contractorCode": "vn0102148238",
+      "taxCode": "",
+      "contractorName": "CÔNG TY CỔ PHẦN DƯỢC PHẨM THIẾT BỊ Y TẾ VIỆT LONG",
+      "status": "participating",
+      "lotNo": "BP2600540532",
+      "lotName": "Mua vật tư phẫu thuật mắt",
+      "bidPrice": 1223350000,
+      "finalPrice": 1223350000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T16:12:31.254",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 1,
@@ -28,5 +44,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:44.597Z"
+  "fetchedAt": "2026-07-29T11:44:08.934Z"
 }

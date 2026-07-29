@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 14,
+    "items": [
+      {
+        "id": "484ad56d-1a41-4d17-9eb5-c121975ef5e4",
+        "lotNo": "PP2600264221",
+        "name": "Phần 01: Chỉ phẫu thuật tan tự nhiên (05 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 117365000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "69c169e9-8684-4aa7-b160-ddbaf1e9f3f3",
+        "lotNo": "PP2600264222",
+        "name": "Phần 02: Chỉ phẫu thuật không tiêu (17 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 325780800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4d22a59f-9749-4e61-aaac-909bca7dd537",
+        "lotNo": "PP2600264223",
+        "name": "Phần 03: Chỉ tan tổng hợp (08 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 375372500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "01d0923d-c3d3-4d86-aef4-147c84a3470b",
+        "lotNo": "PP2600264224",
+        "name": "Phần 04: Chỉ không tiêu tổng hợp (07 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 158553000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e2863fb1-92eb-43ea-b81e-9b9bbcfea09a",
+        "lotNo": "PP2600264225",
+        "name": "Phần 05: Chỉ thép (01 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 27000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d178a065-4898-4359-938a-9487e2719f08",
+        "lotNo": "PP2600264226",
+        "name": "Phần 06: Kim châm cứu (02 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 179950000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "23fc942d-dd05-4729-acc1-2db850a1f537",
+        "lotNo": "PP2600264227",
+        "name": "Phần 07: Kim chọc dò tủy sống (02 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 103662000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0345986b-fde1-48f0-b72c-54d039edab73",
+        "lotNo": "PP2600264228",
+        "name": "Phần 08: Kim tiêm các loại (10 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 523913860,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "13fc11bf-e510-4445-83a7-9ea48056f199",
+        "lotNo": "PP2600264229",
+        "name": "Phần 09: Bơm tiêm các loại (08 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1620949700,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d7e885d9-e6a9-4f55-9d9c-7d63bfc9a6b0",
+        "lotNo": "PP2600264230",
+        "name": "Phần 10: Bơm tiêm nhựa 3ml + kim 26G x 1/2 (01 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3480000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4d3957cf-dcd0-4a0e-a5bf-910a92e9d4f3",
+        "lotNo": "PP2600264231",
+        "name": "Phần 11: Bơm tiêm thuốc cản quang và dây nối (02 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 127950000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6cebe306-c29f-4b0e-ace5-83b5cb81b56c",
+        "lotNo": "PP2600264232",
+        "name": "Phần 12: Dây truyền dịch và dây truyền máu (05 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1512575000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cf70f4e5-ce39-40dd-a13f-005e9b246b7f",
+        "lotNo": "PP2600264233",
+        "name": "Phần 13: Dao mổ mắt (02 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 181230000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f2dc57c1-842a-442f-9bf4-0a88aa5cddda",
+        "lotNo": "PP2600264234",
+        "name": "Phần 14: Lưỡi dao mổ (03 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 50940750,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Chỉ phẫu thuật, dao mổ, bơm, kim tiêm và các vật tư khác",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:49.247Z"
+}

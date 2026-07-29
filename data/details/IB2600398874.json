@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "4f9a0638-3b0d-48e5-94b9-74301684f59d",
+        "lotNo": "BP2600546811",
+        "name": "Gói thầu số 14: Dụng cụ phẫu thuật dùng cho phòng mổ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5725050000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Dụng cụ phẫu thuật dùng cho phòng mổ",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:40.880Z"
+}

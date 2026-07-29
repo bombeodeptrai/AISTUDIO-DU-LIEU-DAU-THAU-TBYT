@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "2dad3581-2238-47c3-ba65-76576bbbc8be",
+      "contractorCode": "vn0101581745",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ HOÀNG ANH",
+      "status": "participating",
+      "lotNo": "PP2600290137",
+      "lotName": "Chỉ khâu phẫu thuật",
+      "bidPrice": 501811188,
+      "finalPrice": 293328588,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T09:27:29.976",
+      "models": []
+    },
+    {
+      "id": "1ae5ecd5-732d-4497-8619-de3d1180631c",
+      "contractorCode": "vn0101581745",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ Y TẾ HOÀNG ANH",
+      "status": "participating",
+      "lotNo": "PP2600290138",
+      "lotName": "Vật tư các chương trình mục tiêu",
+      "bidPrice": 501811188,
+      "finalPrice": 208482600,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T09:27:29.976",
+      "models": []
+    },
+    {
+      "id": "8b6cc5b2-e59c-4b1f-8644-c857488b9abe",
+      "contractorCode": "vn0103809674",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THƯƠNG MẠI VÀ THIẾT BỊ QUANG MINH",
+      "status": "participating",
+      "lotNo": "PP2600290139",
+      "lotName": "Linh kiện cho máy thận nhân tạo",
+      "bidPrice": 403530000,
+      "finalPrice": 403530000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T09:27:35.576",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 3,
+    "items": [
+      {
+        "id": "61fae2d0-54fa-40e8-a857-5414e7bddb5d",
+        "lotNo": "PP2600290137",
+        "name": "Chỉ khâu phẫu thuật",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 293510000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fd894ff9-ec68-43c3-a0bd-172187e5914a",
+        "lotNo": "PP2600290138",
+        "name": "Vật tư các chương trình mục tiêu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 209200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f4c5f21b-70e7-4197-9df1-02c50ae1741d",
+        "lotNo": "PP2600290139",
+        "name": "Linh kiện cho máy thận nhân tạo",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 403596000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua 25 loại vật tư, linh kiện y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:45:07.328Z"
+}

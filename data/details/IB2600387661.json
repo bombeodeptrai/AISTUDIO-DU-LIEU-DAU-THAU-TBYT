@@ -837,16 +837,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "1ecb5770-358c-4f24-a3fd-7f69342623cd",
-        "lotNo": "PP2600300309",
-        "name": "Dây bơm máy huyết học",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 20500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "7dca8df6-7833-4076-985b-c529f05af7a4",
         "lotNo": "PP2600300306",
         "name": "Test thử nước tiểu 11 thông số",
@@ -873,6 +863,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 2900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1ecb5770-358c-4f24-a3fd-7f69342623cd",
+        "lotNo": "PP2600300309",
+        "name": "Dây bơm máy huyết học",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 20500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1128,5 +1128,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:40.761Z"
+  "fetchedAt": "2026-07-29T11:44:01.864Z"
 }

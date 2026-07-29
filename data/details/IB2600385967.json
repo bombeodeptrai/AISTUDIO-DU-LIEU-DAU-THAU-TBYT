@@ -277,16 +277,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "32684768-7e1b-4f2e-9ee0-2fc0ba2c89a8",
-        "lotNo": "PP2600295429",
-        "name": "Phần 37",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 228200000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "8dcb0b08-7516-4833-a899-f59f22a081bf",
         "lotNo": "PP2600295427",
         "name": "Phần 35",
@@ -303,6 +293,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 25920000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "32684768-7e1b-4f2e-9ee0-2fc0ba2c89a8",
+        "lotNo": "PP2600295429",
+        "name": "Phần 37",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 228200000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1914,5 +1914,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:53.379Z"
+  "fetchedAt": "2026-07-29T11:44:30.097Z"
 }

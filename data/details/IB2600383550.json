@@ -347,16 +347,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "dcd3a8b0-44ab-4b7c-aad3-99505f873ab3",
-        "lotNo": "PP2600298739",
-        "name": "Hộp chống sốc",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1225000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "6808f8b4-af70-4a18-93b1-b233e3f73b45",
         "lotNo": "PP2600298736",
         "name": "Chỉ Vicryl số 2",
@@ -383,6 +373,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 11583000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dcd3a8b0-44ab-4b7c-aad3-99505f873ab3",
+        "lotNo": "PP2600298739",
+        "name": "Hộp chống sốc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1225000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1626,5 +1626,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:58.838Z"
+  "fetchedAt": "2026-07-29T11:44:44.502Z"
 }

@@ -342,7 +342,7 @@
         "manufacturer": "Không yêu cầu",
         "origin": "Không yêu cầu",
         "manufactureYear": "2025 trở về sau",
-        "specification": "- Là các thuốc thử có sẵn dẫn xuất từ việc nuôi cấy tế bào chuột lai. Anti- B kháng thể đơn dòng dẫn xuất từ tế bào dòng lai (CCS) B500100 1,0ml . \n- Đạt tiêu chuẩn ISO 13485.",
+        "specification": "- Là các thuốc thử có sẵn dẫn xuất từ việc nuôi cấy tế bào chuột lai. Anti- B kháng thể đơn dòng dẫn xuất từ tế bào dòng lai (CCS) B501100 1,0ml . \n- Đạt tiêu chuẩn ISO 13485.",
         "otherRequirement": "Sau khi có kết quả chào giá: Nếu nhà thầu xếp hạng 1, Nhà thầu phải cung cấp bộ hồ sơ sản phẩm chứng minh sự phù hợp của hàng hóa dự thầu với các yêu cầu về kỹ thuật nêu trong thông báo mời thầu và các tài liệu chứng minh tư cách hợp lệ của nhà thầu (Giấy chứng nhận ĐKDN, Giấy chứng nhận đủ điều kiện kinh doanh trang thiết bị y tế....) trong vòng 05 ngày làm việc kể từ ngày kết thúc chào giá cho Chủ đầu tư, bản cứng gửi về Phòng Vật tư - Thiết bị Y tế, Bệnh viện đa khoa Tân Phú (địa chỉ:609-611 Âu Cơ, Phường Tân Phú, Thành Phố Hồ Chí Minh) và bản mềm gửi qua email: vtttbyt1.bvq@gmail.com",
         "projectPlace": "Bệnh viện Đa khoa Tân Phú 609-611 Âu Cơ, P.Tân Phú,TP.Hồ Chí Minh",
         "earliestDeliveryDate": "24h kể từ ngày đặt hàng",
@@ -452,5 +452,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:22.879Z"
+  "fetchedAt": "2026-07-29T11:43:00.286Z"
 }

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "f1953c20-7213-43cd-bc4f-cd46d84f27cf",
+        "lotNo": "BP2600524122",
+        "name": "Mua sắm vật tư y tế, hoá chất diệt côn trùng phục vụ công tác phòng, chống dịch, bệnh truyền nhiễm và kiểm dịch y tế năm 2026 của Trung tâm Kiểm soát bệnh tật tỉnh Sơn La",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3799200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư y tế, hoá chất diệt côn trùng phục vụ công tác phòng, chống dịch, bệnh truyền nhiễm và kiểm dịch y tế năm 2026 của Trung tâm Kiểm soát bệnh tật tỉnh Sơn La",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:16.216Z"
+}

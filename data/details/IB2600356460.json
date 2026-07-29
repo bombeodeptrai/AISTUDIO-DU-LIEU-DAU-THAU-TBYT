@@ -1,7 +1,68 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "f75d4a38-7fdf-4feb-b795-b4f46d1e70d8",
+      "contractorCode": "vn0317438480",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH TRANG THIẾT BỊ Y TẾ PHƯƠNG NAM VIỆT",
+      "status": "participating",
+      "lotNo": "PP2600275963",
+      "lotName": "Phim X-quang y tế 10'' x12'' (25x30cm)",
+      "bidPrice": 300000000,
+      "finalPrice": 45000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T10:01:06.924",
+      "models": []
+    },
+    {
+      "id": "033833bb-b7e8-49b9-adb5-feacd733de35",
+      "contractorCode": "vn2901720991",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ CÔNG NGHỆ - VẬT TƯ Y TẾ DUY CƯỜNG",
+      "status": "participating",
+      "lotNo": "PP2600275964",
+      "lotName": "Phim X-quang y tế 14'' x17'' (35x43cm)",
+      "bidPrice": 345000000,
+      "finalPrice": 345000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T10:01:06.645",
+      "models": []
+    },
+    {
+      "id": "021e3489-944d-4dd1-bcbb-db2d87d4db72",
+      "contractorCode": "vn0317438480",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH TRANG THIẾT BỊ Y TẾ PHƯƠNG NAM VIỆT",
+      "status": "participating",
+      "lotNo": "PP2600275964",
+      "lotName": "Phim X-quang y tế 14'' x17'' (35x43cm)",
+      "bidPrice": 300000000,
+      "finalPrice": 255000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T10:01:06.924",
+      "models": []
+    },
+    {
+      "id": "0a53d39e-666d-4775-a497-c99cf641b71e",
+      "contractorCode": "vn6001683977",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH TMDV MINH ANH",
+      "status": "participating",
+      "lotNo": "PP2600275964",
+      "lotName": "Phim X-quang y tế 14'' x17'' (35x43cm)",
+      "bidPrice": 258000000,
+      "finalPrice": 258000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T10:01:07.109",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 2,
@@ -38,5 +99,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:09.189Z"
+  "fetchedAt": "2026-07-29T11:45:10.346Z"
 }

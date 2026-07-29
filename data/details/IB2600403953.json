@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "9473741e-1ea6-48e8-8909-cc9976471959",
+        "lotNo": "BP2600574440",
+        "name": "Mua vật tư xét nghiệm miễn dịch sử dụng năm 2026-2027 của Bệnh viện đa khoa khu vực Hải Lăng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 481650000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Gồm 1 gói thầu, 15 khoản",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:07.430Z"
+}

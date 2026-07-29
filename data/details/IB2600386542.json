@@ -367,16 +367,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "c5ca8ce2-f75f-437d-a77f-63c021447672",
-        "lotNo": "PP2600272547",
-        "name": "Dây nối oxy",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 44994000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "ff964f38-463a-4c64-9f9c-1307bad5bf07",
         "lotNo": "PP2600272544",
         "name": "Dây kết nối áp lực cao cho máy bơm Illumena Néo",
@@ -403,6 +393,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1008000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c5ca8ce2-f75f-437d-a77f-63c021447672",
+        "lotNo": "PP2600272547",
+        "name": "Dây nối oxy",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 44994000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -567,16 +567,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "9fda2242-7160-47bc-88ea-d434149be99f",
-        "lotNo": "PP2600272567",
-        "name": "Gạc ép sọ não 1cm x 8cm x 4 lớp",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 20202000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "5d4b3950-4199-466f-989b-25bcb28ce874",
         "lotNo": "PP2600272564",
         "name": "Đầu đốt kích hoạt điện đơn cực",
@@ -603,6 +593,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 19530000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9fda2242-7160-47bc-88ea-d434149be99f",
+        "lotNo": "PP2600272567",
+        "name": "Gạc ép sọ não 1cm x 8cm x 4 lớp",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 20202000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -757,16 +757,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "b000770f-5b77-4021-adf2-74a812b20e69",
-        "lotNo": "PP2600272586",
-        "name": "Kim chọc hút tủy xương",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1400000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "9f8a9f4c-272c-46e9-b99b-c4385bc416a2",
         "lotNo": "PP2600272583",
         "name": "Kẹp khăn mổ 135mm",
@@ -793,6 +783,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 140553000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b000770f-5b77-4021-adf2-74a812b20e69",
+        "lotNo": "PP2600272586",
+        "name": "Kim chọc hút tủy xương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1400000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -957,16 +957,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "b6481fdd-6d6b-40ef-a655-81ec2a4290e5",
-        "lotNo": "PP2600272606",
-        "name": "Lưới điều trị thoát vị",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 1020000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "1535c38c-cb9b-4bc4-8c6b-4cb72c97b8e2",
         "lotNo": "PP2600272603",
         "name": "Lọc khuẩn đo chức năng hô hấp",
@@ -993,6 +983,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1023750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b6481fdd-6d6b-40ef-a655-81ec2a4290e5",
+        "lotNo": "PP2600272606",
+        "name": "Lưới điều trị thoát vị",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1020000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1167,16 +1167,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "dec45969-b53e-44f2-8a35-c1550b5c242d",
-        "lotNo": "PP2600272627",
-        "name": "Ống soi quang học 70 độ, đường kính 4mm, chiều dài 18cm, hộp đựng ống soi đi kèm",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 175224000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "5a432a45-f068-4a8c-a60d-884c25701165",
         "lotNo": "PP2600272624",
         "name": "Ống hút và đốt soi treo thanh quản",
@@ -1203,6 +1193,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 128164000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dec45969-b53e-44f2-8a35-c1550b5c242d",
+        "lotNo": "PP2600272627",
+        "name": "Ống soi quang học 70 độ, đường kính 4mm, chiều dài 18cm, hộp đựng ống soi đi kèm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 175224000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1367,16 +1367,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "e1f38472-9a9b-4dc0-ada8-cb741efb75f3",
-        "lotNo": "PP2600272647",
-        "name": "Vật tư tiêu hao khí nén argon sử dụng cho máy phát tia Plasma lạnh",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 300000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "c30d92af-3f9f-4bea-94c4-e990a16764ca",
         "lotNo": "PP2600272644",
         "name": "Trocar nội soi nhựa không dao đường kính 12mm",
@@ -1403,6 +1393,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 1205000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e1f38472-9a9b-4dc0-ada8-cb741efb75f3",
+        "lotNo": "PP2600272647",
+        "name": "Vật tư tiêu hao khí nén argon sử dụng cho máy phát tia Plasma lạnh",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 300000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1448,5 +1448,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:32:42.458Z"
+  "fetchedAt": "2026-07-29T11:44:03.711Z"
 }

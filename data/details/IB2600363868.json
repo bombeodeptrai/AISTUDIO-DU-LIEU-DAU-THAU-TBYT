@@ -387,22 +387,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "ad574d71-cd5f-439d-9281-8a6dd8b49c70",
-        "lotNo": "PP2600284096",
-        "name": "Túi ép phồng tiệt trùng kích cỡ 150mmx100m, chất liệu PET/CPP",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 20430000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "75043352-7fe2-494f-b00a-fef417fce50e",
         "lotNo": "PP2600284095",
         "name": "Gói thử kiểm soát chất lượng tiệt khuẩn EO",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 6519000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ad574d71-cd5f-439d-9281-8a6dd8b49c70",
+        "lotNo": "PP2600284096",
+        "name": "Túi ép phồng tiệt trùng kích cỡ 150mmx100m, chất liệu PET/CPP",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 20430000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -587,22 +587,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "c4918728-7535-4abe-a299-1e478fd72774",
-        "lotNo": "PP2600284116",
-        "name": "Gạc băng vết thương, 5 lớp, kích thước 16cmx20cm (vùng cùng cụt)",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 81675000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "62823d16-20c8-48cb-955c-7c5aaece7e5c",
         "lotNo": "PP2600284115",
         "name": "Gạc băng vết thương, 5 lớp, kích thước 12cmx12cm",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 43725000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c4918728-7535-4abe-a299-1e478fd72774",
+        "lotNo": "PP2600284116",
+        "name": "Gạc băng vết thương, 5 lớp, kích thước 16cmx20cm (vùng cùng cụt)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 81675000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -787,22 +787,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "c9039b78-4282-47bd-a330-abf7a8f0e737",
-        "lotNo": "PP2600284136",
-        "name": "Kim sinh thiết tự động các mô mềm và khối u mô mềm",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 721500000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "4f660d21-6874-427b-b604-7d9f11e2b62b",
         "lotNo": "PP2600284135",
         "name": "Kim sinh thiết mô mềm nguyên lõi kèm kim đồng trục",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 18550000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c9039b78-4282-47bd-a330-abf7a8f0e737",
+        "lotNo": "PP2600284136",
+        "name": "Kim sinh thiết tự động các mô mềm và khối u mô mềm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 721500000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -987,22 +987,22 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "1267832d-97ff-4858-84e4-3d3adbfaea61",
-        "lotNo": "PP2600284156",
-        "name": "Chỉ phẫu thuật không tan 2-0 dùng trong phẫu thuật tim, miếng đệm 7mm x 3mm x 1.5mm, đóng gói đa sợi/tép",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 311187240,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "f814ca9d-5b01-434f-8586-7c5311895b9e",
         "lotNo": "PP2600284155",
         "name": "Chỉ phẫu thuật không tan 2-0 dùng trong phẫu thuật tim, miếng đệm 3mm x 3mm x 1.5mm, đóng gói đa sợi/tép",
         "quantity": 0,
         "unit": "",
         "plannedPrice": 76813380,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1267832d-97ff-4858-84e4-3d3adbfaea61",
+        "lotNo": "PP2600284156",
+        "name": "Chỉ phẫu thuật không tan 2-0 dùng trong phẫu thuật tim, miếng đệm 7mm x 3mm x 1.5mm, đóng gói đa sợi/tép",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 311187240,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1117,16 +1117,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "c5b929ab-58f8-477e-9638-b208d23d2606",
-        "lotNo": "PP2600284171",
-        "name": "Chỉ phẫu thuật tự tiêu 4-0 dùng trong khâu cơ, 2 chất phủ",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 115970400,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "84285897-6e1e-4652-ae74-5c7e56b4c705",
         "lotNo": "PP2600284168",
         "name": "Chỉ phẫu thuật tiêu sinh học 2-0",
@@ -1153,6 +1143,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 25073664,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c5b929ab-58f8-477e-9638-b208d23d2606",
+        "lotNo": "PP2600284171",
+        "name": "Chỉ phẫu thuật tự tiêu 4-0 dùng trong khâu cơ, 2 chất phủ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 115970400,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1307,16 +1307,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "e5630b43-5552-411d-b352-cccb4067976a",
-        "lotNo": "PP2600284190",
-        "name": "Bộ giá đỡ niệu quản bằng 100% silicone, dài ngày",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 312000000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "f078a52a-3c4f-4adb-90c0-75d6359dd532",
         "lotNo": "PP2600284187",
         "name": "Bộ dụng cụ mở đường dùng trong can thiệp mạch, có van cầm máu thiết kế 6 cạnh xoắn",
@@ -1343,6 +1333,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 6900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e5630b43-5552-411d-b352-cccb4067976a",
+        "lotNo": "PP2600284190",
+        "name": "Bộ giá đỡ niệu quản bằng 100% silicone, dài ngày",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 312000000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -1907,16 +1907,6 @@
         "sourceStage": "invitation"
       },
       {
-        "id": "95d7807f-c0e1-453a-9204-416ac3a89d83",
-        "lotNo": "PP2600284250",
-        "name": "Dung dịch bảo quản giác mạc",
-        "quantity": 0,
-        "unit": "",
-        "plannedPrice": 19845000,
-        "specification": "",
-        "sourceStage": "invitation"
-      },
-      {
         "id": "bdf0eda1-7903-4e4f-8d57-b5327ee8581d",
         "lotNo": "PP2600284247",
         "name": "Dung dịch bảo quản catheter",
@@ -1943,6 +1933,16 @@
         "quantity": 0,
         "unit": "",
         "plannedPrice": 120000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "95d7807f-c0e1-453a-9204-416ac3a89d83",
+        "lotNo": "PP2600284250",
+        "name": "Dung dịch bảo quản giác mạc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 19845000,
         "specification": "",
         "sourceStage": "invitation"
       },
@@ -2128,5 +2128,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:04.713Z"
+  "fetchedAt": "2026-07-29T11:45:00.679Z"
 }

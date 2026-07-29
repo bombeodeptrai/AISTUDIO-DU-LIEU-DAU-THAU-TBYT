@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "148a76e2-a1b3-4b86-ac8b-6467063172cb",
+        "lotNo": "BP2600574135",
+        "name": "01.TB: Mua sắm, lắp đặt thiết bị y tế",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9796053000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm, lắp đặt thiết bị y tế",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:00.402Z"
+}

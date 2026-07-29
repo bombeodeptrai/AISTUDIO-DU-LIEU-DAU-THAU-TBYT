@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "d341b2af-d113-4727-bc82-a675fa815408",
+        "lotNo": "PP2600305303",
+        "name": "Mua sinh phẩm, vật tư phục vụ đánh giá bộ mẫu ngoại kiểm tải lượng HIV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 479800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d7a2b374-728b-41c1-be1d-6cd79dbc9fb1",
+        "lotNo": "PP2600305304",
+        "name": "Mua sinh phẩm cho phân lập và ổn định CD4",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 174500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm sinh phẩm hóa chất vật tư",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:58.241Z"
+}

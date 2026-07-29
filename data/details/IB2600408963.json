@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "e5b227ef-d4ff-475f-8d3e-1a727eaab323",
+        "lotNo": "BP2600582027",
+        "name": "HH - Mua sắm sinh phẩm chẩn đoán",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 77350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm sinh phẩm chẩn đoán",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "202662916615367",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Test thử xét nghiệm định tính AMP/COC/COD/HER/MOP/K2/KET/MDMA/MET/THC",
+        "unit": "Test",
+        "quantity": 1000,
+        "code": "Không yêu cầu",
+        "brand": "Không yêu cầu",
+        "manufacturer": "Không yêu cầu",
+        "origin": "Không yêu cầu",
+        "manufactureYear": "2026",
+        "specification": "Xét nghiệm định tính AMP/COC/COD/HER/MOP/K2/KET/MDMA/MET/THC dùng để phát hiện định tính  đồng thời từ một đến mười loại chất ma túy trong nhiều tổ hợp khác nhau trong mẫu nước tiểu người Độ nhạy, độ đặc hiệu: ≥ 99.9%; Đạt tiêu chuẩn ISO 13485",
+        "otherRequirement": "",
+        "projectPlace": "Bệnh viện Nhân Ái - Địa chỉ: thôn Thác Dài, xã Phú Nghĩa, thành phố Đồng Nai",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1958",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:37.155Z"
+}

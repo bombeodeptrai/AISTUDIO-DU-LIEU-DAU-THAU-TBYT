@@ -1,7 +1,23 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "a227202f-9201-4734-ae89-2f1f97ea7ad1",
+      "contractorCode": "vn6001781808",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH MEDITECH AUTOMATION",
+      "status": "participating",
+      "lotNo": "BP2600469715",
+      "lotName": "Gói số 2: Mua sắm hóa chất xét nghiệm và vật tư đi kèm",
+      "bidPrice": 579260100,
+      "finalPrice": 579260100,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T11:09:32.003",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 1,
@@ -28,5 +44,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:02.757Z"
+  "fetchedAt": "2026-07-29T11:44:54.907Z"
 }

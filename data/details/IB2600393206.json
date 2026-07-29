@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 17,
+    "items": [
+      {
+        "id": "23e4438d-9c67-459e-9842-e5accae2cac6",
+        "lotNo": "PP2600297456",
+        "name": "Ống thông chẩn đoán đầu cong không điều chỉnh loại 4 điện cực",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 21042000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9b1feb60-09ca-4637-9f1a-8737620b5b57",
+        "lotNo": "PP2600297457",
+        "name": "Ống thông chẩn đoán đầu cong không điều chỉnh loại 10 điện cực",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 685000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6855d548-56f7-4e84-bd0c-37fef950a79e",
+        "lotNo": "PP2600297458",
+        "name": "Ống thông chẩn đoán đầu cong có điều chỉnh loại 10 điện cực",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12355000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d5000fc9-8a1b-4699-a0c9-38871a088501",
+        "lotNo": "PP2600297459",
+        "name": "Ống thông đốt điện sinh lý tim 1 hướng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4158000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5c990fe4-1029-4996-8c58-5f1660c7c5dd",
+        "lotNo": "PP2600297460",
+        "name": "Ống thông đốt 2 hướng kèm cáp nối tương thích hệ thống máy",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11497125000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "02a8fa2a-dd66-4163-9926-34b31f0faea6",
+        "lotNo": "PP2600297461",
+        "name": "Ống thông đốt điều trị rối loạn nhịp điện sinh lý tim",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 446500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f4f3e6b9-0fcc-48fc-b212-5329f7b8f5c5",
+        "lotNo": "PP2600297462",
+        "name": "Ống thông đốt loạn nhịp đầu cong 2 hướng, có tưới muối",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2099685000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "94cd0b8f-f054-406a-8d95-327e6fe12528",
+        "lotNo": "PP2600297463",
+        "name": "Ống thông lập bản đồ 64 điện cực",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 560000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c7a8be9d-9c9a-4fcb-baf1-1ebdef7676dc",
+        "lotNo": "PP2600297464",
+        "name": "Ống thông đốt tưới lạnh, đầu uốn cong 2 hướng, có lỗ tưới nước muối",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2400000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1edc1ad6-a0d4-4f44-98e4-8f0cd4d8b1e1",
+        "lotNo": "PP2600297465",
+        "name": "Ống thông đốt tưới lạnh, đầu uốn cong 2 hướng, có lỗ tưới nước muối, vừa đốt vừa lập bản đồ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3700000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "782f7fc8-9570-4ce3-bbcc-98bb0eb9dd5c",
+        "lotNo": "PP2600297466",
+        "name": "Ống thông đốt đầu uốn cong 2 hướng, vừa đốt vừa lập bản đồ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3360000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "44b97764-8ce3-414e-9f74-1d63a75b8782",
+        "lotNo": "PP2600297467",
+        "name": "Điện cực âm và cáp nối dùng cho hệ thống lập bản đồ tim 3 chiều",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2250000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4a891067-ab22-470a-8503-5c8a4239c100",
+        "lotNo": "PP2600297468",
+        "name": "Dụng cụ mở đường có van cầm máu loại ngắn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1550000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7df6220a-7923-417a-ae35-215f4a862e94",
+        "lotNo": "PP2600297469",
+        "name": "Dụng cụ mở đường có van cầm máu loại dài",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 620000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4aef6c8d-a839-4ce3-bfa3-147a1593e1dc",
+        "lotNo": "PP2600297470",
+        "name": "Dụng cụ mở đường",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1250000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "50c01266-7f2e-405e-a2a0-e44d049eaf8f",
+        "lotNo": "PP2600297471",
+        "name": "Kim chọc mạch máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 87000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "275b2aed-f5ee-44dc-9078-70fba3d68732",
+        "lotNo": "PP2600297472",
+        "name": "Kim chọc vách liên nhĩ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 270000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm vật tư dùng cho hệ thống thăm dò điện sinh lý và điều trị rối loạn nhịp bằng sóng RF thuộc Dự toán mua sắm: Mua sắm vật tư dùng cho hệ thống thăm dò điện sinh lý và điều trị rối loạn nhịp bằng sóng RF sử dụng tại Bệnh viện đa khoa Bắc Ninh số 2",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:23.528Z"
+}

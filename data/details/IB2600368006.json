@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "f63a1ffb-887d-4c59-858b-ea811f17a1d5",
+        "lotNo": "BP2600525976",
+        "name": "Gói 20-2026: Mua sắm hóa chất huyết học bổ sung đồng bộ với các hóa chất đã trúng thầu để thực hiện các dịch vụ kỹ thuật xét nghiệm tại Bệnh viện Trường Đại học Trà Vinh (gồm 02 hạng mục)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 62300000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm hóa chất huyết học bổ sung đồng bộ với các hóa chất đã trúng thầu để thực hiện các dịch vụ kỹ thuật xét nghiệm tại Bệnh viện Trường Đại học Trà Vinh",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "10214152703464004",
+        "position": "1",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Hóa chất dùng để đánh dấu các thành phần bạch cầu",
+        "unit": "ml",
+        "quantity": 7000,
+        "code": "DWX-50225",
+        "brand": "DWX-50225",
+        "manufacturer": "Dewei medical Equipment Co., Ltd",
+        "origin": "Trung Quốc",
+        "manufactureYear": "Từ năm 2026 trở về sau.",
+        "specification": "Hóa chất ly giải phá vỡ hồng cầu để đo hemoglobin và xử lý đánh dấu 5 thành phần bạch cầu bằng cách làm thay đổi kích thước và hình dạng của các tế bào bạch cầu, giúp phân loại chính xác 5 loại bạch cầu (Lymphocyte, Monocyte, Neutrophil, Eosinophil, Basophil) sử dụng trên máy xét nghiệm huyết học 5 thành phần bạch cầu 27 thông số đo.  Đồng bộ với các hóa chất huyết học DWX-50222; DWX-50224, tương thích và đồng bộ với máy huyết học tự động Mindray BC – 5380.",
+        "otherRequirement": "Nhà thầu trúng thầu đảm bảo đáp ứng các yêu cầu sau: Hàng hoá cung ứng mới 100%, chưa sử dụng, các kiện hàng khi giao nhận đều phải còn nguyên đai, nguyên kiện. Hàng hoá được giao tại Bệnh viện Trường Đại học Trà Vinh. Cung cấp hàng hóa theo từng đợt hoặc 01 đợt theo yêu cầu của chủ đầu tư, thời gian giao hàng trường hợp thông thường không quá 05 ngày kể từ khi đặt hàng. Hàng hóa giao đến Bệnh viện Trường Đại học Trà Vinh phải đảm bảo về hạn sử dụng: Hàng hóa có hạn dùng > 2 năm: không được ít hơn 18 tháng; Hàng hóa có hạn dùng > 12 tháng đến dưới 24 tháng: Không được ít hơn 12 tháng; Hàng hóa có hạn dùng từ 6 tháng đến dưới 12 tháng: Không được ít hơn 06 tháng; Hàng hóa có hạn dùng < 06 tháng: theo thỏa thuận của 2 bên. Trường hợp hàng hóa đã giao không đảm bảo chất lượng (không đạt yêu cầu về cảm quan, biến đổi màu sắc, nhãn hàng hóa không đúng quy định, bong tróc, mờ...) hoặc có thông báo/văn bản thu hồi của cơ quan có thẩm quyền mà nguyên nhân không do lỗi của chủ đầu tư, nhà thầu có trách nhiệm thu hồi, thay thế bằng lô hàng cùng loại theo hợp đồng trong thời gian không quá 05 ngày kể từ ngày nhận được thông báo của chủ đầu tư và chịu toàn bộ chi phí phát sinh. Nhà thầu cam kết hàng hóa cung cấp có đầy đủ hồ sơ pháp lý theo quy định; tên hàng hóa, nhà sản xuất, quốc gia/vùng lãnh thổ sản xuất và các thông tin trên nhãn, nhãn phụ (đối với hàng hóa nhập khẩu), tờ hướng dẫn sử dụng, catalog phải thống nhất với hồ sơ đăng ký lưu hành và các tài liệu do cơ quan có thẩm quyền cấp. Nhà thầu có trách nhiệm cung cấp cho chủ đầu tư khi có yêu cầu các tài liệu như CO, CQ, Giấy chứng nhận đăng ký lưu hành hoặc Giấy phép nhập khẩu (nếu có), tờ khai hải quan, hóa đơn thương mại, phiếu đóng gói, vận đơn, hướng dẫn sử dụng tiếng Việt và các tài liệu liên quan khác theo quy định. Trường hợp thông tin không thống nhất hoặc sai lệch gây ảnh hưởng đến chất lượng, an toàn sử dụng hoặc thiệt hại cho chủ đầu tư, người bệnh thì nhà thầu phải hoàn toàn chịu trách nhiệm trước pháp luật. Nhà thầu cam kết cung cấp, lắp đặt máy theo hình thức cho mượn/đặt máy đồng bộ với hóa chất, vật tư trúng thầu; bảo đảm máy hoạt động liên tục, đáp ứng yêu cầu chuyên môn trong suốt thời gian thực hiện hợp đồng; chịu toàn bộ chi phí lắp đặt, bảo trì, bảo dưỡng, sửa chữa, thay thế và thu hồi máy, không phát sinh chi phí cho chủ đầu tư.",
+        "projectPlace": "Bệnh viện Trường Đại học Trà Vinh",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      },
+      {
+        "id": "9177005166889212",
+        "position": "2",
+        "lotNo": "",
+        "lotName": "",
+        "name": "Hóa chất ly giải hồng cầu và kết hợp huyết sắc tố",
+        "unit": "ml",
+        "quantity": 28000,
+        "code": "DWX-50223",
+        "brand": "DWX-50223",
+        "manufacturer": "Dewei medical Equipment Co., Ltd",
+        "origin": "Trung Quốc",
+        "manufactureYear": "Từ năm 2026 trở về sau.",
+        "specification": "Hóa chất ly giải (phá vỡ) hồng cầu để hỗ trợ quá trình đo nồng độ hemoglobin (Hb) và đếm số lượng bạch cầu (WBC) sử dụng trên máy xét nghiệm huyết học 5 thành phần bạch cầu 27 thông số đo. Đồng bộ với các hóa chất huyết học DWX-50222; DWX-50224, tương thích và đồng bộ với máy huyết học tự động Mindray BC – 5380.",
+        "otherRequirement": "Nhà thầu trúng thầu đảm bảo đáp ứng các yêu cầu sau: Hàng hoá cung ứng mới 100%, chưa sử dụng, các kiện hàng khi giao nhận đều phải còn nguyên đai, nguyên kiện. Hàng hoá được giao tại Bệnh viện Trường Đại học Trà Vinh. Cung cấp hàng hóa theo từng đợt hoặc 01 đợt theo yêu cầu của chủ đầu tư, thời gian giao hàng trường hợp thông thường không quá 05 ngày kể từ khi đặt hàng. Hàng hóa giao đến Bệnh viện Trường Đại học Trà Vinh phải đảm bảo về hạn sử dụng: Hàng hóa có hạn dùng > 2 năm: không được ít hơn 18 tháng; Hàng hóa có hạn dùng > 12 tháng đến dưới 24 tháng: Không được ít hơn 12 tháng; Hàng hóa có hạn dùng từ 6 tháng đến dưới 12 tháng: Không được ít hơn 06 tháng; Hàng hóa có hạn dùng < 06 tháng: theo thỏa thuận của 2 bên. Trường hợp hàng hóa đã giao không đảm bảo chất lượng (không đạt yêu cầu về cảm quan, biến đổi màu sắc, nhãn hàng hóa không đúng quy định, bong tróc, mờ...) hoặc có thông báo/văn bản thu hồi của cơ quan có thẩm quyền mà nguyên nhân không do lỗi của chủ đầu tư, nhà thầu có trách nhiệm thu hồi, thay thế bằng lô hàng cùng loại theo hợp đồng trong thời gian không quá 05 ngày kể từ ngày nhận được thông báo của chủ đầu tư và chịu toàn bộ chi phí phát sinh. Nhà thầu cam kết hàng hóa cung cấp có đầy đủ hồ sơ pháp lý theo quy định; tên hàng hóa, nhà sản xuất, quốc gia/vùng lãnh thổ sản xuất và các thông tin trên nhãn, nhãn phụ (đối với hàng hóa nhập khẩu), tờ hướng dẫn sử dụng, catalog phải thống nhất với hồ sơ đăng ký lưu hành và các tài liệu do cơ quan có thẩm quyền cấp. Nhà thầu có trách nhiệm cung cấp cho chủ đầu tư khi có yêu cầu các tài liệu như CO, CQ, Giấy chứng nhận đăng ký lưu hành hoặc Giấy phép nhập khẩu (nếu có), tờ khai hải quan, hóa đơn thương mại, phiếu đóng gói, vận đơn, hướng dẫn sử dụng tiếng Việt và các tài liệu liên quan khác theo quy định. Trường hợp thông tin không thống nhất hoặc sai lệch gây ảnh hưởng đến chất lượng, an toàn sử dụng hoặc thiệt hại cho chủ đầu tư, người bệnh thì nhà thầu phải hoàn toàn chịu trách nhiệm trước pháp luật. Nhà thầu cam kết cung cấp, lắp đặt máy theo hình thức cho mượn/đặt máy đồng bộ với hóa chất, vật tư trúng thầu; bảo đảm máy hoạt động liên tục, đáp ứng yêu cầu chuyên môn trong suốt thời gian thực hiện hợp đồng; chịu toàn bộ chi phí lắp đặt, bảo trì, bảo dưỡng, sửa chữa, thay thế và thu hồi máy, không phát sinh chi phí cho chủ đầu tư.",
+        "projectPlace": "Bệnh viện Trường Đại học Trà Vinh",
+        "earliestDeliveryDate": "",
+        "latestDeliveryDate": "",
+        "formCode": "BD.DT.02.1958",
+        "chapterName": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "sourceStage": "invitation-technical"
+      }
+    ],
+    "chapters": [
+      {
+        "code": "BD.DT.02.1958",
+        "name": "Mẫu số 02B. PHẠM VI CUNG CẤP HÀNG HÓA (áp dụng đối với loại hợp đồng theo đơn giá)",
+        "parentCode": "",
+        "orderIndex": 1
+      }
+    ],
+    "files": [],
+    "disclosure": "public-structured-hsmt"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:44:32.487Z"
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "b8e30dda-d0c1-4a05-bef3-c9cfb23fe69a",
+      "contractorCode": "vn0104091548",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH XUẤT NHẬP KHẨU NAM VIỆT HƯNG YÊN",
+      "status": "participating",
+      "lotNo": "BP2600481364",
+      "lotName": "Mua sắm máy bơm tiêm thuốc cản quang tự động DSA cho Bệnh viện Thanh Nhàn năm 2026",
+      "bidPrice": 686200000,
+      "finalPrice": 686200000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T10:36:55.11",
+      "models": []
+    },
+    {
+      "id": "fb4be853-e0ce-411b-aa79-ecd5cff18ac0",
+      "contractorCode": "vn0103809674",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THƯƠNG MẠI VÀ THIẾT BỊ QUANG MINH",
+      "status": "participating",
+      "lotNo": "BP2600481364",
+      "lotName": "Mua sắm máy bơm tiêm thuốc cản quang tự động DSA cho Bệnh viện Thanh Nhàn năm 2026",
+      "bidPrice": 650000000,
+      "finalPrice": 650000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T10:36:55.351",
+      "models": []
+    },
+    {
+      "id": "c72444f5-519d-4fc8-a27d-798d74419040",
+      "contractorCode": "vn0110887994",
+      "taxCode": "",
+      "contractorName": "Công ty TNHH TBYT & DV Duy Bách",
+      "status": "participating",
+      "lotNo": "BP2600481364",
+      "lotName": "Mua sắm máy bơm tiêm thuốc cản quang tự động DSA cho Bệnh viện Thanh Nhàn năm 2026",
+      "bidPrice": 746000000,
+      "finalPrice": 746000000,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-27T10:36:55.581",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "d9431713-4bdb-4e9f-b004-1ee92d8b906b",
+        "lotNo": "BP2600481364",
+        "name": "Mua sắm máy bơm tiêm thuốc cản quang tự động DSA cho Bệnh viện Thanh Nhàn năm 2026",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 730800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm máy bơm tiêm thuốc cản quang tự động DSA cho Bệnh viện Thanh Nhàn năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:45:10.905Z"
+}

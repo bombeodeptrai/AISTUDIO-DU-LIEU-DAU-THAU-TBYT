@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "9edca1f2-4ae2-432f-877f-440bd31a7624",
+        "lotNo": "BP2600531738",
+        "name": "Gói thầu số 05: Mua sắm thiết bị y tế năm 2026",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1969000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm thiết bị y tế năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:35.489Z"
+}

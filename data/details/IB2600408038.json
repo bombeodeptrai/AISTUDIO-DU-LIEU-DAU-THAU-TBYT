@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 2,
+    "items": [
+      {
+        "id": "46b57a27-440b-4e89-a7fd-c5900b55fd7b",
+        "lotNo": "PP2600311700",
+        "name": "Nhóm hàng I",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 463425600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "36c1d9dc-115b-4eab-aea9-b224548abe87",
+        "lotNo": "PP2600311701",
+        "name": "Nhóm hàng II",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 439403800,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Vật tư tiêu hao và vật tư sinh hoạt văn phòng cho Giàn HST, HSĐ",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:42:46.129Z"
+}

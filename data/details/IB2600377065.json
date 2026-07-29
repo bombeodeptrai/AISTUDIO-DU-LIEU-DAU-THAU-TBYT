@@ -1,8 +1,252 @@
 {
   "schemaVersion": 3,
-  "total": 0,
-  "bidders": [],
-  "items": [],
+  "total": 6,
+  "bidders": [
+    {
+      "id": "d0245d1b-69a9-443b-b6be-3e30fbb17f7c",
+      "contractorCode": "vn0101268476",
+      "taxCode": "0101268476",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ MINH TÂM",
+      "status": "won",
+      "lotNo": "PP2600294845",
+      "lotName": "Hóa chất định lượng albumin trong nước tiểu/dịch não tủy",
+      "bidPrice": 117454428,
+      "finalPrice": 117454428,
+      "winningPrice": 117454428,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:39:54.942",
+      "models": [
+        "B38858"
+      ]
+    },
+    {
+      "id": "57b19fac-4e87-44fe-a901-9f124f0cb273",
+      "contractorCode": "vn0312385700",
+      "taxCode": "0312385700",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ DUY MINH",
+      "status": "won",
+      "lotNo": "PP2600294846",
+      "lotName": "Hóa chất làm sạch và tẩy nhiễm hệ thống máy đông máu tự động",
+      "bidPrice": 2916480,
+      "finalPrice": 2916480,
+      "winningPrice": 2916480,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:39:54.942",
+      "models": [
+        "0009832700",
+        "213659"
+      ]
+    },
+    {
+      "id": "02ae455b-b9ad-4a7f-81eb-c9242930d802",
+      "contractorCode": "vn0312385700",
+      "taxCode": "0312385700",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ DUY MINH",
+      "status": "won",
+      "lotNo": "PP2600294847",
+      "lotName": "Hồng cầu mẫu A1/B",
+      "bidPrice": 19857600,
+      "finalPrice": 19857600,
+      "winningPrice": 19857600,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:39:54.942",
+      "models": [
+        "0009832700",
+        "213659"
+      ]
+    },
+    {
+      "id": "42153873-29fe-4a77-b9f1-beda6094c8be",
+      "contractorCode": "vn0400567178",
+      "taxCode": "0400567178",
+      "contractorName": "CÔNG TY CỔ PHẦN THIẾT BỊ Y TẾ NAM TRUNG",
+      "status": "won",
+      "lotNo": "PP2600294848",
+      "lotName": "Hóa chất nội kiểm Cyfra 21-1",
+      "bidPrice": 4310784,
+      "finalPrice": 4310784,
+      "winningPrice": 4310784,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:39:54.942",
+      "models": [
+        "08P4522",
+        "09P4010",
+        "08P4501"
+      ]
+    },
+    {
+      "id": "660ef186-98b4-44a1-b36a-5ef8156dc0c5",
+      "contractorCode": "vn0400567178",
+      "taxCode": "0400567178",
+      "contractorName": "CÔNG TY CỔ PHẦN THIẾT BỊ Y TẾ NAM TRUNG",
+      "status": "won",
+      "lotNo": "PP2600294849",
+      "lotName": "Hóa chất chuẩn 25-OH Vitamin D",
+      "bidPrice": 2888550,
+      "finalPrice": 2888550,
+      "winningPrice": 2888550,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:39:54.942",
+      "models": [
+        "08P4522",
+        "09P4010",
+        "08P4501"
+      ]
+    },
+    {
+      "id": "da6a0d49-2a46-4e0a-932a-0673bc826057",
+      "contractorCode": "vn0400567178",
+      "taxCode": "0400567178",
+      "contractorName": "CÔNG TY CỔ PHẦN THIẾT BỊ Y TẾ NAM TRUNG",
+      "status": "won",
+      "lotNo": "PP2600294850",
+      "lotName": "Hóa chất định lượng 25-OH Vitamin D",
+      "bidPrice": 306240000,
+      "finalPrice": 306240000,
+      "winningPrice": 306240000,
+      "reason": "",
+      "submittedAt": "2026-07-29T09:39:54.942",
+      "models": [
+        "08P4522",
+        "09P4010",
+        "08P4501"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "20266179561458",
+      "name": "Hóa chất định lượng 25-OH Vitamin D",
+      "model": "08P4522",
+      "brand": "Alinity i 25-OH Vitamin D Reagent Kit",
+      "manufacturer": "Abbott Ireland Diagnostics Division (Longford)",
+      "origin": "Ireland",
+      "manufactureYear": "2025 trở đi",
+      "specification": "Xét nghiệm miễn dịch vi hạt hoá phát quang để định lượng 25-hydroxyvitamin D (25-OH vitamin D) trong huyết thanh và huyết tương người.\nKhoảng nồng độ đo của xét nghiệm là 5 ng/ml đến 150 ng/ml hoặc rộng hơn.\nNhiệt độ bảo quản: 2-8 °C\nThời gian onboard trên máy ≥ 21 ngày\nTiêu chuẩn chất lượng: ISO 13485.",
+      "unit": "Test",
+      "quantity": 2200,
+      "unitPrice": 139200,
+      "amount": 306240000,
+      "contractorCode": "vn0400567178",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN THIẾT BỊ Y TẾ NAM TRUNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1369/QĐ-NTP",
+      "decisionDate": "2026-07-29T09:38:50",
+      "resultPublishedDate": "2026-07-29T09:40:04"
+    },
+    {
+      "id": "2026617952429",
+      "name": "Hóa chất làm sạch và tẩy nhiễm hệ thống máy đông máu tự động",
+      "model": "0009832700",
+      "brand": "- Chủng loại: HemosIL Cleaning agent - Quy cách: Hộp: 1 x 80 mL",
+      "manufacturer": "Instrumentation Laboratory Company",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở đi",
+      "specification": "Hóa chất dung dịch dùng để làm sạch và tẩy nhiễm trên hệ thống máy đông máu tự động\nThành phần dung dịch natri hypoclorit.\nĐóng gói: dạng lỏng sẵn sử dụng\nTiêu chuẩn chất lượng: ISO 13485",
+      "unit": "ml",
+      "quantity": 320,
+      "unitPrice": 9114,
+      "amount": 2916480,
+      "contractorCode": "vn0312385700",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ DUY MINH"
+      ],
+      "lotNo": "",
+      "decisionNo": "1369/QĐ-NTP",
+      "decisionDate": "2026-07-29T09:38:50",
+      "resultPublishedDate": "2026-07-29T09:40:04"
+    },
+    {
+      "id": "2026617954240",
+      "name": "Hóa chất nội kiểm Cyfra 21-1",
+      "model": "09P4010",
+      "brand": "Alinity i CYFRA 21-1 Controls",
+      "manufacturer": "Fujirebio Diagnostics, Inc.",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở đi",
+      "specification": "Hoá chất nội kiểm xét nghiệm Cyfra 21-1 miễn dịch vi hạt hoá phát quang trong huyết thanh và huyết tương người.\nTiêu chuẩn chất lượng: ISO 13485.",
+      "unit": "ml",
+      "quantity": 48,
+      "unitPrice": 89808,
+      "amount": 4310784,
+      "contractorCode": "vn0400567178",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN THIẾT BỊ Y TẾ NAM TRUNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1369/QĐ-NTP",
+      "decisionDate": "2026-07-29T09:38:50",
+      "resultPublishedDate": "2026-07-29T09:40:04"
+    },
+    {
+      "id": "202661795054866",
+      "name": "Hóa chất định lượng albumin trong nước tiểu/ dịch não tủy",
+      "model": "B38858",
+      "brand": "- Chủng loại: URINE/CSF ALBUMIN - Quy cách: Hộp: 4x32.6ml+4x4.4ml",
+      "manufacturer": "Beckman Coulter, Inc.",
+      "origin": "Mỹ",
+      "manufactureYear": "2025 trở đi",
+      "specification": "Hóa chất định lượng nồng độ Albumin trong nước tiểu/dịch não tủy. Sử dụng trên máy hóa sinh tự động có buồng phản ứng ủ nước cách ly\nPhương pháp: Immunoturbidimetric (đo độ đục miễn dịch).\nDải đo: 10-450 mg/L (nước tiểu); 10-450 mg/L (CSF) hoặc rộng hơn.\nHóa chất đậm đặc, dạng lỏng sẵn sử dụng\nSau khi mở, ổn định ≥ 60 ngày trên máy\nTiêu chuẩn chất lượng: ISO 13485",
+      "unit": "ml",
+      "quantity": 1332,
+      "unitPrice": 88179,
+      "amount": 117454428,
+      "contractorCode": "vn0101268476",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ MINH TÂM"
+      ],
+      "lotNo": "",
+      "decisionNo": "1369/QĐ-NTP",
+      "decisionDate": "2026-07-29T09:38:50",
+      "resultPublishedDate": "2026-07-29T09:40:04"
+    },
+    {
+      "id": "202661795513393",
+      "name": "Hóa chất chuẩn 25-OH Vitamin D",
+      "model": "08P4501",
+      "brand": "Alinity i 25-OH Vitamin D Calibrators",
+      "manufacturer": "Abbott Ireland Diagnostics Division (Longford)",
+      "origin": "Ireland",
+      "manufactureYear": "2025 trở đi",
+      "specification": "Hoá chất chuẩn được sử dụng để hiệu chuẩn máy phân tích khi thực hiện xét nghiệm định lượng 25-hydroxyvitamin D (25-OH vitamin D) trong huyết thanh và huyết tương người.\nTiêu chuẩn chất lượng: ISO 13485.",
+      "unit": "ml",
+      "quantity": 18,
+      "unitPrice": 160475,
+      "amount": 2888550,
+      "contractorCode": "vn0400567178",
+      "winnerNames": [
+        "CÔNG TY CỔ PHẦN THIẾT BỊ Y TẾ NAM TRUNG"
+      ],
+      "lotNo": "",
+      "decisionNo": "1369/QĐ-NTP",
+      "decisionDate": "2026-07-29T09:38:50",
+      "resultPublishedDate": "2026-07-29T09:40:04"
+    },
+    {
+      "id": "20266179533342",
+      "name": "Hồng cầu mẫu A1/B",
+      "model": "213659",
+      "brand": "- Chủng loại: Serigrup Diana A1/B - Quy cách: Hộp: 2x10ml",
+      "manufacturer": "Diagnostic Grifols, S.A.",
+      "origin": "Tây Ban Nha",
+      "manufactureYear": "2025 trở đi",
+      "specification": "Dùng cho định nhóm máu ABO bằng phương pháp hồng cầu mẫu\nThành phần: Bộ hồng cầu mẫu gồm 2 lọ A1 và B (nồng độ 0,8%) phù hợp trong kỹ thuật Gel.\nBảo quản: 2-8 °C\nĐóng gói: Dạng lỏng sẵn sử dụng\nHóa chất tương tích với hệ thống phân tích nhóm máu tự động bằng phương pháp Gel Card.\nTiêu chuẩn chất lượng: ISO 13485.",
+      "unit": "ml",
+      "quantity": 240,
+      "unitPrice": 82740,
+      "amount": 19857600,
+      "contractorCode": "vn0312385700",
+      "winnerNames": [
+        "CÔNG TY TNHH THIẾT BỊ DUY MINH"
+      ],
+      "lotNo": "",
+      "decisionNo": "1369/QĐ-NTP",
+      "decisionDate": "2026-07-29T09:38:50",
+      "resultPublishedDate": "2026-07-29T09:40:04"
+    }
+  ],
   "requirements": {
     "total": 6,
     "items": [
@@ -218,5 +462,5 @@
     "disclosure": "public-structured-hsmt"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:12.063Z"
+  "fetchedAt": "2026-07-29T11:45:17.439Z"
 }

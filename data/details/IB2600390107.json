@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "be7a62d5-c0a1-491f-ad29-c847b06037a1",
+        "lotNo": "BP2600509273",
+        "name": "Gói thầu số 02: Mua Bơm tiêm, dây dẫn, kim luồn các loại cho Bệnh viện Sản - Nhi Trà Vinh (bao gồm 29 mặt hàng)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1023945015,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua Bơm tiêm, dây dẫn, kim luồn các loại cho Bệnh viện Sản – Nhi Trà Vinh (bao gồm 29 mặt hàng)",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:38.712Z"
+}

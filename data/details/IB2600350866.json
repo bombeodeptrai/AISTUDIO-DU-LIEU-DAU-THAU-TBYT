@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "8702e733-5eba-4249-bb3a-19296759de1f",
+        "lotNo": "BP2600472308",
+        "name": "Cung cấp khí y tế năm 2026-2027",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 3421775448,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung cấp khí y tế năm 2026-2027",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:38.456Z"
+}

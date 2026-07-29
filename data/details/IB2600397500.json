@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 4,
+    "items": [
+      {
+        "id": "078a274a-3011-4822-847a-bff6e34a5d1a",
+        "lotNo": "PP2600278593",
+        "name": "Monitor theo dõi bệnh nhân (5 thông số).",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 75000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f428d841-8100-4550-bd0b-8d473f545f36",
+        "lotNo": "PP2600278594",
+        "name": "Monitor theo dõi bệnh nhân (6 thông số)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 180000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "64c80de9-36d7-4499-a0f7-708992305a28",
+        "lotNo": "PP2600278595",
+        "name": "Đèn mổ treo trần Bàn mổ (Đa năng điều khiển điện sử dụng cho máy x-quang C-Arm kèm bộ phụ kiện mở rộng cho chấn thương chỉnh hình",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1168000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6c3ef87b-193e-4d23-80fe-b828fb943c0f",
+        "lotNo": "PP2600278596",
+        "name": "Sensor cảm biến nha khoa KTS",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 59000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm 05 thiết bị y tế phục vụ công tác chuyên môn tại Bệnh viện đa khoa Yên Thành năm 2026",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:11.114Z"
+}

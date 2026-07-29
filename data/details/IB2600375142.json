@@ -1,7 +1,23 @@
 {
   "schemaVersion": 3,
   "total": 0,
-  "bidders": [],
+  "bidders": [
+    {
+      "id": "8d284edb-0281-4506-ae9f-de3baf9689ec",
+      "contractorCode": "vn6000371421",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH DƯỢC PHẨM HOÀNG VŨ",
+      "status": "participating",
+      "lotNo": "BP2600469674",
+      "lotName": "Gói thầu số 1: Mua sắm vật tư y tế tiêu hao các loại",
+      "bidPrice": 675549600,
+      "finalPrice": 675549600,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-29T11:09:07.702",
+      "models": []
+    }
+  ],
   "items": [],
   "requirements": {
     "total": 1,
@@ -28,5 +44,5 @@
     "disclosure": "official-captcha-required"
   },
   "modelDisclosure": "as-published",
-  "fetchedAt": "2026-07-27T23:33:02.081Z"
+  "fetchedAt": "2026-07-29T11:44:53.869Z"
 }

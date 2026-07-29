@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [
+    {
+      "id": "02eb8ca0-413a-4a04-8396-d977698548ac",
+      "contractorCode": "vn0303479977",
+      "taxCode": "",
+      "contractorName": "CÔNG TY TNHH THIẾT BỊ KHOA HỌC KỸ THUẬT HÓA SINH",
+      "status": "participating",
+      "lotNo": "BP2600530381",
+      "lotName": "Hoá chất xét nghiệm theo máy sinh hoá miễn dịch",
+      "bidPrice": 2462115598,
+      "finalPrice": 2462115598,
+      "winningPrice": 0,
+      "reason": "",
+      "submittedAt": "2026-07-28T09:03:59.021",
+      "models": []
+    }
+  ],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "3c2a4244-c804-46a6-8a6e-ea8503cc6510",
+        "lotNo": "BP2600530381",
+        "name": "Hoá chất xét nghiệm theo máy sinh hoá miễn dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2584980682,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm hoá chất xét nghiệm phục vụ nhu cầu khám chữa bệnh tại Bệnh viện đa khoa An Giang",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:45:12.087Z"
+}

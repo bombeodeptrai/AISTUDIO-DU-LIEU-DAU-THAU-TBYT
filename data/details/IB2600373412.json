@@ -1,0 +1,2082 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 206,
+    "items": [
+      {
+        "id": "9d41b4a0-2894-40eb-8079-67677a4e6512",
+        "lotNo": "PP2600293146",
+        "name": "Môi trường Blood Agar Base",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 46080000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a6a11ca0-a24b-4db5-85e9-78ca701ea273",
+        "lotNo": "PP2600293147",
+        "name": "Môi trường Columbia agar base",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 23280000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bf013a78-2bf3-4108-87bd-6e16370c362f",
+        "lotNo": "PP2600293148",
+        "name": "Môi trường Mueller-Hinton agar",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7425000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "75435e0c-7471-497b-8e66-e02e595e6b9c",
+        "lotNo": "PP2600293149",
+        "name": "Môi trường đông khô Brilliance UTI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 222576000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "69fc67ae-9152-496a-97c3-ffc1d7bae193",
+        "lotNo": "PP2600293150",
+        "name": "Môi trường Macconkey agar",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 46560000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2b29a958-1865-4f44-8473-a4e3c2bc33f0",
+        "lotNo": "PP2600293151",
+        "name": "Môi trường Urea indole medium",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16380000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bf142c86-ee40-4e8f-8a9c-d56414750aa7",
+        "lotNo": "PP2600293152",
+        "name": "Bộ hiệu chỉnh máy cấy máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 26136000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9bf8b27b-c314-4d4b-972c-13f491445981",
+        "lotNo": "PP2600293153",
+        "name": "Chai cấy máu hiếu khí",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1282500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bc8ffa0f-239a-4f25-9937-c2b9c2dcf7dd",
+        "lotNo": "PP2600293154",
+        "name": "Chai cấy máu kỵ khí",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1282500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "41bf92b5-9590-4640-bb99-485ac6c3668c",
+        "lotNo": "PP2600293155",
+        "name": "Chai cấy máu trẻ em",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 31500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3195fca7-cb9e-4722-b48f-d377ff870741",
+        "lotNo": "PP2600293156",
+        "name": "Khay kháng sinh dành cho vi khuẩn Gram âm có colistin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 118350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ca5d12bd-944f-4e70-b97b-e7e2c43aa1b5",
+        "lotNo": "PP2600293157",
+        "name": "Khay kháng sinh đồ với 4 kháng sinh dành cho vi khuẩn đa kháng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 118350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9059a6b6-4c63-4acb-909f-a4663c43de70",
+        "lotNo": "PP2600293158",
+        "name": "Khay kháng sinh đồ với colistin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 19725000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0e230bd2-8e1d-480e-8261-0b33f80f9216",
+        "lotNo": "PP2600293159",
+        "name": "Môi trường canh thang Mueller Hinton có điều chỉnh cation và bổ sung đệm TES",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 60720000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7882ee3d-efc7-4171-b5f6-5a01329f6989",
+        "lotNo": "PP2600293160",
+        "name": "Nước khử khoáng vô trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 51285000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1cfcd4f6-ddda-4654-bdc0-7663d5b133dc",
+        "lotNo": "PP2600293161",
+        "name": "Giemsa",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 338700,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "aacf4f65-3d49-498d-9898-d4d714b10688",
+        "lotNo": "PP2600293162",
+        "name": "Card định danh nấm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 53550000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5ba474be-308d-4b7a-83a6-50bc015bd877",
+        "lotNo": "PP2600293163",
+        "name": "Card kháng sinh đồ nấm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 53550000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f7c7fe89-5674-4b67-abce-73d3bf82031f",
+        "lotNo": "PP2600293164",
+        "name": "Khay kháng nấm đồ có Isavuconazole",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 42000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "90a74ace-904d-4c05-99c6-863226b0a71b",
+        "lotNo": "PP2600293165",
+        "name": "Khay kháng nấm đồ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 40500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0bf5701e-e5c3-466b-a5e9-c17f334f1584",
+        "lotNo": "PP2600293166",
+        "name": "Môi trường canh thang thực hiện kháng nấm đồ",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 23700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "983094b8-2bef-441e-99df-9b9b22a13010",
+        "lotNo": "PP2600293167",
+        "name": "Bộ nhuộm Gram",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 19320000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6d541d9d-d62d-42bf-8578-8fb5252b4b2b",
+        "lotNo": "PP2600293168",
+        "name": "Dung dịch hóa chất để làm phản ứng Oxidase",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 61500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "253cd42b-2647-4c5f-a401-3816c0ec140c",
+        "lotNo": "PP2600293169",
+        "name": "Test nhanh phát hiện gen kháng carbapenem",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 480000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "97120f09-85a5-43f5-8552-44956d84da3b",
+        "lotNo": "PP2600293170",
+        "name": "Máu cừu vô trùng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 207900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ac8d6e4a-0035-4ead-8bf5-0af967fb2a4d",
+        "lotNo": "PP2600293171",
+        "name": "Hóa chất xét nghiệm định lượng HBsAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 274860000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4122ba98-f4da-4646-b604-6986d2de020e",
+        "lotNo": "PP2600293172",
+        "name": "Hóa chất hiệu chuẩn xét nghiệm định lượng HBsAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13356000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "542159fe-e53a-467c-8a38-7c873d90542d",
+        "lotNo": "PP2600293173",
+        "name": "Hóa chất kiểm chuẩn xét nghiệm HBsAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9540000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ac4b39b8-67d3-45af-bc9e-fc506f55a14f",
+        "lotNo": "PP2600293174",
+        "name": "Khay thử xét nghiệm định tính kháng thể kháng H.pylori",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 29250000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0cc19fcc-f2c5-4ee0-97e4-de1e897f852e",
+        "lotNo": "PP2600293175",
+        "name": "Khay thử xét nghiệm định tính kháng nguyên liên cầu khuẩn nhóm A",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 45000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "64f6e2cd-a4c8-4a87-bce0-2d45e00c59fd",
+        "lotNo": "PP2600293176",
+        "name": "Thuốc thử chẩn đoán xét nghiệm RPR carbon",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13230000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9f01c135-745e-45ba-be30-d0b5c341ea67",
+        "lotNo": "PP2600293177",
+        "name": "Thạch máu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 17199000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3282229d-8ff3-44b7-9ddc-7e9be248d538",
+        "lotNo": "PP2600293178",
+        "name": "Thạch Chocolate",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10363500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1647d7b2-16bd-4837-aea1-bffd84ed0d97",
+        "lotNo": "PP2600293179",
+        "name": "Thạch UTI",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13671000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "69efdee2-7c6d-44bc-8379-acdb98d1d854",
+        "lotNo": "PP2600293180",
+        "name": "Môi trường phân lập và phân biệt cho phát hiện các vi khuẩn Enterobacteriaceae",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6835500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "401aaf68-9ace-406c-bd0f-ab9aabd9c6bb",
+        "lotNo": "PP2600293181",
+        "name": "Môi trường phân lập một số Shigella và Salmonella",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1228500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3a6bf222-44cb-4ee6-984e-356ca9e85300",
+        "lotNo": "PP2600293182",
+        "name": "Thạch nấm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1110000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "43a7a1e3-a3e6-46f8-909a-f5d8bc3143df",
+        "lotNo": "PP2600293183",
+        "name": "Que cấy chủng chuẩn Pseudomonas aeruginosa ATCC 27853",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4080000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "66bfb1a1-93d2-4299-b6b7-9eb5fa6cd70a",
+        "lotNo": "PP2600293184",
+        "name": "Que cấy chủng chuẩn Escherichia coli ATCC 25922",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5040000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0084dbeb-b371-4a28-b3d3-20650461ceb8",
+        "lotNo": "PP2600293185",
+        "name": "Que cấy chủng chuẩn Enterococcus faecalis ATCC 29212",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5040000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6118a4b0-1f69-4524-8483-e301d72e914d",
+        "lotNo": "PP2600293186",
+        "name": "Que cấy chủng chuẩn Streptococcus pneumoniae ATCC 49619",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4160000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d678bb32-63a7-4598-920d-6311d743d593",
+        "lotNo": "PP2600293187",
+        "name": "Que cấy chủng chuẩn Enterobacter hormaechei ATCC 700323",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4160000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f485c37b-fe90-47d0-b57a-4f18216fb318",
+        "lotNo": "PP2600293188",
+        "name": "Que cấy chủng chuẩn Enterococcus casseliflavus ATCC 700327",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10960000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d466fea6-638d-4d8f-bc4b-a4058c6b87f4",
+        "lotNo": "PP2600293189",
+        "name": "Test nhanh Chlamydia",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4825800,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4605b236-0026-411b-b272-e53026429e11",
+        "lotNo": "PP2600292984",
+        "name": "Test nhanh phát hiện kháng thể IgG và IgM kháng vi rút Dengue",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 127575000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "895209bc-e20b-42e8-a53b-fe1ec5031f47",
+        "lotNo": "PP2600292985",
+        "name": "Test nhanh phát hiện kháng nguyên vi rút Dengue NS1",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 392175000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b07a1a4c-e8ed-499d-a52b-a46d035138da",
+        "lotNo": "PP2600292986",
+        "name": "Hóa chất kiểm tra xét nghiệm CMV IgG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16814670,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c410ec94-1493-4b32-b45f-d7b11f49e0b2",
+        "lotNo": "PP2600292987",
+        "name": "Hóa chất xét nghiệm CMV IgG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 220279500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "173a07ac-ff15-4082-998c-3ba0795e9e98",
+        "lotNo": "PP2600292988",
+        "name": "Hóa chất kiểm tra xét nghiệm CMV IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16814670,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9cef5dc5-0468-4dc2-91a3-0e39386dde68",
+        "lotNo": "PP2600292989",
+        "name": "Hóa chất xét nghiệm CMV IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 330421500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e12b4d6a-380b-4b4e-9375-6c1aa05accb9",
+        "lotNo": "PP2600292990",
+        "name": "Hóa chất kiểm tra xét nghiệm Anti HBC IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 17108352,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "14f8a324-f215-423c-910c-33db6cc9e795",
+        "lotNo": "PP2600292991",
+        "name": "Hóa chất xét nghiệm Anti HBc IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 137675250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e7f0061f-4fd3-4f07-8d47-8aeab37dd12b",
+        "lotNo": "PP2600292992",
+        "name": "Hóa chất kiểm tra xét nghiệm Anti HBc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10279710,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "75627917-6247-4c30-b661-b52ba2875b0b",
+        "lotNo": "PP2600292993",
+        "name": "Hóa chất xét nghiệm Anti HBc",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 99126000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cd70c38b-1054-43c2-903f-0be34f65714c",
+        "lotNo": "PP2600292994",
+        "name": "Hóa chất kiểm tra xét nghiệm Anti HBe",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7342650,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4721a42d-4226-461e-a1ed-31acc50f4510",
+        "lotNo": "PP2600292995",
+        "name": "Hóa chất xét nghiệm Anti Hbe",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 231295500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "19eb05b4-684b-482c-8b43-47d5ef31db72",
+        "lotNo": "PP2600292996",
+        "name": "Hóa chất kiểm tra xét nghiệm HBeAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7342650,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b3d02452-8c26-46af-9729-e63a2a0dea7a",
+        "lotNo": "PP2600292997",
+        "name": "Hóa chất xét nghiệm HBeAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 231295500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "935b3143-d136-4dc3-b62c-ff869616fc4c",
+        "lotNo": "PP2600292998",
+        "name": "Hóa chất kiểm tra xét nghiệm Anti HBs",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10279710,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "334d9c96-a7f9-4cba-a637-581d9d2d5415",
+        "lotNo": "PP2600292999",
+        "name": "Hóa chất xét nghiệm Anti HBs",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 121153500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "794ebe07-26f8-471f-a31d-45a2b6f0c9be",
+        "lotNo": "PP2600293000",
+        "name": "Hóa chất kiểm tra xét nghiệm định tính HBsAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 15419565,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "dc15d690-b9bc-48f1-bd19-4b0fc0a2709d",
+        "lotNo": "PP2600293001",
+        "name": "Hóa chất xét nghiệm định tính HBsAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 403845000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5e2682f9-5e25-412e-9829-383471e74014",
+        "lotNo": "PP2600293002",
+        "name": "Hóa chất kiểm tra xét nghiệm Anti HCV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 20926557,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "864e6d59-9212-46ed-88a3-6da5644567d8",
+        "lotNo": "PP2600293003",
+        "name": "Hóa chất xét nghiệm Anti HCV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 569055000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ac96952a-15be-4528-a97f-222407ddca60",
+        "lotNo": "PP2600293004",
+        "name": "Hóa chất kiểm tra xét nghiệm HIV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 44790168,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c4a652aa-dd3d-4ea4-bd64-3e55a7995e9f",
+        "lotNo": "PP2600293005",
+        "name": "Hóa chất xét nghiệm HIV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1260000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ecb2c0e4-1ff0-4056-937f-8673778675fc",
+        "lotNo": "PP2600293006",
+        "name": "Cup phản ứng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 96120000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1d1e1dd2-a3bb-49e1-9b54-7d1c24f2cd05",
+        "lotNo": "PP2600293007",
+        "name": "Cup và tip dùng hút mẫu, QC, và chất chuẩn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12918168,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e5762d42-dc82-46b1-bb7d-466cf389a576",
+        "lotNo": "PP2600293008",
+        "name": "Đầu côn hút mẫu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 120150000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "199efc68-a746-4a5a-b261-cae3f8317f27",
+        "lotNo": "PP2600293009",
+        "name": "Dung dịch chất phụ gia",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 57498000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3effc820-e26e-4021-bfac-5b0692a6db6a",
+        "lotNo": "PP2600293010",
+        "name": "Dung dịch phản ứng hệ thống",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 282150000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7507c237-2221-4868-81f5-fff76645320c",
+        "lotNo": "PP2600293011",
+        "name": "Hóa chất rửa hệ thống của máy xét nghiệm miễn dịch",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 282150000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3808c4de-bca1-4e72-9fd3-940b20b9022d",
+        "lotNo": "PP2600293012",
+        "name": "Hóa chất xét nghiệm PCT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1057344000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cc89cd22-0e10-420e-9c66-86dabf38f795",
+        "lotNo": "PP2600293013",
+        "name": "Hóa chất kiểm tra xét nghiệm Rubella IgG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5139840,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e72eae8c-9c4c-4490-bcb1-6f303d6e7a8d",
+        "lotNo": "PP2600293014",
+        "name": "Hóa chất kiểm tra xét nghiệm Rubella IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5384610,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "425ccc88-1568-4a9a-9274-334ea8eb0259",
+        "lotNo": "PP2600293015",
+        "name": "Test phát hiện kháng thể viêm gan C",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 294525000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "25b72a95-4bf9-4e1f-8a83-00ad8b1c93d7",
+        "lotNo": "PP2600293016",
+        "name": "Test nhanh phát hiện kháng thể kháng HIV 1/2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 247500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "80eeea6d-7661-4431-85d5-081aa366ed61",
+        "lotNo": "PP2600293017",
+        "name": "Hóa chất xét nghiệm Rubella IgG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 40384500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "42da8c8d-5950-464a-892d-339c7877a54d",
+        "lotNo": "PP2600293018",
+        "name": "Hóa chất xét nghiệm Rubella IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 57823500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "94141847-e8e1-43c9-918b-41cd1bb17750",
+        "lotNo": "PP2600293019",
+        "name": "Hóa chất xét nghiệm HBcrAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 570714000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2e1c3bda-911f-4799-825a-7a2c443fda50",
+        "lotNo": "PP2600293020",
+        "name": "Hóa chất kiểm chuẩn xét nghiệm HBcrAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11520000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1c495134-06d5-485a-bdc4-cea9abd47024",
+        "lotNo": "PP2600293021",
+        "name": "Dung dịch cơ chất",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 72120600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "836806b0-4220-4589-9495-ca0d1c3770a5",
+        "lotNo": "PP2600293022",
+        "name": "Dung dịch rửa phản ứng",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 26424000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "126a72c7-fd81-4411-ae2f-a9431084904c",
+        "lotNo": "PP2600293023",
+        "name": "Dung dịch pha loãng mẫu bệnh phẩm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 15571200,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "93655373-7266-47b4-b684-0615c18674d8",
+        "lotNo": "PP2600293024",
+        "name": "Đầu côn hút mẫu bệnh phẩm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10368000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f9831223-8563-49a8-8e85-c6d43a1b2191",
+        "lotNo": "PP2600293025",
+        "name": "Cartridges trống",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5078682,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "83ca4b6a-7f7c-449e-ab06-0657c4f8007b",
+        "lotNo": "PP2600293026",
+        "name": "Lọc CO2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2433500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ea4424b6-603f-4865-bae5-d582d3261305",
+        "lotNo": "PP2600293027",
+        "name": "Dung dịch pha loãng mẫu được chỉ định cho một số xét nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 51398550,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "50ad6046-9750-43de-94f7-c6c23bb9f79a",
+        "lotNo": "PP2600293028",
+        "name": "Dung dịch pha loãng mẫu được chỉ định cho một số xét nghiệm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 36497864,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "61b1aefa-b958-4cde-a377-4e7514ccf619",
+        "lotNo": "PP2600293029",
+        "name": "Thuốc thử xét nghiệm định tính các kháng thể kháng Treponema pallidum",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 124424850,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d857b7ef-1f64-45f3-892c-bec36c2e972d",
+        "lotNo": "PP2600293030",
+        "name": "Vật liệu kiểm soát xét nghiệm kháng thể kháng Syphilis",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7892094,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5a17ee5c-7a18-4e4f-85ce-214958b0850d",
+        "lotNo": "PP2600293031",
+        "name": "Thuốc thử xét nghiệm định tính kháng thể IgM kháng EBV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 231525000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8cf5c685-0dc2-40d1-93a3-9bc4c70f0e40",
+        "lotNo": "PP2600293032",
+        "name": "Thuốc thử xét nghiệm định tính kháng thể IgG kháng EBV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 231525000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "037962a3-7532-4bbb-b25f-562857c6f25c",
+        "lotNo": "PP2600293033",
+        "name": "Vật liệu kiểm soát xét nghiệm kháng thể kháng EBV IgM/VCA IgG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 25137000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c56475f8-c186-47e1-a7ce-9f6f5bba9985",
+        "lotNo": "PP2600293034",
+        "name": "Bộ hóa chất cho xét nghiệm PCT",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 578895000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2bf41d5f-5353-4387-be59-91c71125b2df",
+        "lotNo": "PP2600293035",
+        "name": "Bộ hóa chất cho xét nghiệm HBsAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 383640000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "49ae0179-9267-43ee-bc6c-f6665a3e9797",
+        "lotNo": "PP2600293036",
+        "name": "Bộ hóa chất cho xét nghiệm Anti-HBs",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 76728000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fe73bbdf-f44b-4e14-a9b2-816fa6db171b",
+        "lotNo": "PP2600293037",
+        "name": "Bộ hóa chất cho xét nghiệm HBeAg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 219730500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "595f6f06-a9f9-4a7c-95f6-412bc86b5bbf",
+        "lotNo": "PP2600293038",
+        "name": "Bộ hóa chất cho xét nghiệm Anti-Hbe",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 219730500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7b2b5a80-4f62-492c-baa2-c7f59a98a092",
+        "lotNo": "PP2600293039",
+        "name": "Bộ hóa chất cho xét nghiệm Anti-HCV",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 540585000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2ed48463-4d4f-4e69-ba82-8301cf3c6447",
+        "lotNo": "PP2600293040",
+        "name": "Bộ hóa chất cho xét nghiệm HIV Ab/Ag",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 623700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7fc1615a-69e7-4668-b4b9-62d8c28448ea",
+        "lotNo": "PP2600293041",
+        "name": "Bộ hóa chất cho xét nghiệm CMV IgG",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 76729500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "90e014b0-0304-4bfe-bf86-8f08c321de6d",
+        "lotNo": "PP2600293042",
+        "name": "Bộ hóa chất cho xét nghiệm CMV IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 104632500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "40d773fa-735b-49f4-9b62-74dcf56d7f22",
+        "lotNo": "PP2600293043",
+        "name": "Dung dịch kích hoạt phát quang dùng cho máy xét nghiệm miễn dịch tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 379935360,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e9957927-018c-4a18-a355-c2676d996de9",
+        "lotNo": "PP2600293044",
+        "name": "Dung dịch kiểm tra sáng dùng cho máy xét nghiệm miễn dịch tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 28537110,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "13db492a-a1ca-4051-a480-dadfc9ce2a38",
+        "lotNo": "PP2600293045",
+        "name": "Dung dịch làm sạch đường ống dùng cho máy xét nghiệm miễn dịch tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 20295975,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "fe4fc42e-1c60-4715-9fb4-4e0c6527481f",
+        "lotNo": "PP2600293046",
+        "name": "Dung dịch rửa dùng cho máy xét nghiệm miễn dịch tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 152664960,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1b705023-c21a-4be2-a76c-b8727aa0ac07",
+        "lotNo": "PP2600293047",
+        "name": "Cóng đựng bệnh phẩm dùng cho máy xét nghiệm miễn dịch tự động",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 221205600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5d157b54-feca-4438-ba00-6a23c6a21b47",
+        "lotNo": "PP2600293048",
+        "name": "Bộ hóa chất cho xét nghiệm Syphilis",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 61258500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "48b57c6d-e15c-4155-95c3-3d98235c24fc",
+        "lotNo": "PP2600293049",
+        "name": "Dung dịch rửa điện cực",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4891605,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9748d012-db62-45e2-a712-e36eef6a3966",
+        "lotNo": "PP2600293050",
+        "name": "Bộ xét nghiệm nhanh định tính kháng nguyên Aspergillus Galactomannan",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 397500000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "485e6061-4b5d-410e-8270-91ace39f3a0c",
+        "lotNo": "PP2600293051",
+        "name": "Test nhanh đồng thời Aspergillus IgG IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 147000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "24f0d276-d6f5-4b9b-b88f-aeacd6a38986",
+        "lotNo": "PP2600293052",
+        "name": "Sinh phẩm chuẩn đoán BetaDGlucan",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 617100000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2892c131-7101-4780-906e-ea2861c9359e",
+        "lotNo": "PP2600293053",
+        "name": "Test nhanh Cúm A/B",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 209160000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6bc3b3a8-6e44-4e05-aed6-797176cd7c84",
+        "lotNo": "PP2600293054",
+        "name": "Dải ống đáy sâu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 65309600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cf59ed3a-cd34-41d9-a1fb-961b14743009",
+        "lotNo": "PP2600293055",
+        "name": "Lọ chứa hóa chất loại 15 mL",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 74385000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6cf1e112-43cc-4059-9242-3dbf385c9027",
+        "lotNo": "PP2600293056",
+        "name": "Lọ chứa hóa chất loại 25mL",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 49590000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "77ca4a47-b396-49b6-b823-66cb27ab530c",
+        "lotNo": "PP2600293057",
+        "name": "Đầu hút hóa chất",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 109497600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "49d34458-eeb2-4d1b-8df9-a546edefcb58",
+        "lotNo": "PP2600293058",
+        "name": "Đầu hút mẫu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 170582400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0aa158e4-3b44-447f-9f6f-ed72edd59564",
+        "lotNo": "PP2600293059",
+        "name": "Ống chuẩn đáy sâu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8348000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0cf78064-c89f-4d23-abfc-37799ca52dbc",
+        "lotNo": "PP2600293060",
+        "name": "Test nhanh phát hiện tất cả kháng thể IgG, IgM, IgA kháng khuẩn giang mai",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 32700000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e789c34e-d95f-45fd-a1e6-376375dac188",
+        "lotNo": "PP2600293061",
+        "name": "Sinh phẩm phát hiện định tính yếu tố thấp RF",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 7497000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "aebcf2f3-78a0-48e5-a86d-6f7ab89c6879",
+        "lotNo": "PP2600293062",
+        "name": "Thuốc thử chẩn đoán để định tính ASO",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 4378500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "464fa74c-bf78-4dd5-888b-466b5d9aa16e",
+        "lotNo": "PP2600293063",
+        "name": "Test nhanh phát hiện kháng nguyên Virus SARS CoV - 2",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 28350000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "aec5fa2f-5740-4cb1-9c69-22a10f092037",
+        "lotNo": "PP2600293064",
+        "name": "Bộ nhuộm các loài Mycobacteria",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6825000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0f5fe2aa-d76b-4cf4-9dce-17915c9f02b1",
+        "lotNo": "PP2600293065",
+        "name": "Test nhanh phát hiện kháng nguyên Rotavirus",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 14332500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2cb01ccd-d336-4ee4-8f3f-ace17f788d30",
+        "lotNo": "PP2600293066",
+        "name": "ETEST Imipenem/Relebactam",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 74550060,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "414be1f5-a151-4ae0-a946-41abbbe031e8",
+        "lotNo": "PP2600293067",
+        "name": "ETEST Ampicillin/sulbactam",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 20245950,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "345cd02f-8370-4a96-b10b-4f3c08d2b9df",
+        "lotNo": "PP2600293068",
+        "name": "ETEST Tobramycin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12084300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "931cdfc9-ea64-44e8-a031-17d754805c6d",
+        "lotNo": "PP2600293069",
+        "name": "ETEST Spectinomycin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13497300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "301744f6-722f-40b3-a454-037a1b194abe",
+        "lotNo": "PP2600293070",
+        "name": "ETEST Linezolid",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11529000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9dfe852f-51a2-4ad6-84fa-5d16d82e2a46",
+        "lotNo": "PP2600293071",
+        "name": "ETEST Ticarcillin/Clavulanic acid",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 16200000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2217e8c1-db0c-488a-b337-624cb9ac16a1",
+        "lotNo": "PP2600293072",
+        "name": "ETEST Tetracycline",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13497300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b91a3844-9f2a-48b4-b469-ee8082ffe477",
+        "lotNo": "PP2600293073",
+        "name": "ETEST Piperacillin/tazobactam",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13497300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ca3ccf68-99df-42cf-9541-dfdf89a81285",
+        "lotNo": "PP2600293074",
+        "name": "ETEST Minoxyclin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12285000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b7f7a3f8-bc7e-4ae9-8945-bdf7430272de",
+        "lotNo": "PP2600293075",
+        "name": "ETEST Moxifloxacin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13833000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "cbe47cf9-6d64-493a-9898-c5f8d925bb8a",
+        "lotNo": "PP2600293076",
+        "name": "ETEST Amikacin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 9072000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "59fc0c59-3833-4a44-b87a-f18754911d7f",
+        "lotNo": "PP2600293077",
+        "name": "ETEST Amoxicillin/clavulanic acid (2/1)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13497300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "466f341c-16f0-4c23-bb30-4dc62dc1617d",
+        "lotNo": "PP2600293078",
+        "name": "ETEST Azithromycin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12285000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7a4c9cf4-68b2-4891-8f70-f6f47357164b",
+        "lotNo": "PP2600293079",
+        "name": "ETEST Cefepime",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12084300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "71f6145c-d05b-4252-b040-4a6c151a7634",
+        "lotNo": "PP2600293080",
+        "name": "ETEST Ceftolozane/Tazobactam",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 24818400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "72b30da9-7301-428e-9cee-fbb603d934b2",
+        "lotNo": "PP2600293081",
+        "name": "ETEST Ceftriaxone",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12084300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "89bea3e5-762c-4773-b029-e8a6bc4501b9",
+        "lotNo": "PP2600293082",
+        "name": "ETEST Cefuroxime",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12084300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "94a9c47d-a9aa-4a7d-baa9-48e1798f78d6",
+        "lotNo": "PP2600293083",
+        "name": "ETEST Chloramphenicol",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12084300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8aa16778-f72c-4400-a0dd-a2da9cecd0cb",
+        "lotNo": "PP2600293084",
+        "name": "ETEST Ciprofloxacin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11529000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "af18dcc4-9e93-478d-ae19-7b07bbc74dd1",
+        "lotNo": "PP2600293085",
+        "name": "ETEST Doripenem",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 17865000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f5b8a593-0710-4baf-808a-bf25503e0296",
+        "lotNo": "PP2600293086",
+        "name": "ETEST Fosfomycin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 27711000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "24d1062b-0450-41ee-b601-2b656315c8ef",
+        "lotNo": "PP2600293087",
+        "name": "ETEST Gentamicin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 12084300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "08f82076-6b2d-443f-a568-b9a7b513c853",
+        "lotNo": "PP2600293088",
+        "name": "ETEST Imipenem",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 22774500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b2378e8b-02da-4b29-8751-ddf801cbd505",
+        "lotNo": "PP2600293089",
+        "name": "ETEST Levofloxacin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 13497300,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "44736b8e-19a0-4f05-92ab-211b7ed91e71",
+        "lotNo": "PP2600293090",
+        "name": "ETEST Ceftazidime/Avibactam",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 23826600,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d218e924-f9b3-41aa-ab45-f4de497e5a17",
+        "lotNo": "PP2600293091",
+        "name": "ETEST Vancomycin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11056500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "53e02d7f-716e-47c2-9fc4-100010064d5c",
+        "lotNo": "PP2600293092",
+        "name": "Ampicillin/sulbactam 10/10mg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1545000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8c504104-2cad-4356-8e26-59bbb5178ed0",
+        "lotNo": "PP2600293093",
+        "name": "Azithromycin 15mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "62d5e458-11f9-4610-bfbd-2b2b30079153",
+        "lotNo": "PP2600293094",
+        "name": "Aztreonam 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 787500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9aa0c655-2e42-4530-af6c-037038fef14f",
+        "lotNo": "PP2600293095",
+        "name": "Cefepime 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 787500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3a654dda-a3d5-4472-8709-6747ec3c5f06",
+        "lotNo": "PP2600293096",
+        "name": "Cefuroxime 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 761250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3be79646-8416-4815-ac5f-0023fbdf19bd",
+        "lotNo": "PP2600293097",
+        "name": "Clindamycin 2mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "71a4fa88-8bca-4525-9c5b-6a22d7cd13ed",
+        "lotNo": "PP2600293098",
+        "name": "Doxycycline 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 712500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f3b30e49-8aff-4303-82b4-708d0d5e284f",
+        "lotNo": "PP2600293099",
+        "name": "Gentamycin 10mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 712500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "3bf8c1c3-f4f4-4369-b5e2-40a31dc6d88e",
+        "lotNo": "PP2600293100",
+        "name": "Khoanh Ceftazidime/Avibactam",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 806250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0f0f06dd-1a0d-45bf-aa9f-4eca29c93783",
+        "lotNo": "PP2600293101",
+        "name": "Netilmicin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 787500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "973f112e-8245-4e0b-842d-9a405cfbc9ae",
+        "lotNo": "PP2600293102",
+        "name": "Nitrofurantion 300mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f5f0854c-e1b3-44b8-953a-37e0f37100c8",
+        "lotNo": "PP2600293103",
+        "name": "Ofloxacin 5mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "09374f06-feb1-491c-ad81-69c6f307ffee",
+        "lotNo": "PP2600293104",
+        "name": "Oxacillin 1mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f375d4ec-ffc6-42ca-a80d-1ead577dc2ee",
+        "lotNo": "PP2600293105",
+        "name": "Penicilin 10 units",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 712500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "88df1f46-2e96-497c-a6f1-1c9bfb20f2ca",
+        "lotNo": "PP2600293106",
+        "name": "Piperacillin + tazobactam (100/10mcg )",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 772500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b5e35fae-49ad-430a-8b23-4b4322814a01",
+        "lotNo": "PP2600293107",
+        "name": "Ticarcillin 75mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 799125,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "858b8153-0579-44ab-b41c-4f43bbc5d562",
+        "lotNo": "PP2600293108",
+        "name": "Ticarcillin/ clavulanic (75mcg/10mcg)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 693750,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "eaa668d8-c04f-4a08-b946-e311ef84d1e0",
+        "lotNo": "PP2600293109",
+        "name": "Vancomycin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 803400,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8af71303-a2c7-459b-895a-4019a720e910",
+        "lotNo": "PP2600293110",
+        "name": "Cefixime 5mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b1deed8f-7c71-4e2b-bd4c-39ed2b976869",
+        "lotNo": "PP2600293111",
+        "name": "Cefoxitin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 712500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "adcf84e9-effc-4c65-a438-c1db21df388a",
+        "lotNo": "PP2600293112",
+        "name": "Clarythromycin 15mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1012500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "6c9263f8-f91d-47ac-b61a-9580ea2ab938",
+        "lotNo": "PP2600293113",
+        "name": "Doripenem 10mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1012500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "32bfb468-5a89-4180-b368-3e4ea9fce479",
+        "lotNo": "PP2600293114",
+        "name": "Fosfomycin 200mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "612b9d1c-90fe-4bde-b5e9-d87a44e0d357",
+        "lotNo": "PP2600293115",
+        "name": "Imipenem 10mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1425000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4488af42-3b91-4501-8df9-38152d5d8e34",
+        "lotNo": "PP2600293116",
+        "name": "Kanamycin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1050000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2ee9f79a-d91d-4a87-a30b-6ffef70d1afa",
+        "lotNo": "PP2600293117",
+        "name": "Khoanh giấy Bacitracin 0,04 Unit",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 420000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ef0bcf8a-b75d-4d69-93cb-c8f1aa519e54",
+        "lotNo": "PP2600293118",
+        "name": "Khoanh kháng sinh Novobiocin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 911250,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "50f6507b-d259-49a1-82eb-166ac05a7722",
+        "lotNo": "PP2600293119",
+        "name": "Linezolid 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e5ec324a-1e1b-4bf2-9a8b-a7527323f9bb",
+        "lotNo": "PP2600293120",
+        "name": "Minocyclin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4b653fa8-cd61-43c2-b2a3-6c03eccbb2ed",
+        "lotNo": "PP2600293121",
+        "name": "Pipracillin 100mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1012500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "0654bb02-9058-4e5a-8ba2-9cc842252de7",
+        "lotNo": "PP2600293122",
+        "name": "Rifampicin 5mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8c96ba90-2395-4487-bf33-c57f890a6e69",
+        "lotNo": "PP2600293123",
+        "name": "Spectinomycin 100mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1087500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8942b3a9-ef94-48d1-a0da-f30c03b7b907",
+        "lotNo": "PP2600293124",
+        "name": "Teicoplanin 30mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1050000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "67af13c7-7dd6-4ac2-bdbb-4f7ef17329b7",
+        "lotNo": "PP2600293125",
+        "name": "Tigecycline 15mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "07aa3aca-ea6e-4017-b2d5-a2a3004e5376",
+        "lotNo": "PP2600293126",
+        "name": "Tobramycin 10mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 787500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "b3ec6f78-6ec4-408c-8a55-395464c04794",
+        "lotNo": "PP2600293127",
+        "name": "Trimethoprim + sulfamethoxazole (1.25/23.75 mcg)",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 712500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "eb5500b5-e049-4535-806b-82a28c605a65",
+        "lotNo": "PP2600293128",
+        "name": "Khoanh giấy Optochin 5mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 375000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c82e856b-ca63-4d1e-ad3b-22aaa947e0d0",
+        "lotNo": "PP2600293129",
+        "name": "Khoanh giấy yếu tố V",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bbd4820b-4544-4744-8624-cdcdd72e80c1",
+        "lotNo": "PP2600293130",
+        "name": "Khoanh giấy yếu tố X",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1800000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1f9d09b3-4f8c-4e65-91fb-84b90c2e01cc",
+        "lotNo": "PP2600293131",
+        "name": "Streptomycin 10mcg",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 900000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "846636db-5c97-4924-9e31-1f8809891702",
+        "lotNo": "PP2600293132",
+        "name": "Môi trường phân lập chọn lọc Neisseria",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8460000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "4590fb8c-3049-4877-a777-64f9d5f193e8",
+        "lotNo": "PP2600293133",
+        "name": "Chất bổ sung Vitox cho môi trường phân lập chọn lọc Neisseria",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2880000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "bacced39-8498-4618-87ae-82a498ac75c4",
+        "lotNo": "PP2600293134",
+        "name": "Chất bổ sung VCNT cho môi trường phân lập chọn lọc Neisseria",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6376500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "356d466f-3f3a-4940-8336-4ddc8890bddd",
+        "lotNo": "PP2600293135",
+        "name": "Huyết sắc tố để bổ sung vào môi trường nuôi cấy",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5505000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e6dd7a78-bbcd-4555-b368-f235a3c0aa88",
+        "lotNo": "PP2600293136",
+        "name": "Môi trường phân lập các loài nấm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5280000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c809d312-ff80-4a57-88ee-c61433a7a9f7",
+        "lotNo": "PP2600293137",
+        "name": "Môi trường phân lập các loài nấm men, nấm mốc trong môi trường, thực phẩm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 8077500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "d56e2a43-7ae1-49a2-9d39-82d2bab6652b",
+        "lotNo": "PP2600293138",
+        "name": "Brilliance Candida agar base",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 42000000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "5c3180fc-bde6-4b67-848a-d1b742bef239",
+        "lotNo": "PP2600293139",
+        "name": "Môi trường định danh Enterobacteriaceae",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 2863500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "ff559bd7-bf1a-4080-b637-c61c0bdfa593",
+        "lotNo": "PP2600293140",
+        "name": "Thạch Yeast Extract Agar",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6442500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "2dd1d803-ac61-477d-a703-d2b57532b50b",
+        "lotNo": "PP2600293141",
+        "name": "Môi trường Tryptone Soya Broth",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 10890000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "067dc14a-f144-4f6b-ad8c-29369509f195",
+        "lotNo": "PP2600293142",
+        "name": "Bột Skim milk",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5085000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "652e63ad-0c33-4787-bfae-710bd41556d5",
+        "lotNo": "PP2600293143",
+        "name": "Môi trường canh thang bổ sung kháng sinh dùng cho tăng sinh chọn lọc liên cầu nhóm B",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11340000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c2216a6b-0ee5-4a22-808e-12936c194cfa",
+        "lotNo": "PP2600293144",
+        "name": "Môi trường sinh màu dùng cho phân lập và phân biệt liên cầu nhóm B",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 11970000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c0b644fc-74f5-4479-bb87-5b701c28eb9a",
+        "lotNo": "PP2600293145",
+        "name": "Môi trường Brain Heart Infusion Broth",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 5940000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung ứng hàng hoá phục vụ công tác chuyên môn tại Bệnh viện",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:27.159Z"
+}

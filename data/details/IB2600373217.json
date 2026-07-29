@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 15,
+    "items": [
+      {
+        "id": "b29e9bf4-5e83-45b7-aae3-a2f9dcbbd364",
+        "lotNo": "PP2600292973",
+        "name": "Thẻ định danh cho Neisseria/ Haemophilus",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 26579700,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "e74c3ce0-62cd-42d0-bbf7-8279fcf9477b",
+        "lotNo": "PP2600292974",
+        "name": "Thẻ định danh vi khuẩn Gram âm",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 960498000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7ccaefc5-5f2e-4f31-bad3-33fd2ab2a1ee",
+        "lotNo": "PP2600292975",
+        "name": "Thẻ định danh vi khuẩn Gram dương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 400207500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "a854d82a-e912-40b7-9133-44ab39a98092",
+        "lotNo": "PP2600292976",
+        "name": "Nước muối vô trùng 0.45%",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 30660000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7b8db530-5d63-4cc1-aed2-08fc89b6a1b8",
+        "lotNo": "PP2600292977",
+        "name": "Ống tuýp pha huyền dịch vi khuẩn",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 239184000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "067451f9-d346-4772-8180-8786f485dfbf",
+        "lotNo": "PP2600292978",
+        "name": "Thẻ kháng sinh đồ vi khuẩn Gram âm không thuộc họ vi khuẩn đường ruột",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 478151100,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "1fc3aceb-0ac0-4fed-acf5-5cac5b39beba",
+        "lotNo": "PP2600292979",
+        "name": "Thẻ kháng sinh đồ vi khuẩn Gram âm, họ vi khuẩn đường ruột",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 584406900,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "8385683f-541d-4ee2-ae1e-ac2a8f960c4f",
+        "lotNo": "PP2600292980",
+        "name": "Thẻ kháng sinh đồ vi khuẩn Gram dương",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 264883500,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "9994d65f-c318-4534-ad4c-19bc1db43049",
+        "lotNo": "PP2600292981",
+        "name": "Hoá chất xét nghiệm sinh học phân tử định lượng nhanh RNA của Virus Viêm gan C",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 579600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "f0258387-5f87-450c-90f3-e1ae76e307c0",
+        "lotNo": "PP2600292982",
+        "name": "Hóa chất xét nghiệm sinh học phân tử định lượng DNA của Virus Viêm gan B",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 687960000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "673c5799-f896-4780-a132-969a656997c8",
+        "lotNo": "PP2600292983",
+        "name": "Hóa chất xét nghiệm sinh học phân tử bán định lượng DNA phức hợp vi khuẩn lao và phát hiện kháng Rifampin",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 496125000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "7d9910fc-a873-4de6-bbeb-eefadab0b3f8",
+        "lotNo": "PP2600292969",
+        "name": "Bộ xét nghiệm định lượng/định tính kháng thể IgM kháng Measles virus",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 48600000,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "269709e5-ffaa-4ec5-817c-d4a35e1d102e",
+        "lotNo": "PP2600292970",
+        "name": "Dung dịch dùng để loại bỏ các yếu tố viêm khớp dạng thấp RF IgM",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 6299937,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "688cc932-6c63-4141-9b53-ee1eb66be6d6",
+        "lotNo": "PP2600292971",
+        "name": "Bộ ống lấy máu cho xét nghiệm định lượng Interferon gamma chẩn đoán nhiễm VK Lao",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 796516875,
+        "specification": "",
+        "sourceStage": "invitation"
+      },
+      {
+        "id": "c8204078-a236-4fa7-af3a-66cab8735560",
+        "lotNo": "PP2600292972",
+        "name": "Thẻ kháng sinh đồ Liên cầu",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 58697100,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Cung ứng hàng hoá phục vụ công tác chuyên môn tại Bệnh viện",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:27.988Z"
+}

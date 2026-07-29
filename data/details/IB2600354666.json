@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "total": 0,
+  "bidders": [],
+  "items": [],
+  "requirements": {
+    "total": 1,
+    "items": [
+      {
+        "id": "18b41955-65e1-488c-a756-417f5e886cf5",
+        "lotNo": "BP2600468641",
+        "name": "Gói số 1: Mua sắm Vật tư phẫu thuật Phaco",
+        "quantity": 0,
+        "unit": "",
+        "plannedPrice": 1210750000,
+        "specification": "",
+        "sourceStage": "invitation"
+      }
+    ],
+    "summary": "Mua sắm Vật tư phẫu thuật Phaco",
+    "disclosure": "public-plan-lots"
+  },
+  "technicalRequirements": {
+    "total": 0,
+    "items": [],
+    "chapters": [],
+    "files": [],
+    "disclosure": "official-captcha-required"
+  },
+  "modelDisclosure": "as-published",
+  "fetchedAt": "2026-07-29T11:43:03.873Z"
+}
