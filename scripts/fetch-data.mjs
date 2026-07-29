@@ -26,6 +26,29 @@ const DETAIL_SCHEMA_VERSION = 3;
 const WINDOW_DAYS = 7;
 const PAGE_SIZE = 10;
 const DETAIL_PAGE_SIZE = 20;
+
+// Các từ khóa rộng dùng để gọi API (để không bỏ sót)
+const API_SEARCH_KEYWORDS = [
+  "y tế",
+  "bệnh viện",
+  "trung tâm y tế",
+  "thiết bị",
+  "vật tư",
+  "dụng cụ",
+  "hóa chất",
+  "sinh phẩm",
+  "xét nghiệm",
+  "thuốc",
+  "dược phẩm",
+  "phẫu thuật",
+  "chẩn đoán",
+  "hồi sức",
+  "nha khoa",
+  "siêu âm",
+  "máy thở",
+];
+
+// Các từ khóa chắc chắn là y tế (dùng trong isMedical)
 const SEARCH_KEYWORDS = [
   "thiết bị y tế",
   "vật tư tiêu hao",
@@ -39,6 +62,7 @@ const SEARCH_KEYWORDS = [
   "máy siêu âm",
   "máy thở",
 ];
+
 // Hồ sơ cũ trước đợt thay đổi địa giới thường không còn trường locations.provCode.
 // Khi quét bù 3 năm, tìm giao giữa địa danh trong tên đơn vị và từ khóa trong tên gói,
 // sau đó vẫn chạy bộ lọc y tế chặt chẽ ở isMedical().
@@ -196,7 +220,7 @@ async function fetchWindowKeyword(keyword, window, windowIndex, totalWindows) {
 
 async function fetchWindow(window, windowIndex, totalWindows) {
   process.stdout.write(`Đang quét khoảng ${windowIndex + 1}/${totalWindows} (${window.from.split('T')[0]} đến ${window.to.split('T')[0]})...\n`);
-  const results = await mapLimited(SEARCH_KEYWORDS, 3, (keyword) =>
+  const results = await mapLimited(API_SEARCH_KEYWORDS, 3, (keyword) =>
     fetchWindowKeyword(keyword, window, windowIndex, totalWindows)
   );
   const items = results.flat();
@@ -316,6 +340,8 @@ function isMedical(item) {
   const laboratoryTerms = [
     "xét nghiệm", "chẩn đoán", "in vitro", "huyết học", "sinh hóa", "sinh hoá",
     "vi sinh", "bệnh phẩm", "định nhóm máu", "máy huyết học", "máy sinh hóa", "máy sinh hoá",
+    "miễn dịch", "elisa", "pcr", "hba1c", "nước tiểu", "đông máu", "sinh học phân tử", "máy phân tích",
+    "giải phẫu bệnh", "tế bào học", "mô bệnh học"
   ];
   const laboratorySupplies = ["hóa chất", "hoá chất", "sinh phẩm", "vật tư", "chủng vi sinh"];
   if (laboratoryTerms.some((term) => originalTitle.includes(term))
