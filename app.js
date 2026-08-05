@@ -1260,19 +1260,23 @@ function getDynamicCompetitorAnalysis(tender) {
   // 1. Same investor
   const sameInvestor = allTenders.filter(t => t.investor && investor && isSameInvestorFuzzy(investor, t.investor) && t.winnerNames?.length);
   const investorWinners = new Map();
+  const originalNames = new Map(); // Keep original casing for display
   sameInvestor.forEach(t => {
     t.winnerNames.forEach(w => {
       if (w) {
-        const name = w.trim();
+        const rawName = w.trim().replace(/\s+/g, ' ');
+        const name = rawName.toUpperCase();
         investorWinners.set(name, (investorWinners.get(name) || 0) + 1);
+        if (!originalNames.has(name)) originalNames.set(name, rawName);
       }
     });
   });
 
   let rivals = [];
   [...investorWinners.entries()].sort((a,b) => b[1] - a[1]).slice(0, 4).forEach(([name, count]) => {
+    const dispName = originalNames.get(name) || name;
     let ratingText = count >= 3 ? "Rất Cao (85 - 90%)" : count === 2 ? "Cao (70 - 80%)" : "Khá (50 - 65%)";
-    rivals.push(`${name} - **[Xếp loại khả năng trúng: ${ratingText}]** (Trúng ${count} gói tại ${investor})`);
+    rivals.push(`${dispName} - **[Xếp loại khả năng trúng: ${ratingText}]** (Trúng ${count} gói tại ${investor})`);
   });
 
   if (rivals.length < 2) {
@@ -1282,16 +1286,19 @@ function getDynamicCompetitorAnalysis(tender) {
     regional.forEach(t => {
       t.winnerNames.forEach(w => {
         if (w) {
-          const name = w.trim();
+          const rawName = w.trim().replace(/\s+/g, ' ');
+          const name = rawName.toUpperCase();
           if (!investorWinners.has(name)) {
             regionalWinners.set(name, (regionalWinners.get(name) || 0) + 1);
+            if (!originalNames.has(name)) originalNames.set(name, rawName);
           }
         }
       });
     });
     [...regionalWinners.entries()].sort((a,b) => b[1] - a[1]).slice(0, 4 - rivals.length).forEach(([name, count]) => {
+      const dispName = originalNames.get(name) || name;
       let ratingText = count >= 3 ? "Rất Cao (85 - 90%)" : count === 2 ? "Cao (70 - 80%)" : "Khá (50 - 65%)";
-      rivals.push(`${name} - **[Xếp loại khả năng trúng: ${ratingText}]** (Trúng ${count} gói tại khu vực / chuyên ngành)`);
+      rivals.push(`${dispName} - **[Xếp loại khả năng trúng: ${ratingText}]** (Trúng ${count} gói tại khu vực / chuyên ngành)`);
     });
   }
 
@@ -2014,9 +2021,10 @@ function openKieuVietModal(tender) {
 
     winners.forEach(w => {
       if (!w) return;
-      const name = w.trim();
+      const rawName = w.trim().replace(/\s+/g, ' ');
+      const name = rawName.toUpperCase();
       if (!competitorScoreMap.has(name)) {
-        competitorScoreMap.set(name, { score: 0, hospitalWins: 0, clusterWins: 0, totalVal: 0, modelsSet: new Set() });
+        competitorScoreMap.set(name, { dispName: rawName, score: 0, hospitalWins: 0, clusterWins: 0, totalVal: 0, modelsSet: new Set() });
       }
       const entry = competitorScoreMap.get(name);
       if (isSameInv) {
@@ -2070,7 +2078,7 @@ function openKieuVietModal(tender) {
 
       return {
         rank: idx + 1,
-        name: name,
+        name: info.dispName || name,
         tag: info.hospitalWins > 0 ? "Chủ lực" : "Cao",
         score: `${68 - idx}/100`,
         stats: statsStr,
