@@ -251,6 +251,10 @@ const elements = {
   savedCount: document.querySelector("#saved-count"),
   savedList: document.querySelector("#saved-list"),
   aiPopover: document.querySelector("#ai-hover-popover"),
+  directSyncInput: document.querySelector("#direct-sync-input"),
+  directSyncButton: document.querySelector("#direct-sync-button"),
+  directSyncSpinner: document.querySelector("#direct-sync-spinner"),
+  directSyncBtnText: document.querySelector("#direct-sync-btn-text"),
 };
 
 function escapeHtml(value) {
@@ -2965,7 +2969,75 @@ elements.pagination.addEventListener("click", (event) => {
   document.querySelector("#goi-thau")?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-elements.refresh.addEventListener("click", () => loadData(true));
+elements.refresh.addEventListener("click", async () => {
+  elements.refresh.disabled = true;
+  elements.dataState.dataset.state = "loading";
+  elements.sourceLabel.textContent = "Đang quét & cập nhật";
+  elements.updatedLabel.textContent = "Đang quét Cổng mạng đấu thầu...";
+  try {
+    const response = await fetch("/api/trigger-scan", { method: "POST" });
+    const resData = await response.json();
+    if (!resData.success) {
+      console.warn("Broad sync warning:", resData.error || resData.message);
+    }
+  } catch (err) {
+    console.error("Broad sync error:", err);
+  } finally {
+    await loadData(true);
+    elements.refresh.disabled = false;
+  }
+});
+
+if (elements.directSyncButton) {
+  elements.directSyncButton.addEventListener("click", async () => {
+    const notifyNo = elements.directSyncInput.value.trim();
+    if (!notifyNo) {
+      alert("Vui lòng nhập Mã TBMT (Ví dụ: IB2600367132)!");
+      return;
+    }
+
+    // Set loading state
+    elements.directSyncButton.disabled = true;
+    elements.directSyncSpinner.style.display = "inline-block";
+    elements.directSyncBtnText.textContent = "Đang đồng bộ...";
+
+    try {
+      const response = await fetch("/api/fetch-tender", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ notifyNo }),
+      });
+
+      const resData = await response.json();
+      if (resData.success) {
+        alert(`Đồng bộ thành công! ${resData.message || ""}`);
+        elements.directSyncInput.value = "";
+        
+        // Reload all data so that the new tender is added to our list instantly
+        await loadData(true);
+
+        // Auto filter/highlight the scanned tender
+        state.query = notifyNo;
+        elements.keyword.value = notifyNo;
+        state.page = 1;
+        state.days = 3650; // Ensure it's not filtered out by time range
+        if (elements.days) elements.days.value = "3650";
+        render();
+      } else {
+        alert(`Lỗi đồng bộ: ${resData.error || resData.message || "Không xác định"}`);
+      }
+    } catch (err) {
+      console.error(err);
+      alert(`Lỗi kết nối hoặc hệ thống: ${err.message}`);
+    } finally {
+      // Reset button state
+      elements.directSyncButton.disabled = false;
+      elements.directSyncSpinner.style.display = "none";
+      elements.directSyncBtnText.textContent = "Đồng bộ thầu";
+    }
+  });
+}
+
 if (elements.province) {
   state.province = elements.province.value || "mientrung";
 }

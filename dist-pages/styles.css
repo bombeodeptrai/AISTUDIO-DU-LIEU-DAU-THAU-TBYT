@@ -24,9 +24,8 @@
   font-size: 18px;
 }
 
-.source-warning[hidden],
-.tender-detail-panel[hidden] {
-  display: none;
+[hidden] {
+  display: none !important;
 }
 
 .loading-copy {
@@ -71,7 +70,9 @@ body {
     radial-gradient(circle at 8% 18%, rgba(255, 255, 255, 0.94), transparent 30%),
     linear-gradient(180deg, #faf7f0 0%, var(--ivory) 78%, #f2ecdf 100%);
   color: var(--ink);
-  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -125,10 +126,10 @@ select:focus-visible {
   align-items: center;
   gap: 13px;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(19px, 2vw, 27px);
   font-weight: 700;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.01em;
   text-decoration: none;
 }
 
@@ -253,17 +254,17 @@ select:focus-visible {
 .hero h1,
 .panel-heading h2,
 .alert-copy h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--forest);
 }
 
 .hero h1 {
   max-width: 720px;
   margin: 0;
-  font-size: clamp(45px, 5.4vw, 74px);
-  font-family: "Segoe UI", "Be Vietnam Pro", Arial, sans-serif;
+  font-size: clamp(40px, 5.2vw, 68px);
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
@@ -333,6 +334,10 @@ select:focus-visible {
   border: 0;
   outline: 0;
   appearance: none;
+}
+
+.search-field > *:not(input):not(select):not(datalist) {
+  pointer-events: none;
 }
 
 .search-field input::placeholder {
@@ -441,9 +446,9 @@ select:focus-visible {
   display: block;
   margin-top: -7px;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(36px, 3.4vw, 52px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -749,26 +754,35 @@ select:focus-visible {
 
 .tender-meta {
   display: flex;
-  gap: 7px;
-  margin-bottom: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
 }
 
 .tender-meta span {
-  color: var(--forest-2);
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  background: #f1ede5;
+  border: 1px solid #dfd8cb;
+  border-radius: 4px;
+  color: #4f5148;
   font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .tender-meta span + span::before {
-  margin-right: 7px;
-  color: #b7b1a7;
-  content: "•";
+  content: none;
 }
 
 .tender-meta .result-meta {
-  color: #2f7659;
+  background: #e2f2e9;
+  border-color: #bfe5cf;
+  color: #1b5e3a;
 }
 
 .tender-main h3 {
@@ -776,9 +790,11 @@ select:focus-visible {
   margin: 0 0 6px;
   overflow: hidden;
   color: #292c27;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.48;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -850,6 +866,90 @@ select:focus-visible {
   font-weight: 700;
 }
 
+.equipment-card-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 9px;
+  padding: 8px 10px;
+  background: #f3f8f4;
+  border: 1px solid #d8e6da;
+  border-left: 3px solid #3c7356;
+  border-radius: 7px;
+}
+
+.equipment-card-preview.empty-eq {
+  padding: 6px 10px;
+  background: #f8f8f6;
+  border-color: #e5e5e0;
+  border-left-color: #a0a098;
+  font-size: 11px;
+  color: #666;
+}
+
+.equipment-card-preview-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e4537;
+}
+
+.equipment-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+
+.equipment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: #ffffff;
+  border: 1px solid #cfe0d2;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #233b30;
+  max-width: 100%;
+}
+
+.chip-qty {
+  display: inline-block;
+  padding: 1px 5px;
+  background: #e4f2e7;
+  color: #1b533a;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.chip-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chip-model {
+  font-size: 10px;
+  color: #587365;
+  white-space: nowrap;
+}
+
+.equipment-chip-more {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2e6047;
+  padding: 2px 7px;
+  background: #e4f3e7;
+  border: 1px solid #bde2c7;
+  border-radius: 4px;
+}
+
 .tender-status,
 .tender-price {
   display: flex;
@@ -883,9 +983,9 @@ select:focus-visible {
 
 .tender-price strong {
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .tender-actions {
@@ -1051,9 +1151,9 @@ select:focus-visible {
 
 .bidder-price strong {
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .bidder-price span {
@@ -1239,9 +1339,9 @@ select:focus-visible {
 
 .equipment-price strong {
   color: var(--terracotta);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .result-limit-note { margin: 10px 0 0; }
@@ -1307,9 +1407,9 @@ select:focus-visible {
 .insight-item strong {
   display: block;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .insight-hero span,
@@ -1358,8 +1458,9 @@ select:focus-visible {
   height: 23px;
   place-items: center;
   color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 11px;
+  font-weight: 700;
   background: var(--sage-light);
   border-radius: 50%;
 }
@@ -1377,8 +1478,9 @@ select:focus-visible {
 
 .investor-list strong {
   color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
+  font-weight: 700;
   text-align: right;
 }
 
@@ -1418,9 +1520,9 @@ select:focus-visible {
 
 .saved-count strong {
   color: var(--terracotta);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 34px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .saved-count span {
@@ -1690,7 +1792,761 @@ select:focus-visible {
   .pagination { gap: 4px; }
   .pagination button { min-width: 40px; height: 40px; }
   .site-footer { align-items: flex-start; flex-direction: column; padding-inline: 18px; }
+
+  /* Mobile-first enhancements */
+  #ai-hover-popover {
+    display: none !important;
+  }
+  .tender-meta {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .tender-meta span {
+    padding: 2px 5px;
+    font-size: 8.5px;
+    border-radius: 3px;
+  }
+  .ai-summary-badge {
+    padding: 2px 6px !important;
+    font-size: 9px !important;
+    border-radius: 4px !important;
+  }
+  .equipment-card-preview {
+    padding: 6px 8px;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  .equipment-card-preview-heading {
+    font-size: 10px;
+  }
+  .equipment-chip {
+    padding: 2px 5px;
+    font-size: 9.5px;
+    border-radius: 4px;
+  }
+  .chip-qty {
+    padding: 1px 3px;
+    font-size: 8.5px;
+    border-radius: 2px;
+  }
+  .chip-name {
+    font-weight: 600;
+  }
+  .chip-model {
+    font-size: 8.5px;
+  }
+  .equipment-chip-more {
+    font-size: 9.5px;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  .tender-ai-card {
+    padding: 12px;
+    margin-top: 8px;
+  }
+  .ai-popover-lead {
+    font-size: 11.5px;
+    margin-bottom: 8px;
+  }
+  .ai-popover-list li {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  .ai-popover-assessment {
+    font-size: 10.5px;
+    padding: 6px 8px;
+    line-height: 1.4;
+  }
+  .ai-official-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    font-size: 11px;
+    align-items: center;
+  }
 }
+
+/* AI Summary & Hover Tooltip Styles */
+.ai-summary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #173c32;
+  background: linear-gradient(135deg, #ebf5ee 0%, #d6edd8 100%);
+  border: 1px solid #b2dac1;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 180ms ease;
+  user-select: none;
+}
+
+.ai-summary-badge:hover {
+  color: #0d2a22;
+  background: linear-gradient(135deg, #d3ebd8 0%, #bfe4c6 100%);
+  border-color: #87c79a;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(36, 86, 71, 0.16);
+}
+
+.ai-summary-badge .ai-icon-sparkle {
+  color: #d97706;
+  font-size: 12px;
+}
+
+/* Hover Floating Card Popover */
+.ai-hover-popover {
+  position: absolute;
+  z-index: 1000;
+  width: min(400px, 92vw);
+  padding: 16px;
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid #b8d4c2;
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(23, 60, 50, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.ai-hover-popover.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ai-hover-popover[hidden] {
+  display: none;
+}
+
+.ai-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eef3ef;
+}
+
+.ai-popover-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ai-popover-badge {
+  padding: 2px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #173c32;
+  background: #e2f0e6;
+  border-radius: 4px;
+}
+
+.ai-popover-lead {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #2b302a;
+  font-weight: 500;
+}
+
+.ai-popover-list {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-popover-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #3b423a;
+}
+
+.ai-popover-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 2px;
+  color: var(--forest);
+  font-size: 10px;
+}
+
+.ai-popover-assessment {
+  padding: 8px 10px;
+  background: #f4f8f5;
+  border-left: 3px solid #245647;
+  border-radius: 0 6px 6px 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #1e3f35;
+}
+
+.ai-popover-official-link {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #dbe8df;
+}
+
+.ai-official-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1b4d3e;
+  background: #edf7f0;
+  border: 1px solid #bce3c9;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 160ms ease;
+}
+
+.ai-official-btn:hover {
+  color: #0b2e23;
+  background: #dcf2e3;
+  border-color: #9cd1ae;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(27, 77, 62, 0.12);
+}
+
+.ai-popover-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ai-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #b5dcc3;
+  border-top-color: var(--forest);
+  border-radius: 50%;
+  animation: ai-spin 700ms linear infinite;
+}
+
+@keyframes ai-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Inline Expandable AI Card */
+.tender-ai-card {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: #f7faf8;
+  border: 1px solid #cce2d3;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+  animation: ai-fade-in 220ms ease;
+}
+
+@keyframes ai-fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ai-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ai-card-close {
+  padding: 2px 6px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ai-card-close:hover {
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Premium AI Bid Assessment Dashboard Styles */
+.ai-assessment-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  color: #2c302b;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: left;
+}
+
+.ai-top-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px;
+  border: 1px solid #e1e7e2;
+  border-radius: 12px;
+}
+
+.ai-circular-gauge-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-circular-gauge {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(var(--forest) var(--percent), #e6efe7 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(23, 60, 50, 0.06);
+}
+
+.ai-circular-gauge::after {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.ai-circular-gauge-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-circular-gauge-score {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--forest);
+  line-height: 1;
+}
+
+.ai-circular-gauge-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.ai-overview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-overview-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-overview-badge {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffe0b2;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ai-overview-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #173c32;
+  margin: 0;
+}
+
+.ai-success-probability {
+  margin-top: 6px;
+}
+
+.ai-success-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555850;
+  margin-bottom: 4px;
+}
+
+.ai-success-bar-bg {
+  height: 8px;
+  background: #eef3ef;
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid #e1e7e2;
+}
+
+.ai-success-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5c9e70, var(--forest));
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-brief-tender-card {
+  padding: 10px 14px;
+  background: #f4f7f5;
+  border: 1px solid #e2ece5;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a504a;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.ai-brief-tender-card span strong {
+  color: #173c32;
+}
+
+.ai-section-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--forest);
+  margin: 12px 0 6px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2ece5;
+  padding-bottom: 4px;
+}
+
+.ai-suitability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ai-suitability-card {
+  background: #ffffff;
+  border: 1px solid #e3e8e4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-suitability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a504a;
+}
+
+.ai-suitability-score {
+  color: var(--forest-2);
+}
+
+.ai-suitability-bar-bg {
+  height: 6px;
+  background: #f1f4f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ai-suitability-bar-fill {
+  height: 100%;
+  background: #7ca88a;
+  border-radius: 4px;
+}
+
+.ai-primary-equipment-box {
+  background: #fcfdfd;
+  border: 1px solid #d4dfd7;
+  border-left: 4px solid var(--forest);
+  padding: 10px 14px;
+  border-radius: 4px 8px 8px 4px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #2b302a;
+}
+
+.ai-quad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ai-quad-card {
+  background: #ffffff;
+  border: 1px solid #e3e8e4;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.ai-quad-card h4 {
+  font-size: 11.5px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-quad-card.strengths h4 { color: #1e5e3a; }
+.ai-quad-card.gaps h4 { color: #b25e00; }
+.ai-quad-card.risks h4 { color: #b71c1c; }
+.ai-quad-card.partners h4 { color: #1565c0; }
+
+.ai-bullet-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-bullet-list li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #3b423a;
+}
+
+.ai-bullet-list li::before {
+  position: absolute;
+  left: 0;
+  font-size: 12px;
+}
+
+.ai-quad-card.strengths li::before { content: "•"; color: #2e7d32; }
+.ai-quad-card.gaps li::before { content: "•"; color: #ef6c00; }
+.ai-quad-card.risks li::before { content: "•"; color: #c62828; }
+.ai-quad-card.partners li::before { content: "•"; color: #1565c0; }
+
+.ai-todo-box {
+  background: #edf7f3;
+  border: 1px solid #bce2cb;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.ai-todo-box h4 {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0b4028;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-todo-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #1c3d2e;
+}
+
+.ai-todo-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* AI Competitor Intelligence Styling */
+.ai-competitor-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e3e8e4;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ai-competitor-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-competitor-sub h5 {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #1a3c30;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: none;
+}
+
+.ai-competitor-list-styled, .ai-strategy-list-styled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-competitor-list-styled li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #383d38;
+}
+
+.ai-competitor-list-styled li::before {
+  content: "⚠️";
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  top: 1px;
+}
+
+.ai-strategy-list-styled li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #383d38;
+}
+
+.ai-strategy-list-styled li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  top: 1px;
+}
+
+.ai-hospital-summary-text {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a504a;
+  background: #f4f7f5;
+  border: 1px solid #e2ece5;
+  border-left: 3px solid #ff9100;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0;
+}
+
+/* Fallback banner style */
+.ai-fallback-alert-banner {
+  display: flex;
+  gap: 12px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-left: 4px solid #ffb300;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.ai-fallback-alert-icon {
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.ai-fallback-alert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-fallback-alert-content strong {
+  font-size: 11.5px;
+  color: #b78103;
+  font-weight: 700;
+}
+
+.ai-fallback-alert-content p {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #5d4037;
+  margin: 0;
+}
+
+@media (max-width: 1120px) {
+  .ai-suitability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .ai-top-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+  .ai-overview-info {
+    text-align: center;
+    width: 100%;
+  }
+  .ai-overview-badge-row {
+    justify-content: center;
+  }
+  .ai-suitability-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-quad-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-assessment-dashboard {
+    gap: 12px;
+  }
+}
+
 
 @media (max-width: 390px) {
   .stats-grid { grid-template-columns: 1fr; }
@@ -1704,5 +2560,686 @@ select:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    zoom: normal !important;
   }
 }
+
+/* ==========================================================================
+   Kiểu Việt AI Full-screen Modal Styles (Matching ChatGPT screenshots)
+   ========================================================================== */
+.kv-past-tenders-box summary,
+details summary {
+  list-style: none !important;
+  outline: none !important;
+  user-select: none;
+}
+
+.kv-past-tenders-box summary::-webkit-details-marker,
+.kv-past-tenders-box summary::marker,
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none !important;
+  content: "" !important;
+}
+
+.kv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(10, 24, 18, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: kv-backdrop-fade 200ms ease;
+}
+
+.kv-modal-backdrop[hidden] {
+  display: none !important;
+}
+
+@keyframes kv-backdrop-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.kv-modal-container {
+  width: min(1120px, 98vw);
+  max-height: 94vh;
+  background: #f7faf8;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #c8dad0;
+  animation: kv-modal-slide 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes kv-modal-slide {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Header */
+.kv-modal-header {
+  background: #0d3c2e;
+  color: #ffffff;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid #195240;
+}
+
+.kv-header-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kv-header-brand {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #f3e5ab;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kv-modal-close {
+  background: rgba(255, 255, 255, 0.15);
+  border: 0;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 160ms ease;
+}
+
+.kv-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.kv-header-tender-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+}
+
+/* Scrollable Body */
+.kv-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f8faf8;
+}
+
+/* Footer */
+.kv-modal-footer {
+  background: #edf2ee;
+  border-top: 1px solid #dce4de;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kv-footer-note {
+  font-size: 12px;
+  color: #58635c;
+  font-weight: 500;
+}
+
+.kv-footer-close-btn {
+  background: #ffffff;
+  border: 1px solid #cfd8d2;
+  color: #1c332b;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: all 160ms ease;
+}
+
+.kv-footer-close-btn:hover {
+  background: #f0f4f1;
+  border-color: #b5c4b9;
+}
+
+/* Overview Section in Modal */
+.kv-overview-card {
+  background: #ffffff;
+  border: 1px solid #e1e7e2;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kv-overview-top-grid {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.kv-gauge-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kv-circular-gauge {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: conic-gradient(#b8860b var(--percent, 200deg), #e6efe7 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.kv-circular-gauge::after {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.kv-gauge-score-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kv-gauge-score {
+  font-size: 26px;
+  font-weight: 800;
+  color: #173c32;
+  line-height: 1;
+}
+
+.kv-gauge-total {
+  font-size: 10px;
+  font-weight: 700;
+  color: #777;
+}
+
+.kv-overview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kv-free-pill {
+  display: inline-block;
+  align-self: flex-start;
+  background: #fef3d6;
+  color: #8a6d1b;
+  border: 1px solid #f3e4b7;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.kv-overview-headline {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #173c32;
+}
+
+.kv-overview-lead {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #555850;
+}
+
+.kv-success-rate-row {
+  margin-top: 6px;
+}
+
+.kv-success-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #4a504a;
+  margin-bottom: 4px;
+}
+
+.kv-success-bar {
+  height: 8px;
+  background: #eef3ef;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.kv-success-bar-fill {
+  height: 100%;
+  background: #114b38;
+  border-radius: 99px;
+}
+
+.kv-info-pill-bar {
+  background: #fbf9f5;
+  border: 1px solid #e8e2d5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-size: 11.5px;
+  color: #444;
+}
+
+.kv-info-pill-bar span strong {
+  color: #173c32;
+}
+
+/* Equipment / Lots Grid */
+.kv-lots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.kv-lot-card {
+  background: #fbf9f5;
+  border: 1px solid #e8e2d5;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.kv-lot-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.kv-lot-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kv-lot-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1c2b24;
+  line-height: 1.4;
+}
+
+.kv-lot-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: #fef3d6;
+  color: #8a6d1b;
+  border: 1px solid #f3e4b7;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.kv-lot-percent {
+  font-size: 18px;
+  font-weight: 800;
+  color: #173c32;
+}
+
+.kv-lot-price {
+  font-size: 11.5px;
+  color: #777c78;
+  border-top: 1px dashed #e2ded3;
+  padding-top: 6px;
+}
+
+/* Competitors & History Section */
+.kv-competitor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kv-comp-badge-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kv-comp-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #173c32;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.kv-comp-risk-badge {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.kv-stat-boxes-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.kv-stat-box {
+  background: #fbf9f5;
+  border: 1px solid #e8e2d5;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kv-stat-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1c2b24;
+  line-height: 1;
+}
+
+.kv-stat-lbl {
+  font-size: 11.5px;
+  color: #666e68;
+  line-height: 1.3;
+}
+
+.kv-dark-highlight-box {
+  background: #0d3c2e;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.kv-dark-left {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #a8e6cf;
+  border-right: 1px solid #1f5645;
+  padding-right: 20px;
+}
+
+.kv-dark-right {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #d6ede2;
+}
+
+/* Competitor Rankings */
+.kv-rivals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kv-rival-card {
+  background: #ffffff;
+  border: 1px solid #e3e9e5;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.kv-rival-rank-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f5eada;
+  color: #8a611c;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kv-rival-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kv-rival-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kv-rival-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kv-rival-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1b2823;
+  margin: 0;
+}
+
+.kv-rival-tag {
+  background: #fef3d6;
+  color: #8a6d1b;
+  border: 1px solid #f3e4b7;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
+.kv-rival-score-box {
+  font-size: 18px;
+  font-weight: 800;
+  color: #173c32;
+}
+
+.kv-rival-score-box small {
+  font-size: 11px;
+  color: #888;
+}
+
+.kv-rival-stats-line {
+  font-size: 11.5px;
+  color: #555e58;
+}
+
+.kv-rival-stats-line strong {
+  color: #1c2b24;
+}
+
+.kv-rival-desc {
+  font-size: 12px;
+  color: #4a544e;
+  line-height: 1.4;
+  margin: 2px 0 0;
+}
+
+.kv-rival-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.kv-rival-pill-tag {
+  background: #f7f1e5;
+  border: 1px solid #ebdcc8;
+  color: #5c4728;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Past Tenders Accordion */
+.kv-past-tenders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kv-past-tender-card {
+  background: #ffffff;
+  border: 1px solid #e2ece5;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.kv-past-tender-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eef5f0;
+  color: #173c32;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kv-past-tender-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kv-past-tender-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #666e68;
+}
+
+.kv-similarity-badge {
+  background: #fef3d6;
+  color: #8a6d1b;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.kv-past-tender-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c2b24;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.kv-past-tender-details {
+  font-size: 11.5px;
+  color: #555e58;
+  line-height: 1.4;
+}
+
+.kv-past-tender-price-box {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.kv-past-tender-price {
+  font-size: 15px;
+  font-weight: 800;
+  color: #173c32;
+}
+
+.kv-past-tender-link {
+  font-size: 10.5px;
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.kv-past-tender-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+  .kv-overview-top-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .kv-free-pill {
+    align-self: center;
+  }
+  .kv-lots-grid {
+    grid-template-columns: 1fr;
+  }
+  .kv-stat-boxes-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kv-dark-highlight-box {
+    grid-template-columns: 1fr;
+  }
+  .kv-dark-left {
+    border-right: 0;
+    border-bottom: 1px solid #1f5645;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+}
+
+

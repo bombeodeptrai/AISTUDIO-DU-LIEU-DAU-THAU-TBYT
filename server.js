@@ -1118,6 +1118,93 @@ Yêu cầu trả về mảng kết quả JSON tương ứng theo đúng thứ t�
   }
 });
 
+// API endpoint to trigger live fetch/sync for a specific tender ID
+app.post('/api/fetch-tender', (req, res) => {
+  const { notifyNo } = req.body;
+  if (!notifyNo || typeof notifyNo !== 'string' || notifyNo.trim().length < 5) {
+    return res.status(400).json({ success: false, error: 'Mã thông báo mời thầu không hợp lệ' });
+  }
+
+  const cleanId = notifyNo.trim();
+  console.log(`[API] Triggering live sync for ID: ${cleanId}`);
+
+  const { exec } = require('child_process');
+  
+  // Run scripts/fetch-data.mjs with --id <cleanId>
+  exec(`node scripts/fetch-data.mjs --id ${cleanId}`, (error, stdout, stderr) => {
+    // Invalidate the cache so the next request reads the updated tenders.json
+    allTendersCached = null;
+
+    if (error) {
+      console.error(`[API] Error scanning ${cleanId}:`, error);
+      return res.json({
+        success: false,
+        error: error.message,
+        stdout: stdout,
+        stderr: stderr,
+        message: `Lỗi khi đồng bộ gói thầu ${cleanId}`
+      });
+    }
+
+    console.log(`[API] Sync of ${cleanId} completed successfully!`);
+    return res.json({
+      success: true,
+      stdout: stdout,
+      stderr: stderr,
+      message: `Đồng bộ thành công gói thầu ${cleanId}!`
+    });
+  });
+});
+
+// API endpoint to trigger full background incremental scan on demand
+app.post('/api/trigger-scan', (req, res) => {
+  console.log(`[API] Triggering live database-wide sync...`);
+  const { exec } = require('child_process');
+  
+  exec('node scripts/fetch-data.mjs', (error, stdout, stderr) => {
+    allTendersCached = null;
+
+    if (error) {
+      console.error(`[API] Error triggering broad scan:`, error);
+      return res.json({
+        success: false,
+        error: error.message,
+        stdout: stdout,
+        stderr: stderr,
+        message: `Lỗi khi đồng bộ dữ liệu hệ thống`
+      });
+    }
+
+    console.log(`[API] Broad sync completed successfully!`);
+    return res.json({
+      success: true,
+      stdout: stdout,
+      stderr: stderr,
+      message: `Đồng bộ và cập nhật toàn bộ thầu mới thành công!`
+    });
+  });
+});
+
+// Background scheduler to auto-sync automatically every 2 hours
+const { exec } = require('child_process');
+function runBackgroundSync() {
+  console.log('[Scheduler] Starting automatic background synchronization...');
+  exec('node scripts/fetch-data.mjs', (error, stdout, stderr) => {
+    allTendersCached = null;
+    if (error) {
+      console.error('[Scheduler] Automatic sync failed:', error);
+    } else {
+      console.log('[Scheduler] Automatic background sync completed successfully!');
+    }
+  });
+}
+
+// Run automatic sync once shortly after startup
+setTimeout(runBackgroundSync, 5000);
+
+// Set interval to run automatic sync every 2 hours
+setInterval(runBackgroundSync, 2 * 60 * 60 * 1000);
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });

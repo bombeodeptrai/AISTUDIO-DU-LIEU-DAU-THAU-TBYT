@@ -203,15 +203,61 @@ async function mapLimited(values, concurrency, mapper) {
   return results;
 }
 
+function provinceBroadPayload(pageNumber, from, to, provCodes) {
+  return [{
+    pageSize: 10,
+    pageNumber,
+    sortBy: "publicDate",
+    sortType: "DESC",
+    query: [{
+      index: "es-contractor-selection",
+      keyWord: "",
+      matchType: "exact",
+      matchFields: ["bidName"],
+      filters: [
+        { fieldName: "type", searchType: "in", fieldValues: ["es-notify-contractor"] },
+        { fieldName: "locations.provCode", searchType: "in", fieldValues: provCodes },
+        { fieldName: "publicDate", searchType: "range", from, to },
+      ],
+    }],
+  }];
+}
+
+async function fetchBroadProvinces(window, windowIndex, totalWindows) {
+  const provCodes = ["52", "50", "54", "53", "49", "51", "48", "56", "58", "55", "57", "60", "46", "45", "44"];
+  process.stdout.write(`Đang rà soát toàn bộ thầu địa phương (không lọc từ khóa) cho 15 tỉnh miền Trung - Tây Nguyên...\n`);
+  try {
+    const first = await postJson(SEARCH_URL, provinceBroadPayload(0, window.from, window.to, provCodes));
+    const totalPages = Math.max(1, Number(first.page?.totalPages) || 1);
+    const pagesToFetch = Math.min(totalPages - 1, 100);
+    const pageNumbers = Array.from({ length: pagesToFetch }, (_, index) => index + 1);
+    const remaining = await mapLimited(pageNumbers, 3, async (pageNumber) => {
+      try {
+        await delay(300);
+        return await postJson(SEARCH_URL, provinceBroadPayload(pageNumber, window.from, window.to, provCodes));
+      } catch (e) {
+        process.stderr.write(`Cảnh báo trang thầu địa phương ${pageNumber} thất bại: ${e.message}\n`);
+        return { page: { content: [] } };
+      }
+    });
+    const items = [first, ...remaining].flatMap((payload) => payload.page?.content || []);
+    process.stdout.write(`Đã tải ${items.length} thầu địa phương.\n`);
+    return items;
+  } catch (error) {
+    process.stderr.write(`Cảnh báo quét thầu địa phương thất bại trang đầu: ${error.message}\n`);
+    return [];
+  }
+}
+
 async function fetchWindowKeyword(keyword, window, windowIndex, totalWindows) {
   try {
     const first = await postJson(SEARCH_URL, searchPayload(0, window.from, window.to, keyword));
     const totalPages = Math.max(1, Number(first.page?.totalPages) || 1);
     const pagesToFetch = Math.min(totalPages - 1, 10);
     const pageNumbers = Array.from({ length: pagesToFetch }, (_, index) => index + 1);
-    const remaining = await mapLimited(pageNumbers, 1, async (pageNumber) => {
+    const remaining = await mapLimited(pageNumbers, 3, async (pageNumber) => {
       try {
-        await delay(500);
+        await delay(300);
         return await postJson(SEARCH_URL, searchPayload(pageNumber, window.from, window.to, keyword));
       } catch (e) {
         process.stderr.write(`Cảnh báo từ khóa "${keyword}" trang ${pageNumber} thất bại: ${e.message}\n`);
@@ -227,17 +273,25 @@ async function fetchWindowKeyword(keyword, window, windowIndex, totalWindows) {
 
 async function fetchWindow(window, windowIndex, totalWindows) {
   process.stdout.write(`Đang quét khoảng ${windowIndex + 1}/${totalWindows} (${window.from.split('T')[0]} đến ${window.to.split('T')[0]})...\n`);
-  const results = await mapLimited(API_SEARCH_KEYWORDS, 1, (keyword) =>
+  
+  // 1. Broad keywordless scan for Central region
+  const broadItems = await fetchBroadProvinces(window, windowIndex, totalWindows);
+
+  // 2. National keyword-based scan with increased concurrency (3)
+  const results = await mapLimited(API_SEARCH_KEYWORDS, 3, (keyword) =>
     fetchWindowKeyword(keyword, window, windowIndex, totalWindows)
   );
-  const items = results.flat();
+  const keywordItems = results.flat();
+  
+  const allItems = [...broadItems, ...keywordItems];
   const uniqueItems = new Map();
-  items.forEach((item) => {
+  allItems.forEach((item) => {
     const key = item.notifyId || item.id || item.notifyNo;
     if (key) uniqueItems.set(key, item);
   });
+  
   process.stdout.write(
-    `Hoàn thành khoảng ${windowIndex + 1}/${totalWindows}: tìm thấy ${uniqueItems.size} gói thầu y tế\n`,
+    `Hoàn thành khoảng ${windowIndex + 1}/${totalWindows}: tìm thấy ${uniqueItems.size} gói thầu y tế & địa phương\n`,
   );
   return [...uniqueItems.values()];
 }
@@ -937,8 +991,137 @@ function enrichTender(tender, detail) {
   };
 }
 
+async function writeAtomic(targetPath, data) {
+  const tmpPath = `${targetPath}.${Date.now()}.${Math.random().toString(36).slice(2)}.tmp`;
+  await writeFile(tmpPath, `${JSON.stringify(data, null, 2)}\n`);
+  await rename(tmpPath, targetPath);
+}
+
 async function main() {
   const previous = await previousData();
+
+  // Handle direct fetch of specific tender by notifyNo/id
+  const idIdx = process.argv.indexOf("--id");
+  if (idIdx !== -1 && process.argv[idIdx + 1]) {
+    const targetId = process.argv[idIdx + 1].trim();
+    process.stdout.write(`Đang tiến hành quét và đồng bộ trực tiếp gói thầu ID/Mã TBMT: ${targetId}...\n`);
+    
+    // Search the API for exact notifyNo
+    const results = await postJson(SEARCH_URL, [{
+      pageSize: 10,
+      pageNumber: 0,
+      sortBy: "publicDate",
+      sortType: "DESC",
+      query: [{
+        index: "es-contractor-selection",
+        keyWord: targetId,
+        matchType: "exact",
+        matchFields: ["notifyNo"],
+        filters: [
+          { fieldName: "type", searchType: "in", fieldValues: ["es-notify-contractor"] }
+        ]
+      }]
+    }]);
+    
+    const items = results.page?.content || [];
+    if (!items.length) {
+      process.stdout.write(`Không tìm thấy gói thầu ${targetId} trên cổng chính thức muasamcong!\n`);
+      return;
+    }
+    
+    const item = items[0];
+    const medicalCheck = analyzeMedical(item);
+    if (!medicalCheck.matched) {
+      process.stdout.write(`Cảnh báo: Gói thầu ${targetId} được tìm thấy nhưng bị bộ lọc y tế loại (${medicalCheck.reason}). Vẫn cho phép đồng bộ theo yêu cầu trực tiếp của người dùng.\n`);
+    }
+    
+    // Normalize and enrich
+    const tender = normalizeTender(item);
+    tender.category = categoryOf(tender.name);
+    tender.status = statusOf(tender);
+    
+    // Fetch details
+    process.stdout.write(`Đang tải chi tiết cho gói thầu ${targetId}...\n`);
+    const detailsByNotifyNo = { ...(previous.detailsByNotifyNo || {}) };
+    try {
+      detailsByNotifyNo[tender.notifyNo] = await fetchTenderDetails(tender);
+      process.stdout.write(`Đã tải chi tiết thành công cho gói thầu ${targetId}!\n`);
+    } catch (err) {
+      process.stderr.write(`Cảnh báo khi tải chi tiết cho gói thầu ${targetId}: ${err.message}\n`);
+    }
+    
+    // Merge into previous tenders
+    const tendersMap = new Map((previous.tenders || []).map(t => [t.notifyNo || t.id, t]));
+    const enrichedTender = enrichTender(tender, detailsByNotifyNo[tender.notifyNo]);
+    tendersMap.set(enrichedTender.notifyNo || enrichedTender.id, enrichedTender);
+    
+    const tenders = [...tendersMap.values()].sort((a, b) => new Date(b.publicDate) - new Date(a.publicDate));
+    
+    // Regenerate files
+    const bidders = Object.entries(detailsByNotifyNo).flatMap(([notifyNo, detail]) => {
+      const tender = tendersMap.get(notifyNo);
+      return (detail.bidders || []).map((bidder) => ({
+        notifyNo,
+        tenderName: tender?.name || "",
+        sourceUrl: tender?.sourceUrl || "",
+        ...bidder,
+      }));
+    });
+    
+    const equipment = Object.entries(detailsByNotifyNo).flatMap(([notifyNo, detail]) => {
+      const tender = tendersMap.get(notifyNo);
+      return (detail.items || []).map((item) => ({
+        notifyNo,
+        tenderName: tender?.name || "",
+        sourceUrl: tender?.sourceUrl || "",
+        ...item,
+      }));
+    });
+    
+    const requirements = Object.entries(detailsByNotifyNo).flatMap(([notifyNo, detail]) => {
+      const tender = tendersMap.get(notifyNo);
+      return (detail.requirements?.items || []).map((item) => ({
+        notifyNo,
+        tenderName: tender?.name || "",
+        sourceUrl: tender?.sourceUrl || "",
+        ...item,
+      }));
+    });
+    
+    const technicalRequirements = Object.entries(detailsByNotifyNo).flatMap(([notifyNo, detail]) => {
+      const tender = tendersMap.get(notifyNo);
+      return (detail.technicalRequirements?.items || []).map((item) => ({
+        notifyNo,
+        tenderName: tender?.name || "",
+        sourceUrl: tender?.sourceUrl || "",
+        ...item,
+      }));
+    });
+    
+    const payload = {
+      ...previous,
+      tenders,
+      fetchedAt: new Date().toISOString(),
+      detailTenderCount: Object.keys(detailsByNotifyNo).length,
+    };
+    
+    await mkdir(dirname(outputPath), { recursive: true });
+    await mkdir(detailsDir, { recursive: true });
+    
+    if (detailsByNotifyNo[tender.notifyNo]) {
+      await writeFile(resolve(detailsDir, `${tender.notifyNo}.json`), `${JSON.stringify(detailsByNotifyNo[tender.notifyNo], null, 2)}\n`);
+    }
+    
+    await writeAtomic(biddersOutputPath, { bidders, fetchedAt: new Date().toISOString() });
+    await writeAtomic(equipmentOutputPath, { equipment, fetchedAt: new Date().toISOString() });
+    await writeAtomic(requirementsOutputPath, { requirements, fetchedAt: new Date().toISOString() });
+    await writeAtomic(technicalRequirementsOutputPath, { technicalRequirements, fetchedAt: new Date().toISOString() });
+    await writeAtomic(outputPath, payload);
+    
+    process.stdout.write(`Đã quét, đồng bộ và lưu thành công gói thầu ${targetId} vào cơ sở dữ liệu!\n`);
+    return;
+  }
+
   const fullRefresh = process.argv.includes("--full");
   const scanDays = fullRefresh ? DAYS : (previous.tenders?.length ? INCREMENTAL_DAYS : 90);
   const windows = dateWindows(scanDays);
