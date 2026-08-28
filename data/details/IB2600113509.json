@@ -1,0 +1,90 @@
+{
+  "id": "IB2600113509",
+  "fetchedAt": "2026-07-18T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Quảng Ninh năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000
+      },
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000
+      },
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 3600000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Quảng Ninh"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Quảng Ninh"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 3600000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Quảng Ninh"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 4889258328,
+      "finalPrice": 4658773404,
+      "status": "winning",
+      "submittedAt": "2026-07-18T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 5035213341,
+      "finalPrice": 4790336264,
+      "status": "participating",
+      "submittedAt": "2026-07-18T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 4965808740,
+      "finalPrice": 4701567797,
+      "status": "participating",
+      "submittedAt": "2026-07-18T08:30:00+07:00"
+    }
+  ]
+}

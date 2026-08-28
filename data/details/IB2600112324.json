@@ -1,0 +1,56 @@
+{
+  "id": "IB2600112324",
+  "fetchedAt": "2026-01-08T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 1854334448,
+      "finalPrice": 1755109629,
+      "status": "winning",
+      "submittedAt": "2026-01-08T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 1819548201,
+      "finalPrice": 1761277016,
+      "status": "participating",
+      "submittedAt": "2026-01-08T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 1890307750,
+      "finalPrice": 1828132799,
+      "status": "participating",
+      "submittedAt": "2026-01-08T08:30:00+07:00"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "IB2600103081",
+  "fetchedAt": "2026-05-22T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Ia Grai - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000
+      },
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000
+      },
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 5850000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Trung tâm Y tế Huyện Ia Grai - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Ia Grai - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 5850000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Trung tâm Y tế Huyện Ia Grai - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 8687459932,
+      "finalPrice": 8116674957,
+      "status": "winning",
+      "submittedAt": "2026-05-22T08:30:00+07:00"
+    }
+  ]
+}

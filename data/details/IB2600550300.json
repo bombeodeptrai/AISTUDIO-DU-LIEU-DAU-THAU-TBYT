@@ -1,0 +1,65 @@
+{
+  "id": "IB2600550300",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Chư Sê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 52345266737,
+      "finalPrice": 51412907089,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 51597072480,
+      "finalPrice": 50179044031,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

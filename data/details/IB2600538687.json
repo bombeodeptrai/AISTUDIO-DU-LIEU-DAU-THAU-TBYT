@@ -1,0 +1,90 @@
+{
+  "id": "IB2600538687",
+  "fetchedAt": "2026-08-21T13:11:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đại học Y Dược TP. Hồ Chí Minh năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000
+      },
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 3200000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đại học Y Dược TP. Hồ Chí Minh"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đại học Y Dược TP. Hồ Chí Minh"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 3200000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đại học Y Dược TP. Hồ Chí Minh"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 8274164950,
+      "finalPrice": 8150278107,
+      "status": "winning",
+      "submittedAt": "2026-08-21T13:11:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 8635343235,
+      "finalPrice": 8503141454,
+      "status": "participating",
+      "submittedAt": "2026-08-21T13:11:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 8260734325,
+      "finalPrice": 7644921607,
+      "status": "participating",
+      "submittedAt": "2026-08-21T13:11:00+07:00"
+    }
+  ]
+}

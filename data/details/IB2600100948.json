@@ -1,0 +1,65 @@
+{
+  "id": "IB2600100948",
+  "fetchedAt": "2026-08-11T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Nhi tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000
+      },
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 3695106512,
+      "finalPrice": 3503169984,
+      "status": "winning",
+      "submittedAt": "2026-08-11T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 3790714367,
+      "finalPrice": 3557407916,
+      "status": "participating",
+      "submittedAt": "2026-08-11T08:30:00+07:00"
+    }
+  ]
+}

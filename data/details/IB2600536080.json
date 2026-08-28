@@ -1,0 +1,57 @@
+{
+  "id": "IB2600536080",
+  "fetchedAt": "2026-08-21T12:36:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Nhi tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000
+      },
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 4642748539,
+      "finalPrice": 4319209182,
+      "status": "winning",
+      "submittedAt": "2026-08-21T12:36:00+07:00"
+    }
+  ]
+}

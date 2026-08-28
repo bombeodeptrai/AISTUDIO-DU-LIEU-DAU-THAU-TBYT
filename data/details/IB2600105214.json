@@ -1,0 +1,57 @@
+{
+  "id": "IB2600105214",
+  "fetchedAt": "2026-02-05T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa Khu vực An Khê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 1560000000
+      },
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 1560000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Bệnh viện Đa khoa Khu vực An Khê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa Khu vực An Khê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 2397900799,
+      "finalPrice": 2299847147,
+      "status": "winning",
+      "submittedAt": "2026-02-05T08:30:00+07:00"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "IB2600536554",
+  "fetchedAt": "2026-08-20T15:26:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Hữu nghị Việt Đức - Hà Nội năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Hữu nghị Việt Đức - Hà Nội"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 960655023,
+      "finalPrice": 937954773,
+      "status": "winning",
+      "submittedAt": "2026-08-20T15:26:00+07:00"
+    }
+  ]
+}

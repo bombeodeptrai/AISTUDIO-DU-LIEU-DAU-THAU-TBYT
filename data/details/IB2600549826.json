@@ -1,0 +1,40 @@
+{
+  "id": "IB2600549826",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Kông Chro - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1650000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1650000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Huyện Kông Chro - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 1648710915,
+      "finalPrice": 1585430411,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

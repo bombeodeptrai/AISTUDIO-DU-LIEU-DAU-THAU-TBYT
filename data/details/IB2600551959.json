@@ -1,0 +1,74 @@
+{
+  "id": "IB2600551959",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Nhi tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 55500000000
+      },
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 780000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 55500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 780000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 64493329397,
+      "finalPrice": 62873317167,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

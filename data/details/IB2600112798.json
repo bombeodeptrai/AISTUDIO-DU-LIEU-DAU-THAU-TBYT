@@ -1,0 +1,74 @@
+{
+  "id": "IB2600112798",
+  "fetchedAt": "2026-08-10T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Bình Định năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000
+      },
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000
+      },
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 2400000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Bình Định"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Bình Định"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 2400000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Bình Định"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 8318426741,
+      "finalPrice": 8021043973,
+      "status": "winning",
+      "submittedAt": "2026-08-10T08:30:00+07:00"
+    }
+  ]
+}

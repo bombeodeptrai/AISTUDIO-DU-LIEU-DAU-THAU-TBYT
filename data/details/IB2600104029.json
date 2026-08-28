@@ -1,0 +1,56 @@
+{
+  "id": "IB2600104029",
+  "fetchedAt": "2026-03-10T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa Khu vực Ayun Pa - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa Khu vực Ayun Pa - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 4363305208,
+      "finalPrice": 4110052801,
+      "status": "winning",
+      "submittedAt": "2026-03-10T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 4224779283,
+      "finalPrice": 4077680227,
+      "status": "participating",
+      "submittedAt": "2026-03-10T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 4222485804,
+      "finalPrice": 4005591230,
+      "status": "participating",
+      "submittedAt": "2026-03-10T08:30:00+07:00"
+    }
+  ]
+}

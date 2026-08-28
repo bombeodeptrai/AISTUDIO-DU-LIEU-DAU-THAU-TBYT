@@ -1,0 +1,74 @@
+{
+  "id": "IB2600553144",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Chư Păh - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000
+      },
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 37000000000
+      },
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Păh - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 37000000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Păh - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Păh - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 39804783273,
+      "finalPrice": 38756075677,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

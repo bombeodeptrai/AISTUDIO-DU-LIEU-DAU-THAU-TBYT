@@ -1,0 +1,90 @@
+{
+  "id": "IB2600102370",
+  "fetchedAt": "2026-07-14T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 26000000000
+      },
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 55500000000
+      },
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 620000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 26000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 55500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 620000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 81297758839,
+      "finalPrice": 76536349575,
+      "status": "winning",
+      "submittedAt": "2026-07-14T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 79690298608,
+      "finalPrice": 74023887096,
+      "status": "participating",
+      "submittedAt": "2026-07-14T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 79997461854,
+      "finalPrice": 76796420135,
+      "status": "participating",
+      "submittedAt": "2026-07-14T08:30:00+07:00"
+    }
+  ]
+}

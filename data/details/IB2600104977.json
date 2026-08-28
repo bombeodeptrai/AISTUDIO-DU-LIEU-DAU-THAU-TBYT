@@ -1,0 +1,65 @@
+{
+  "id": "IB2600104977",
+  "fetchedAt": "2026-07-17T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Sở Y tế tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 120000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 3200000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 120000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 3200000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 3304410737,
+      "finalPrice": 3076563043,
+      "status": "winning",
+      "submittedAt": "2026-07-17T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 3260073871,
+      "finalPrice": 3101370209,
+      "status": "participating",
+      "submittedAt": "2026-07-17T08:30:00+07:00"
+    }
+  ]
+}

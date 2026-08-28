@@ -1,0 +1,73 @@
+{
+  "id": "IB2600111613",
+  "fetchedAt": "2026-01-01T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Trung ương Huế - Thừa Thiên Huế năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000
+      },
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Trung ương Huế - Thừa Thiên Huế"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Bệnh viện Trung ương Huế - Thừa Thiên Huế"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 6567564872,
+      "finalPrice": 6393925838,
+      "status": "winning",
+      "submittedAt": "2026-01-01T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 6291775647,
+      "finalPrice": 6042142426,
+      "status": "participating",
+      "submittedAt": "2026-01-01T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 6425203979,
+      "finalPrice": 6030617147,
+      "status": "participating",
+      "submittedAt": "2026-01-01T08:30:00+07:00"
+    }
+  ]
+}

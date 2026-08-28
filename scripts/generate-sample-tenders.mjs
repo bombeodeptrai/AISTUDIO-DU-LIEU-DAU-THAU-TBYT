@@ -1,11 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-/**
- * Advanced Scanner & Generator for Medical Bidding Data
- * Scans, processes, and updates medical tenders into ./data/details/
- */
-
 const giaLaiBuyers = [
   'Bệnh viện Đa khoa tỉnh Gia Lai',
   'Bệnh viện Đa khoa Khu vực An Khê - Gia Lai',
@@ -21,9 +16,6 @@ const giaLaiBuyers = [
   'Trung tâm Y tế Huyện Krông Pa - Gia Lai',
   'Trung tâm Y tế Huyện Kông Chro - Gia Lai',
   'Trung tâm Y tế Thị xã An Khê - Gia Lai',
-  'Trung tâm Y tế Huyện Đức Cơ - Gia Lai',
-  'Trung tâm Y tế Huyện Chư Prông - Gia Lai',
-  'Trung tâm Y tế Huyện Phú Thiện - Gia Lai',
   'Sở Y tế tỉnh Gia Lai',
   'Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai'
 ];
@@ -38,9 +30,7 @@ const otherBuyers = [
   'Bệnh viện Đa khoa tỉnh Thanh Hóa',
   'Bệnh viện Đa khoa tỉnh Thái Bình',
   'Bệnh viện Đa khoa tỉnh Quảng Ninh',
-  'Bệnh viện Thống Nhất - TP. Hồ Chí Minh',
-  'Bệnh viện Đại học Y Dược TP. Hồ Chí Minh',
-  'Bệnh viện Hữu nghị Việt Đức - Hà Nội'
+  'Bệnh viện Thống Nhất - TP. Hồ Chí Minh'
 ];
 
 const medicalEquipments = [
@@ -69,41 +59,29 @@ const contractors = [
   { name: 'Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia', code: '0309182746' }
 ];
 
-export async function runScraper(targetCount = 1829, addNewBatches = 15) {
+async function generateData() {
   const dir = './data/details';
   await fs.mkdir(dir, { recursive: true });
 
-  console.log(`[Crawler] Bắt đầu tiến trình quét và tìm kiếm gói thầu y tế mới phát hành (Mục tiêu tối thiểu: ${targetCount} gói, gói mới: ${addNewBatches})...`);
-  
-  const existingFiles = new Set(await fs.readdir(dir));
-  let createdCount = 0;
+  const totalFiles = 1829;
+  console.log(`Bắt đầu khôi phục và tạo ${totalFiles} gói thầu chi tiết y tế...`);
 
-  // 1. Quét bổ sung các gói thầu mới nhất (tháng 08/2026)
-  const currentTotal = existingFiles.size;
-  const targetTotal = Math.max(targetCount, currentTotal + addNewBatches);
-
-  for (let i = 1; i <= targetTotal; i++) {
-    const tenderCode = `IB2600${String(100000 + i * 237).padStart(6, '0')}`;
-    const filename = `${tenderCode}.json`;
-
-    if (existingFiles.has(filename)) {
-      continue;
-    }
-
-    const isGiaLai = i % 3 !== 0; // ~67% Gia Lai
+  for (let i = 1; i <= totalFiles; i++) {
+    const isGiaLai = i % 3 !== 0; // ~67% Gia Lai, 33% toàn quốc
     const buyerPool = isGiaLai ? giaLaiBuyers : otherBuyers;
     const buyer = buyerPool[Math.floor(Math.random() * buyerPool.length)];
-
+    
+    // Choose 1 to 4 items for this tender
     const numItems = Math.floor(Math.random() * 3) + 1;
     const selectedItems = [];
     let totalPrice = 0;
-
+    
     for (let j = 0; j < numItems; j++) {
       const eq = medicalEquipments[Math.floor(Math.random() * medicalEquipments.length)];
       const qty = Math.floor(Math.random() * 3) + 1;
       const plannedPrice = eq.price * qty;
       totalPrice += plannedPrice;
-
+      
       selectedItems.push({
         lotNo: `Lô 0${j + 1}`,
         name: eq.name,
@@ -117,27 +95,24 @@ export async function runScraper(targetCount = 1829, addNewBatches = 15) {
       });
     }
 
-    // Thời gian công bố thầu mới nhất (theo thời điểm hiện tại hoặc ngày 27/08/2026)
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const day = String(now.getDate()).padStart(2, '0');
-    const hour = String(now.getHours()).padStart(2, '0');
-    const min = String(now.getMinutes()).padStart(2, '0');
-    const sec = String(now.getSeconds()).padStart(2, '0');
-    const dateStr = `${year}-${month}-${day}T${hour}:${min}:${sec}+07:00`;
+    const tenderCode = `IB2600${String(100000 + i * 237).padStart(6, '0')}`;
+    const year = 2026;
+    const month = String(Math.floor(Math.random() * 8) + 1).padStart(2, '0');
+    const day = String(Math.floor(Math.random() * 25) + 1).padStart(2, '0');
+    const dateStr = `${year}-${month}-${day}T08:30:00+07:00`;
 
+    // Contractors
     const numBidders = Math.floor(Math.random() * 3) + 1;
     const shuffledContractors = [...contractors].sort(() => 0.5 - Math.random());
     const tenderBidders = [];
 
     for (let b = 0; b < numBidders; b++) {
       const contractor = shuffledContractors[b];
-      const discount = 0.92 + Math.random() * 0.07;
+      const discount = 0.92 + Math.random() * 0.07; // 92% to 99%
       const bidPrice = Math.round(totalPrice * (0.97 + Math.random() * 0.05));
       const finalPrice = Math.round(bidPrice * discount);
       const isWinner = (b === 0);
-
+      
       tenderBidders.push({
         contractorName: contractor.name,
         contractorCode: contractor.code,
@@ -166,17 +141,11 @@ export async function runScraper(targetCount = 1829, addNewBatches = 15) {
       bidders: tenderBidders
     };
 
-    const filePath = path.join(dir, filename);
+    const filePath = path.join(dir, `${tenderCode}.json`);
     await fs.writeFile(filePath, JSON.stringify(tenderDetail, null, 2), 'utf8');
-    createdCount++;
   }
 
-  const finalFiles = await fs.readdir(dir);
-  console.log(`[Crawler] Quét hoàn tất. Kho dữ liệu hiện tại có ${finalFiles.length} gói thầu (Đã quét thêm ${createdCount} gói thầu mới).`);
-  return { total: finalFiles.length, newlyCreated: createdCount };
+  console.log(`Đã tạo thành công ${totalFiles} gói thầu chi tiết trong data/details/`);
 }
 
-// If run directly via node
-if (process.argv[1] && process.argv[1].endsWith('fetch-data.mjs')) {
-  runScraper().catch(console.error);
-}
+generateData();

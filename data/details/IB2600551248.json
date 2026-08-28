@@ -1,0 +1,90 @@
+{
+  "id": "IB2600551248",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Chư Sê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000
+      },
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 19566621617,
+      "finalPrice": 18106996161,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 19697489500,
+      "finalPrice": 18839277157,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 19684403103,
+      "finalPrice": 19125679718,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "IB2600110665",
+  "fetchedAt": "2026-01-05T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Trung ương Huế - Thừa Thiên Huế năm 2026",
+    "items": [
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000
+      },
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000
+      },
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1650000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Bệnh viện Trung ương Huế - Thừa Thiên Huế"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Bệnh viện Trung ương Huế - Thừa Thiên Huế"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1650000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Trung ương Huế - Thừa Thiên Huế"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 9330533926,
+      "finalPrice": 8946413422,
+      "status": "winning",
+      "submittedAt": "2026-01-05T08:30:00+07:00"
+    }
+  ]
+}

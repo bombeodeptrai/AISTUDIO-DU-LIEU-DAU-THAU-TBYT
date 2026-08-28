@@ -1,0 +1,90 @@
+{
+  "id": "IB2600108058",
+  "fetchedAt": "2026-08-04T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Ia Grai - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1700000000
+      },
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 3600000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1700000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Ia Grai - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 3600000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Trung tâm Y tế Huyện Ia Grai - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Ia Grai - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 14598503631,
+      "finalPrice": 13617195408,
+      "status": "winning",
+      "submittedAt": "2026-08-04T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 14971151443,
+      "finalPrice": 14560342877,
+      "status": "participating",
+      "submittedAt": "2026-08-04T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 15046890838,
+      "finalPrice": 13847334622,
+      "status": "participating",
+      "submittedAt": "2026-08-04T08:30:00+07:00"
+    }
+  ]
+}

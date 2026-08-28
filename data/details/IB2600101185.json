@@ -1,0 +1,40 @@
+{
+  "id": "IB2600101185",
+  "fetchedAt": "2026-04-23T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Mang Yang - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Trung tâm Y tế Huyện Mang Yang - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 51329528355,
+      "finalPrice": 47450880812,
+      "status": "winning",
+      "submittedAt": "2026-04-23T08:30:00+07:00"
+    }
+  ]
+}

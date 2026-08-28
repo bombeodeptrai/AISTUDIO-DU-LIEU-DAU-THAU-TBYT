@@ -1,0 +1,74 @@
+{
+  "id": "IB2600110428",
+  "fetchedAt": "2026-03-06T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh năm 2026",
+    "items": [
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000
+      },
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000
+      },
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 2282554554,
+      "finalPrice": 2140690260,
+      "status": "winning",
+      "submittedAt": "2026-03-06T08:30:00+07:00"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "IB2600113746",
+  "fetchedAt": "2026-02-14T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Thanh Hóa năm 2026",
+    "items": [
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1200000000
+      },
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1200000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thanh Hóa"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thanh Hóa"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thanh Hóa"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 55927772375,
+      "finalPrice": 52383757777,
+      "status": "winning",
+      "submittedAt": "2026-02-14T08:30:00+07:00"
+    }
+  ]
+}

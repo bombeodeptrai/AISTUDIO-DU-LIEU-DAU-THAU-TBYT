@@ -1,0 +1,56 @@
+{
+  "id": "IB2600537028",
+  "fetchedAt": "2026-08-21T09:29:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Krông Pa - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Trung tâm Y tế Huyện Krông Pa - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 974127522,
+      "finalPrice": 913204416,
+      "status": "winning",
+      "submittedAt": "2026-08-21T09:29:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 931352058,
+      "finalPrice": 907094177,
+      "status": "participating",
+      "submittedAt": "2026-08-21T09:29:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 966520783,
+      "finalPrice": 923164427,
+      "status": "participating",
+      "submittedAt": "2026-08-21T09:29:00+07:00"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "IB2600111139",
+  "fetchedAt": "2026-07-03T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Bạch Mai - Hà Nội năm 2026",
+    "items": [
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 5850000000
+      },
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 5850000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Bệnh viện Bạch Mai - Hà Nội"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Bạch Mai - Hà Nội"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 6132809741,
+      "finalPrice": 5828709876,
+      "status": "winning",
+      "submittedAt": "2026-07-03T08:30:00+07:00"
+    }
+  ]
+}

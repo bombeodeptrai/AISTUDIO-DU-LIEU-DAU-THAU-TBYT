@@ -1,0 +1,82 @@
+{
+  "id": "IB2600550774",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Bình Định năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000
+      },
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 6400000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Bình Định"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Bình Định"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 6400000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Bình Định"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 14123021097,
+      "finalPrice": 13929693761,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 14155114554,
+      "finalPrice": 13093987785,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "IB2600547930",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa Trung ương Đà Nẵng năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa Trung ương Đà Nẵng"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Bệnh viện Đa khoa Trung ương Đà Nẵng"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 51577493098,
+      "finalPrice": 47491558385,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

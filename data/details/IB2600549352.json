@@ -1,0 +1,90 @@
+{
+  "id": "IB2600549352",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Bạch Mai - Hà Nội năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000
+      },
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 55500000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 78000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Bạch Mai - Hà Nội"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 55500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Bạch Mai - Hà Nội"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 78000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Bệnh viện Bạch Mai - Hà Nội"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 139359587137,
+      "finalPrice": 132437186999,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 135944075759,
+      "finalPrice": 130122947033,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 138736126082,
+      "finalPrice": 135653800210,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

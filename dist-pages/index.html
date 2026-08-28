@@ -1,276 +1,1044 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Theo dõi kết quả đấu thầu thiết bị y tế, vật tư tiêu hao và hóa chất xét nghiệm tại Gia Lai." />
-    <title>Thầu Y tế Gia Lai</title>
-    <link rel="icon" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
-  </head>
-  <body>
-    <main>
-      <header class="site-header">
-        <nav aria-label="Điều hướng chính">
-          <a class="active" href="#top">Tổng quan</a>
-          <a href="#goi-thau">Gói thầu</a>
-          <a href="#chu-dau-tu">Chủ đầu tư</a>
-          <a href="#canh-bao">Quan tâm</a>
-        </nav>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng phân tích thầu Y tế - Gia Lai & Toàn quốc</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9fa',
+              100: '#dcf2f5',
+              200: '#bde4eb',
+              300: '#8ecfdb',
+              400: '#56b1c4',
+              500: '#3a95aa',
+              600: '#327b8f',
+              700: '#2d6576',
+              800: '#2b5462',
+              900: '#274753',
+              950: '#152f39',
+            },
+            neutral: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+              950: '#0c0a09',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">CỔNG THÔNG TIN ĐẤU THẦU</p>
-          <h1 id="hero-title">Theo dõi cơ hội thầu<br />thiết bị y tế tại Miền Trung</h1>
-          <p class="hero-note">Chỉ tổng hợp thiết bị y tế, vật tư tiêu hao và hóa chất xét nghiệm; kèm kết quả lựa chọn nhà thầu, model, hãng, đơn giá và cấu hình kỹ thuật.</p>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <img src="./assets/hero-medical-gialai.webp" alt="" width="1600" height="533" />
-        </div>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-        <form class="search-panel" id="search-form">
-          <label class="search-field search-keyword">
-            <span class="sr-only">Từ khóa</span><span class="icon-text">⌕</span>
-            <input id="keyword" list="equipment-search-suggestions" placeholder="Tên gói, loại máy, model, hãng..." title="Tra cứu tên gói thầu, mã TBMT, tên thiết bị, model, nhãn hiệu hoặc hãng sản xuất" />
-            <datalist id="equipment-search-suggestions">
-              <option value="Máy siêu âm"></option>
-              <option value="Máy xét nghiệm"></option>
-              <option value="Máy điện tim"></option>
-              <option value="Máy thở"></option>
-              <option value="Máy nội soi"></option>
-              <option value="Mindray"></option>
-            </datalist>
-          </label>
-          <label class="search-field select-field">
-            <span class="icon-text">⌖</span><span class="sr-only">Địa bàn</span>
-            <select id="province">
-              <option value="gialai" selected>Tỉnh Gia Lai</option>
-              <option value="mientrung">Toàn Miền Trung - Tây Nguyên</option>
-              <option value="binhdinh">Tỉnh Bình Định</option>
-              <option value="daklak">Tỉnh Đắk Lắk</option>
-              <option value="kontum">Tỉnh Kon Tum</option>
-              <option value="phuyen">Tỉnh Phú Yên</option>
-              <option value="quangngai">Tỉnh Quảng Ngãi</option>
-              <option value="quangnam">Tỉnh Quảng Nam</option>
-              <option value="khanhhoa">Tỉnh Khánh Hòa</option>
-              <option value="lamdong">Tỉnh Lâm Đồng</option>
-              <option value="daknong">Tỉnh Đắk Nông</option>
-              <option value="ninhthuan_binhthuan">Ninh Thuận &amp; Bình Thuận</option>
-              <option value="quangtri_quangbinh_hue">Trị Thiên Huế &amp; Quảng Bình</option>
-              <option value="all">Tất cả tỉnh thành</option>
-            </select>
-            <span>⌄</span>
-          </label>
-          <label class="search-field select-field">
-            <span class="icon-text">▣</span><span class="sr-only">Nhóm dữ liệu</span>
-            <select id="category">
-              <option value="all">Tất cả thiết bị &amp; vật tư</option>
-              <option value="Thiết bị y tế">Thiết bị y tế</option>
-              <option value="Vật tư &amp; hóa chất">Vật tư tiêu hao &amp; hóa chất</option>
-            </select>
-            <span>⌄</span>
-          </label>
-          <label class="search-field select-field compact-select">
-            <span class="icon-text">◫</span><span class="sr-only">Khoảng thời gian</span>
-            <select id="days">
-              <option value="7">7 ngày</option>
-              <option value="30">30 ngày</option>
-              <option value="90">90 ngày</option>
-              <option value="180">180 ngày</option>
-              <option value="365">1 năm</option>
-              <option value="730">2 năm</option>
-              <option value="1095" selected>3 năm</option>
-              <option value="3650">Toàn bộ dữ liệu đang lưu</option>
-            </select>
-            <span>⌄</span>
-          </label>
-          <button class="primary-button" type="submit"><span>Tìm kiếm</span><span>⌕</span></button>
-        </form>
-      </section>
+  <!-- React CDNs -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-      <section class="content-wrap stats-grid" aria-label="Thống kê nhanh">
-        <article class="stat-card"><span class="stat-icon green">▧</span><div><strong id="metric-total">—</strong><span>Gói thầu phù hợp</span></div><div class="sparkline green-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-        <article class="stat-card"><span class="stat-icon sage">⌑</span><div><strong id="metric-open">—</strong><span>Đang mở</span></div><div class="barline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-        <article class="stat-card urgent-card"><span class="stat-icon coral">◷</span><div><strong id="metric-urgent">—</strong><span>Sắp đóng trong 3 ngày</span></div><div class="sparkline coral-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-        <article class="stat-card"><span class="stat-icon gold">◉</span><div><strong class="money-stat" id="metric-value">—</strong><span>Tổng giá trị dự toán</span></div><div class="barline gold-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-      </section>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    body {
+      background-color: #f7f7f5;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f0;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d6d3d1;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #a8a29e;
+    }
+    .shimmer {
+      background: linear-gradient(90deg, #f5f5f4 25%, #e7e5e4 50%, #f5f5f4 75%);
+      background-size: 200% 100%;
+      animation: shimmer-anim 1.5s infinite;
+    }
+    @keyframes shimmer-anim {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-neutral-800">
 
-      <section class="content-wrap dashboard-grid" id="goi-thau">
-        <div class="tender-panel">
-          <div class="panel-heading">
-            <div><p class="eyebrow small">DANH SÁCH THEO DÕI</p><h2>Gói thầu đáng chú ý</h2></div>
-            <div class="data-state" data-state="loading" id="data-state">
-              <span class="live-dot"></span>
-              <div><strong id="source-label">Đang tải dữ liệu</strong><span id="updated-label">Từ Hệ thống mạng đấu thầu quốc gia</span></div>
-              <button type="button" id="refresh-button" aria-label="Cập nhật dữ liệu">↻</button>
-            </div>
-          </div>
+  <div id="root"></div>
 
-          <div class="filter-row" aria-label="Lọc trạng thái" id="status-filter">
-            <button class="selected" data-status="all" type="button">Tất cả</button>
-            <button data-status="open" type="button">Đang mở</button>
-            <button data-status="urgent" type="button">Sắp đóng</button>
-            <button data-status="evaluating" type="button">Đang xét thầu</button>
-            <button data-status="closed" type="button">Chưa có kết quả</button>
-            <button data-status="no_bidder" type="button">Không có nhà thầu</button>
-            <button data-status="awarded" type="button">Đã có kết quả</button>
-            <button data-status="cancelled" type="button">Đã hủy</button>
-            <span id="result-count">0 kết quả</span>
-          </div>
+  <!-- React code with Babel -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
 
-          <div class="source-warning" id="source-warning" role="status" hidden></div>
-          <div class="tender-list" id="tender-list" aria-live="polite" aria-busy="true">
-            <div class="loading-copy">Đang đọc dữ liệu đấu thầu công khai…</div>
-          </div>
-          <nav class="pagination" id="pagination" aria-label="Phân trang danh sách gói thầu" hidden></nav>
-        </div>
+    function App() {
+      const [tenders, setTenders] = useState([]);
+      const [stats, setStats] = useState(null);
+      const [loading, setLoading] = useState(true);
+      const [statsLoading, setStatsLoading] = useState(true);
+      
+      // Filters
+      const [search, setSearch] = useState('');
+      const [province, setProvince] = useState('Toàn quốc');
+      const [sort, setSort] = useState('date-desc');
+      const [page, setPage] = useState(1);
+      const [total, setTotal] = useState(0);
+      const [limit] = useState(15);
+      
+      // Selected Tender Detail Modal
+      const [selectedTenderId, setSelectedTenderId] = useState(null);
+      const [tenderDetails, setTenderDetails] = useState(null);
+      const [detailLoading, setDetailLoading] = useState(false);
+      const [activeTab, setActiveTab] = useState('overview');
+      
+      // AI Summarizer State
+      const [aiSummary, setAiSummary] = useState('');
+      const [aiLoading, setAiLoading] = useState(false);
+      const [syncing, setSyncing] = useState(false);
+      const [toast, setToast] = useState(null);
+      const [lastSyncTime, setLastSyncTime] = useState(new Date().toLocaleTimeString('vi-VN'));
+      const [tbmtInput, setTbmtInput] = useState('');
+      const [tbmtSyncing, setTbmtSyncing] = useState(false);
 
-        <aside class="insight-panel" id="chu-dau-tu">
-          <div class="panel-heading compact"><div><p class="eyebrow small">PHÂN TÍCH NHANH</p><h2>Góc nhìn thị trường</h2></div><span>↗</span></div>
-          <div class="insight-hero"><span class="insight-icon">↗</span><div><strong id="open-percent">0%</strong><span>gói thầu còn mở</span></div></div>
-          <div class="insight-item"><span class="insight-icon gold">◉</span><div><strong id="average-value">—</strong><span>Giá trị trung bình mỗi gói</span></div></div>
-          <div class="investor-list"><p>Chủ đầu tư hoạt động nhiều · bấm để lọc</p><div id="investor-ranking"></div></div>
+      // Show toast helper
+      const showToast = (message, type = 'success') => {
+        setToast({ message, type });
+        setTimeout(() => setToast(null), 5000);
+      };
+
+      // Sync specific TBMT Code (e.g. IB2600421414)
+      const handleSyncSingleTbmt = async (e) => {
+        if (e) e.preventDefault();
+        if (!tbmtInput.trim()) {
+          showToast('Vui lòng nhập Mã TBMT (Ví dụ: IB2600421414)', 'error');
+          return;
+        }
+        setTbmtSyncing(true);
+        try {
+          const res = await fetch('/api/tenders/sync-single', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code: tbmtInput.trim() })
+          });
+          const result = await res.json();
+          if (result.success) {
+            showToast(result.message || `Đã quét và nạp gói thầu ${tbmtInput} thành công!`);
+            setSearch(tbmtInput.trim().toUpperCase());
+            setTbmtInput('');
+            await fetchStats();
+            await fetchTenders();
+            setLastSyncTime(new Date().toLocaleTimeString('vi-VN'));
+          } else {
+            showToast(result.error || 'Không thể đồng bộ gói thầu này', 'error');
+          }
+        } catch (err) {
+          console.error(err);
+          showToast('Lỗi kết nối khi đồng bộ mã TBMT', 'error');
+        } finally {
+          setTbmtSyncing(false);
+        }
+      };
+
+      // Trigger Rescan / Sync
+      const handleSyncData = async () => {
+        setSyncing(true);
+        try {
+          const res = await fetch('/api/crawler/sync', { 
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ addNewBatches: 25 })
+          });
+          const result = await res.json();
+          if (result.success) {
+            await fetchStats();
+            await fetchTenders();
+            setLastSyncTime(new Date().toLocaleTimeString('vi-VN'));
+            showToast(result.message || 'Đã quét và đồng bộ thành công các gói thầu mới!');
+          } else {
+            showToast('Không thể đồng bộ: ' + (result.error || 'Lỗi không xác định'), 'error');
+          }
+        } catch (err) {
+          console.error('Lỗi khi đồng bộ:', err);
+          showToast('Lỗi kết nối khi quét dữ liệu.', 'error');
+        } finally {
+          setSyncing(false);
+        }
+      };
+
+      // Fetch Tenders List
+      const fetchTenders = async () => {
+        setLoading(true);
+        try {
+          const url = `/api/tenders?search=${encodeURIComponent(search)}&province=${encodeURIComponent(province)}&sort=${sort}&page=${page}&limit=${limit}`;
+          const res = await fetch(url);
+          const result = await res.json();
+          setTenders(result.data || []);
+          setTotal(result.total || 0);
+        } catch (error) {
+          console.error('Lỗi khi tải danh sách gói thầu:', error);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      // Fetch stats
+      const fetchStats = async () => {
+        setStatsLoading(true);
+        try {
+          const res = await fetch('/api/stats');
+          const data = await res.json();
+          setStats(data);
+          setLastSyncTime(new Date().toLocaleTimeString('vi-VN'));
+        } catch (error) {
+          console.error('Lỗi khi tải thống kê:', error);
+        } finally {
+          setStatsLoading(false);
+        }
+      };
+
+      useEffect(() => {
+        fetchStats();
+      }, []);
+
+      useEffect(() => {
+        fetchTenders();
+      }, [search, province, sort, page]);
+
+      // Live background auto-polling every 12 seconds
+      useEffect(() => {
+        const interval = setInterval(async () => {
+          try {
+            const res = await fetch('/api/stats');
+            const data = await res.json();
+            if (data && data.totalCount !== stats?.totalCount) {
+              setStats(data);
+              fetchTenders();
+              setLastSyncTime(new Date().toLocaleTimeString('vi-VN'));
+            }
+          } catch (e) {}
+        }, 12000);
+        return () => clearInterval(interval);
+      }, [stats?.totalCount, search, province, sort, page]);
+
+      // Debounce input helper or direct input search
+      const handleSearchChange = (e) => {
+        setSearch(e.target.value);
+        setPage(1); // Reset page on query change
+      };
+
+      // Open Tender details
+      const openTenderDetails = async (id) => {
+        setSelectedTenderId(id);
+        setTenderDetails(null);
+        setAiSummary('');
+        setActiveTab('overview');
+        setDetailLoading(true);
+        
+        try {
+          const res = await fetch(`/api/tenders/${id}`);
+          if (res.ok) {
+            const data = await res.json();
+            setTenderDetails(data);
+          } else {
+            alert('Không tìm thấy thông tin chi tiết gói thầu này.');
+            setSelectedTenderId(null);
+          }
+        } catch (error) {
+          console.error('Lỗi tải chi tiết gói thầu:', error);
+        } finally {
+          setDetailLoading(false);
+        }
+      };
+
+      // Generate AI summary
+      const generateAISummary = async (id) => {
+        setAiLoading(true);
+        setAiSummary('');
+        try {
+          const res = await fetch(`/api/tenders/${id}/summarize`, { method: 'POST' });
+          const result = await res.json();
+          setAiSummary(result.summary || 'Không có kết quả.');
+        } catch (error) {
+          setAiSummary('Lỗi hệ thống khi sinh tóm tắt AI: ' + error.message);
+        } finally {
+          setAiLoading(false);
+        }
+      };
+
+      // Render Lucide Icon Helper
+      useEffect(() => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      }, [tenders, stats, selectedTenderId, tenderDetails, detailLoading, aiSummary, aiLoading]);
+
+      // Format currency to VND short scale
+      const formatCurrency = (val) => {
+        if (!val || val === 0) return '0 đ';
+        if (val >= 1e9) {
+          return `${(val / 1e9).toFixed(2)} tỷ VNĐ`;
+        }
+        return `${(val / 1e6).toFixed(0)} triệu VNĐ`;
+      };
+
+      const formatFullCurrency = (val) => {
+        if (!val) return '0 đ';
+        return val.toLocaleString('vi-VN') + ' đ';
+      };
+
+      return (
+        <div id="main-container" class="min-h-screen flex flex-col bg-neutral-100">
           
-          <!-- Interactive Company Portfolio & Capability Profile Configurator -->
-          <div class="kv-portfolio-card" style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-soft);">
-            <p class="eyebrow small" id="kv-profile-eyebrow" style="color: #b88230; margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">ĐỐI CHIẾU NĂNG LỰC NHÀ THẦU</p>
+          {/* Top Elegant Navbar */}
+          <nav id="navbar" class="bg-neutral-900 text-white shadow-md border-b border-neutral-800 sticky top-0 z-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                  <div class="p-2 bg-brand-600 rounded-lg text-white">
+                    <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h1 class="font-serif text-lg font-bold tracking-tight text-neutral-100 md:text-xl">
+                      ANALYTICA Y TẾ <span class="font-sans font-light text-sm text-brand-300 ml-1">GIA LAI & TOÀN QUỐC</span>
+                    </h1>
+                    <p class="text-xs text-neutral-400 font-sans tracking-wide flex items-center space-x-2">
+                      <span>Phân tích thông minh đấu thầu trang thiết bị y tế</span>
+                      <span class="text-neutral-600">•</span>
+                      <span class="text-emerald-400">Đồng bộ: {lastSyncTime}</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="hidden sm:flex items-center space-x-1.5 text-xs text-emerald-400 font-sans px-3 py-1.5 bg-emerald-950/60 border border-emerald-800/60 rounded-full">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+                    <span>Tự động quét nền</span>
+                  </div>
+                  <div class="flex items-center space-x-1.5 text-xs text-neutral-300 font-sans px-3 py-1.5 bg-neutral-800 rounded-full border border-neutral-700">
+                    <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span class="font-semibold">{stats?.totalCount || 0}</span>
+                    <span class="text-neutral-400">Gói Thầu</span>
+                  </div>
+                  <button
+                    onClick={handleSyncData}
+                    disabled={syncing}
+                    class="flex items-center space-x-1.5 text-xs font-semibold px-3.5 py-1.5 bg-brand-600 hover:bg-brand-500 text-white rounded-lg transition duration-150 shadow-sm disabled:opacity-50"
+                  >
+                    <i data-lucide={syncing ? "loader-2" : "refresh-cw"} class={`w-3.5 h-3.5 ${syncing ? "animate-spin" : ""}`}></i>
+                    <span>{syncing ? "Đang quét..." : "Quét gói mới"}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          {/* Toast Notification Alert */}
+          {toast && (
+            <div class="fixed top-20 right-6 z-50 animate-bounce">
+              <div class={`px-4 py-3 rounded-xl shadow-xl flex items-center space-x-2 text-sm font-medium border ${
+                toast.type === 'error' 
+                  ? 'bg-red-900/90 text-red-100 border-red-700' 
+                  : 'bg-emerald-900/95 text-emerald-100 border-emerald-700'
+              }`}>
+                <i data-lucide={toast.type === 'error' ? 'alert-triangle' : 'check-circle-2'} class="w-5 h-5 flex-shrink-0"></i>
+                <span>{toast.message}</span>
+              </div>
+            </div>
+          )}
+
+          {/* Core App Stage */}
+          <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 space-y-6">
             
-            <!-- Segmented Control Tabs -->
-            <div style="display: flex; background: #f5eae0; padding: 3px; border-radius: 8px; margin-bottom: 14px; gap: 4px;">
-              <button type="button" id="tab-btn-portfolio" class="active" style="flex: 1; padding: 6px 4px; font-size: 11.5px; font-weight: 600; border-radius: 6px; border: none; cursor: pointer; transition: all 0.2s ease; background: #fff; color: #b88230; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">Dự án Đã Làm</button>
-              <button type="button" id="tab-btn-config" style="flex: 1; padding: 6px 4px; font-size: 11.5px; font-weight: 600; border-radius: 6px; border: none; cursor: pointer; transition: all 0.2s ease; background: transparent; color: #5c4e3c;">Cấu hình HSNL ⚙️</button>
+            {/* High-End Stats Ribbon */}
+            <div id="stats-ribbon" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {statsLoading ? (
+                Array(4).fill(0).map((_, idx) => (
+                  <div key={idx} class="shimmer h-24 rounded-xl border border-neutral-200"></div>
+                ))
+              ) : (
+                <React.Fragment>
+                  <div class="bg-white p-5 rounded-xl border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-semibold uppercase tracking-wider text-neutral-500">Gia Lai (Chuyên biệt)</span>
+                      <div class="p-1 bg-amber-50 rounded-lg text-amber-600">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                      </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline space-x-2">
+                      <span class="text-3xl font-bold text-neutral-900">{stats?.giaLaiCount}</span>
+                      <span class="text-xs text-neutral-400">Gói thầu</span>
+                    </div>
+                  </div>
+
+                  <div class="bg-white p-5 rounded-xl border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-semibold uppercase tracking-wider text-neutral-500">Gói Toàn Quốc</span>
+                      <div class="p-1 bg-brand-50 rounded-lg text-brand-600">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                      </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline space-x-2">
+                      <span class="text-3xl font-bold text-neutral-900">{stats?.otherCount}</span>
+                      <span class="text-xs text-neutral-400">Gói thầu</span>
+                    </div>
+                  </div>
+
+                  <div class="bg-white p-5 rounded-xl border border-neutral-200 shadow-sm flex flex-col justify-between col-span-1">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-semibold uppercase tracking-wider text-neutral-500">Giá Trị Dự Toán</span>
+                      <div class="p-1 bg-emerald-50 rounded-lg text-emerald-600">
+                        <i data-lucide="banknote" class="w-5 h-5"></i>
+                      </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline space-x-2">
+                      <span class="text-2xl font-bold text-neutral-900">{formatCurrency(stats?.totalValue)}</span>
+                    </div>
+                  </div>
+
+                  <div class="bg-white p-5 rounded-xl border border-neutral-200 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-semibold uppercase tracking-wider text-neutral-500">Tổng Số Gói Thầu</span>
+                      <div class="p-1 bg-purple-50 rounded-lg text-purple-600">
+                        <i data-lucide="database" class="w-5 h-5"></i>
+                      </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline space-x-2">
+                      <span class="text-3xl font-bold text-neutral-900">{stats?.totalCount}</span>
+                      <span class="text-xs text-neutral-400">Tổng kho</span>
+                    </div>
+                  </div>
+                </React.Fragment>
+              )}
             </div>
 
-            <!-- Tab 1: Portfolio List View -->
-            <div id="kv-tab-portfolio-view">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                <span id="kv-display-name-label" style="font-size: 13px; font-weight: 700; color: #333;">Công ty TNHH Kiểu Việt</span>
-                <span style="background: #e8f5e9; color: #1b5e20; font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px; border: 1px solid #c8e6c9;">Đã kiểm thực 🛡️</span>
-              </div>
+            {/* Dashboard Content split into sidebar stats and table */}
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
               
-              <!-- Quick Search for Portfolio projects -->
-              <div style="position: relative; margin-bottom: 12px;">
-                <input type="text" id="kv-portfolio-search" placeholder="Tìm dự án, thiết bị, địa bàn..." style="width: 100%; padding: 6px 10px 6px 28px; font-size: 12px; border: 1px solid var(--border-soft); border-radius: 6px; background: #fffcf7; color: #333;" />
-                <span style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font-size: 12px; color: #999;">⌕</span>
+              {/* Left Column: Aggregated Lists & Quick Insights */}
+              <div class="space-y-6 lg:col-span-1">
+                
+                {/* Hospital Activities Chart Card */}
+                <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-5 space-y-4">
+                  <div class="flex items-center space-x-2 pb-2 border-b border-neutral-100">
+                    <i data-lucide="landmark" class="w-4 h-4 text-brand-600"></i>
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-neutral-700">Chủ đầu tư tích cực nhất</h3>
+                  </div>
+                  {statsLoading ? (
+                    <div class="space-y-3">
+                      {Array(5).fill(0).map((_, i) => <div key={i} class="shimmer h-8 rounded-lg w-full"></div>)}
+                    </div>
+                  ) : (
+                    <div class="space-y-3 text-xs">
+                      {stats?.topHospitals?.map((h, i) => (
+                        <div key={i} class="flex items-center justify-between p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 transition duration-150">
+                          <span class="font-medium text-neutral-700 truncate max-w-[180px]" title={h.name}>{cleanBuyerName(h.name)}</span>
+                          <span class="px-2 py-0.5 bg-brand-100 text-brand-700 font-semibold rounded-full">{h.count} gói</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Country of Origin Card */}
+                <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-5 space-y-4">
+                  <div class="flex items-center space-x-2 pb-2 border-b border-neutral-100">
+                    <i data-lucide="factory" class="w-4 h-4 text-brand-600"></i>
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-neutral-700">Xuất xứ thiết bị phổ biến</h3>
+                  </div>
+                  {statsLoading ? (
+                    <div class="space-y-3">
+                      {Array(5).fill(0).map((_, i) => <div key={i} class="shimmer h-8 rounded-lg w-full"></div>)}
+                    </div>
+                  ) : (
+                    <div class="space-y-3 text-xs">
+                      {stats?.topOrigins?.map((o, i) => (
+                        <div key={i} class="flex items-center justify-between p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 transition duration-150">
+                          <span class="font-medium text-neutral-700 truncate max-w-[180px]">{o.name}</span>
+                          <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 font-semibold rounded-full">{o.count} mục</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
               </div>
 
-              <div id="kv-portfolio-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; padding-right: 2px;">
-                <!-- Dynamic list will be rendered by JavaScript -->
+              {/* Right Column: Search Filtering & Primary Table of Tenders */}
+              <div class="lg:col-span-3 space-y-6">
+                
+                {/* Muasamcong Direct Code Sync Banner */}
+                <div class="bg-gradient-to-r from-amber-50/90 via-orange-50/60 to-amber-50/90 p-4 sm:p-5 rounded-xl border border-amber-200/80 shadow-sm">
+                  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-amber-600 font-bold text-sm flex items-center gap-1">
+                          <i data-lucide="zap" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+                          Đồng bộ & Cập nhật gói thầu trực tiếp từ Muasamcong
+                        </span>
+                      </div>
+                      <p class="text-xs text-neutral-600 max-w-xl">
+                        Hệ thống kết nối và quét đầy đủ chi tiết HSMT, danh mục máy móc, vật tư y tế và thông tin nhà thầu theo bất kỳ Mã thông báo mời thầu (TBMT) nào của bạn.
+                      </p>
+                    </div>
+                    <form onSubmit={handleSyncSingleTbmt} class="flex items-center space-x-2 w-full md:w-auto">
+                      <div class="relative flex-grow md:w-64">
+                        <input
+                          type="text"
+                          value={tbmtInput}
+                          onChange={(e) => setTbmtInput(e.target.value)}
+                          placeholder="Nhập Mã TBMT (Ví dụ: IB2600421414)"
+                          class="w-full pl-3 pr-3 py-2 text-xs font-mono bg-white border border-amber-300 rounded-lg shadow-inner outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-neutral-900 placeholder:text-neutral-400 uppercase"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        disabled={tbmtSyncing}
+                        class="px-4 py-2 text-xs font-bold text-white bg-amber-700 hover:bg-amber-800 disabled:opacity-50 rounded-lg shadow transition duration-150 flex items-center space-x-1.5 whitespace-nowrap"
+                      >
+                        <i data-lucide={tbmtSyncing ? "loader-2" : "download-cloud"} class={`w-3.5 h-3.5 ${tbmtSyncing ? "animate-spin" : ""}`}></i>
+                        <span>{tbmtSyncing ? "Đang quét..." : "Đồng bộ thầu"}</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+                {/* Filters Board */}
+                <div class="bg-white p-5 rounded-xl border border-neutral-200 shadow-sm space-y-4">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    
+                    {/* Province selectors */}
+                    <div class="flex items-center bg-neutral-100 p-1 rounded-xl w-fit">
+                      {['Toàn quốc', 'Gia Lai', 'Tỉnh khác'].map((p) => (
+                        <button
+                          key={p}
+                          onClick={() => { setProvince(p); setPage(1); }}
+                          class={`px-4 py-2 text-xs font-semibold rounded-lg transition duration-150 whitespace-nowrap ${
+                            province === p
+                              ? 'bg-white text-neutral-900 shadow-sm'
+                              : 'text-neutral-500 hover:text-neutral-950'
+                          }`}
+                        >
+                          {p === 'Toàn quốc' ? 'Toàn bộ thầu' : p === 'Gia Lai' ? '🏥 Gia Lai' : 'Tỉnh khác'}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Sorting selector */}
+                    <div class="flex items-center space-x-2 text-xs">
+                      <span class="text-neutral-400">Sắp xếp:</span>
+                      <select
+                        value={sort}
+                        onChange={(e) => setSort(e.target.value)}
+                        class="bg-neutral-50 border border-neutral-200 rounded-lg p-2 font-medium text-neutral-700 outline-none focus:border-brand-500"
+                      >
+                        <option value="date-desc">Mới nhất</option>
+                        <option value="date-asc">Cũ nhất</option>
+                        <option value="price-desc">Giá trị giảm dần</option>
+                        <option value="price-asc">Giá trị tăng dần</option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                  {/* Keyword searching bar */}
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400">
+                      <i data-lucide="search" class="w-4 h-4"></i>
+                    </span>
+                    <input
+                      type="text"
+                      value={search}
+                      onChange={handleSearchChange}
+                      placeholder="Tìm kiếm theo mã thầu, tên gói thầu, tên chủ đầu tư hoặc vật tư y tế..."
+                      class="w-full bg-neutral-50 border border-neutral-200 text-sm rounded-xl pl-10 pr-4 py-3 outline-none focus:border-brand-500 focus:bg-white transition duration-150"
+                    />
+                  </div>
+                </div>
+
+                {/* Primary Tenders List Container */}
+                <div class="bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
+                  <div class="px-5 py-4 border-b border-neutral-100 flex items-center justify-between bg-neutral-50">
+                    <span class="text-xs font-bold text-neutral-600 uppercase tracking-wider">Danh sách kết quả ({total} gói thầu)</span>
+                  </div>
+
+                  {loading ? (
+                    <div class="p-6 space-y-4">
+                      {Array(5).fill(0).map((_, i) => (
+                        <div key={i} class="shimmer h-12 rounded-lg w-full"></div>
+                      ))}
+                    </div>
+                  ) : tenders.length === 0 ? (
+                    <div class="p-16 text-center space-y-3">
+                      <div class="p-3 bg-neutral-100 rounded-full w-fit mx-auto text-neutral-400">
+                        <i data-lucide="alert-circle" class="w-8 h-8"></i>
+                      </div>
+                      <h4 class="text-sm font-semibold text-neutral-700">Không tìm thấy gói thầu nào</h4>
+                      <p class="text-xs text-neutral-400 max-w-md mx-auto">
+                        Thử điều chỉnh từ khóa tìm kiếm hoặc chuyển đổi bộ lọc phạm vi tỉnh thành phố.
+                      </p>
+                    </div>
+                  ) : (
+                    <div class="overflow-x-auto custom-scrollbar">
+                      <table class="min-w-full divide-y divide-neutral-200 text-xs">
+                        <thead>
+                          <tr class="bg-neutral-50/50 text-neutral-400 uppercase text-left tracking-wider">
+                            <th class="px-6 py-3 font-semibold">Mã thầu</th>
+                            <th class="px-6 py-3 font-semibold">Tên gói thầu</th>
+                            <th class="px-6 py-3 font-semibold">Bên mời thầu / Địa điểm</th>
+                            <th class="px-6 py-3 font-semibold">Giá dự toán</th>
+                            <th class="px-6 py-3 font-semibold text-center">Tác vụ</th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-neutral-100 bg-white">
+                          {tenders.map((tender) => (
+                            <tr key={tender.id} class="hover:bg-neutral-50 transition duration-150">
+                              <td class="px-6 py-4 whitespace-nowrap font-mono font-semibold text-brand-700">
+                                <div class="flex items-center space-x-1.5">
+                                  <span>{tender.id}</span>
+                                  {tender.date && tender.date.startsWith('2026-08-2') && (
+                                    <span class="px-1.5 py-0.2 bg-rose-500 text-white text-[9px] font-bold uppercase rounded tracking-wider animate-pulse">
+                                      MỚI
+                                    </span>
+                                  )}
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 max-w-sm">
+                                <div class="font-medium text-neutral-900 line-clamp-2" title={tender.title}>
+                                  {tender.title}
+                                </div>
+                                <div class="flex items-center space-x-2 mt-1.5">
+                                  <span class="px-2 py-0.5 bg-neutral-100 text-neutral-600 rounded font-medium text-[10px]">
+                                    {tender.itemsCount} mặt hàng
+                                  </span>
+                                  <span class="text-[10px] text-neutral-400">
+                                    Nộp ngày: {tender.date}
+                                  </span>
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 max-w-xs">
+                                <div class="text-neutral-700 truncate" title={tender.buyer}>
+                                  {tender.buyer}
+                                </div>
+                                <div class="flex items-center space-x-1 mt-1 text-[10px] text-neutral-400">
+                                  <span class={`px-1.5 py-0.2 rounded font-semibold ${
+                                    tender.province === 'Gia Lai' 
+                                      ? 'bg-amber-100 text-amber-800' 
+                                      : 'bg-neutral-100 text-neutral-600'
+                                  }`}>
+                                    {tender.province}
+                                  </span>
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-nowrap font-semibold text-neutral-900">
+                                {formatCurrency(tender.plannedPrice)}
+                              </td>
+                              <td class="px-6 py-4 whitespace-nowrap text-center space-x-2">
+                                <button
+                                  onClick={() => openTenderDetails(tender.id)}
+                                  class="px-3 py-1.5 bg-neutral-900 hover:bg-neutral-800 text-white rounded font-medium transition duration-150 inline-flex items-center space-x-1"
+                                >
+                                  <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                                  <span>Chi tiết</span>
+                                </button>
+                                <button
+                                  onClick={() => { openTenderDetails(tender.id); setTimeout(() => generateAISummary(tender.id), 200); }}
+                                  class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white rounded font-medium transition duration-150 inline-flex items-center space-x-1"
+                                >
+                                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                                  <span>Tóm tắt AI</span>
+                                </button>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+
+                  {/* Pagination control */}
+                  <div class="px-5 py-4 bg-neutral-50/50 border-t border-neutral-100 flex items-center justify-between text-xs">
+                    <span class="text-neutral-500">
+                      Hiển thị {Math.min(total, (page - 1) * limit + 1)} - {Math.min(total, page * limit)} trong số {total} kết quả
+                    </span>
+                    <div class="flex items-center space-x-2">
+                      <button
+                        onClick={() => setPage(p => Math.max(1, p - 1))}
+                        disabled={page === 1}
+                        class="px-3 py-1.5 border border-neutral-200 rounded-lg hover:bg-white text-neutral-600 font-semibold disabled:opacity-50 disabled:hover:bg-transparent"
+                      >
+                        Trước
+                      </button>
+                      <span class="font-bold text-neutral-700">Trang {page} / {Math.max(1, Math.ceil(total / limit))}</span>
+                      <button
+                        onClick={() => setPage(p => Math.min(Math.ceil(total / limit), p + 1))}
+                        disabled={page === Math.ceil(total / limit) || total === 0}
+                        class="px-3 py-1.5 border border-neutral-200 rounded-lg hover:bg-white text-neutral-600 font-semibold disabled:opacity-50 disabled:hover:bg-transparent"
+                      >
+                        Sau
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
             </div>
 
-            <!-- Tab 2: Profile Customization & Upload Form -->
-            <div id="kv-tab-profile-edit" style="display: none;">
-              <form id="kv-profile-form" style="display: flex; flex-direction: column; gap: 12px; font-size: 12px;">
-                <!-- File Import Zone -->
-                <div id="kv-drag-zone" style="border: 2px dashed #b88230; border-radius: 8px; padding: 12px; text-align: center; background: #fffbf5; cursor: pointer; transition: background 0.2s;">
-                  <span style="font-size: 18px; display: block; margin-bottom: 4px;">📂</span>
-                  <strong style="color: #b88230; font-size: 11px; display: block;">Tải Hồ sơ lên (File JSON)</strong>
-                  <span style="font-size: 10px; color: #666; display: block; margin-top: 2px;">Kéo thả hoặc bấm để nhập profile của bạn</span>
-                  <input type="file" id="kv-profile-file-input" accept=".json" style="display: none;" />
-                </div>
+          </main>
 
-                <!-- Quick Template Selection -->
-                <div style="background: #fdf6ec; border: 1px solid #f5dab1; border-radius: 8px; padding: 10px;">
-                  <strong style="display: block; font-size: 11px; color: #b88230; margin-bottom: 6px; font-weight: 700;">💡 ÁP DỤNG NHANH HỒ SƠ MẪU:</strong>
-                  <div style="display: flex; flex-direction: column; gap: 6px;">
-                    <button type="button" class="kv-tpl-btn" data-tpl="kieu_viet" style="background: #fff; border: 1px solid #b88230; color: #b88230; padding: 6px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background 0.2s;">
-                      <span>🏥 Hệ sinh thái Kiểu Việt (Hạ tầng & Y tế Gốc)</span>
-                      <span style="font-size: 9px; background: #b88230; color: #fff; padding: 1px 4px; border-radius: 3px;">Hồ sơ Gốc</span>
-                    </button>
-                    <button type="button" class="kv-tpl-btn" data-tpl="med_equip" style="background: #fff; border: 1px solid #1b5e20; color: #1b5e20; padding: 6px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background 0.2s;">
-                      <span>🔬 Thiết bị Y tế Quy Nhơn</span>
-                      <span style="font-size: 9px; background: #1b5e20; color: #fff; padding: 1px 4px; border-radius: 3px;">Hợp Thiết Bị</span>
-                    </button>
-                    <button type="button" class="kv-tpl-btn" data-tpl="med_supplies" style="background: #fff; border: 1px solid #0288d1; color: #0288d1; padding: 6px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background 0.2s;">
-                      <span>💊 Dược phẩm & Vật tư Gia Lai</span>
-                      <span style="font-size: 9px; background: #0288d1; color: #fff; padding: 1px 4px; border-radius: 3px;">Hợp Vật Tư</span>
-                    </button>
+          {/* Elegant Drawer / Modal for Tender Details */}
+          {selectedTenderId && (
+            <div id="modal-container" class="fixed inset-0 bg-neutral-900/60 backdrop-blur-sm z-50 flex justify-end">
+              
+              {/* Escape Click area */}
+              <div class="absolute inset-0" onClick={() => setSelectedTenderId(null)}></div>
+              
+              {/* Detailed panel */}
+              <div class="relative bg-white w-full max-w-4xl h-full shadow-2xl flex flex-col z-10 transition duration-300">
+                
+                {/* Header of Detail */}
+                <div class="px-6 py-5 border-b border-neutral-100 flex items-center justify-between bg-neutral-50">
+                  <div class="space-y-1">
+                    <div class="flex items-center space-x-2">
+                      <span class="px-2.5 py-0.5 bg-brand-100 text-brand-800 rounded font-bold text-xs uppercase font-mono">
+                        Mã Thầu: {selectedTenderId}
+                      </span>
+                      <span class="text-xs text-neutral-400">
+                        Bản ghi hệ thống mảng đấu thầu
+                      </span>
+                    </div>
+                    <h2 class="text-base font-bold text-neutral-900 line-clamp-1" title={tenderDetails?.requirements?.summary}>
+                      {tenderDetails ? tenderDetails.requirements?.summary : 'Đang tải thông tin...'}
+                    </h2>
                   </div>
+                  <button
+                    onClick={() => setSelectedTenderId(null)}
+                    class="p-2 hover:bg-neutral-200 rounded-full text-neutral-500 hover:text-neutral-900 transition duration-150"
+                  >
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                  </button>
                 </div>
 
-                <!-- Basic Fields -->
-                <div>
-                  <label style="display: block; font-weight: 600; color: #555; margin-bottom: 4px;">Tên Doanh nghiệp / Nhà thầu:</label>
-                  <input type="text" id="kv-input-name" style="width: 100%; padding: 6px 8px; border: 1px solid var(--border-soft); border-radius: 6px; font-size: 12px;" required />
-                </div>
-
-                <div>
-                  <label style="display: block; font-weight: 600; color: #555; margin-bottom: 4px;">Lĩnh vực Hoạt động (Từ khóa phân tách bằng dấu phẩy):</label>
-                  <textarea id="kv-input-business" rows="3" style="width: 100%; padding: 6px 8px; border: 1px solid var(--border-soft); border-radius: 6px; font-size: 11.5px; line-height: 1.4; font-family: inherit;" required></textarea>
-                  <span style="font-size: 10px; color: #777; display: block; margin-top: 2px;">Ví dụ: bê tông, cát xây dựng, đá móng, vật tư y tế, siêu âm...</span>
-                </div>
-
-                <div>
-                  <label style="display: block; font-weight: 600; color: #555; margin-bottom: 4px;">Địa bàn thế mạnh (Tỉnh/Thành phố):</label>
-                  <input type="text" id="kv-input-locations" style="width: 100%; padding: 6px 8px; border: 1px solid var(--border-soft); border-radius: 6px; font-size: 12px;" required />
-                </div>
-
-                <!-- Contracts List Management -->
-                <div>
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                    <strong style="font-weight: 600; color: #555;">Hợp đồng tương tự (${DEFAULT_COMPANY_PROFILE.projects.length})</strong>
-                    <button type="button" id="kv-add-contract-btn" style="background: #b88230; color: #fff; border: none; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; cursor: pointer;">+ Thêm</button>
+                {/* Main panel body */}
+                {detailLoading ? (
+                  <div class="flex-grow p-12 space-y-6">
+                    <div class="shimmer h-12 rounded-xl w-full"></div>
+                    <div class="shimmer h-32 rounded-xl w-full"></div>
+                    <div class="shimmer h-48 rounded-xl w-full"></div>
                   </div>
-                  
-                  <div id="kv-contracts-edit-list" style="display: flex; flex-direction: column; gap: 6px; max-height: 160px; overflow-y: auto; padding: 4px; border: 1px solid var(--border-soft); border-radius: 6px; background: #fafafa;">
-                    <!-- Managed dynamically by JS -->
+                ) : tenderDetails && (
+                  <div class="flex-grow flex flex-col min-h-0">
+                    
+                    {/* Tab Selectors */}
+                    <div class="px-6 border-b border-neutral-100 flex space-x-6 text-xs font-semibold bg-neutral-50/50">
+                      {[
+                        { id: 'overview', label: 'Tổng quan', icon: 'info' },
+                        { id: 'items', label: `Sản phẩm (${tenderDetails.technicalRequirements?.items?.length || tenderDetails.requirements?.items?.length || 0})`, icon: 'package' },
+                        { id: 'bidders', label: `Nhà thầu (${tenderDetails.bidders?.length || 0})`, icon: 'users' },
+                        { id: 'ai', label: 'Tóm tắt AI Gemini', icon: 'sparkles' }
+                      ].map((tab) => (
+                        <button
+                          key={tab.id}
+                          onClick={() => setActiveTab(tab.id)}
+                          class={`py-3.5 border-b-2 transition duration-150 inline-flex items-center space-x-1.5 ${
+                            activeTab === tab.id
+                              ? 'border-brand-500 text-brand-600'
+                              : 'border-transparent text-neutral-500 hover:text-neutral-900'
+                          }`}
+                        >
+                          <i data-lucide={tab.icon} class="w-4 h-4"></i>
+                          <span>{tab.label}</span>
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Tab panels container */}
+                    <div class="flex-grow overflow-y-auto p-6 custom-scrollbar text-xs">
+                      
+                      {/* OVERVIEW PANEL */}
+                      {activeTab === 'overview' && (
+                        <div class="space-y-6">
+                          
+                          {/* Top key indicators */}
+                          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="bg-neutral-50 p-4 rounded-xl border border-neutral-150">
+                              <span class="text-neutral-400 block pb-1">Tổng giá trị dự toán</span>
+                              <span class="text-base font-bold text-neutral-900">
+                                {formatFullCurrency(tenderDetails.requirements?.items?.reduce((sum, item) => sum + (item.plannedPrice || 0), 0) || tenderDetails.technicalRequirements?.items?.reduce((sum, item) => sum + (item.plannedPrice || 0), 0))}
+                              </span>
+                            </div>
+                            <div class="bg-neutral-50 p-4 rounded-xl border border-neutral-150">
+                              <span class="text-neutral-400 block pb-1">Ngày thu thập</span>
+                              <span class="text-base font-bold text-neutral-900">
+                                {tenderDetails.fetchedAt ? tenderDetails.fetchedAt.split('T')[0] : 'Không rõ'}
+                              </span>
+                            </div>
+                            <div class="bg-neutral-50 p-4 rounded-xl border border-neutral-150 col-span-2 md:col-span-1">
+                              <span class="text-neutral-400 block pb-1">Bên mời thầu</span>
+                              <span class="text-base font-bold text-neutral-900 truncate block">
+                                {tenderDetails.technicalRequirements?.items?.[0]?.projectPlace || 'Bệnh viện Gia Lai'}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Full summary text */}
+                          <div class="space-y-2">
+                            <h4 class="text-sm font-bold text-neutral-700">Mô tả đầy đủ gói thầu</h4>
+                            <p class="text-neutral-600 leading-relaxed bg-neutral-50 p-4 rounded-xl border border-neutral-100 text-sm">
+                              {tenderDetails.requirements?.summary}
+                            </p>
+                          </div>
+
+                        </div>
+                      )}
+
+                      {/* TECHNICAL ITEMS PANEL */}
+                      {activeTab === 'items' && (
+                        <div class="space-y-4">
+                          <h4 class="text-sm font-bold text-neutral-700">Danh mục thiết bị / Vật tư kỹ thuật</h4>
+                          
+                          {/* List of items */}
+                          {(!tenderDetails.technicalRequirements?.items || tenderDetails.technicalRequirements.items.length === 0) && (!tenderDetails.requirements?.items || tenderDetails.requirements.items.length === 0) ? (
+                            <div class="text-center py-12 text-neutral-400">
+                              Chưa có thông tin danh mục kỹ thuật cho gói thầu này.
+                            </div>
+                          ) : (
+                            <div class="border border-neutral-200 rounded-xl overflow-hidden">
+                              <table class="min-w-full divide-y divide-neutral-200 text-left">
+                                <thead class="bg-neutral-50">
+                                  <tr class="text-neutral-400 font-semibold uppercase">
+                                    <th class="px-4 py-2.5">Tên thiết bị</th>
+                                    <th class="px-4 py-2.5">Thông số kỹ thuật</th>
+                                    <th class="px-4 py-2.5 text-center">SL / Đơn vị</th>
+                                    <th class="px-4 py-2.5">Hãng / Xuất xứ</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="divide-y divide-neutral-100 bg-white">
+                                  {(tenderDetails.technicalRequirements?.items || tenderDetails.requirements?.items || []).map((item, idx) => (
+                                    <tr key={idx} class="hover:bg-neutral-50">
+                                      <td class="px-4 py-3 font-semibold text-neutral-950 max-w-[200px]">
+                                        {item.name}
+                                        {item.lotNo && <div class="text-[9px] text-neutral-400 font-normal">Lô: {item.lotNo}</div>}
+                                      </td>
+                                      <td class="px-4 py-3 text-neutral-600 max-w-sm">
+                                        <p class="line-clamp-3 leading-normal" title={item.specification}>
+                                          {item.specification || 'Chưa cập nhật thông số kĩ thuật'}
+                                        </p>
+                                      </td>
+                                      <td class="px-4 py-3 text-center whitespace-nowrap">
+                                        <div class="font-bold text-neutral-900">{item.quantity || 1}</div>
+                                        <div class="text-neutral-400 text-[10px]">{item.unit || 'Cái'}</div>
+                                      </td>
+                                      <td class="px-4 py-3">
+                                        <div class="font-medium text-neutral-800">{item.manufacturer || item.brand || 'Chưa rõ'}</div>
+                                        <span class="px-1.5 py-0.2 bg-emerald-50 text-emerald-800 rounded font-semibold text-[10px] mt-0.5 inline-block">
+                                          {item.origin || 'Không rõ xuất xứ'}
+                                        </span>
+                                      </td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* BIDDERS PANEL */}
+                      {activeTab === 'bidders' && (
+                        <div class="space-y-4">
+                          <h4 class="text-sm font-bold text-neutral-700">Các nhà thầu tham gia</h4>
+                          
+                          {!tenderDetails.bidders || tenderDetails.bidders.length === 0 ? (
+                            <div class="text-center py-12 text-neutral-400">
+                              Không tìm thấy thông tin nhà thầu nộp thầu cho tệp ghi nhận này.
+                            </div>
+                          ) : (
+                            <div class="border border-neutral-200 rounded-xl overflow-hidden">
+                              <table class="min-w-full divide-y divide-neutral-200 text-left">
+                                <thead class="bg-neutral-50">
+                                  <tr class="text-neutral-400 font-semibold uppercase">
+                                    <th class="px-4 py-2.5">Tên nhà thầu</th>
+                                    <th class="px-4 py-2.5">Trạng thái</th>
+                                    <th class="px-4 py-2.5">Giá chào thầu</th>
+                                    <th class="px-4 py-2.5">Giá cuối cùng</th>
+                                    <th class="px-4 py-2.5">Nộp lúc</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="divide-y divide-neutral-100 bg-white">
+                                  {tenderDetails.bidders.map((bidder, idx) => (
+                                    <tr key={idx} class="hover:bg-neutral-50">
+                                      <td class="px-4 py-3 font-semibold text-neutral-950">
+                                        {bidder.contractorName}
+                                        {bidder.contractorCode && <div class="text-[9px] text-neutral-400 font-normal">Mã DN: {bidder.contractorCode}</div>}
+                                      </td>
+                                      <td class="px-4 py-3 whitespace-nowrap">
+                                        <span class={`px-2 py-0.5 rounded font-semibold text-[10px] ${
+                                          bidder.status === 'participating'
+                                            ? 'bg-blue-50 text-blue-700'
+                                            : bidder.status === 'winning'
+                                            ? 'bg-green-50 text-green-700'
+                                            : 'bg-neutral-50 text-neutral-500'
+                                        }`}>
+                                          {bidder.status === 'participating' ? 'Đang tham gia' : bidder.status === 'winning' ? 'Trúng thầu' : bidder.status}
+                                        </span>
+                                      </td>
+                                      <td class="px-4 py-3 font-semibold text-neutral-600 whitespace-nowrap">
+                                        {formatFullCurrency(bidder.bidPrice)}
+                                      </td>
+                                      <td class="px-4 py-3 font-bold text-neutral-900 whitespace-nowrap">
+                                        {formatFullCurrency(bidder.finalPrice)}
+                                      </td>
+                                      <td class="px-4 py-3 text-neutral-400 whitespace-nowrap text-[10px]">
+                                        {bidder.submittedAt ? bidder.submittedAt.replace('T', ' ') : 'Chưa rõ'}
+                                      </td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* AI GEMINI SUMMARIZER PANEL */}
+                      {activeTab === 'ai' && (
+                        <div class="space-y-4">
+                          <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+                            <div>
+                              <h4 class="text-sm font-bold text-neutral-700">Tóm tắt & Phân tích chuyên sâu bằng AI</h4>
+                              <p class="text-[10px] text-neutral-400">Được cung cấp bởi mô hình Gemini 3.6 Flash trên máy chủ</p>
+                            </div>
+                            <button
+                              onClick={() => generateAISummary(selectedTenderId)}
+                              disabled={aiLoading}
+                              class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 disabled:opacity-50 text-white rounded font-medium transition duration-150 inline-flex items-center space-x-1"
+                            >
+                              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                              <span>{aiLoading ? 'Đang phân tích...' : 'Sinh tóm tắt mới'}</span>
+                            </button>
+                          </div>
+
+                          {aiLoading ? (
+                            <div class="p-8 space-y-4 text-center">
+                              <div class="w-8 h-8 border-4 border-brand-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                              <p class="text-neutral-500 font-medium">Gemini đang nghiên cứu cấu hình gói thầu và phân tích kỹ thuật thầu...</p>
+                            </div>
+                          ) : aiSummary ? (
+                            <div class="bg-brand-50/50 border border-brand-100 rounded-xl p-5 leading-relaxed text-sm text-neutral-700 space-y-3 font-sans custom-scrollbar">
+                              <div class="prose max-w-none text-neutral-800 text-xs">
+                                {aiSummary.split('\n').map((line, i) => {
+                                  if (line.startsWith('###')) {
+                                    return <h4 key={i} class="font-bold text-neutral-900 text-sm mt-4 mb-2 pb-1 border-b border-brand-100">{line.replace('###', '').trim()}</h4>;
+                                  } else if (line.startsWith('##')) {
+                                    return <h3 key={i} class="font-bold text-neutral-900 text-base mt-5 mb-2 pb-1 border-b border-brand-200">{line.replace('##', '').trim()}</h3>;
+                                  } else if (line.startsWith('1.') || line.startsWith('2.') || line.startsWith('3.') || line.startsWith('4.')) {
+                                    return <p key={i} class="font-semibold text-neutral-900 mt-3 mb-1">{line}</p>;
+                                  } else if (line.startsWith('-') || line.startsWith('*')) {
+                                    return (
+                                      <div key={i} class="flex items-start space-x-2 pl-4 py-0.5">
+                                        <span class="text-brand-500">•</span>
+                                        <span>{line.replace(/^[-*]\s+/, '')}</span>
+                                      </div>
+                                    );
+                                  } else if (line.trim() === '') {
+                                    return <div key={i} class="h-2"></div>;
+                                  }
+                                  
+                                  // Bold markdown render support
+                                  let rendered = line;
+                                  const boldRegex = /\*\*([^*]+)\*\*/g;
+                                  const matches = [...line.matchAll(boldRegex)];
+                                  if (matches.length > 0) {
+                                    return (
+                                      <p key={i} class="leading-normal">
+                                        {line.split('**').map((part, pIdx) => pIdx % 2 === 1 ? <strong key={pIdx} class="font-bold text-neutral-950">{part}</strong> : part)}
+                                      </p>
+                                    );
+                                  }
+                                  
+                                  return <p key={i} class="leading-normal">{line}</p>;
+                                })}
+                              </div>
+                            </div>
+                          ) : (
+                            <div class="text-center py-16 bg-neutral-50 rounded-xl border border-neutral-100 space-y-3">
+                              <div class="p-3 bg-white rounded-full w-fit mx-auto shadow-sm text-brand-500">
+                                <i data-lucide="sparkles" class="w-6 h-6 animate-pulse"></i>
+                              </div>
+                              <p class="font-medium text-neutral-600">Bấm nút "Sinh tóm tắt mới" để kích hoạt Trí tuệ Nhân tạo Gemini</p>
+                              <p class="text-neutral-400 text-[11px] max-w-sm mx-auto">Gemini sẽ tự động phân tích tất cả hồ sơ kỹ thuật, xuất xứ nguồn gốc thiết bị và danh sách nhà thầu để cho bạn cái nhìn trực quan nhất.</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                    </div>
+
+                    {/* Footer of Detail */}
+                    <div class="px-6 py-4 bg-neutral-50 border-t border-neutral-100 flex items-center justify-between">
+                      <span class="text-[10px] text-neutral-400">Hệ thống phân tích thầu tự động phát triển năm 2026</span>
+                      <button
+                        onClick={() => setSelectedTenderId(null)}
+                        class="px-4 py-2 bg-neutral-200 hover:bg-neutral-300 text-neutral-700 font-semibold rounded-lg transition duration-150"
+                      >
+                        Đóng lại
+                      </button>
+                    </div>
+
                   </div>
-                </div>
+                )}
 
-                <!-- Form Action Buttons -->
-                <div style="display: flex; gap: 6px; margin-top: 4px;">
-                  <button type="submit" style="flex: 2; background: #1b5e20; color: #fff; border: none; padding: 8px 10px; border-radius: 6px; font-size: 11.5px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;">Lưu & Áp Dụng 💾</button>
-                  <button type="button" id="kv-export-profile-btn" style="flex: 1; background: #0288d1; color: #fff; border: none; padding: 8px 10px; border-radius: 6px; font-size: 11.5px; font-weight: 600; cursor: pointer;" title="Tải xuống file JSON hồ sơ">Xuất file 📥</button>
-                </div>
+              </div>
 
-                <button type="button" id="kv-reset-profile-btn" style="background: transparent; color: #d32f2f; border: 1px dashed #d32f2f; padding: 6px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: background 0.2s;">Khôi phục Hồ sơ Mặc định ↺</button>
-              </form>
             </div>
-          </div>
-        </aside>
-      </section>
+          )}
 
-      <section class="content-wrap alert-section" id="canh-bao">
-        <div class="alert-summary">
-          <div class="alert-copy"><span class="alert-icon">♧</span><div><p class="eyebrow small">DANH SÁCH QUAN TÂM</p><h2>Theo dõi các gói thầu quan trọng</h2><p>Bấm “Mở gói thầu” để quay lại đúng hồ sơ đã đánh dấu sao.</p></div></div>
-          <div class="saved-count"><strong id="saved-count">0</strong><span>gói đã lưu</span></div>
-        </div>
-        <div class="saved-list" id="saved-list"></div>
-      </section>
+          {/* Bottom Footer Info */}
+          <footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-500 text-xs py-6 mt-12 font-sans">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+              <p class="text-neutral-400">
+                © 2026 Bản quyền thuộc về Hệ thống Analytica Y tế Gia Lai & Toàn quốc.
+              </p>
+              <p class="text-[11px] text-neutral-600">
+                Hệ thống hoạt động dựa trên các báo cáo và tệp dữ liệu công khai trên Hệ thống mạng đấu thầu quốc gia. Trợ lý tóm tắt AI sử dụng công nghệ mô hình lớn Google Gemini.
+              </p>
+            </div>
+          </footer>
 
-      <footer class="site-footer">
-        <div class="source-line"><span>✓</span><span>Dữ liệu công khai từ Hệ thống mạng đấu thầu quốc gia; GitHub Actions tự động cập nhật định kỳ.</span></div>
-        <p>Không phải website chính thức của cơ quan quản lý đấu thầu.</p>
-      </footer>
-    </main>
+        </div>
+      );
+    }
 
-    <!-- Floating AI Summary Popover for row hover -->
-    <div id="ai-hover-popover" class="ai-hover-popover" hidden></div>
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
 
-    <!-- Full-screen Kiểu Việt AI Analysis Modal -->
-    <div id="kieu-viet-modal" class="kv-modal-backdrop" hidden>
-      <div class="kv-modal-container">
-        <div class="kv-modal-header">
-          <div class="kv-header-brand-row">
-            <span class="kv-header-brand">✦ PHÂN TÍCH ĐẤU THẦU KIỂU VIỆT</span>
-            <button id="kv-modal-close-top" class="kv-modal-close" type="button" aria-label="Đóng">✕</button>
-          </div>
-          <h2 id="kv-header-title" class="kv-header-tender-title"></h2>
-        </div>
-        <div id="kv-modal-body" class="kv-modal-body">
-          <!-- Dynamic content -->
-        </div>
-        <div class="kv-modal-footer">
-          <span class="kv-footer-note">Dữ liệu đấu thầu công khai được cập nhật tự động từ Mạng Đấu thầu Quốc gia.</span>
-          <button id="kv-modal-close-bottom" class="kv-footer-close-btn" type="button">Đóng</button>
-        </div>
-      </div>
-    </div>
-  </body>
+</body>
 </html>

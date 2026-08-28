@@ -1,0 +1,56 @@
+{
+  "id": "IB2600112561",
+  "fetchedAt": "2026-04-17T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa Vùng Tây Nguyên - Đắk Lắk năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 960000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Đa khoa Vùng Tây Nguyên - Đắk Lắk"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 967971444,
+      "finalPrice": 936802367,
+      "status": "winning",
+      "submittedAt": "2026-04-17T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 958879883,
+      "finalPrice": 902774409,
+      "status": "participating",
+      "submittedAt": "2026-04-17T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 934965953,
+      "finalPrice": 895801419,
+      "status": "participating",
+      "submittedAt": "2026-04-17T08:30:00+07:00"
+    }
+  ]
+}

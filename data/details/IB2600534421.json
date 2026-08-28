@@ -1,0 +1,73 @@
+{
+  "id": "IB2600534421",
+  "fetchedAt": "2026-08-20T14:36:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Thái Bình năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 26000000000
+      },
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 620000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 26000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 620000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 26190209579,
+      "finalPrice": 24206317832,
+      "status": "winning",
+      "submittedAt": "2026-08-20T14:36:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 25948613251,
+      "finalPrice": 25656247086,
+      "status": "participating",
+      "submittedAt": "2026-08-20T14:36:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 26140992115,
+      "finalPrice": 25384432538,
+      "status": "participating",
+      "submittedAt": "2026-08-20T14:36:00+07:00"
+    }
+  ]
+}

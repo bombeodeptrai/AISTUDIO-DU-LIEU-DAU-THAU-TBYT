@@ -1,0 +1,65 @@
+{
+  "id": "IB2600535369",
+  "fetchedAt": "2026-08-22T11:09:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Thị xã An Khê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000
+      },
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Thị xã An Khê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Thị xã An Khê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 1059783823,
+      "finalPrice": 1047796220,
+      "status": "winning",
+      "submittedAt": "2026-08-22T11:09:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 1072333211,
+      "finalPrice": 1038308148,
+      "status": "participating",
+      "submittedAt": "2026-08-22T11:09:00+07:00"
+    }
+  ]
+}

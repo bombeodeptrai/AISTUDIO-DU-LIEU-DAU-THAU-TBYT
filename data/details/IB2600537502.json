@@ -1,0 +1,48 @@
+{
+  "id": "IB2600537502",
+  "fetchedAt": "2026-08-21T15:21:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Thành phố Pleiku - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Thành phố Pleiku - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 2552887498,
+      "finalPrice": 2380545727,
+      "status": "winning",
+      "submittedAt": "2026-08-21T15:21:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 2558155477,
+      "finalPrice": 2382274528,
+      "status": "participating",
+      "submittedAt": "2026-08-21T15:21:00+07:00"
+    }
+  ]
+}

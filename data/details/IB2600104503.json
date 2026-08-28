@@ -1,0 +1,48 @@
+{
+  "id": "IB2600104503",
+  "fetchedAt": "2026-03-04T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Sở Y tế tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 850000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 836433704,
+      "finalPrice": 810294023,
+      "status": "winning",
+      "submittedAt": "2026-03-04T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 864211997,
+      "finalPrice": 819979672,
+      "status": "participating",
+      "submittedAt": "2026-03-04T08:30:00+07:00"
+    }
+  ]
+}

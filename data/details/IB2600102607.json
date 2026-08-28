@@ -1,0 +1,73 @@
+{
+  "id": "IB2600102607",
+  "fetchedAt": "2026-06-23T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Nhi tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 6400000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 1860000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 6400000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 8299341603,
+      "finalPrice": 7906299679,
+      "status": "winning",
+      "submittedAt": "2026-06-23T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 8361177196,
+      "finalPrice": 7890339559,
+      "status": "participating",
+      "submittedAt": "2026-06-23T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 8074139157,
+      "finalPrice": 7442156549,
+      "status": "participating",
+      "submittedAt": "2026-06-23T08:30:00+07:00"
+    }
+  ]
+}

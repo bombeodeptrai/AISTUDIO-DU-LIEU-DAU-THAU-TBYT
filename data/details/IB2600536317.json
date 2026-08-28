@@ -1,0 +1,82 @@
+{
+  "id": "IB2600536317",
+  "fetchedAt": "2026-08-21T15:10:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Thị xã An Khê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 1560000000
+      },
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1240000000
+      },
+      {
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 1560000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Trung tâm Y tế Thị xã An Khê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1240000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Thị xã An Khê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy thở đa năng chuyên sâu cho người lớn và trẻ sơ sinh",
+        "quantity": 3,
+        "unit": "Máy",
+        "plannedPrice": 2550000000,
+        "specification": "Đầy đủ các mode thở kiểm soát thể tích, áp lực, CPAP, BiPAP, APRV, đo cơ học phổi liên tục, tích hợp bộ khí dung siêu âm và pin dự phòng 4 giờ",
+        "manufacturer": "Dräger",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Thị xã An Khê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 5208310703,
+      "finalPrice": 4793265257,
+      "status": "winning",
+      "submittedAt": "2026-08-21T15:10:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 5415823821,
+      "finalPrice": 5113125475,
+      "status": "participating",
+      "submittedAt": "2026-08-21T15:10:00+07:00"
+    }
+  ]
+}

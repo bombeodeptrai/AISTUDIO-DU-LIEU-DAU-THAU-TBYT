@@ -1,0 +1,65 @@
+{
+  "id": "IB2600106162",
+  "fetchedAt": "2026-01-10T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Chư Sê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1450000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 3200000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1450000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 3200000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Sê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 4558723706,
+      "finalPrice": 4364502850,
+      "status": "winning",
+      "submittedAt": "2026-01-10T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 4741530493,
+      "finalPrice": 4671947049,
+      "status": "participating",
+      "submittedAt": "2026-01-10T08:30:00+07:00"
+    }
+  ]
+}

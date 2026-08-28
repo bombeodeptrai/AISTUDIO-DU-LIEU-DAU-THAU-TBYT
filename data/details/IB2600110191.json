@@ -1,0 +1,73 @@
+{
+  "id": "IB2600110191",
+  "fetchedAt": "2026-08-09T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Thái Bình năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000
+      },
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 4601733760,
+      "finalPrice": 4310524722,
+      "status": "winning",
+      "submittedAt": "2026-08-09T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 4659413726,
+      "finalPrice": 4312507496,
+      "status": "participating",
+      "submittedAt": "2026-08-09T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 4672653296,
+      "finalPrice": 4506208038,
+      "status": "participating",
+      "submittedAt": "2026-08-09T08:30:00+07:00"
+    }
+  ]
+}

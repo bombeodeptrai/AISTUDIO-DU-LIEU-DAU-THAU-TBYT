@@ -1,0 +1,74 @@
+{
+  "id": "IB2600539398",
+  "fetchedAt": "2026-08-22T10:38:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Thanh Hóa năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000
+      },
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thanh Hóa"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thanh Hóa"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 480000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thanh Hóa"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 54619805098,
+      "finalPrice": 52478994728,
+      "status": "winning",
+      "submittedAt": "2026-08-22T10:38:00+07:00"
+    }
+  ]
+}

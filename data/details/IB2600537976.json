@@ -1,0 +1,48 @@
+{
+  "id": "IB2600537976",
+  "fetchedAt": "2026-08-23T12:39:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Hữu nghị Việt Đức - Hà Nội năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Hữu nghị Việt Đức - Hà Nội"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 4893146339,
+      "finalPrice": 4806589419,
+      "status": "winning",
+      "submittedAt": "2026-08-23T12:39:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 5030204798,
+      "finalPrice": 4948940020,
+      "status": "participating",
+      "submittedAt": "2026-08-23T12:39:00+07:00"
+    }
+  ]
+}

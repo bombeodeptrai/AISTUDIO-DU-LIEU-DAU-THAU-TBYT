@@ -1,0 +1,73 @@
+{
+  "id": "IB2600548167",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Krông Pa - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1200000000
+      },
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1200000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Trung tâm Y tế Huyện Krông Pa - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Krông Pa - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 19517770406,
+      "finalPrice": 19101179185,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 19259907130,
+      "finalPrice": 18040974920,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 19846171757,
+      "finalPrice": 19257709370,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

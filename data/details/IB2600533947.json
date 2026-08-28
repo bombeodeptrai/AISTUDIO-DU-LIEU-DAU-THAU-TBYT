@@ -1,0 +1,90 @@
+{
+  "id": "IB2600533947",
+  "fetchedAt": "2026-08-25T13:38:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Chư Prông - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1950000000
+      },
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 78000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1950000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Prông - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Prông - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 78000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Prông - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 82285653691,
+      "finalPrice": 77604917206,
+      "status": "winning",
+      "submittedAt": "2026-08-25T13:38:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 80617802226,
+      "finalPrice": 77750610523,
+      "status": "participating",
+      "submittedAt": "2026-08-25T13:38:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 82029846977,
+      "finalPrice": 79634363592,
+      "status": "participating",
+      "submittedAt": "2026-08-25T13:38:00+07:00"
+    }
+  ]
+}

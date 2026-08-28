@@ -1,0 +1,82 @@
+{
+  "id": "IB2600538213",
+  "fetchedAt": "2026-08-24T10:02:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Sở Y tế tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1240000000
+      },
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1450000000
+      },
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 26000000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1240000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1450000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 26000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 28509245441,
+      "finalPrice": 27952388388,
+      "status": "winning",
+      "submittedAt": "2026-08-24T10:02:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 29037535043,
+      "finalPrice": 28260316830,
+      "status": "participating",
+      "submittedAt": "2026-08-24T10:02:00+07:00"
+    }
+  ]
+}

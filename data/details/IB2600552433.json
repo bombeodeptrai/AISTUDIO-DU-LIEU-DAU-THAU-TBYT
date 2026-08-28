@@ -1,0 +1,82 @@
+{
+  "id": "IB2600552433",
+  "fetchedAt": "2026-08-28T03:57:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Phú Thiện - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000
+      },
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000
+      },
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Huyện Phú Thiện - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 2,
+        "unit": "Bộ",
+        "plannedPrice": 240000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Huyện Phú Thiện - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Trung tâm Y tế Huyện Phú Thiện - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 5830607523,
+      "finalPrice": 5591135861,
+      "status": "winning",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 5836568435,
+      "finalPrice": 5689225295,
+      "status": "participating",
+      "submittedAt": "2026-08-28T03:57:00+07:00"
+    }
+  ]
+}

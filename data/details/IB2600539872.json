@@ -1,0 +1,48 @@
+{
+  "id": "IB2600539872",
+  "fetchedAt": "2026-08-24T13:38:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Sở Y tế tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 3900000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Sở Y tế tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 3884437287,
+      "finalPrice": 3609601722,
+      "status": "winning",
+      "submittedAt": "2026-08-24T13:38:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 3870008504,
+      "finalPrice": 3688632945,
+      "status": "participating",
+      "submittedAt": "2026-08-24T13:38:00+07:00"
+    }
+  ]
+}

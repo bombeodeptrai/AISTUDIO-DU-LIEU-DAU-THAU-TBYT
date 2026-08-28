@@ -1,0 +1,56 @@
+{
+  "id": "IB2600108532",
+  "fetchedAt": "2026-02-02T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Kông Chro - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 780000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 1,
+        "unit": "Bộ",
+        "plannedPrice": 780000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Trung tâm Y tế Huyện Kông Chro - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 786050067,
+      "finalPrice": 744571784,
+      "status": "winning",
+      "submittedAt": "2026-02-02T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 770716758,
+      "finalPrice": 729924664,
+      "status": "participating",
+      "submittedAt": "2026-02-02T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 791958010,
+      "finalPrice": 763014151,
+      "status": "participating",
+      "submittedAt": "2026-02-02T08:30:00+07:00"
+    }
+  ]
+}

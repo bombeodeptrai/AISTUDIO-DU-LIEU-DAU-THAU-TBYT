@@ -1,0 +1,56 @@
+{
+  "id": "IB2600535606",
+  "fetchedAt": "2026-08-20T11:17:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Đắk Đoa - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4950000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Trung tâm Y tế Huyện Đắk Đoa - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 4843585427,
+      "finalPrice": 4775062940,
+      "status": "winning",
+      "submittedAt": "2026-08-20T11:17:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 4806375707,
+      "finalPrice": 4488470689,
+      "status": "participating",
+      "submittedAt": "2026-08-20T11:17:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 4859086601,
+      "finalPrice": 4646776965,
+      "status": "participating",
+      "submittedAt": "2026-08-20T11:17:00+07:00"
+    }
+  ]
+}

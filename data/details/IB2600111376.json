@@ -1,0 +1,82 @@
+{
+  "id": "IB2600111376",
+  "fetchedAt": "2026-05-09T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa tỉnh Thái Bình năm 2026",
+    "items": [
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1200000000
+      },
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000
+      },
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1200000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Bệnh viện Đa khoa tỉnh Thái Bình"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 21520113290,
+      "finalPrice": 21261714641,
+      "status": "winning",
+      "submittedAt": "2026-05-09T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 21764420418,
+      "finalPrice": 20738257550,
+      "status": "participating",
+      "submittedAt": "2026-05-09T08:30:00+07:00"
+    }
+  ]
+}

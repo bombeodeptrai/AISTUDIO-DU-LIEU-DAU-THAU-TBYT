@@ -1,15 +1,19 @@
 {
   "name": "thau-y-te-gia-lai",
   "version": "1.0.0",
-  "description": "Thầu Y tế Gia Lai",
+  "description": "Bảng tổng hợp & Phân tích Gói thầu Thiết bị Y tế Gia Lai & Toàn quốc tích hợp AI tóm tắt",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "dev": "node server.js",
     "start": "node server.js",
-    "build": "echo 'No build required'"
+    "dev": "node server.js",
+    "build": "echo 'No build step required'",
+    "lint": "echo 'No lint step required'"
   },
   "dependencies": {
-    "@google/genai": "^2.13.0",
+    "@google/genai": "latest",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2"
   }
 }

@@ -1,0 +1,74 @@
+{
+  "id": "IB2600106636",
+  "fetchedAt": "2026-02-21T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000
+      },
+      {
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000
+      },
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống chụp cộng hưởng từ MRI 1.5 Tesla",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 52000000000,
+        "specification": "Từ trường 1.5T, độ đồng nhất cao, cuộn thu phát đa kênh chuyên dụng sọ não, cột sống, bụng, khớp. Phần mềm dựng hình 3D mạch máu không dùng thuốc tương phản",
+        "manufacturer": "GE Healthcare",
+        "origin": "Mỹ",
+        "projectPlace": "Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy xét nghiệm sinh hóa tự động công suất 800 test/giờ",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 3300000000,
+        "specification": "Công suất 800 test quang/giờ, khay chứa 120 mẫu bệnh phẩm, hệ thống quang học đa bước sóng, chức năng tự động rửa cuvet và phát hiện bọt khí",
+        "manufacturer": "Roche Diagnostics",
+        "origin": "Nhật Bản",
+        "projectPlace": "Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 72668138661,
+      "finalPrice": 68440911057,
+      "status": "winning",
+      "submittedAt": "2026-02-21T08:30:00+07:00"
+    }
+  ]
+}

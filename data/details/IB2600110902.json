@@ -1,0 +1,40 @@
+{
+  "id": "IB2600110902",
+  "fetchedAt": "2026-08-03T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh năm 2026",
+    "items": [
+      {
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1240000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy xét nghiệm huyết học tự động 26 thông số kèm 5 thành phần bạch cầu",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 1240000000,
+        "specification": "Nguyên lý laser bán dẫn và nhuộm huỳnh quang, tốc độ 80 mẫu/giờ, có bộ nạp mẫu tự động và tính năng đọc mã vạch tự động",
+        "manufacturer": "Sysmex Corporation",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Chợ Rẫy - TP. Hồ Chí Minh"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 1255321714,
+      "finalPrice": 1166772885,
+      "status": "winning",
+      "submittedAt": "2026-08-03T08:30:00+07:00"
+    }
+  ]
+}

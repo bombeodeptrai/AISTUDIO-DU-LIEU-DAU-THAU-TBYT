@@ -1,0 +1,65 @@
+{
+  "id": "IB2600396409",
+  "fetchedAt": "2026-08-28T04:03:19.159Z",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị và vật tư y tế chuyên dụng năm 2026 tại Bệnh viện Nhi tỉnh Gia Lai",
+    "items": [
+      {
+        "name": "Hệ thống phẫu thuật nội soi và vật tư y tế kỹ thuật cao",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 4200000000
+      },
+      {
+        "name": "Vật tư y tế nẹp vít khóa và phim X-quang kỹ thuật số",
+        "quantity": 150,
+        "unit": "Bộ",
+        "plannedPrice": 1250000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống phẫu thuật nội soi và vật tư y tế kỹ thuật cao",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 4200000000,
+        "specification": "Camera 4K UHD, nguồn sáng LED 300W, tích hợp dao mổ điện lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Vật tư y tế nẹp vít khóa và phim X-quang kỹ thuật số",
+        "quantity": 150,
+        "unit": "Bộ",
+        "plannedPrice": 1250000000,
+        "specification": "Nẹp vít titan đạt chuẩn CE/FDA, phim cảm quang độ nhạy cao",
+        "manufacturer": "DePuy Synthes",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Bệnh viện Nhi tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 5200000000,
+      "finalPrice": 4950000000,
+      "status": "winning",
+      "submittedAt": "2026-08-28T04:03:19.159Z"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 5350000000,
+      "finalPrice": 5120000000,
+      "status": "participating",
+      "submittedAt": "2026-08-28T04:03:19.159Z"
+    }
+  ]
+}

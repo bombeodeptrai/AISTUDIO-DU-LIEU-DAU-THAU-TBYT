@@ -1,0 +1,82 @@
+{
+  "id": "IB2600536791",
+  "fetchedAt": "2026-08-24T15:54:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000
+      },
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1450000000
+      },
+      {
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Đèn mổ 2 nhánh treo trần bóng LED có gắn camera truyền hình",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 1440000000,
+        "specification": "Cường độ sáng 160.000 Lux/nhánh, chỉ số hoàn màu Ra 98, điều chỉnh nhiệt độ màu 3500K - 5000K, tuổi thọ bóng LED > 60.000 giờ",
+        "manufacturer": "Merivaara",
+        "origin": "Phần Lan",
+        "projectPlace": "Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 1450000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống phẫu thuật nội soi ổ bụng Full HD/4K",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 9600000000,
+        "specification": "Camera 4K UHD, nguồn sáng Xenon/LED 300W, bơm khí CO2 có sưởi ấm nhiệt độ cơ thể, dao mổ điện cao tần lưỡng cực đa năng",
+        "manufacturer": "Karl Storz",
+        "origin": "Đức",
+        "projectPlace": "Ban Quản lý Dự án Đầu tư Xây dựng Các Công trình Dân dụng và Công nghiệp tỉnh Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 12301010252,
+      "finalPrice": 11904312508,
+      "status": "winning",
+      "submittedAt": "2026-08-24T15:54:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Dược phẩm & Trang thiết bị Y tế Tây Nguyên",
+      "contractorCode": "6001829301",
+      "bidPrice": 12555169608,
+      "finalPrice": 11768798550,
+      "status": "participating",
+      "submittedAt": "2026-08-24T15:54:00+07:00"
+    }
+  ]
+}

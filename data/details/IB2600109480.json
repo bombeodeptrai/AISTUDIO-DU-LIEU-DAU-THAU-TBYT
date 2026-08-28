@@ -1,0 +1,74 @@
+{
+  "id": "IB2600109480",
+  "fetchedAt": "2026-08-20T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 2900000000
+      },
+      {
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000
+      },
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 2900000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Máy theo dõi bệnh nhân đa thông số (Monitor 5-7 thông số)",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 360000000,
+        "specification": "Theo dõi ECG 5 chuyển đạo, SpO2 chống nhiễu cử động, NIBP, 2 kênh nhiệt độ, nhịp thở, IBP huyết áp xâm lấn và EtCO2",
+        "manufacturer": "Nihon Kohden",
+        "origin": "Nhật Bản",
+        "projectPlace": "Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Y Dược Cổ truyền và Phục hồi Chức năng Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 7566025238,
+      "finalPrice": 7336856519,
+      "status": "winning",
+      "submittedAt": "2026-08-20T08:30:00+07:00"
+    }
+  ]
+}

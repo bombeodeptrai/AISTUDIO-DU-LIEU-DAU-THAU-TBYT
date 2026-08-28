@@ -1,0 +1,56 @@
+{
+  "id": "IB2600102133",
+  "fetchedAt": "2026-06-06T08:30:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa Khu vực An Khê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống chụp cắt lớp vi tính 128 lát cắt",
+        "quantity": 1,
+        "unit": "Hệ thống",
+        "plannedPrice": 18500000000,
+        "specification": "Độ phân giải không gian cao, tốc độ quay 0.33s/vòng, bóng chụp công suất 8.0 MHU, tích hợp AI giảm liều tia CARE Dose4D và tái tạo hình ảnh Safire",
+        "manufacturer": "Siemens Healthineers",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa Khu vực An Khê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty TNHH Thương mại và Dịch vụ Kỹ thuật Y tế Gia Lai",
+      "contractorCode": "5900829103",
+      "bidPrice": 18120148880,
+      "finalPrice": 16955523617,
+      "status": "winning",
+      "submittedAt": "2026-06-06T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Thiết bị Khoa học Kỹ thuật Y khoa Hoàng Gia",
+      "contractorCode": "0309182746",
+      "bidPrice": 18143905649,
+      "finalPrice": 17545884649,
+      "status": "participating",
+      "submittedAt": "2026-06-06T08:30:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 18741486815,
+      "finalPrice": 18523219161,
+      "status": "participating",
+      "submittedAt": "2026-06-06T08:30:00+07:00"
+    }
+  ]
+}

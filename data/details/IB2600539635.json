@@ -1,0 +1,48 @@
+{
+  "id": "IB2600539635",
+  "fetchedAt": "2026-08-24T12:09:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Bệnh viện Đa khoa Khu vực An Khê - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 3,
+        "unit": "Hệ thống",
+        "plannedPrice": 4350000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Bệnh viện Đa khoa Khu vực An Khê - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Công nghệ Y tế Việt Nhật",
+      "contractorCode": "0102718291",
+      "bidPrice": 4316646096,
+      "finalPrice": 4086402292,
+      "status": "winning",
+      "submittedAt": "2026-08-24T12:09:00+07:00"
+    },
+    {
+      "contractorName": "Công ty Cổ phần Giải pháp Y tế Thông minh Nam Trung Bộ",
+      "contractorCode": "4201829371",
+      "bidPrice": 4344318784,
+      "finalPrice": 4002031031,
+      "status": "participating",
+      "submittedAt": "2026-08-24T12:09:00+07:00"
+    }
+  ]
+}

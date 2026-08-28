@@ -1,0 +1,82 @@
+{
+  "id": "IB2600539161",
+  "fetchedAt": "2026-08-25T10:18:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Huyện Chư Prông - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1950000000
+      },
+      {
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 2900000000
+      },
+      {
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 2400000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Máy siêu âm Doppler màu 4D chuyên tim mạch và tổng quát",
+        "quantity": 1,
+        "unit": "Máy",
+        "plannedPrice": 1950000000,
+        "specification": "Màn hình OLED 21.5 inch, 4 cổng đầu dò hoạt động, tích hợp phần mềm đo strain tim, elastography đàn hồi mô gan và tuyến giáp",
+        "manufacturer": "Philips Healthcare",
+        "origin": "Hà Lan",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Prông - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 02",
+        "name": "Hệ thống lọc máu liên tục CRRT chuyên dụng hồi sức cấp cứu",
+        "quantity": 2,
+        "unit": "Hệ thống",
+        "plannedPrice": 2900000000,
+        "specification": "Thực hiện đầy đủ các phương thức CVVH, CVVHD, CVVHDF, SCUF, TPE (thay huyết tương), tích hợp cân điện tử độ chính xác cao và hệ thống sưởi ấm dịch",
+        "manufacturer": "Fresenius Medical Care",
+        "origin": "Đức",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Prông - Gia Lai"
+      },
+      {
+        "lotNo": "Lô 03",
+        "name": "Máy gây mê kèm thở giúp thở chuyên sâu có màn hình theo dõi",
+        "quantity": 2,
+        "unit": "Máy",
+        "plannedPrice": 2400000000,
+        "specification": "Hệ thống kiểm soát lưu lượng điện tử, bình bốc hơi Sevoflurane và Isoflurane tích hợp bù nhiệt độ và áp suất, module đo khí mê EtCO2, N2O, O2",
+        "manufacturer": "Mindray",
+        "origin": "Trung Quốc",
+        "projectPlace": "Trung tâm Y tế Huyện Chư Prông - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Công ty Cổ phần Thiết bị Y tế Mediland Việt Nam",
+      "contractorCode": "0105829182",
+      "bidPrice": 7162512122,
+      "finalPrice": 7037316751,
+      "status": "winning",
+      "submittedAt": "2026-08-25T10:18:00+07:00"
+    },
+    {
+      "contractorName": "Công ty TNHH Đầu tư & Phát triển Công nghệ Y khoa Đông Á",
+      "contractorCode": "0312984712",
+      "bidPrice": 7102368706,
+      "finalPrice": 6862919554,
+      "status": "participating",
+      "submittedAt": "2026-08-25T10:18:00+07:00"
+    }
+  ]
+}

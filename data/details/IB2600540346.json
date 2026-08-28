@@ -1,0 +1,40 @@
+{
+  "id": "IB2600540346",
+  "fetchedAt": "2026-08-23T15:55:00+07:00",
+  "requirements": {
+    "summary": "Mua sắm trang thiết bị y tế chuyên dụng phục vụ công tác khám chữa bệnh tại Trung tâm Y tế Thành phố Pleiku - Gia Lai năm 2026",
+    "items": [
+      {
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "items": [
+      {
+        "lotNo": "Lô 01",
+        "name": "Bàn mổ đa năng điều khiển điện thủy lực dùng trong chấn thương và ngoại khoa",
+        "quantity": 3,
+        "unit": "Bộ",
+        "plannedPrice": 2340000000,
+        "specification": "Tải trọng 350kg, xuyên tia X toàn phần, điều chỉnh đa tư thế Trendelenburg, nghiêng trái/phải, nâng hạ lưng và chân bằng remote điện tử",
+        "manufacturer": "Schaerer Medical",
+        "origin": "Thụy Sĩ",
+        "projectPlace": "Trung tâm Y tế Thành phố Pleiku - Gia Lai"
+      }
+    ]
+  },
+  "bidders": [
+    {
+      "contractorName": "Tổng Công ty Thiết bị Y tế Việt Nam - CTCP (Vinamed)",
+      "contractorCode": "0100108922",
+      "bidPrice": 2315149015,
+      "finalPrice": 2135354719,
+      "status": "winning",
+      "submittedAt": "2026-08-23T15:55:00+07:00"
+    }
+  ]
+}
